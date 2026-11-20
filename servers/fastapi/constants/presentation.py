@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-MAX_NUMBER_OF_SLIDES = 50
+MAX_NUMBER_OF_SLIDES = 200
 DEFAULT_MAX_OUTLINE_WORDS = 100
 
 

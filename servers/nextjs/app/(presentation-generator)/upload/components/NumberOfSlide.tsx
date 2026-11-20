@@ -3,7 +3,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { clampSlideCountValue, MAX_NUMBER_OF_SLIDES } from '@/utils/presentationLimits';
 import React, { useState } from 'react'
 
-const SLIDE_OPTIONS: string[] = ["5", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
+const SLIDE_OPTIONS: string[] = ["5", "8", "10", "12", "15", "20", "25", "30", "40", "50", "60", "80", "100", "120", "150", "200"];
 
 const NumberOfSlide = ({ value, onValueChange }: { value: string, onValueChange: (value: string) => void }) => {
     const [customInput, setCustomInput] = useState(

@@ -39,39 +39,10 @@ interface ConfigurationSelectsProps {
   onModeChange?: (mode: GenerationMode) => void;
 }
 
-type SlideOption =
-  | "5"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "13"
-  | "14"
-  | "15"
-  | "16"
-  | "17"
-  | "18"
-  | "19"
-  | "20";
+type SlideOption = string;
 
 // Constants
-const SLIDE_OPTIONS: SlideOption[] = [
-  "5",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
-  "19",
-  "20",
-];
+const SLIDE_OPTIONS: SlideOption[] = ["5","8","10","12","15","20","25","30","40","50","60","80","100","120","150","200"];
 
 /**
  * Renders a select component for slide count
