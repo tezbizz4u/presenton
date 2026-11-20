@@ -262,10 +262,13 @@ def recolor_html_slide(slide: Any, theme: dict[str, Any]) -> int:
     native_dark = bool(root_bg) and _lstar(root_bg) < 0.5
     mapper = _Mapper(theme, usage, native_dark, False)
 
-    def map_hex(raw: str) -> str:
-        return mapper.map(_norm_hex(raw))
-
     orig_bg = root_bg or "#FFFFFF"
+
+    def map_hex(raw: str) -> str:
+        norm = _norm_hex(raw)
+        if norm == orig_bg.upper():
+            return mapper.bg  # same colour as the slide background -> the new background
+        return mapper.map(norm)
 
     def readable(original: str, mapped: str) -> str:
         """Text that read well on the slide background must still read on the new one."""
@@ -276,15 +279,16 @@ def recolor_html_slide(slide: Any, theme: dict[str, Any]) -> int:
     def sub_text(text: str) -> str:
         text = re.sub(
             r"(?<![\w-])(text-\[)(#[0-9a-fA-F]{3,6})(\])",
-            lambda m: m.group(1) + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:])) + m.group(3),
+            lambda m: m.group(1) + "\x00" + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:]))[1:] + m.group(3),
             text,
         )
         text = re.sub(
             r"(?<![\w-])(color\s*:\s*)(#[0-9a-fA-F]{3,6})(?![0-9a-zA-Z-])",
-            lambda m: m.group(1) + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:])),
+            lambda m: m.group(1) + "\x00" + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:]))[1:],
             text,
         )
         text = _HTML_HEX.sub(lambda m: map_hex(m.group(1)) if not m.group(0).startswith("#__") else m.group(0), text)
+        text = text.replace("\x00", "#")  # NUL marks values already mapped above (kept out of the pass before)
 
         def named(m: re.Match) -> str:
             value = _tw_to_hex(m.group(2))
