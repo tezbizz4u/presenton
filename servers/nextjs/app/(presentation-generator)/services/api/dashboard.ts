@@ -22,6 +22,7 @@ export interface PresentationResponse {
   theme: Record<string, any> | null;
   titles: string[];
   user_id: string;
+  folder_id?: string | null;
   vector_store: any;
 
   thumbnail: string;
@@ -30,6 +31,62 @@ export interface PresentationResponse {
   components?: any;
   fonts?: any;
   slides: any[];
+}
+
+export interface FolderResponse {
+  id: string;
+  name: string;
+  parent_id: string | null;
+  presentation_count: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export class FolderApi {
+  private static base = "/api/v1/ppt/folders";
+
+  static async list(): Promise<FolderResponse[]> {
+    const response = await apiFetch(getApiUrl(FolderApi.base), { method: "GET" });
+    return await ApiResponseHandler.handleResponse(response, "Failed to load folders");
+  }
+
+  static async create(name: string, parentId: string | null = null): Promise<FolderResponse> {
+    const response = await apiFetch(getApiUrl(FolderApi.base), {
+      method: "POST",
+      headers: getHeader(),
+      body: JSON.stringify({ name, parent_id: parentId }),
+    });
+    return await ApiResponseHandler.handleResponse(response, "Failed to create folder");
+  }
+
+  static async update(
+    id: string,
+    changes: { name?: string; parent_id?: string | null }
+  ): Promise<FolderResponse> {
+    const response = await apiFetch(getApiUrl(`${FolderApi.base}/${id}`), {
+      method: "PATCH",
+      headers: getHeader(),
+      body: JSON.stringify(changes),
+    });
+    return await ApiResponseHandler.handleResponse(response, "Failed to update folder");
+  }
+
+  static async remove(id: string) {
+    const response = await apiFetch(getApiUrl(`${FolderApi.base}/${id}`), {
+      method: "DELETE",
+      headers: getHeader(),
+    });
+    return await ApiResponseHandler.handleResponse(response, "Failed to delete folder");
+  }
+
+  static async movePresentations(presentationIds: string[], folderId: string | null) {
+    const response = await apiFetch(getApiUrl(`${FolderApi.base}/move`), {
+      method: "POST",
+      headers: getHeader(),
+      body: JSON.stringify({ presentation_ids: presentationIds, folder_id: folderId }),
+    });
+    return await ApiResponseHandler.handleResponse(response, "Failed to move presentation");
+  }
 }
 
 export class DashboardApi {

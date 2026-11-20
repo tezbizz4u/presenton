@@ -2,8 +2,9 @@
 import React from "react";
 
 import { Card } from "@/components/ui/card";
-import { DashboardApi } from "@/app/(presentation-generator)/services/api/dashboard";
-import { Archive, Copy, EllipsisVertical, Loader2, Trash } from "lucide-react";
+import { DashboardApi, FolderApi, type FolderResponse } from "@/app/(presentation-generator)/services/api/dashboard";
+import { buildFolderTree } from "./FolderBar";
+import { Archive, Copy, EllipsisVertical, Folder, Loader2, Trash } from "lucide-react";
 import {
   Popover,
   PopoverTrigger,
@@ -34,7 +35,9 @@ export const PresentationCard = ({
   presentation,
   viewMode = "grid",
   onDeleted,
-  onDuplicated
+  onDuplicated,
+  folders = [],
+  onMoved,
 }: {
   id: string;
   title: string;
@@ -42,6 +45,8 @@ export const PresentationCard = ({
   viewMode?: "grid" | "list";
   onDeleted?: (presentationId: string) => void;
   onDuplicated?: (presentation: any) => void;
+  folders?: FolderResponse[];
+  onMoved?: (presentationId: string, folderId: string | null) => void;
 }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -49,6 +54,8 @@ export const PresentationCard = ({
   const [showActions, setShowActions] = React.useState(false);
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [isDuplicating, setIsDuplicating] = React.useState(false);
+  const [showMove, setShowMove] = React.useState(false);
+  const folderTree = React.useMemo(() => buildFolderTree(folders), [folders]);
   const isUnsupported = presentation?.version === "v1-standard";
   const presentationType =
     presentation?.type === "smart" || presentation?.generation_mode === "smart"
@@ -95,6 +102,22 @@ export const PresentationCard = ({
       notify.error("Could not delete presentation", response?.message || "Something went wrong while deleting the presentation.");
     }
     setIsDeleting(false);
+  };
+
+  const handleMove = async (folderId: string | null) => {
+    setShowMove(false);
+    setShowActions(false);
+    try {
+      await FolderApi.movePresentations([id], folderId);
+      const target = folderTree.find((f) => f.id === folderId);
+      notify.success(target ? `Moved to ${target.path}` : "Removed from folder");
+      onMoved?.(id, folderId);
+    } catch (error) {
+      notify.error(
+        "Could not move presentation",
+        error instanceof Error ? error.message : "Something went wrong while moving the presentation."
+      );
+    }
   };
 
   const handleDuplicate = async () => {
@@ -221,6 +244,53 @@ export const PresentationCard = ({
                       <Copy className="h-4 w-4 text-gray-500" />
                     )}
                   </button>
+                )}
+                {!isUnsupported && (
+                  <div className="w-full">
+                    <button
+                      className="flex w-full items-center justify-between px-2 py-1 hover:bg-gray-100"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setShowMove((v) => !v);
+                      }}
+                    >
+                      <p>Move to folder</p>
+                      <Folder className="h-4 w-4 text-gray-500" />
+                    </button>
+                    {showMove && (
+                      <div className="max-h-48 overflow-y-auto border-t border-[#EDEEEF] py-1">
+                        <button
+                          className="block w-full truncate px-4 py-1 text-left text-sm hover:bg-gray-100"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            void handleMove(null);
+                          }}
+                        >
+                          No folder
+                        </button>
+                        {folderTree.map((folder) => (
+                          <button
+                            key={folder.id}
+                            title={folder.path}
+                            className={`block w-full truncate px-4 py-1 text-left text-sm hover:bg-gray-100 ${presentation?.folder_id === folder.id ? "font-semibold" : ""}`}
+                            style={{ paddingLeft: 16 + folder.depth * 12 }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              void handleMove(folder.id);
+                            }}
+                          >
+                            {folder.name}
+                          </button>
+                        ))}
+                        {folderTree.length === 0 && (
+                          <p className="px-4 py-1 text-sm text-gray-500">No folders yet</p>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 )}
                 <button
                   className="flex w-full items-center justify-between rounded-[6px] px-2 py-1 text-neutral-700 transition-colors hover:bg-neutral-100"

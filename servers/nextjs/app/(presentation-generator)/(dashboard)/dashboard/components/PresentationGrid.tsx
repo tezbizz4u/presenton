@@ -1,6 +1,6 @@
 import React from "react";
 import { PresentationCard } from "./PresentationCard";
-import { PresentationResponse } from "@/app/(presentation-generator)/services/api/dashboard";
+import { PresentationResponse, FolderResponse } from "@/app/(presentation-generator)/services/api/dashboard";
 import { EmptyState } from "./EmptyState";
 
 interface PresentationGridProps {
@@ -10,6 +10,8 @@ interface PresentationGridProps {
   error?: string | null;
   onPresentationDeleted?: (presentationId: string) => void;
   onPresentationDuplicated?: (presentation: PresentationResponse) => void;
+  folders?: FolderResponse[];
+  onPresentationMoved?: (presentationId: string, folderId: string | null) => void;
 }
 
 export const PresentationGrid = ({
@@ -19,6 +21,8 @@ export const PresentationGrid = ({
   error = null,
   onPresentationDeleted,
   onPresentationDuplicated,
+  folders = [],
+  onPresentationMoved,
 }: PresentationGridProps) => {
   const ShimmerCard = () => (
     <div className="flex min-h-[216px] flex-col overflow-hidden rounded-[12px] border border-[#EDEEEF] bg-[#F8FBFB] shadow-none animate-pulse">
@@ -90,6 +94,8 @@ export const PresentationGrid = ({
           viewMode={viewMode}
           onDeleted={onPresentationDeleted}
           onDuplicated={onPresentationDuplicated}
+          folders={folders}
+          onMoved={onPresentationMoved}
         />
       ))}
     </div>

@@ -10,6 +10,8 @@ import React, {
 
 import {
   DashboardApi,
+  FolderApi,
+  type FolderResponse,
   type PresentationResponse,
 } from "@/app/(presentation-generator)/services/api/dashboard";
 import { PresentationGrid } from "@/app/(presentation-generator)/(dashboard)/dashboard/components/PresentationGrid";
@@ -26,6 +28,11 @@ import { notify } from "@/components/ui/sonner";
 import { sanitizeAnalyticsError } from "@/utils/analytics";
 import { IMAGE_PROVIDERS, LLM_PROVIDERS } from "@/utils/providerConstants";
 import { BlankPresentationDialog } from "./BlankPresentationDialog";
+import {
+  FolderBar,
+  folderAndDescendantIds,
+  type FolderSelection,
+} from "./FolderBar";
 import styles from "./dashboardMotion.module.css";
 
 const GITHUB_REPOSITORY_URL = "https://github.com/presenton/presenton";
@@ -407,10 +414,31 @@ const DashboardPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [deckViewMode, setDeckViewMode] = useState<"grid" | "list">("grid");
   const blankPresentationRequestInFlight = useRef(false);
+  const [folders, setFolders] = useState<FolderResponse[]>([]);
+  const [selectedFolder, setSelectedFolder] = useState<FolderSelection>("all");
+
+  const fetchFolders = useCallback(async () => {
+    try {
+      setFolders(await FolderApi.list());
+    } catch {
+      setFolders([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    void fetchFolders();
+  }, [fetchFolders]);
+
+  const visiblePresentations = useMemo(() => {
+    if (selectedFolder === "all") return presentations;
+    if (selectedFolder === "unfiled") return presentations.filter((p) => !p.folder_id);
+    const ids = folderAndDescendantIds(folders, selectedFolder);
+    return presentations.filter((p) => p.folder_id && ids.has(p.folder_id));
+  }, [presentations, folders, selectedFolder]);
 
   const sortedPresentations = useMemo(
-    () => sortPresentationsNewestFirst(presentations),
-    [presentations],
+    () => sortPresentationsNewestFirst(visiblePresentations),
+    [visiblePresentations],
   );
 
   const sortedLegacyPresentations = useMemo(
@@ -595,7 +623,26 @@ const DashboardPage: React.FC = () => {
             </div>
           </div>
         </div>
+        <FolderBar
+          folders={folders}
+          selected={selectedFolder}
+          totalCount={presentations.length}
+          unfiledCount={presentations.filter((p) => !p.folder_id).length}
+          onSelect={setSelectedFolder}
+          onChanged={async () => {
+            await Promise.all([fetchFolders(), fetchPresentations()]);
+          }}
+        />
         <PresentationGrid
+          folders={folders}
+          onPresentationMoved={(presentationId, folderId) => {
+            setPresentations((prev) =>
+              prev.map((p) =>
+                p.id === presentationId ? { ...p, folder_id: folderId } : p,
+              ),
+            );
+            void fetchFolders();
+          }}
           presentations={sortedPresentations}
           viewMode={deckViewMode}
           isLoading={isLoading}
