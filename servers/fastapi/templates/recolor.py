@@ -115,7 +115,15 @@ def _split_alpha(color: str) -> tuple[str, str]:
 
 
 class _Mapper:
-    def __init__(self, theme: dict[str, Any], usage: dict[str, int]):
+    def __init__(
+        self,
+        theme: dict[str, Any],
+        usage: dict[str, int],
+        native_dark: bool = False,
+        freeze_neutrals: bool = False,
+    ):
+        self.native_dark = native_dark
+        self.freeze_neutrals = freeze_neutrals
         colors = theme["colors"]
         self.bg = colors["background"].upper()
         self.card = colors["card"].upper()
@@ -161,7 +169,14 @@ class _Mapper:
         self.black_partner = self.neutral("#000000")
 
     def neutral(self, color: str) -> str:
-        return _mix(self.text, self.card, max(0.0, min(1.0, _lstar(color))))
+        if self.freeze_neutrals:
+            return color
+        t = max(0.0, min(1.0, _lstar(color)))
+        # light-native slide: white -> card, black -> text; dark-native: the reverse,
+        # so the polarity of the slide is kept whatever the preset mode is
+        if self.native_dark:
+            return _mix(self.card, self.text, t)
+        return _mix(self.text, self.card, t)
 
     def map(self, hex_color: str, is_background: bool = False) -> str:
         base, alpha = _split_alpha(hex_color)
@@ -230,7 +245,21 @@ def recolor_slide(slide: Any, theme: dict[str, Any]) -> int:
         if not is_series:
             base = value[:7].upper()
             usage[base] = usage.get(base, 0) + 1
-    mapper = _Mapper(theme, usage)
+    has_bg_fill = any(is_bg for _, _, is_bg, _ in entries)
+    if has_bg_fill:
+        bg_values = [v for _, v, is_bg, _ in entries if is_bg]
+        native_dark = _lstar(bg_values[0]) < 0.5
+        freeze = False
+    else:
+        fonts = [
+            _lstar(v)
+            for path, v, _, series in entries
+            if not series and "font" in path and _chroma(v) < 0.12
+        ]
+        native_dark = bool(fonts) and sum(fonts) / len(fonts) > 0.6
+        # background is a picture/gradient we cannot recolour: keep text polarity
+        freeze = native_dark
+    mapper = _Mapper(theme, usage, native_dark, freeze)
 
     snapshot: dict[str, str] = {}
     for path, value, is_background, is_series in entries:
