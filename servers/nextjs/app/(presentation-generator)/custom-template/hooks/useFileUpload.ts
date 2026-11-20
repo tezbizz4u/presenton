@@ -6,9 +6,9 @@ export const useFileUpload = () => {
 
   const handleRawFileSelect = useCallback((file: File) => {
     const lowerName = file.name.toLowerCase();
-    const isPptx = lowerName.endsWith(".pptx");
+    const isPptx = lowerName.endsWith(".pptx") || lowerName.endsWith(".potx");
     if (!isPptx) {
-      notify.error("Invalid file", "Please select a valid PPTX file.");
+      notify.error("Invalid file", "Please select a valid PPTX or POTX file.");
       return;
     }
 

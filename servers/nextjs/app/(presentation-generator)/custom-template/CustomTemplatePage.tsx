@@ -84,7 +84,7 @@ const FONT_FALLBACK_OVERSCAN_ROWS = 4;
 
 function getDefaultTemplateName(file: File | null): string {
   if (!file?.name) return "";
-  return file.name.replace(/\.pptx$/i, "").trim();
+  return file.name.replace(/\.(pptx|potx)$/i, "").trim();
 }
 
 function formatFileSize(size: number): string {
@@ -158,7 +158,7 @@ function UploadPanel({
   return (
     <main className="mx-auto mt-7 w-full max-w-[742px] px-4 pb-12 font-syne">
       <section aria-label="Upload PowerPoint" aria-busy={isProcessing} className="rounded-xl border border-[#DBDBDB99] bg-white px-[9px] py-[11px] shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
-        <input ref={inputRef} type="file" accept=".pptx" aria-label="PowerPoint file" className="hidden" disabled={isProcessing} onChange={(event) => { onFileInput(event); event.target.value = ""; }} />
+        <input ref={inputRef} type="file" accept=".pptx,.potx" aria-label="PowerPoint file" className="hidden" disabled={isProcessing} onChange={(event) => { onFileInput(event); event.target.value = ""; }} />
         <div
           className={`relative flex h-[127px] items-center overflow-hidden rounded-[10px] ${isDragging ? "bg-[#F3EFFF] ring-2 ring-[#7A5AF8]" : "bg-[#F9F9FA]"}`}
           onDragOver={(event) => { event.preventDefault(); if (!isProcessing) setIsDragging(true); }}

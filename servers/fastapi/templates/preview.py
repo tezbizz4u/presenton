@@ -5,6 +5,8 @@ Implementation is ported from presenton-enterprise fonts_and_slides_preview flow
 adapted for local app_data storage instead of S3.
 """
 
+import io
+import zipfile
 from typing import List, Optional
 
 from fastapi import File, HTTPException, UploadFile
@@ -26,10 +28,37 @@ __all__ = [
 ]
 
 
+_TEMPLATE_CT = b"presentationml.template.main+xml"
+_PRESENTATION_CT = b"presentationml.presentation.main+xml"
+
+
+async def normalize_pptx_upload(upload: UploadFile) -> UploadFile:
+    """Accept PowerPoint templates (.potx) by turning them into a normal .pptx:
+    same package, only the main content type differs."""
+    name = upload.filename or "template.pptx"
+    data = await upload.read()
+    await upload.seek(0)
+    if not name.lower().endswith(".potx"):
+        return upload
+    try:
+        source = zipfile.ZipFile(io.BytesIO(data))
+    except zipfile.BadZipFile:
+        raise HTTPException(status_code=400, detail="This file is not a valid PowerPoint package")
+    out = io.BytesIO()
+    with source, zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as target:
+        for item in source.infolist():
+            content = source.read(item.filename)
+            if item.filename == "[Content_Types].xml":
+                content = content.replace(_TEMPLATE_CT, _PRESENTATION_CT)
+            target.writestr(item, content)
+    out.seek(0)
+    return UploadFile(file=out, size=len(out.getvalue()), filename=name[:-5] + ".pptx", headers=upload.headers)
+
+
 async def check_fonts_in_pptx_handler(
     pptx_file: UploadFile = File(..., description="PPTX file to analyze fonts from"),
 ) -> FontCheckResponse:
-    return await _check_fonts_in_pptx_handler(pptx_file)
+    return await _check_fonts_in_pptx_handler(await normalize_pptx_upload(pptx_file))
 
 
 async def upload_fonts_and_slides_preview_handler(
@@ -46,6 +75,7 @@ async def upload_fonts_and_slides_preview_handler(
     upload_presentation: bool = True,
     temp_dir: Optional[str] = None,
 ) -> FontsUploadAndSlidesPreviewResponse:
+    pptx_file = await normalize_pptx_upload(pptx_file)
     return await upload_fonts_and_preview_handler(
         pptx_file=pptx_file,
         font_files=font_files,
