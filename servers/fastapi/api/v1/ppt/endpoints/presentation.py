@@ -117,6 +117,7 @@ from templates.v2.content import (
 )
 from templates.v2.theme import template_theme_for_presentation
 from templates.theme_presets import get_theme_preset
+from templates.recolor import apply_theme_to_slides
 from utils.datetime_utils import get_current_utc_datetime
 from templates.default_templates import resolve_default_template_id
 from services.community_presentations import (
@@ -2518,6 +2519,7 @@ async def stream_presentation(
 
         for slide in slides:
             slide.ui = _apply_template_content_to_ui(slide.ui, slide.content)
+        apply_theme_to_slides(slides, presentation.theme)
 
         # Moved this here to make sure new slides are generated before deleting the old ones
         await sql_session.execute(
@@ -2658,10 +2660,26 @@ async def apply_theme_preset(
                 )
         presentation.theme = restored
 
+    # Recolour (or revert) the deck's slides to match the theme.
+    slide_rows = (
+        await sql_session.scalars(
+            select(SlideModel)
+            .where(
+                SlideModel.presentation == presentation_id,
+                SlideModel.owner_id == get_current_owner_id(),
+            )
+            .order_by(SlideModel.index)
+        )
+    ).all()
+    apply_theme_to_slides(slide_rows, presentation.theme)
+    sql_session.add_all(slide_rows)
+
     presentation.updated_at = get_current_utc_datetime()
     sql_session.add(presentation)
     await sql_session.commit()
-    return {"theme": presentation.theme}
+    for row in slide_rows:
+        await sql_session.refresh(row)
+    return {"theme": presentation.theme, "slides": slide_rows}
 
 
 @PRESENTATION_ROUTER.patch("/slide_update", response_model=SlideModel)
@@ -3181,6 +3199,7 @@ async def generate_presentation_handler(
 
         for slide in slides:
             _hydrate_template_slide_ui(slide, layout_payload)
+        apply_theme_to_slides(slides, template_theme)
 
         # 8. Save PresentationModel and Slides
         sql_session.add(presentation)

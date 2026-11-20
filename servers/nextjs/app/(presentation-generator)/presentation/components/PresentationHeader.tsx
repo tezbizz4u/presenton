@@ -594,14 +594,28 @@ const PresentationHeader = ({
     if (!presentationData) return;
     try {
       const templateId = resolveTemplateIdFromPresentation(presentationData);
-      const { theme: stored } = await ThemePresetApi.apply(
+      const { theme: stored, slides: recolored } = await ThemePresetApi.apply(
         presentation_id,
         preset?.id ?? null,
         templateId || null,
       );
       const theme = normalizeTemplateTheme(stored);
+      // The server recolours (or restores) every slide's colours; take them over.
+      const byId = new Map((recolored ?? []).map((slide) => [String(slide.id), slide]));
+      const nextSlides = byId.size
+        ? presentationData.slides?.map((slide: any) => {
+            const fresh = byId.get(String(slide.id));
+            return fresh ? { ...slide, ui: fresh.ui, properties: fresh.properties } : slide;
+          })
+        : presentationData.slides;
       if (theme) {
-        dispatch(setPresentationData({ ...presentationData, theme } as typeof presentationData));
+        dispatch(
+          setPresentationData({
+            ...presentationData,
+            slides: nextSlides,
+            theme,
+          } as typeof presentationData),
+        );
         applyPresentationThemeToElement(
           document.getElementById("presentation-slides-wrapper"),
           theme,

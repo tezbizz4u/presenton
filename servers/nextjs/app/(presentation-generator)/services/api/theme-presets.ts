@@ -24,6 +24,7 @@ export class ThemePresetApi {
   static async list(params: {
     q?: string;
     mode?: string;
+    family?: string;
     trend?: string;
     offset?: number;
     limit?: number;
@@ -44,7 +45,7 @@ export class ThemePresetApi {
     presentationId: string,
     presetId: string | null,
     templateId?: string | null,
-  ): Promise<{ theme: Record<string, any> | null }> {
+  ): Promise<{ theme: Record<string, any> | null; slides?: Array<Record<string, any>> }> {
     const response = await apiFetch(
       getApiUrl(`/api/v1/ppt/presentation/${presentationId}/theme-preset`),
       {

@@ -1,56 +1,45 @@
-"""ASF theme-preset library: 1000+ deterministic colour/font themes.
+"""ASF theme-preset library built from Color Hunt palettes.
 
-A preset is a complete Presenton theme (16 colours + text font) that can be
-applied on top of any bundled layout family. Presets are generated, not
-stored, so the library costs no database space and is identical on every run.
+Each Color Hunt palette is 4 colours. Every palette yields two presets (Light and
+Dark), each a complete Presenton theme (16 colours) plus the original palette so
+the frontend can recolour template slides (see recolorSlides.ts).
+
+Palette source: https://colorhunt.co (palettes are public property per the
+site's About page). Codes live in data/colorhunt_codes.txt, 24 hex chars each.
 """
 from __future__ import annotations
 
 import colorsys
-import re
 from functools import lru_cache
+from pathlib import Path
 from typing import Any
-from urllib.parse import quote_plus
 
-# Trend-based families: (name, hue, saturation scale, trend note). Sources: Pantone
-# Colour of the Year 2026 (Cloud Dancer) palettes, 2026 presentation/graphic design
-# trend reports (warm neutrals, earthy browns, natural greens, deep purples, soft
-# purposeful palettes, bold maximalist colour, retro/nostalgic tones).
-_FAMILIES = [
-    ("Cloud Dancer", 40, 0.12, "Pantone 2026"), ("Cloud Blue", 210, 0.15, "Pantone 2026"),
-    ("Powdered Pastel Peach", 22, 0.45, "Pantone 2026 palette"), ("Powdered Pastel Lemon", 52, 0.45, "Pantone 2026 palette"),
-    ("Powdered Pastel Lilac", 270, 0.40, "Pantone 2026 palette"), ("Tropical Lagoon", 180, 0.70, "Pantone 2026 palette"),
-    ("Moody Midnight", 232, 0.45, "Pantone 2026 palette"), ("Glamour Gold", 44, 0.60, "Pantone 2026 palette"),
-    ("Mocha Mousse", 24, 0.35, "Earthy brown"), ("Warm Sand", 36, 0.30, "Warm neutral"),
-    ("Terracotta", 14, 0.55, "Earthy"), ("Clay Rose", 6, 0.35, "Earthy"),
-    ("Olive Grove", 76, 0.40, "Natural green"), ("Sage Garden", 112, 0.28, "Natural green"),
-    ("Forest Canopy", 140, 0.45, "Natural green"), ("Deep Emerald", 156, 0.60, "Natural green"),
-    ("Healing Teal", 174, 0.55, "Healthcare calm"), ("Clinical Blue", 206, 0.60, "Healthcare calm"),
-    ("Deep Plum", 292, 0.45, "Deep purple"), ("Royal Aubergine", 282, 0.50, "Deep purple"),
-    ("Electric Violet", 262, 0.85, "Bold maximalist"), ("Hot Coral", 8, 0.85, "Bold maximalist"),
-    ("Signal Orange", 20, 0.90, "Bold maximalist"), ("Citrus Pop", 62, 0.85, "Bold maximalist"),
-    ("Retro Mustard", 46, 0.60, "Retro nostalgic"), ("Vintage Teal", 188, 0.35, "Retro nostalgic"),
-    ("Dusty Rose", 346, 0.30, "Retro nostalgic"), ("Ink Navy", 222, 0.55, "Sober business"),
+_CODES_FILE = Path(__file__).parent / "data" / "colorhunt_codes.txt"
+
+_HUE_FAMILIES = [
+    (15, "Red"), (40, "Orange"), (65, "Yellow"), (150, "Green"),
+    (190, "Teal"), (255, "Blue"), (290, "Purple"), (335, "Pink"), (361, "Red"),
 ]
-_FONTS = ["Inter", "Figtree", "Playfair Display", "Literata", "Plus Jakarta Sans"]
 
-# mode: (bg_l, bg_s, card, text_l, primary_l, primary_s)
-_MODES = {
-    "Light": dict(bg_l=0.97, bg_s=0.30, card="#FFFFFF", dark=False, p_l=0.38, p_s=0.65),
-    "Soft": dict(bg_l=0.92, bg_s=0.35, card=None, dark=False, p_l=0.42, p_s=0.55),
-    "Dark": dict(bg_l=0.11, bg_s=0.35, card=None, dark=True, p_l=0.62, p_s=0.70),
-    "Vivid": dict(bg_l=0.96, bg_s=0.55, card="#FFFFFF", dark=False, p_l=0.44, p_s=0.85),
-}
+_WHITE = (255, 255, 255)
+_BLACK = (0, 0, 0)
 
 
-def _hex(h: float, s: float, l: float) -> str:
-    r, g, b = colorsys.hls_to_rgb((h % 360) / 360.0, min(max(l, 0), 1), min(max(s, 0), 1))
-    return "#{:02X}{:02X}{:02X}".format(round(r * 255), round(g * 255), round(b * 255))
+def _to_rgb(color: str) -> tuple[int, int, int]:
+    c = color.lstrip("#")
+    return int(c[0:2], 16), int(c[2:4], 16), int(c[4:6], 16)
+
+
+def _to_hex(rgb: tuple[float, float, float]) -> str:
+    r, g, b = (max(0, min(255, round(v))) for v in rgb)
+    return f"#{r:02X}{g:02X}{b:02X}"
 
 
 def _lum(color: str) -> float:
-    vals = [int(color[i : i + 2], 16) / 255 for i in (1, 3, 5)]
-    lin = [v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4 for v in vals]
+    lin = []
+    for v in _to_rgb(color):
+        s = v / 255
+        lin.append(s / 12.92 if s <= 0.03928 else ((s + 0.055) / 1.055) ** 2.4)
     return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
 
 
@@ -60,99 +49,167 @@ def contrast(a: str, b: str) -> float:
     return (hi + 0.05) / (lo + 0.05)
 
 
-def _readable_on(background: str, h: float, minimum: float) -> str:
-    """Near-black / near-white text tinted with the hue that meets `minimum`."""
-    for l in (0.12, 0.08, 0.04, 0.0) if _lum(background) > 0.4 else (0.92, 0.96, 1.0):
-        candidate = _hex(h, 0.25 if 0 < l < 1 else 0, l)
-        if contrast(candidate, background) >= minimum:
+def _hls(color: str) -> tuple[float, float, float]:
+    r, g, b = (v / 255 for v in _to_rgb(color))
+    return colorsys.rgb_to_hls(r, g, b)  # h, l, s in 0..1
+
+
+def _from_hls(h: float, l: float, s: float) -> str:
+    r, g, b = colorsys.hls_to_rgb(h, max(0.0, min(1.0, l)), max(0.0, min(1.0, s)))
+    return _to_hex((r * 255, g * 255, b * 255))
+
+
+def _mix(a: str, b: str, t: float) -> str:
+    ra, rb = _to_rgb(a), _to_rgb(b)
+    return _to_hex(tuple(ra[i] + (rb[i] - ra[i]) * t for i in range(3)))  # type: ignore[arg-type]
+
+
+def _sat(color: str) -> float:
+    return _hls(color)[2]
+
+
+def _push(color: str, bg: str, minimum: float) -> str:
+    """Move lightness away from `bg` until contrast >= minimum (or limits)."""
+    if contrast(color, bg) >= minimum:
+        return color
+    h, l, s = _hls(color)
+    direction = -1 if _lum(bg) > 0.35 else 1
+    for _ in range(40):
+        l += direction * 0.025
+        candidate = _from_hls(h, l, s)
+        if contrast(candidate, bg) >= minimum:
             return candidate
-    return "#000000" if _lum(background) > 0.4 else "#FFFFFF"
+        if l <= 0 or l >= 1:
+            break
+    return "#111111" if direction < 0 else "#F5F5F5"
 
 
-def _build_colors(hue: float, mode: dict[str, Any]) -> dict[str, str]:
-    background = _hex(hue, mode["bg_s"], mode["bg_l"])
-    card = mode["card"] or (
-        _hex(hue, mode["bg_s"], 0.17) if mode["dark"] else _hex(hue, mode["bg_s"], 0.98)
+def _readable_on(bg: str, dark: str, light: str) -> str:
+    best = dark if contrast(dark, bg) >= contrast(light, bg) else light
+    if contrast(best, bg) >= 4.5:
+        return best
+    fallback = "#111111" if contrast("#111111", bg) >= contrast("#FFFFFF", bg) else "#FFFFFF"
+    return fallback
+
+
+def _family(color: str) -> str:
+    h, l, s = _hls(color)
+    if s < 0.12 or l > 0.94 or l < 0.06:
+        return "Neutral"
+    if 10 / 360 <= h < 50 / 360 and l < 0.5 and s < 0.8:
+        return "Brown"
+    deg = h * 360
+    for limit, name in _HUE_FAMILIES:
+        if deg < limit:
+            return name
+    return "Red"
+
+
+def _style_tag(palette: list[str]) -> str:
+    hls = [_hls(c) for c in palette]
+    avg_l = sum(x[1] for x in hls) / 4
+    avg_s = sum(x[2] for x in hls) / 4
+    hues = [x[0] * 360 for x in hls if x[2] > 0.15]
+    warm = bool(hues) and sum(1 for h in hues if h < 70 or h > 330) >= max(1, round(len(hues) * 0.75))
+    cool = bool(hues) and sum(1 for h in hues if 150 <= h <= 280) >= max(1, round(len(hues) * 0.75))
+    if avg_l < 0.3:
+        return "Dark"
+    if avg_s > 0.88 and 0.45 <= avg_l <= 0.7:
+        return "Neon"
+    if avg_l > 0.72:
+        return "Pastel"
+    if avg_s < 0.3:
+        return "Muted"
+    if warm and avg_l < 0.55 and avg_s < 0.6:
+        return "Earthy"
+    if avg_s > 0.6:
+        return "Vivid"
+    return "Warm" if warm else "Cool" if cool else "Balanced"
+
+
+def _build_theme(palette: list[str], dark: bool) -> dict[str, Any]:
+    p = sorted(palette, key=_lum)  # dark -> light
+    if not dark:
+        bg = p[3] if _lum(p[3]) >= 0.55 else _mix(p[3], "#FFFFFF", 0.7)
+        card = _mix(bg, "#FFFFFF", 0.6)
+        stroke = _mix(bg, p[0], 0.18)
+        text = _push(_mix(p[0], "#000000", 0.35), bg, 7.0)
+    else:
+        bg = p[0] if _lum(p[0]) <= 0.12 else _mix(p[0], "#000000", 0.65)
+        card = _mix(bg, "#FFFFFF", 0.08)
+        stroke = _mix(bg, "#FFFFFF", 0.18)
+        text = _push(_mix(p[3], "#FFFFFF", 0.8), bg, 7.0)
+
+    by_sat = sorted(p, key=_sat, reverse=True)
+    primary = _push(by_sat[0], bg, 3.0)
+    primary_text = _readable_on(
+        primary, _mix(p[0], "#000000", 0.5), _mix(p[3], "#FFFFFF", 0.75)
     )
-    primary = _hex(hue, mode["p_s"], mode["p_l"])
-    # Keep the brand colour readable against the background (>= 3:1 for UI shapes).
-    step = 0.02
-    p_l = mode["p_l"]
-    while contrast(primary, background) < 3.0 and 0.05 < p_l < 0.95:
-        p_l += step if mode["dark"] else -step
-        primary = _hex(hue, mode["p_s"], p_l)
-    def _best_text(color: str) -> str:
-        dark_text, light_text = _hex(hue, 0.25, 0.08), "#FFFFFF"
-        return dark_text if contrast(dark_text, color) >= contrast(light_text, color) else light_text
 
-    primary_text = _best_text(primary)
-    guard = 0
-    while contrast(primary_text, primary) < 4.5 and guard < 40:
-        guard += 1
-        p_l += -0.02 if primary_text == "#FFFFFF" else 0.02
-        p_l = min(max(p_l, 0.05), 0.95)
-        primary = _hex(hue, mode["p_s"], p_l)
-        primary_text = _best_text(primary)
-    background_text = _readable_on(background, hue, 7.0)
-    stroke = _hex(hue, mode["p_s"], max(0.2, min(0.8, p_l + (0.08 if mode["dark"] else -0.08))))
-    # Chart palette: analogous + complementary accents around the brand hue.
-    offsets = [0, 30, -30, 150, 180, 210, 60, -60, 120, 240]
-    lightness = [p_l, p_l + 0.05, p_l - 0.05, p_l, p_l + 0.08, p_l - 0.08, p_l, p_l + 0.1, p_l - 0.1, p_l]
-    graphs = {
-        f"graph_{i}": _hex(hue + offsets[i], 0.65, min(0.8, max(0.28, lightness[i])))
-        for i in range(10)
-    }
-    return {
+    base = [_push(c, bg, 2.0) for c in by_sat]
+    graph = [primary] + [c for c in base if c != primary]
+    for i in range(6):
+        a, b = base[i % 4], base[(i + 1) % 4]
+        mixed = _mix(a, b, 0.5)
+        h, l, s = _hls(mixed)
+        mixed = _from_hls(h, l + (0.1 if i % 2 else -0.1), s)
+        graph.append(_push(mixed, bg, 2.0))
+    graph = graph[:10]
+
+    colors = {
         "primary": primary,
-        "background": background,
+        "background": bg,
         "card": card,
         "stroke": stroke,
         "primary_text": primary_text,
-        "background_text": background_text,
-        **graphs,
+        "background_text": text,
     }
-
-
-def _font(name: str) -> dict[str, str]:
-    return {
-        "name": name,
-        "url": f"https://fonts.googleapis.com/css2?family={quote_plus(name)}:wght@400;500;700&display=swap",
-    }
-
-
-def _slug(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    for i, c in enumerate(graph):
+        colors[f"graph_{i}"] = c
+    return {"colors": colors, "palette": p, "mode": "dark" if dark else "light"}
 
 
 @lru_cache(maxsize=1)
-def all_theme_presets() -> tuple[dict[str, Any], ...]:
+def _palettes() -> tuple[tuple[str, tuple[str, ...]], ...]:
+    out: list[tuple[str, tuple[str, ...]]] = []
+    if not _CODES_FILE.exists():
+        return ()
+    for line in _CODES_FILE.read_text().split():
+        code = line.strip().lower()
+        if len(code) != 24 or any(ch not in "0123456789abcdef" for ch in code):
+            continue
+        out.append((code, tuple(f"#{code[i:i + 6].upper()}" for i in range(0, 24, 6))))
+    return tuple(out)
+
+
+@lru_cache(maxsize=1)
+def _index() -> tuple[tuple[dict[str, Any], ...], dict[str, dict[str, Any]]]:
     presets: list[dict[str, Any]] = []
-    for family, hue, sat_scale, trend in _FAMILIES:
-        for mode_name, mode in _MODES.items():
-            scaled = {
-                **mode,
-                "bg_s": mode["bg_s"] * (0.5 + sat_scale / 2),
-                "p_s": min(1.0, mode["p_s"] * sat_scale / 0.6),
-            }
-            colors = _build_colors(hue, scaled)
-            for font_name in _FONTS:
-                name = f"{family} {mode_name} · {font_name}"
-                presets.append(
-                    {
-                        "id": _slug(name),
-                        "name": name,
-                        "family": family,
-                        "trend": trend,
-                        "mode": mode_name,
-                        "font": font_name,
-                        "theme": {"colors": colors, "fonts": {"textFont": _font(font_name)}},
-                    }
-                )
-    return tuple(presets)
+    for number, (code, palette) in enumerate(_palettes(), start=1):
+        palette_list = list(palette)
+        tag = _style_tag(palette_list)
+        family = _family(max(palette_list, key=_sat))
+        for dark in (False, True):
+            mode = "Dark" if dark else "Light"
+            theme = _build_theme(palette_list, dark)
+            presets.append(
+                {
+                    "id": f"ch-{code}-{mode.lower()}",
+                    "name": f"{family} {tag} #{number:04d}",
+                    "family": family,
+                    "mode": mode,
+                    "trend": tag,
+                    "font": "Template font",
+                    "code": code,
+                    "theme": theme,
+                }
+            )
+    return tuple(presets), {p["id"]: p for p in presets}
+
+
+def all_theme_presets() -> tuple[dict[str, Any], ...]:
+    return _index()[0]
 
 
 def get_theme_preset(preset_id: str) -> dict[str, Any] | None:
-    for preset in all_theme_presets():
-        if preset["id"] == preset_id:
-            return preset
-    return None
+    return _index()[1].get(preset_id)

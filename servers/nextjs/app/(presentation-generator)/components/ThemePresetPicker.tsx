@@ -15,18 +15,20 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-const MODES = ["Light", "Soft", "Dark", "Vivid"];
-const TRENDS = [
-  "Pantone 2026",
-  "Earthy",
-  "Warm neutral",
-  "Natural green",
-  "Healthcare calm",
-  "Deep purple",
-  "Bold maximalist",
-  "Retro nostalgic",
-  "Sober business",
+const MODES = ["Light", "Dark"];
+const FAMILIES = [
+  "Red",
+  "Orange",
+  "Yellow",
+  "Green",
+  "Teal",
+  "Blue",
+  "Purple",
+  "Pink",
+  "Brown",
+  "Neutral",
 ];
+const TRENDS = ["Pastel", "Vivid", "Muted", "Earthy", "Neon", "Dark", "Warm", "Cool", "Balanced"];
 const PAGE_SIZE = 48;
 
 type Props = {
@@ -48,6 +50,7 @@ export const ThemePresetPicker = ({
   const [q, setQ] = useState("");
   const [mode, setMode] = useState("");
   const [trend, setTrend] = useState("");
+  const [family, setFamily] = useState("");
   const [items, setItems] = useState<ThemePresetSummary[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -60,7 +63,7 @@ export const ThemePresetPicker = ({
       setLoading(true);
       setFailed(false);
       try {
-        const result = await ThemePresetApi.list({ q, mode, trend, offset, limit: PAGE_SIZE });
+        const result = await ThemePresetApi.list({ q, mode, family, trend, offset, limit: PAGE_SIZE });
         if (id !== requestId.current) return;
         setTotal(result.total);
         setItems((prev) => (offset === 0 ? result.items : [...prev, ...result.items]));
@@ -70,7 +73,7 @@ export const ThemePresetPicker = ({
         if (id === requestId.current) setLoading(false);
       }
     },
-    [q, mode, trend],
+    [q, mode, family, trend],
   );
 
   useEffect(() => {
@@ -92,14 +95,14 @@ export const ThemePresetPicker = ({
         <DialogHeader>
           <DialogTitle>Theme library</DialogTitle>
           <DialogDescription>
-            2026-trend colour and font themes. Works with any template.
+            Colour palettes from Color Hunt. Picking one recolours every slide, on any template.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-wrap gap-2">
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search (e.g. teal, plum, Figtree)"
+            placeholder="Search (e.g. teal, pastel, F4CE14)"
             className={`${select} min-w-[200px] flex-1`}
           />
           <select value={mode} onChange={(e) => setMode(e.target.value)} className={select}>
@@ -108,8 +111,14 @@ export const ThemePresetPicker = ({
               <option key={m}>{m}</option>
             ))}
           </select>
+          <select value={family} onChange={(e) => setFamily(e.target.value)} className={select}>
+            <option value="">All colours</option>
+            {FAMILIES.map((f) => (
+              <option key={f}>{f}</option>
+            ))}
+          </select>
           <select value={trend} onChange={(e) => setTrend(e.target.value)} className={select}>
-            <option value="">All trends</option>
+            <option value="">All styles</option>
             {TRENDS.map((t) => (
               <option key={t}>{t}</option>
             ))}
@@ -144,7 +153,7 @@ export const ThemePresetPicker = ({
                   {selectedId === preset.id && <Check className="h-3 w-3 shrink-0" />}
                   {preset.name}
                 </p>
-                <p className="truncate text-[11px] text-[#808080]">{preset.trend}</p>
+                <p className="truncate text-[11px] text-[#808080]">{preset.mode} · {preset.trend}</p>
               </button>
             ))}
           </div>

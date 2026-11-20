@@ -27,6 +27,8 @@ export type TemplateThemeTextFont = {
 
 export type TemplateTheme = Record<TemplateThemeColorKey, string> & {
   fonts?: { textFont?: TemplateThemeTextFont };
+  /** ASF presets: the source palette (hex). When present, slides are recoloured to it. */
+  palette?: string[];
 };
 
 export const DEFAULT_TEMPLATE_THEME: TemplateTheme = {
@@ -106,7 +108,18 @@ export function normalizeTemplateTheme(value: unknown): TemplateTheme | null {
   const fonts =
     asRecord(nestedTheme?.fonts) ?? asRecord(root.fonts) ?? asRecord(data?.fonts);
   const textFont = normalizeTextFont(fonts?.textFont);
-  return textFont ? { ...normalized, fonts: { textFont } } : normalized;
+  const rawPalette =
+    (Array.isArray(root.palette) ? root.palette : null) ??
+    (Array.isArray(data?.palette) ? data.palette : null) ??
+    (Array.isArray(nestedTheme?.palette) ? nestedTheme.palette : null);
+  const palette = rawPalette
+    ? (rawPalette as unknown[])
+        .map(normalizedHex)
+        .filter((color): color is string => color != null)
+    : [];
+  const withPalette: TemplateTheme =
+    palette.length >= 2 ? { ...normalized, palette } : normalized;
+  return textFont ? { ...withPalette, fonts: { textFont } } : withPalette;
 }
 
 export function templateThemeGraphColors(theme: TemplateTheme): string[] {
