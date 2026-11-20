@@ -14,6 +14,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { LLMConfig } from "@/types/llm_config";
 import { trackEvent, MixpanelEvent } from "@/utils/mixpanel";
 import SettingSideBar, { SettingsSection } from "./SettingSideBar";
+import { ImageSourcesKeys } from "@/components/image-sources/ImageSourcesKeys";
 import TextProvider from "./TextProvider";
 import ImageProvider from "./ImageProvider";
 import WebSearchProvider from "./WebSearchProvider";
@@ -466,6 +467,15 @@ const SettingsPage = () => {
               <WebSearchProvider llmConfig={llmConfig} setLlmConfig={setLlmConfig} />
             </div>
           )}
+          {selectedProvider === 'image-sources' && (
+            <div className="motion-fade w-full max-w-2xl">
+              <h4 className="font-syne text-lg font-normal text-black">Image sources</h4>
+              <p className="mb-4 mt-1 text-xs leading-5 text-[#494A4D]">
+                Keep the Pexels, Pixabay and Unsplash keys together here. The image picker in the editor then searches all of them, plus licence-safe web images and AI generation.
+              </p>
+              <ImageSourcesKeys />
+            </div>
+          )}
           {selectedProvider === 'privacy' && <div className="motion-fade"><PrivacySettings /></div>}
           {selectedProvider === "admin" && <div className="pt-7"><AdminPanel embedded onBackToSettings={() => selectSettingsSection("text-provider")} /></div>}
           {selectedProvider === "session" && (
@@ -487,7 +497,7 @@ const SettingsPage = () => {
       </main>
 
       {/* Fixed Bottom Button — hidden on Sign out; nothing to save there */}
-      {!["session", "admin"].includes(selectedProvider) ? (
+      {!["session", "admin", "image-sources"].includes(selectedProvider) ? (
         <div className="fixed bottom-20 right-5 z-50 mx-auto">
           <button
             onClick={handleSaveConfig}

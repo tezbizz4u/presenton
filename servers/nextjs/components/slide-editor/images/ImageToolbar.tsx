@@ -45,7 +45,7 @@ import {
 } from "@/components/slide-editor/model/image-effects";
 import type { ImageEffects } from "@/components/slide-editor/types";
 import { OpacitySwatchIcon } from "@/components/slide-editor/toolbar/OpacitySwatchIcon";
-import { ImagePickerModal } from "@/components/slide-editor/images/ImagePickerModal";
+import { AsfImagePickerModal as ImagePickerModal } from "@/components/slide-editor/images/AsfImagePickerModal";
 import { resolveBackendAssetSource } from "@/utils/api";
 import { ImagesApi } from "@/app/(presentation-generator)/services/api/images";
 import { notify } from "@/components/ui/sonner";

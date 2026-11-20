@@ -1,10 +1,10 @@
 import React from 'react'
-import { LogOut, Search, Shield, ShieldCheck } from 'lucide-react'
+import { ImagePlus, LogOut, Search, Shield, ShieldCheck } from 'lucide-react'
 import { IMAGE_PROVIDERS, LLM_PROVIDERS } from '@/utils/providerConstants'
 import { useSelector } from 'react-redux'
 import { RootState } from '@/store/store'
 
-export type SettingsSection = 'text-provider' | 'image-provider' | 'web-search-provider' | 'privacy' | 'admin' | 'session'
+export type SettingsSection = 'text-provider' | 'image-provider' | 'web-search-provider' | 'image-sources' | 'privacy' | 'admin' | 'session'
 
 const SettingSideBar = ({ selectedProvider, setSelectedProvider, presentonSelected = false, className = '' }: { selectedProvider: SettingsSection, setSelectedProvider: (provider: SettingsSection) => void, presentonSelected?: boolean, className?: string }) => {
     const { llm_config } = useSelector((state: RootState) => state.userConfig)
@@ -22,6 +22,12 @@ const SettingSideBar = ({ selectedProvider, setSelectedProvider, presentonSelect
                             <img src={textProviderIcon} className=' object-cover w-full h-full overflow-hidden' alt='google' />
                         </div>
                         <p className='text-[#191919] text-xs  font-medium' >Text Provider</p>
+                    </button>
+                    <button className={` w-full rounded-[6px] px-3 py-4 flex items-center gap-1.5 border  ${selectedProvider === 'image-sources' ? 'bg-[#F4F3FF] border-[#D9D6FE]' : 'bg-white border-[#EDEEEF]'}`} onClick={() => setSelectedProvider('image-sources')}>
+                        <div className='relative w-[18px] h-[18px] rounded-full overflow-hidden border border-[#EDEEEF] flex items-center justify-center bg-white'>
+                            <ImagePlus className='w-3 h-3 text-[#5146E5]' />
+                        </div>
+                        <p className='text-[#191919] text-xs font-medium'>Image Sources</p>
                     </button>
                     {!presentonSelected ? (
                         <>

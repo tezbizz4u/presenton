@@ -16,7 +16,7 @@ import {
   X,
 } from "lucide-react";
 import IconsEditor from "@/components/slide-editor/images/IconsEditor";
-import { ImagePickerModal } from "@/components/slide-editor/images/ImagePickerModal";
+import { AsfImagePickerModal as ImagePickerModal } from "@/components/slide-editor/images/AsfImagePickerModal";
 import { DeferredColorInput } from "@/components/slide-editor/toolbar/DeferredColorInput";
 import type {
   BeforeAfterInfographicData,
