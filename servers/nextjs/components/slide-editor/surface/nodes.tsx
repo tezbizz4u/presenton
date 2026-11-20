@@ -1675,6 +1675,12 @@ function RawElementNode({
     ],
   );
 
+  const containerClipRadii: [number, number, number, number] | null = (() => {
+    if (!isBoxVisualType(readString(renderedElement.type))) return null;
+    const radii = imageCornerRadii(renderedElement, visualBox.width, visualBox.height);
+    return radii.some((value) => value > 0) ? radii : null;
+  })();
+
   return (
     <Group
       ref={(node) => {
@@ -1896,6 +1902,19 @@ function RawElementNode({
           onSelect={() => onSelect(selection)}
         />
       ) : null}
+      <Group
+        clipFunc={
+          containerClipRadii
+            ? (context) =>
+                drawRoundedImageClip(
+                  context,
+                  visualBox.width,
+                  visualBox.height,
+                  containerClipRadii,
+                )
+            : undefined
+        }
+      >
       {laidOutChildren.map(({ child, index, box: childBox, layoutManaged }) => (
         <MemoizedRawElementNode
           key={rawElementKey(child, index)}
@@ -1934,6 +1953,7 @@ function RawElementNode({
           renderTextAsHtml={renderTextAsHtml}
         />
       ))}
+      </Group>
     </Group>
   );
 }
