@@ -32,6 +32,7 @@ from templates.theme_presets import _from_hls, _hls, _lum, _mix, _to_hex, _to_rg
 
 _HEX = re.compile(r"^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$")
 _SNAPSHOT_KEY = "asf_recolor_orig"
+_HTML_KEY = "asf_recolor_html_orig"
 _SLIDE_W, _SLIDE_H = 1280, 720
 
 
@@ -178,7 +179,7 @@ def _recolor_art(src_url: str, mapper: "_Mapper") -> str | None:
         out_path = os.path.join(out_dir, name + ext)
         tmp = out_path + ".tmp"
         if opaque:
-            rgb.save(tmp, format="JPEG", quality=90)
+            rgb.save(tmp, format="JPEG", quality=82, optimize=True, progressive=True)
         else:
             result.save(tmp, format="PNG")
         os.replace(tmp, out_path)
@@ -186,6 +187,143 @@ def _recolor_art(src_url: str, mapper: "_Mapper") -> str | None:
         return f"/app_data/templates/{_ART_DIR}/{name}{ext}"
     except Exception:
         return None
+
+
+# ---------------------------------------------------------------- SmartHtml slides
+_TW_FAMILY_HUE = {
+    "red": 25, "orange": 45, "amber": 70, "yellow": 90, "lime": 125, "green": 150,
+    "emerald": 160, "teal": 180, "cyan": 200, "sky": 220, "blue": 255, "indigo": 275,
+    "violet": 290, "purple": 300, "fuchsia": 320, "pink": 350, "rose": 10,
+}
+_TW_GREYS = ("slate", "gray", "zinc", "neutral", "stone")
+_TW_SHADE_L = {
+    50: 0.97, 100: 0.93, 200: 0.87, 300: 0.78, 400: 0.68, 500: 0.58,
+    600: 0.50, 700: 0.42, 800: 0.34, 900: 0.26, 950: 0.18,
+}
+_TW_PREFIX = r"(?:bg|text|border|border-[trblxy]|fill|stroke|from|via|to|ring|divide|outline|decoration|accent|caret|placeholder|shadow)"
+_TW_NAMED = re.compile(
+    r"(?<![\w-])(" + _TW_PREFIX + r")-(white|black|(?:" + "|".join(list(_TW_FAMILY_HUE) + list(_TW_GREYS)) + r")-(?:50|100|200|300|400|500|600|700|800|900|950))(?![\w-])"
+)
+_HTML_HEX = re.compile(r"(?<=[\[:\s\"'(,=])#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![0-9a-zA-Z-])")
+_ROOT_TAG = re.compile(r"<section\b[^>]*>", re.IGNORECASE)
+
+
+def _tw_to_hex(token: str) -> str | None:
+    if token == "white":
+        return "#FFFFFF"
+    if token == "black":
+        return "#000000"
+    family, _, shade = token.rpartition("-")
+    lightness = _TW_SHADE_L.get(int(shade)) if shade.isdigit() else None
+    if lightness is None:
+        return None
+    if family in _TW_GREYS:
+        return _from_hls(0.0, lightness, 0.0)
+    hue = _TW_FAMILY_HUE.get(family)
+    if hue is None:
+        return None
+    return _from_hls(hue / 360.0, lightness, 0.75)
+
+
+def _norm_hex(raw: str) -> str:
+    if len(raw) == 3:
+        raw = "".join(ch * 2 for ch in raw)
+    return "#" + raw.upper()
+
+
+def _html_colours(html: str) -> list[str]:
+    found = [_norm_hex(m.group(1)) for m in _HTML_HEX.finditer(html)]
+    for m in _TW_NAMED.finditer(html):
+        value = _tw_to_hex(m.group(2))
+        if value:
+            found.append(value.upper())
+    return found
+
+
+def recolor_html_slide(slide: Any, theme: dict[str, Any]) -> int:
+    """Recolour a SmartHtml slide (literal hex colours and Tailwind colour classes)."""
+    html = slide.html_content
+    if not isinstance(html, str) or not html.strip() or not theme.get("palette"):
+        return 0
+    colours = _html_colours(html)
+    if not colours:
+        return 0
+    usage: dict[str, int] = {}
+    for value in colours:
+        usage[value] = usage.get(value, 0) + 1
+
+    root = _ROOT_TAG.search(html)
+    root_bg: str | None = None
+    if root:
+        for m in re.finditer(r"(?<![\w-])bg-(?:\[(#[0-9a-fA-F]{3,6})\]|(white|black|[a-z]+-\d{2,3}))(?![\w-])", root.group(0)):
+            raw = m.group(1) or m.group(2)
+            root_bg = _norm_hex(raw[1:]) if raw.startswith("#") else _tw_to_hex(raw)
+            break
+    native_dark = bool(root_bg) and _lstar(root_bg) < 0.5
+    mapper = _Mapper(theme, usage, native_dark, False)
+
+    def map_hex(raw: str) -> str:
+        return mapper.map(_norm_hex(raw))
+
+    orig_bg = root_bg or "#FFFFFF"
+
+    def readable(original: str, mapped: str) -> str:
+        """Text that read well on the slide background must still read on the new one."""
+        if contrast(original, orig_bg) >= 3.0:
+            return _ensure_contrast(mapped, mapper.bg, 4.5)
+        return mapped
+
+    def sub_text(text: str) -> str:
+        text = re.sub(
+            r"(?<![\w-])(text-\[)(#[0-9a-fA-F]{3,6})(\])",
+            lambda m: m.group(1) + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:])) + m.group(3),
+            text,
+        )
+        text = re.sub(
+            r"(?<![\w-])(color\s*:\s*)(#[0-9a-fA-F]{3,6})(?![0-9a-zA-Z-])",
+            lambda m: m.group(1) + readable(_norm_hex(m.group(2)[1:]), map_hex(m.group(2)[1:])),
+            text,
+        )
+        text = _HTML_HEX.sub(lambda m: map_hex(m.group(1)) if not m.group(0).startswith("#__") else m.group(0), text)
+
+        def named(m: re.Match) -> str:
+            value = _tw_to_hex(m.group(2))
+            if not value:
+                return m.group(0)
+            mapped = mapper.map(value.upper())
+            if m.group(1) == "text":
+                mapped = readable(value.upper(), mapped)
+            return f"{m.group(1)}-[{mapped}]"
+
+        return _TW_NAMED.sub(named, text)
+
+    if root:
+        head, tail = html[: root.start()], html[root.end() :]
+        tag = root.group(0)
+        done = {"bg": False}
+
+        def bg_sub(m: re.Match) -> str:
+            if done["bg"]:
+                return m.group(0)
+            done["bg"] = True
+            return "bg-[__ASFBG__]"
+
+        tag = re.sub(
+            r"(?<![\w-])bg-(?:\[#[0-9a-fA-F]{3,6}\]|white|black|[a-z]+-\d{2,3})(?![\w-])",
+            bg_sub,
+            tag,
+            count=1,
+        )
+        new_html = sub_text(head) + sub_text(tag).replace("__ASFBG__", mapper.bg) + sub_text(tail)
+    else:
+        new_html = sub_text(html)
+    if new_html == html:
+        return 0
+    props = dict(slide.properties) if isinstance(slide.properties, dict) else {}
+    props[_HTML_KEY] = html
+    slide.properties = props
+    slide.html_content = new_html
+    return 1
 
 
 def _is_color_key(key: str) -> bool:
@@ -367,6 +505,10 @@ class _Mapper:
 def revert_slide(slide: Any) -> None:
     """Undo a previous recolour of this slide (if one was recorded)."""
     props = slide.properties if isinstance(slide.properties, dict) else None
+    if props and isinstance(props.get(_HTML_KEY), str):
+        slide.html_content = props[_HTML_KEY]
+        slide.properties = {k: v for k, v in props.items() if k != _HTML_KEY}
+        props = slide.properties
     snapshot = props.get(_SNAPSHOT_KEY) if props else None
     if props is not None and _SNAPSHOT_KEY in props and not snapshot:
         slide.properties = {k: v for k, v in props.items() if k != _SNAPSHOT_KEY}
@@ -390,6 +532,8 @@ def revert_slide(slide: Any) -> None:
 def recolor_slide(slide: Any, theme: dict[str, Any]) -> int:
     """Recolour one slide's ui to `theme` ({'colors':..., 'palette':...}); returns changed count."""
     revert_slide(slide)
+    if not isinstance(slide.ui, dict) and isinstance(getattr(slide, "html_content", None), str):
+        return recolor_html_slide(slide, theme)
     if not isinstance(slide.ui, dict) or not theme.get("palette"):
         return 0
     ui = copy.deepcopy(slide.ui)
@@ -476,7 +620,7 @@ def ensure_theme_on_new_slides(slides: Iterable[Any], theme: dict[str, Any] | No
     count = 0
     for slide in slides:
         props = slide.properties if isinstance(slide.properties, dict) else {}
-        if _SNAPSHOT_KEY in props:
+        if _SNAPSHOT_KEY in props or _HTML_KEY in props:
             continue
         count += recolor_slide(slide, data)
     return count
@@ -485,5 +629,5 @@ def ensure_theme_on_new_slides(slides: Iterable[Any], theme: dict[str, Any] | No
 def forget_snapshot(slide: Any) -> None:
     """Drop the snapshot without touching ui (used when ui was replaced by a fresh layout)."""
     props = slide.properties if isinstance(slide.properties, dict) else None
-    if props and _SNAPSHOT_KEY in props:
-        slide.properties = {k: v for k, v in props.items() if k != _SNAPSHOT_KEY}
+    if props and (_SNAPSHOT_KEY in props or _HTML_KEY in props):
+        slide.properties = {k: v for k, v in props.items() if k not in (_SNAPSHOT_KEY, _HTML_KEY)}

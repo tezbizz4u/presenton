@@ -605,7 +605,14 @@ const PresentationHeader = ({
       const nextSlides = byId.size
         ? presentationData.slides?.map((slide: any) => {
             const fresh = byId.get(String(slide.id));
-            return fresh ? { ...slide, ui: fresh.ui, properties: fresh.properties } : slide;
+            return fresh
+              ? {
+                  ...slide,
+                  ui: fresh.ui,
+                  properties: fresh.properties,
+                  html_content: fresh.html_content ?? slide.html_content,
+                }
+              : slide;
           })
         : presentationData.slides;
       if (theme) {

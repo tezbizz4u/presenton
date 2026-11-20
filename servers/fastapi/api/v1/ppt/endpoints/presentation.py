@@ -2263,6 +2263,8 @@ async def stream_smart_presentation(
         final_presentation.n_slides = slide_count
         final_presentation.fonts = final_fonts
         sql_session.add(final_presentation)
+        apply_theme_to_slides(slides, final_presentation.theme)
+        sql_session.add_all(slides)
         await sql_session.commit()
 
         response = PresentationWithSlides(
