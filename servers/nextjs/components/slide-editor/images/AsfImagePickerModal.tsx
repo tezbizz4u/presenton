@@ -400,7 +400,7 @@ export function AsfImagePickerModal({
                     </div>
                   ) : busy && !grid.length ? (
                     <p className="flex items-center gap-2 py-10 text-sm text-[#6B7280]">
-                      <Loader2 className="size-4 animate-spin" /> {tab === "ai" ? "Creating images, this can take up to a minute…" : tab === "web" ? "Searching open-licence sources, this can take up to 30 seconds…" : "Searching…"}
+                      <Loader2 className="size-4 animate-spin" /> {tab === "ai" ? "Creating images, this can take up to a minute…" : tab === "web" ? "Searching Wikimedia Commons…" : "Searching…"}
                     </p>
                   ) : grid.length ? (
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -435,7 +435,7 @@ export function AsfImagePickerModal({
                       {tab === "stock"
                         ? "Search Pexels, Pixabay and Unsplash together."
                         : tab === "web"
-                          ? "Search openly licensed images from Wikimedia Commons, Flickr CC and museums. Credit is saved with each image."
+                          ? "Search openly licensed images (Creative Commons and public domain) from Wikimedia Commons. Credit is saved with each image."
                           : tab === "ai"
                             ? "Describe an image, pick a style and format, then Generate. Medical diagrams: check the result carefully."
                             : "No uploads yet."}

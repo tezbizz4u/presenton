@@ -10,10 +10,12 @@ in full.
 from __future__ import annotations
 
 import asyncio
+import html
 import ipaddress
 import json
 import logging
 import os
+import re
 import socket
 import tempfile
 import uuid
@@ -334,7 +336,17 @@ async def test_key(body: KeyTest):
 
 # ------------------------------------------------------- licence-safe web search
 
-OPENVERSE_URL = "https://api.openverse.org/v1/images/"
+COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def _plain(value: str) -> str:
+    return html.unescape(_TAG_RE.sub("", value or "")).strip()
+
+
+def _open_licence(short: str) -> bool:
+    low = short.lower()
+    return low.startswith("cc") or low.startswith("public domain") or low.startswith("pd") or "cc0" in low
 
 
 @ASF_IMAGES_ROUTER.get("/web")
@@ -344,48 +356,72 @@ async def search_web(
     limit: int = Query(default=24, ge=1, le=40),
     page: int = Query(default=1, ge=1, le=20),
 ):
-    """Internet search restricted to openly licensed images (Openverse: Wikimedia
-    Commons, Flickr CC, museums, ...). Random web images are not offered because
-    their reuse rights are unknown."""
+    """Internet search restricted to openly licensed images (Wikimedia Commons:
+    Creative Commons and public domain, with author and licence). Random web
+    images are not offered because their reuse rights are unknown."""
     params: dict[str, Any] = {
-        "q": query.strip(),
-        "page_size": limit,
-        "page": page,
-        "license_type": "commercial,modification",
-        "mature": "false",
+        "action": "query",
+        "generator": "search",
+        "gsrnamespace": 6,
+        "gsrsearch": f"{query.strip()} filetype:bitmap",
+        "gsrlimit": min(limit * 2, 50),
+        "gsroffset": (page - 1) * min(limit * 2, 50),
+        "prop": "imageinfo",
+        "iiprop": "url|size|mime|extmetadata",
+        "iiurlwidth": 1600,
+        "iiextmetadatafilter": "LicenseShortName|Artist|NonFree|ImageDescription",
+        "format": "json",
+        "formatversion": 2,
     }
-    aspect = {"landscape": "wide", "portrait": "tall", "square": "square"}.get(orientation)
-    if aspect:
-        params["aspect_ratio"] = aspect
     async with aiohttp.ClientSession(trust_env=True) as session:
-        data = await _get_json(session, OPENVERSE_URL, retries=1, params=params, headers={"User-Agent": "asf-presenton/1.0"})
+        data = await _get_json(
+            session, COMMONS_URL, retries=1, params=params, headers={"User-Agent": "asf-presenton/1.0"}
+        )
+    pages = sorted((data.get("query", {}) or {}).get("pages", []), key=lambda x: x.get("index", 0))
     results = []
-    for item in data.get("results", []):
-        url = item.get("url")
-        if not url or (item.get("filetype") or "").lower() not in ("jpg", "jpeg", "png", "webp", ""):
+    for item in pages:
+        info = (item.get("imageinfo") or [{}])[0]
+        meta = info.get("extmetadata") or {}
+        if info.get("mime") not in ("image/jpeg", "image/png", "image/webp"):
             continue
-        licence = (item.get("license") or "").upper()
-        version = item.get("license_version") or ""
-        label = f"CC {licence} {version}".strip() if licence not in ("", "CC0", "PDM") else (licence or "Open licence")
+        if str((meta.get("NonFree") or {}).get("value", "")).lower() in ("true", "1"):
+            continue
+        licence = _plain((meta.get("LicenseShortName") or {}).get("value", ""))
+        if not licence or not _open_licence(licence):
+            continue
+        width, height = info.get("width") or 0, info.get("height") or 0
+        ratio = (width / height) if width and height else 1
+        if orientation == "landscape" and ratio < 1.15:
+            continue
+        if orientation == "portrait" and ratio > 0.87:
+            continue
+        if orientation == "square" and not (0.87 <= ratio <= 1.15):
+            continue
+        url = info.get("thumburl") or info.get("url")
+        if not url:
+            continue
+        title = item.get("title", "").removeprefix("File:")
+        author = _plain((meta.get("Artist") or {}).get("value", "")) or "Unknown"
         results.append(
             {
-                "id": f"web-{item.get('id')}",
+                "id": f"web-{item.get('pageid')}",
                 "source": "web",
-                "thumb": item.get("thumbnail") or url,
+                "thumb": url,
                 "url": url,
-                "width": item.get("width"),
-                "height": item.get("height"),
-                "alt": item.get("title") or "",
+                "width": width,
+                "height": height,
+                "alt": title,
                 "credit": _credit(
-                    item.get("source") or "web",
-                    item.get("creator") or "Unknown",
-                    item.get("creator_url") or "",
-                    item.get("foreign_landing_url") or "",
-                    label,
+                    "wikimedia-commons",
+                    author[:120],
+                    "",
+                    info.get("descriptionurl") or "",
+                    licence,
                 ),
-                "attribution": item.get("attribution") or "",
             }
         )
+        if len(results) >= limit:
+            break
     return {"results": results, "errors": {}}
 
 
