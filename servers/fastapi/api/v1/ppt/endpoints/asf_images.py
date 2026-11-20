@@ -47,7 +47,7 @@ ENV_NAMES = {
 }
 UTM = "utm_source=asf_presenton&utm_medium=referral"
 MAX_DOWNLOAD_BYTES = 20 * 1024 * 1024
-HTTP_TIMEOUT = aiohttp.ClientTimeout(total=25)
+HTTP_TIMEOUT = aiohttp.ClientTimeout(total=40)
 
 # ---------------------------------------------------------------- key storage
 
@@ -134,15 +134,24 @@ def _credit(source: str, author: str, author_url: str, page_url: str, licence: s
     }
 
 
-async def _get_json(session: aiohttp.ClientSession, url: str, **kwargs) -> Any:
-    async with session.get(url, timeout=HTTP_TIMEOUT, **kwargs) as response:
-        if response.status in (401, 403):
-            raise HTTPException(status_code=401, detail="The key was rejected (invalid or no access)")
-        if response.status == 429:
-            raise HTTPException(status_code=429, detail="Rate limit reached, try again later")
-        if response.status != 200:
-            raise HTTPException(status_code=502, detail=f"Source answered {response.status}")
-        return await response.json(content_type=None)
+async def _get_json(session: aiohttp.ClientSession, url: str, retries: int = 0, **kwargs) -> Any:
+    last: HTTPException | None = None
+    for attempt in range(retries + 1):
+        try:
+            async with session.get(url, timeout=HTTP_TIMEOUT, **kwargs) as response:
+                if response.status in (401, 403):
+                    raise HTTPException(status_code=401, detail="The key was rejected (invalid or no access)")
+                if response.status == 429:
+                    raise HTTPException(status_code=429, detail="Rate limit reached, try again later")
+                if response.status in (502, 503, 504):
+                    last = HTTPException(status_code=504, detail="The image source is busy, please try again")
+                    continue
+                if response.status != 200:
+                    raise HTTPException(status_code=502, detail=f"Source answered {response.status}")
+                return await response.json(content_type=None)
+        except (asyncio.TimeoutError, aiohttp.ClientError):
+            last = HTTPException(status_code=504, detail="The image source is slow right now, please try again")
+    raise last or HTTPException(status_code=502, detail="Search failed")
 
 
 def _orientation(value: str, source: str) -> Optional[str]:
@@ -344,17 +353,16 @@ async def search_web(
         "page": page,
         "license_type": "commercial,modification",
         "mature": "false",
-        "extension": "jpg,jpeg,png,webp",
     }
     aspect = {"landscape": "wide", "portrait": "tall", "square": "square"}.get(orientation)
     if aspect:
         params["aspect_ratio"] = aspect
     async with aiohttp.ClientSession(trust_env=True) as session:
-        data = await _get_json(session, OPENVERSE_URL, params=params, headers={"User-Agent": "asf-presenton/1.0"})
+        data = await _get_json(session, OPENVERSE_URL, retries=1, params=params, headers={"User-Agent": "asf-presenton/1.0"})
     results = []
     for item in data.get("results", []):
         url = item.get("url")
-        if not url:
+        if not url or (item.get("filetype") or "").lower() not in ("jpg", "jpeg", "png", "webp", ""):
             continue
         licence = (item.get("license") or "").upper()
         version = item.get("license_version") or ""
