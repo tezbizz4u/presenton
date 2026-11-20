@@ -24,6 +24,7 @@ from sqlalchemy import delete
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 from constants.presentation import MAX_NUMBER_OF_SLIDES
+from models.sql.folder import FolderModel
 from enums.async_task_status import AsyncTaskStatus
 from enums.webhook_event import WebhookEvent
 from models.api_error_model import APIErrorModel
@@ -338,6 +339,18 @@ def _extract_template_fonts_from_assets(assets: Any) -> Optional[dict[str, str]]
     if not isinstance(assets, dict):
         return None
     return _coerce_presentation_font_map(assets.get("fonts"))
+
+
+async def _require_folder_id(
+    folder_id: Optional[uuid.UUID], sql_session: AsyncSession
+) -> Optional[uuid.UUID]:
+    """Return folder_id if it exists (and belongs to the caller), else raise 404."""
+    if folder_id is None:
+        return None
+    folder = await sql_session.get(FolderModel, folder_id)
+    if folder is None:
+        raise HTTPException(status_code=404, detail="Folder not found")
+    return folder_id
 
 
 def _presentation_response_data(presentation: PresentationModel) -> dict:
@@ -1511,6 +1524,14 @@ async def get_all_presentations(
             )
         ),
     ] = True,
+    folder_id: Annotated[
+        Optional[uuid.UUID],
+        Query(description="Only include presentations inside this folder."),
+    ] = None,
+    unfiled: Annotated[
+        bool,
+        Query(description="Only include presentations that are not in any folder."),
+    ] = False,
     sql_session: AsyncSession = Depends(get_async_session),
 ):
     if include_slides:
@@ -1523,6 +1544,10 @@ async def get_all_presentations(
 
     if version is not None:
         query = query.where(PresentationModel.version == version)
+    if folder_id is not None:
+        query = query.where(PresentationModel.folder_id == folder_id)
+    elif unfiled:
+        query = query.where(PresentationModel.folder_id.is_(None))
     query = query.order_by(PresentationModel.created_at.desc())
 
     results = await sql_session.execute(query)
@@ -1692,8 +1717,10 @@ async def create_presentation(
     web_search: Annotated[bool, Body()] = False,
     generation_mode: Annotated[Literal["standard", "smart"], Body()] = "standard",
     community_design_ids: Annotated[Optional[List[int]], Body()] = None,
+    folder_id: Annotated[Optional[uuid.UUID], Body()] = None,
     sql_session: AsyncSession = Depends(get_async_session),
 ):
+    folder_id = await _require_folder_id(folder_id, sql_session)
 
     if n_slides is not None and n_slides < 1:
         raise HTTPException(
@@ -1757,6 +1784,7 @@ async def create_presentation(
         web_search=web_search,
         generation_mode=generation_mode,
         community_design_ids=normalized_community_ids or None,
+        folder_id=folder_id,
     )
 
     sql_session.add(presentation)
@@ -1787,8 +1815,10 @@ async def create_presentation(
 )
 async def create_blank_presentation(
     template_id: Annotated[Optional[str], Body(embed=True)] = None,
+    folder_id: Annotated[Optional[uuid.UUID], Body(embed=True)] = None,
     sql_session: AsyncSession = Depends(get_async_session),
 ):
+    folder_id = await _require_folder_id(folder_id, sql_session)
     template = None
     if template_id is not None:
         template = await _resolve_requested_template(template_id, sql_session)
@@ -1809,6 +1839,7 @@ async def create_blank_presentation(
         layout=None,
         fonts=_extract_template_fonts_from_assets(template.assets) if template else None,
         include_title_slide=False,
+        folder_id=folder_id,
     )
     slide = SlideModel(
         presentation=presentation_id,
@@ -2631,6 +2662,8 @@ async def check_if_api_request_is_valid(
             detail="Either content or slides markdown or files is required to generate presentation",
         )
 
+    await _require_folder_id(request.folder_id, sql_session)
+
     if request.n_slides is not None and request.n_slides <= 0:
         raise HTTPException(
             status_code=400,
@@ -2956,6 +2989,7 @@ async def generate_presentation_handler(
             instructions=request.instructions,
             fonts=template_fonts,
             theme=template_theme,
+            folder_id=request.folder_id,
         )
 
         # Updating async status

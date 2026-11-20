@@ -1,3 +1,4 @@
+import uuid
 from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
@@ -44,6 +45,10 @@ class GeneratePresentationRequest(BaseModel):
     trigger_webhook: bool = Field(
         default=False, description="Whether to trigger subscribed webhooks"
     )
+    folder_id: Optional[uuid.UUID] = Field(
+        default=None,
+        description="Optional folder to save the generated presentation in",
+    )
 
 
 class GenerateSmartPresentationRequest(BaseModel):
@@ -62,3 +67,4 @@ class GenerateSmartPresentationRequest(BaseModel):
     )
     community_design_ids: Optional[List[int]] = None
     export_as: Literal["pptx", "pdf"] = "pptx"
+    folder_id: Optional[uuid.UUID] = None

@@ -14,6 +14,7 @@ class PresentationWithSlides(BaseModel):
     n_slides: int
     language: str
     title: Optional[str] = None
+    folder_id: Optional[uuid.UUID] = None
     created_at: datetime
     updated_at: datetime
     tone: Optional[str] = None

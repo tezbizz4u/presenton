@@ -14,6 +14,7 @@ from models.sql.async_presentation_generation_status import (
     AsyncPresentationGenerationTaskModel,
 )
 from models.sql.chat_history_message import ChatHistoryMessageModel
+from models.sql.folder import FolderModel
 from models.sql.font_upload import FontUpload
 from models.sql.api_key import ApiKey
 from models.sql.image_asset import ImageAsset
@@ -54,6 +55,7 @@ async_session_maker = async_sessionmaker(sql_engine, expire_on_commit=False)
 
 
 _STRICT_OWNER_MODELS = (
+    FolderModel,
     PresentationModel,
     SlideModel,
     ChatHistoryMessageModel,
@@ -122,6 +124,7 @@ async def create_db_and_tables():
                 lambda sync_conn: SQLModel.metadata.create_all(
                     sync_conn,
                     tables=[
+                        FolderModel.__table__,
                         PresentationModel.__table__,
                         SlideModel.__table__,
                         KeyValueSqlModel.__table__,

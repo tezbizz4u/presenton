@@ -31,6 +31,14 @@ class PresentationModel(SQLModel, table=True):
             index=True,
         ),
     )
+    folder_id: Optional[uuid.UUID] = Field(
+        default=None,
+        sa_column=Column(
+            ForeignKey("folders.id", ondelete="SET NULL"),
+            nullable=True,
+            index=True,
+        ),
+    )
     version: PresentationVersion = Field(
         sa_column=Column(
             SAEnum(
@@ -84,6 +92,7 @@ class PresentationModel(SQLModel, table=True):
         return PresentationModel(
             id=uuid.uuid4(),
             owner_id=self.owner_id,
+            folder_id=self.folder_id,
             version=self.version,
             content=self.content,
             n_slides=self.n_slides,

@@ -80,6 +80,7 @@ async def _create_smart_presentation(
         web_search=request.web_search,
         generation_mode="smart",
         community_design_ids=request.community_design_ids,
+        folder_id=request.folder_id,
         sql_session=sql_session,
     )
 
