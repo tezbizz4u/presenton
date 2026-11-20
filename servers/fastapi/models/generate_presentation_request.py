@@ -49,6 +49,10 @@ class GeneratePresentationRequest(BaseModel):
         default=None,
         description="Optional folder to save the generated presentation in",
     )
+    theme_preset: Optional[str] = Field(
+        default=None,
+        description="Optional id from /api/v1/ppt/theme-presets; recolors the chosen template",
+    )
 
 
 class GenerateSmartPresentationRequest(BaseModel):

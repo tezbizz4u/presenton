@@ -116,6 +116,7 @@ from templates.v2.content import (
     repeated_child_source_index,
 )
 from templates.v2.theme import template_theme_for_presentation
+from templates.theme_presets import get_theme_preset
 from templates.default_templates import resolve_default_template_id
 from services.community_presentations import (
     build_community_design_context,
@@ -2663,6 +2664,8 @@ async def check_if_api_request_is_valid(
         )
 
     await _require_folder_id(request.folder_id, sql_session)
+    if request.theme_preset and get_theme_preset(request.theme_preset) is None:
+        raise HTTPException(status_code=400, detail="Unknown theme_preset id")
 
     if request.n_slides is not None and request.n_slides <= 0:
         raise HTTPException(
@@ -2911,6 +2914,16 @@ async def generate_presentation_handler(
             template_fonts,
             template_theme,
         ) = await _resolve_generation_layout(request.template, sql_session)
+        if request.theme_preset:
+            preset = get_theme_preset(request.theme_preset)
+            if preset is not None:
+                template_theme = {
+                    "name": preset["name"],
+                    "description": f"ASF theme preset: {preset['name']}",
+                    "data": preset["theme"],
+                    "source": "template",
+                    "template_id": (template_theme or {}).get("template_id"),
+                }
         safe_log(logger, logging.INFO,
             "[presentation.generate] layout ready template=%r slides=%d ordered=%s icon_weight=%s",
             request.template,

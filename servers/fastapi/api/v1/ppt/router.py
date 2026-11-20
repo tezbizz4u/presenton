@@ -10,6 +10,7 @@ from api.v1.ppt.endpoints.openai import OPENAI_ROUTER
 from api.v1.ppt.endpoints.openrouter import OPENROUTER_ROUTER
 from api.v1.ppt.endpoints.files import FILES_ROUTER
 from api.v1.ppt.endpoints.folders import FOLDERS_ROUTER
+from api.v1.ppt.endpoints.theme_presets import THEME_PRESETS_ROUTER
 from api.v1.ppt.endpoints.fonts import FONTS_ROUTER
 from api.v1.ppt.endpoints.icons import ICONS_ROUTER
 from api.v1.ppt.endpoints.images import IMAGES_ROUTER
@@ -24,6 +25,7 @@ API_V1_PPT_ROUTER = APIRouter(prefix="/api/v1/ppt")
 
 API_V1_PPT_ROUTER.include_router(FILES_ROUTER)
 API_V1_PPT_ROUTER.include_router(FOLDERS_ROUTER)
+API_V1_PPT_ROUTER.include_router(THEME_PRESETS_ROUTER)
 API_V1_PPT_ROUTER.include_router(FONTS_ROUTER)
 API_V1_PPT_ROUTER.include_router(OUTLINES_ROUTER)
 API_V1_PPT_ROUTER.include_router(SLIDE_ROUTER)
