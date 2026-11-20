@@ -1,5 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { ThemePresetApi } from "@/app/(presentation-generator)/services/api/theme-presets";
+import { ThemePresetPicker, ThemePresetButton } from "@/app/(presentation-generator)/components/ThemePresetPicker";
+import { setPresentationData } from "@/store/slices/presentationGeneration";
+import { normalizeTemplateTheme, resolveTemplateIdFromPresentation } from "@/lib/template-theme";
+import { applyPresentationThemeToElement } from "@/app/(presentation-generator)/presentation/utils/applyPresentationThemeDom";
+import { notify as themeNotify } from "@/components/ui/sonner";
 import {
   Play,
   Loader2,
@@ -119,6 +125,7 @@ const PresentationHeader = ({
 
   const pathname = usePathname();
   const dispatch = useDispatch();
+  const [themePickerOpen, setThemePickerOpen] = useState(false);
 
   const {
     presentationData,
@@ -583,6 +590,43 @@ const PresentationHeader = ({
     </div>
   );
 
+  const handleThemePreset = async (preset: { id: string; name: string } | null) => {
+    if (!presentationData) return;
+    try {
+      const templateId = resolveTemplateIdFromPresentation(presentationData);
+      const { theme: stored } = await ThemePresetApi.apply(
+        presentation_id,
+        preset?.id ?? null,
+        templateId || null,
+      );
+      const theme = normalizeTemplateTheme(stored);
+      if (theme) {
+        dispatch(setPresentationData({ ...presentationData, theme } as typeof presentationData));
+        applyPresentationThemeToElement(
+          document.getElementById("presentation-slides-wrapper"),
+          theme,
+        );
+        const font = theme.fonts?.textFont;
+        if (font?.url) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = font.url;
+          document.head.appendChild(link);
+        }
+      } else if (!preset) {
+        // Template default restored: reload to pick up the template's own theme.
+        window.location.reload();
+        return;
+      }
+      themeNotify.success(preset ? `Theme: ${preset.name}` : "Template theme restored");
+    } catch (error) {
+      themeNotify.error(
+        "Could not apply theme",
+        error instanceof Error ? error.message : "Something went wrong.",
+      );
+    }
+  };
+
   return (
     <>
       <div className="py-[18px] px-4 sticky top-0 bg-white z-50 shadow-sm font-syne flex justify-between items-center gap-4">
@@ -747,6 +791,17 @@ const PresentationHeader = ({
             </button>
           </ToolTip>)}
 
+          {presentationData && !isStreaming && (
+            <>
+              <ThemePresetButton label="Theme" onClick={() => setThemePickerOpen(true)} />
+              <ThemePresetPicker
+                open={themePickerOpen}
+                onOpenChange={setThemePickerOpen}
+                selectedId={(presentationData?.theme as { preset_id?: string } | null)?.preset_id ?? null}
+                onSelect={handleThemePreset}
+              />
+            </>
+          )}
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <button

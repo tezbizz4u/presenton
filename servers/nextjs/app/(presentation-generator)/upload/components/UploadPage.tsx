@@ -26,6 +26,8 @@ import { setPptGenUploadState } from "@/store/slices/presentationGenUpload";
 import { trackEvent, MixpanelEvent } from "@/utils/mixpanel";
 import { sanitizeAnalyticsError } from "@/utils/analytics";
 import { ConfigurationSelects } from "./ConfigurationSelects";
+import { ThemePresetApi, type ThemePresetSummary } from "../../services/api/theme-presets";
+import { ThemePresetPicker, ThemePresetButton } from "../../components/ThemePresetPicker";
 import { RootState } from "@/store/store";
 import { ImagesApi } from "../../services/api/images";
 import GenerationModeDialog from "./GenerationModeDialog";
@@ -160,6 +162,8 @@ const UploadPage = ({
 
   const [modeDialogOpen, setModeDialogOpen] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
+  const [themePreset, setThemePreset] = useState<ThemePresetSummary | null>(null);
+  const [themePickerOpen, setThemePickerOpen] = useState(false);
   const [communityReference, setCommunityReference] =
     useState<CommunityPresentation | null>(null);
   const [generationMode, setGenerationMode] = useState<GenerationMode>(() =>
@@ -503,6 +507,14 @@ const UploadPage = ({
           : undefined,
     });
 
+    if (themePreset) {
+      try {
+        await ThemePresetApi.apply(createResponse.id, themePreset.id);
+      } catch (themeError) {
+        console.warn("Theme preset was not applied", themeError);
+        notify.warning("Theme not applied", "The deck was created with the template's default theme.");
+      }
+    }
     dispatch(setPptGenUploadState({
       config,
       files: responses,
@@ -566,6 +578,14 @@ const UploadPage = ({
           : undefined,
     });
 
+    if (themePreset) {
+      try {
+        await ThemePresetApi.apply(createResponse.id, themePreset.id);
+      } catch (themeError) {
+        console.warn("Theme preset was not applied", themeError);
+        notify.warning("Theme not applied", "The deck was created with the template's default theme.");
+      }
+    }
     dispatch(setPptGenUploadState({
       config,
       files: [],
@@ -644,6 +664,28 @@ const UploadPage = ({
             compact
             config={config}
             onConfigChange={handleConfigChange}
+          />
+          <div className="mt-2 flex items-center gap-2">
+            <ThemePresetButton
+              label={themePreset ? `Theme: ${themePreset.name}` : "Theme library"}
+              onClick={() => setThemePickerOpen(true)}
+            />
+            {themePreset && (
+              <button
+                type="button"
+                className="text-xs text-[#808080] underline"
+                onClick={() => setThemePreset(null)}
+              >
+                Clear
+              </button>
+            )}
+          </div>
+          <ThemePresetPicker
+            open={themePickerOpen}
+            onOpenChange={setThemePickerOpen}
+            selectedId={themePreset?.id ?? null}
+            allowReset={false}
+            onSelect={(preset) => setThemePreset(preset)}
           />
         </div>
 

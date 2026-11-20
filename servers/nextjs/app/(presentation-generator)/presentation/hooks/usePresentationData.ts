@@ -49,7 +49,11 @@ export const usePresentationData = (
         const fetchedTheme = templateId
           ? await TemplateService.getTemplateTheme(templateId)
           : null;
-        const theme = fetchedTheme ?? responseTheme ?? DEFAULT_TEMPLATE_THEME;
+        const storedThemeSource = (normalizedData.theme as { source?: unknown } | null)?.source;
+        const theme =
+          storedThemeSource === "preset" && responseTheme
+            ? responseTheme
+            : fetchedTheme ?? responseTheme ?? DEFAULT_TEMPLATE_THEME;
         const themedData = {
           ...normalizedData,
           ...(templateId && !normalizedData.template_id

@@ -117,6 +117,7 @@ from templates.v2.content import (
 )
 from templates.v2.theme import template_theme_for_presentation
 from templates.theme_presets import get_theme_preset
+from utils.datetime_utils import get_current_utc_datetime
 from templates.default_templates import resolve_default_template_id
 from services.community_presentations import (
     build_community_design_context,
@@ -2614,6 +2615,55 @@ async def update_presentation(
     )
 
 
+class ThemePresetApplyRequest(BaseModel):
+    preset_id: Optional[str] = None
+    # Needed only when preset_id is null: the template whose own theme is restored.
+    template_id: Optional[str] = None
+
+
+@PRESENTATION_ROUTER.put("/{presentation_id}/theme-preset")
+async def apply_theme_preset(
+    presentation_id: uuid.UUID,
+    body: ThemePresetApplyRequest,
+    sql_session: AsyncSession = Depends(get_async_session),
+):
+    """Apply an ASF theme preset to a deck (or restore the template's own theme)."""
+    presentation = await sql_session.get(PresentationModel, presentation_id)
+    if not presentation:
+        raise HTTPException(status_code=404, detail="Presentation not found")
+
+    if body.preset_id:
+        preset = get_theme_preset(body.preset_id)
+        if preset is None:
+            raise HTTPException(status_code=404, detail="Theme preset not found")
+        previous = presentation.theme if isinstance(presentation.theme, dict) else {}
+        presentation.theme = {
+            "name": preset["name"],
+            "description": f"ASF theme preset: {preset['name']}",
+            "data": preset["theme"],
+            "source": "preset",
+            "preset_id": preset["id"],
+            "template_id": previous.get("template_id") or body.template_id,
+        }
+    else:
+        restored = None
+        if body.template_id:
+            template = await _resolve_requested_template(body.template_id, sql_session)
+            if template is not None:
+                restored = template_theme_for_presentation(
+                    template_id=template.id,
+                    template_name=template.name,
+                    template_description=template.description,
+                    theme=template.theme,
+                )
+        presentation.theme = restored
+
+    presentation.updated_at = get_current_utc_datetime()
+    sql_session.add(presentation)
+    await sql_session.commit()
+    return {"theme": presentation.theme}
+
+
 @PRESENTATION_ROUTER.patch("/slide_update", response_model=SlideModel)
 async def update_presentation_slide(
     slide: Annotated[SlideModel, Body(embed=True)],
@@ -2921,7 +2971,8 @@ async def generate_presentation_handler(
                     "name": preset["name"],
                     "description": f"ASF theme preset: {preset['name']}",
                     "data": preset["theme"],
-                    "source": "template",
+                    "source": "preset",
+                    "preset_id": preset["id"],
                     "template_id": (template_theme or {}).get("template_id"),
                 }
         safe_log(logger, logging.INFO,
