@@ -39,6 +39,7 @@ from utils.asset_directory_utils import (
     resolve_app_path_to_filesystem,
 )
 from utils.get_env import get_app_data_directory_env
+from utils.export_permissions import finalize_export_permissions
 from utils.font_uploads import (
     download_font_uploads,
     get_font_upload_url,
@@ -1912,6 +1913,14 @@ async def _persist_files_to_session(pairs: List[Tuple[str, str]]) -> List[str]:
     async def _copy_pair(dest_path: str, src_path: str) -> str:
         await asyncio.to_thread(os.makedirs, os.path.dirname(dest_path), exist_ok=True)
         await asyncio.to_thread(shutil.copy2, src_path, dest_path)
+        # nginx (www-data) serves /app_data/uploads; give it group read access
+        # like other generated artifacts (otherwise previews 403).
+        try:
+            await asyncio.to_thread(
+                finalize_export_permissions, dest_path, [get_uploads_directory()]
+            )
+        except OSError:
+            pass
         return dest_path
 
     results = await asyncio.gather(
