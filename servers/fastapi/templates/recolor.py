@@ -213,6 +213,9 @@ def revert_slide(slide: Any) -> None:
     """Undo a previous recolour of this slide (if one was recorded)."""
     props = slide.properties if isinstance(slide.properties, dict) else None
     snapshot = props.get(_SNAPSHOT_KEY) if props else None
+    if props is not None and _SNAPSHOT_KEY in props and not snapshot:
+        slide.properties = {k: v for k, v in props.items() if k != _SNAPSHOT_KEY}
+        return
     if not snapshot or not isinstance(slide.ui, dict):
         return
     ui = copy.deepcopy(slide.ui)
@@ -272,6 +275,8 @@ def recolor_slide(slide: Any, theme: dict[str, Any]) -> int:
             snapshot[json.dumps(list(path))] = value
             _set(ui, path, new_value)
 
+    if not snapshot:
+        return 0
     slide.ui = ui
     props = dict(slide.properties) if isinstance(slide.properties, dict) else {}
     props[_SNAPSHOT_KEY] = snapshot
