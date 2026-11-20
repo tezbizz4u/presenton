@@ -1,5 +1,6 @@
 "use client";
 
+import { imageEffectsFilter } from "@/components/slide-editor/model/image-effects";
 import {
   Fragment,
   createContext,
@@ -2788,6 +2789,32 @@ function RawImageElement({
     }
   }
 
+  const effectsFilter = imageEffectsFilter(element.effects);
+  const effectsProps = effectsFilter
+    ? {
+        // Canvas 2D `filter` (same CSS syntax the HTML export uses); drawing a
+        // cross-origin picture with it is allowed, only reading pixels is not.
+        sceneFunc: (context: Konva.Context, shape: Konva.Shape) => {
+          const raw = (context as unknown as { _context: CanvasRenderingContext2D })._context;
+          raw.save();
+          raw.filter = effectsFilter;
+          const w = shape.width();
+          const h = shape.height();
+          if (crop) {
+            raw.drawImage(loaded, crop.x, crop.y, crop.width, crop.height, 0, 0, w, h);
+          } else {
+            raw.drawImage(loaded, 0, 0, w, h);
+          }
+          raw.restore();
+        },
+        hitFunc: (context: Konva.Context, shape: Konva.Shape) => {
+          context.beginPath();
+          context.rect(0, 0, shape.width(), shape.height());
+          context.closePath();
+          context.fillShape(shape);
+        },
+      }
+    : {};
   const imageNode = (
     <KonvaImage
       image={loaded}
@@ -2797,6 +2824,7 @@ function RawImageElement({
       height={drawH}
       crop={crop}
       listening={interactive}
+      {...effectsProps}
     />
   );
 

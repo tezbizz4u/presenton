@@ -8,6 +8,7 @@ import {
   Loader2,
   RotateCcw,
   Scan,
+  SlidersHorizontal,
   Upload,
   X,
 } from "lucide-react";
@@ -38,13 +39,18 @@ import {
   FloatingToolbarPanel,
   type FloatingToolbarBox,
 } from "@/components/slide-editor/toolbar/FloatingToolbar";
+import {
+  DEFAULT_IMAGE_EFFECTS,
+  imageEffectsFilter,
+} from "@/components/slide-editor/model/image-effects";
+import type { ImageEffects } from "@/components/slide-editor/types";
 import { OpacitySwatchIcon } from "@/components/slide-editor/toolbar/OpacitySwatchIcon";
 import { ImagePickerModal } from "@/components/slide-editor/images/ImagePickerModal";
 import { resolveBackendAssetSource } from "@/utils/api";
 import { ImagesApi } from "@/app/(presentation-generator)/services/api/images";
 import { notify } from "@/components/ui/sonner";
 
-type ImagePanel = "fit" | "crop" | "radius" | "opacity" | null;
+type ImagePanel = "fit" | "crop" | "radius" | "opacity" | "effects" | null;
 type ImageFit = "contain" | "cover" | "fill";
 type CropPoint = { x: number; y: number };
 type CropFrame = { left: number; top: number; width: number; height: number };
@@ -69,6 +75,23 @@ type CropDragState =
     startDraft: CropDraft;
     startImageFrame: CropImageFrame;
   };
+
+const EFFECT_CONTROLS: Array<{
+  key: keyof ImageEffects & keyof typeof DEFAULT_IMAGE_EFFECTS;
+  label: string;
+  min: number;
+  max: number;
+  step: number;
+  unit: string;
+}> = [
+  { key: "brightness", label: "Brightness", min: 20, max: 200, step: 5, unit: "%" },
+  { key: "contrast", label: "Contrast", min: 20, max: 200, step: 5, unit: "%" },
+  { key: "saturation", label: "Saturation", min: 0, max: 250, step: 5, unit: "%" },
+  { key: "grayscale", label: "Black & white", min: 0, max: 100, step: 5, unit: "%" },
+  { key: "sepia", label: "Warm tone", min: 0, max: 100, step: 5, unit: "%" },
+  { key: "hue", label: "Hue shift", min: -180, max: 180, step: 5, unit: "°" },
+  { key: "blur", label: "Blur", min: 0, max: 20, step: 1, unit: "px" },
+];
 
 const FIT_OPTIONS: Array<{ label: string; value: ImageFit }> = [
   { label: "Fill", value: "cover" },
@@ -775,6 +798,68 @@ export function ImageToolbar({
                 }
                 className="w-full cursor-pointer accent-[#7A5AF8]"
               />
+            </Panel>
+          ) : null}
+        </div>
+        <Divider />
+
+        <div className="relative">
+          <button
+            type="button"
+            title="Image effects"
+            aria-label="Image effects"
+            aria-pressed={openPanel === "effects"}
+            onClick={() => togglePanel("effects")}
+            className={cn(
+              "rounded-[2px] border-0 bg-transparent p-1 text-[#05070A] hover:bg-[#F4F3FF]",
+              (openPanel === "effects" || imageEffectsFilter(element.effects)) &&
+                "bg-[#F4F1FF] text-[#7C3AED]",
+            )}
+          >
+            <SlidersHorizontal size={16} strokeWidth={1.5} aria-hidden />
+          </button>
+          {openPanel === "effects" ? (
+            <Panel className="flex w-[220px] flex-col gap-2 p-3 font-manrope text-[12px] text-[#191919]">
+              {EFFECT_CONTROLS.map((control) => {
+                const current =
+                  (element.effects?.[control.key] as number | null | undefined) ??
+                  DEFAULT_IMAGE_EFFECTS[control.key];
+                return (
+                  <label key={control.key} className="flex flex-col gap-1">
+                    <span className="flex justify-between">
+                      <span>{control.label}</span>
+                      <span className="text-[#6B7280]">
+                        {Math.round(current)}
+                        {control.unit}
+                      </span>
+                    </span>
+                    <input
+                      aria-label={control.label}
+                      type="range"
+                      min={control.min}
+                      max={control.max}
+                      step={control.step}
+                      value={current}
+                      onChange={(event) =>
+                        update({
+                          effects: {
+                            ...(element.effects ?? {}),
+                            [control.key]: Number(event.target.value),
+                          },
+                        })
+                      }
+                      className="w-full cursor-pointer accent-[#7A5AF8]"
+                    />
+                  </label>
+                );
+              })}
+              <button
+                type="button"
+                onClick={() => update({ effects: null })}
+                className="mt-1 inline-flex h-7 items-center justify-center rounded-[6px] border border-[#D7DAE3] bg-white px-2 text-[11px] text-[#353742] hover:bg-[#F7F8FB]"
+              >
+                Reset effects
+              </button>
             </Panel>
           ) : null}
         </div>

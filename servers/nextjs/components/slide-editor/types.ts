@@ -467,8 +467,19 @@ export type ContainerElement = ElementBase & {
   child?: SlideElement | null;
 };
 
+export type ImageEffects = {
+  brightness?: number | null; // percent, 100 = unchanged
+  contrast?: number | null; // percent, 100 = unchanged
+  saturation?: number | null; // percent, 100 = unchanged
+  grayscale?: number | null; // percent, 0 = unchanged
+  sepia?: number | null; // percent, 0 = unchanged
+  hue?: number | null; // degrees, 0 = unchanged
+  blur?: number | null; // px, 0 = unchanged
+};
+
 export type ImageElement = ElementBase & {
   type: "image";
+  effects?: ImageEffects | null;
   data?: string | null;
   fit?: ImageFit | null;
   focus_x?: number | null;

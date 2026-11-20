@@ -1,3 +1,4 @@
+import { imageEffectsFilter } from "@/components/slide-editor/model/image-effects";
 import { resolveBackendAssetUrl } from "@/utils/api";
 import { markdownToPlainChartText } from "@/components/slide-editor/charts/chart-data";
 import {
@@ -352,6 +353,8 @@ function renderItem(item: JsonRecord, mode: RenderMode): string {
 function renderImage(item: JsonRecord, mode: RenderMode): string {
   const source = readString(item.data);
   if (!source) return "";
+  const effectsFilter = imageEffectsFilter(item.effects);
+  const effectsStyle = effectsFilter ? `filter:${effectsFilter};` : "";
   const color = normalizeChartColor(readString(item.color));
   const clipPath = clipPathStyle(item);
   if (color && readBoolean(item.isIcon ?? item.is_icon)) {
@@ -371,21 +374,21 @@ function renderImage(item: JsonRecord, mode: RenderMode): string {
       item
     )}${clipPath}overflow:hidden;"><img alt="" src="${escapeAttribute(
       source
-    )}" style="display:block;max-width:none;max-height:none;height:100%;width:100%;object-fit:${fit};${focusStyle}${cropTransformStyle}"></div>`;
+    )}" style="display:block;max-width:none;max-height:none;height:100%;width:100%;object-fit:${fit};${focusStyle}${cropTransformStyle}${effectsStyle}"></div>`;
   }
   if (clipPath) {
     return `<div style="${frameStyle(item, mode)}${boxStyle(
       item
     )}${clipPath}overflow:hidden;"><img alt="" src="${escapeAttribute(
       source
-    )}" style="display:block;max-width:none;max-height:none;height:100%;width:100%;object-fit:${fit};${focusStyle}"></div>`;
+    )}" style="display:block;max-width:none;max-height:none;height:100%;width:100%;object-fit:${fit};${focusStyle}${effectsStyle}"></div>`;
   }
   return `<img alt="" src="${escapeAttribute(source)}" style="${frameStyle(
     item,
     mode
   )}${boxStyle(
     item
-  )}display:block;max-width:none;max-height:none;object-fit:${fit};${focusStyle}${clipPath}">`;
+  )}display:block;max-width:none;max-height:none;object-fit:${fit};${focusStyle}${effectsStyle}${clipPath}">`;
 }
 
 function renderText(item: JsonRecord, mode: RenderMode): string {
