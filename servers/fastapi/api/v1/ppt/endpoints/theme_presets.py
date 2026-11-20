@@ -15,6 +15,7 @@ def _summary(preset: dict) -> dict:
         "name": preset["name"],
         "family": preset["family"],
         "mode": preset["mode"],
+        "trend": preset["trend"],
         "font": preset["font"],
         "swatches": [
             colors["background"],
@@ -31,6 +32,7 @@ async def list_theme_presets(
     q: Optional[str] = Query(default=None, description="Search in name"),
     mode: Optional[str] = Query(default=None, description="Light, Soft, Dark or Vivid"),
     font: Optional[str] = None,
+    trend: Optional[str] = Query(default=None, description="e.g. Pantone 2026, Natural green"),
     offset: int = Query(default=0, ge=0),
     limit: int = Query(default=60, ge=1, le=500),
 ):
@@ -42,6 +44,8 @@ async def list_theme_presets(
         presets = tuple(p for p in presets if p["mode"].casefold() == mode.casefold())
     if font:
         presets = tuple(p for p in presets if p["font"].casefold() == font.casefold())
+    if trend:
+        presets = tuple(p for p in presets if trend.casefold() in p["trend"].casefold())
     return {
         "total": len(presets),
         "items": [_summary(p) for p in presets[offset : offset + limit]],

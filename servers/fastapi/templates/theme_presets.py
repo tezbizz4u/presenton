@@ -12,22 +12,27 @@ from functools import lru_cache
 from typing import Any
 from urllib.parse import quote_plus
 
-# (display name, hue 0-360). 72 hues → every ~5 degrees, named by nearest family.
-_HUE_FAMILIES = [
-    (0, "Crimson"), (8, "Scarlet"), (16, "Vermilion"), (24, "Coral"), (32, "Tangerine"),
-    (40, "Amber"), (48, "Honey"), (56, "Gold"), (64, "Lemon"), (72, "Chartreuse"),
-    (84, "Lime"), (96, "Fern"), (110, "Leaf"), (124, "Emerald"), (138, "Jade"),
-    (150, "Mint"), (160, "Sea Green"), (170, "Teal"), (180, "Cyan"), (190, "Lagoon"),
-    (200, "Sky"), (210, "Azure"), (220, "Cobalt"), (230, "Royal"), (240, "Indigo"),
-    (250, "Iris"), (260, "Violet"), (270, "Amethyst"), (282, "Orchid"), (294, "Magenta"),
-    (306, "Fuchsia"), (318, "Rose"), (330, "Raspberry"), (342, "Ruby"), (352, "Cherry"),
+# Trend-based families: (name, hue, saturation scale, trend note). Sources: Pantone
+# Colour of the Year 2026 (Cloud Dancer) palettes, 2026 presentation/graphic design
+# trend reports (warm neutrals, earthy browns, natural greens, deep purples, soft
+# purposeful palettes, bold maximalist colour, retro/nostalgic tones).
+_FAMILIES = [
+    ("Cloud Dancer", 40, 0.12, "Pantone 2026"), ("Cloud Blue", 210, 0.15, "Pantone 2026"),
+    ("Powdered Pastel Peach", 22, 0.45, "Pantone 2026 palette"), ("Powdered Pastel Lemon", 52, 0.45, "Pantone 2026 palette"),
+    ("Powdered Pastel Lilac", 270, 0.40, "Pantone 2026 palette"), ("Tropical Lagoon", 180, 0.70, "Pantone 2026 palette"),
+    ("Moody Midnight", 232, 0.45, "Pantone 2026 palette"), ("Glamour Gold", 44, 0.60, "Pantone 2026 palette"),
+    ("Mocha Mousse", 24, 0.35, "Earthy brown"), ("Warm Sand", 36, 0.30, "Warm neutral"),
+    ("Terracotta", 14, 0.55, "Earthy"), ("Clay Rose", 6, 0.35, "Earthy"),
+    ("Olive Grove", 76, 0.40, "Natural green"), ("Sage Garden", 112, 0.28, "Natural green"),
+    ("Forest Canopy", 140, 0.45, "Natural green"), ("Deep Emerald", 156, 0.60, "Natural green"),
+    ("Healing Teal", 174, 0.55, "Healthcare calm"), ("Clinical Blue", 206, 0.60, "Healthcare calm"),
+    ("Deep Plum", 292, 0.45, "Deep purple"), ("Royal Aubergine", 282, 0.50, "Deep purple"),
+    ("Electric Violet", 262, 0.85, "Bold maximalist"), ("Hot Coral", 8, 0.85, "Bold maximalist"),
+    ("Signal Orange", 20, 0.90, "Bold maximalist"), ("Citrus Pop", 62, 0.85, "Bold maximalist"),
+    ("Retro Mustard", 46, 0.60, "Retro nostalgic"), ("Vintage Teal", 188, 0.35, "Retro nostalgic"),
+    ("Dusty Rose", 346, 0.30, "Retro nostalgic"), ("Ink Navy", 222, 0.55, "Sober business"),
 ]
-
-# 2 variants per family hue (hue shift) gives 70 hues; plus ASF clinical set below.
-_FONTS = [
-    "Lato", "Poppins", "Inter", "Merriweather", "Nunito", "Source Sans 3",
-    "Playfair Display", "Roboto",
-]
+_FONTS = ["Inter", "Figtree", "Playfair Display", "Literata", "Plus Jakarta Sans"]
 
 # mode: (bg_l, bg_s, card, text_l, primary_l, primary_s)
 _MODES = {
@@ -122,26 +127,27 @@ def _slug(text: str) -> str:
 @lru_cache(maxsize=1)
 def all_theme_presets() -> tuple[dict[str, Any], ...]:
     presets: list[dict[str, Any]] = []
-    for base_hue, family in _HUE_FAMILIES:
-        for shift_index, shift in enumerate((0, 4)):
-            hue = base_hue + shift
-            label = family if shift == 0 else f"{family} Alt"
-            for mode_name, mode in _MODES.items():
-                colors = _build_colors(hue, mode)
-                # Fonts rotate per (hue, mode) so a family shows several type styles.
-                offset = base_hue // 8 + shift_index
-                for font_name in (_FONTS[(offset + step) % len(_FONTS)] for step in (0, 2, 4, 6)):
-                    name = f"{label} {mode_name} · {font_name}"
-                    presets.append(
-                        {
-                            "id": _slug(name),
-                            "name": name,
-                            "family": label,
-                            "mode": mode_name,
-                            "font": font_name,
-                            "theme": {"colors": colors, "fonts": {"textFont": _font(font_name)}},
-                        }
-                    )
+    for family, hue, sat_scale, trend in _FAMILIES:
+        for mode_name, mode in _MODES.items():
+            scaled = {
+                **mode,
+                "bg_s": mode["bg_s"] * (0.5 + sat_scale / 2),
+                "p_s": min(1.0, mode["p_s"] * sat_scale / 0.6),
+            }
+            colors = _build_colors(hue, scaled)
+            for font_name in _FONTS:
+                name = f"{family} {mode_name} · {font_name}"
+                presets.append(
+                    {
+                        "id": _slug(name),
+                        "name": name,
+                        "family": family,
+                        "trend": trend,
+                        "mode": mode_name,
+                        "font": font_name,
+                        "theme": {"colors": colors, "fonts": {"textFont": _font(font_name)}},
+                    }
+                )
     return tuple(presets)
 
 
