@@ -19,6 +19,7 @@ from utils.process_slides import (
     image_target_sizes_from_template,
     process_old_and_new_slides_and_fetch_assets,
 )
+from templates.recolor import ensure_theme_on_new_slides, forget_snapshot
 from api.v1.ppt.endpoints.presentation import (
     _apply_template_content_to_ui,
     _get_presentation_stream_layout,
@@ -116,8 +117,10 @@ async def edit_slide(
         and _is_template_layout_payload(presentation.layout)
     ):
         slide.ui = _template_slide_ui(presentation.layout, slide_layout.id)
+        forget_snapshot(slide)
     slide.layout = slide_layout.id
     _hydrate_template_slide_ui(slide, presentation.layout)
+    ensure_theme_on_new_slides([slide], presentation.theme)
     slide.speaker_note = edited_slide_content.get("__speaker_note__", "")
     sql_session.add_all(new_assets)
     await sql_session.commit()

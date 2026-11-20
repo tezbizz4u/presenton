@@ -22,7 +22,9 @@ The original value of every changed colour is stored in
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
+import os
 import re
 from typing import Any, Iterable
 
@@ -31,6 +33,159 @@ from templates.theme_presets import _from_hls, _hls, _lum, _mix, _to_hex, _to_rg
 _HEX = re.compile(r"^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$")
 _SNAPSHOT_KEY = "asf_recolor_orig"
 _SLIDE_W, _SLIDE_H = 1280, 720
+
+
+_ART_PREFIX = "/app_data/templates/"
+_ART_DIR = "_recolored"
+
+
+def _walk_art(node: Any, path: tuple, out: list[tuple[tuple, str]]) -> None:
+    """Template-shipped decorative pictures (waves, textured backdrops)."""
+    if isinstance(node, dict):
+        data = node.get("data")
+        if (
+            node.get("type") == "image"
+            and isinstance(data, str)
+            and data.startswith(_ART_PREFIX)
+            and f"/{_ART_DIR}/" not in data
+            and ".." not in data
+        ):
+            out.append(((*path, "data"), data))
+        for key, value in node.items():
+            if isinstance(value, (dict, list)):
+                _walk_art(value, (*path, key), out)
+    elif isinstance(node, list):
+        for i, value in enumerate(node):
+            if isinstance(value, (dict, list)):
+                _walk_art(value, (*path, i), out)
+
+
+_SVG_HEX = re.compile(r"#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![0-9a-zA-Z])")
+_SVG_RGB = re.compile(r"rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)")
+_SVG_NAMED = {"white": "#FFFFFF", "black": "#000000"}
+
+
+_CACHE_LIMIT = 800 * 1024 * 1024
+
+
+def _prune_cache(out_dir: str) -> None:
+    """Keep the recoloured-picture cache bounded (oldest files go first)."""
+    try:
+        files = [
+            (e.stat().st_mtime, e.stat().st_size, e.path)
+            for e in os.scandir(out_dir)
+            if e.is_file() and not e.name.endswith(".tmp")
+        ]
+        total = sum(size for _, size, _ in files)
+        if total <= _CACHE_LIMIT:
+            return
+        for _, size, path in sorted(files):
+            os.remove(path)
+            total -= size
+            if total <= _CACHE_LIMIT * 0.75:
+                break
+    except OSError:
+        pass
+
+
+def _recolor_svg(source: str, base: str, out_dir: str, mapper: "_Mapper") -> str | None:
+    try:
+        with open(source, "r", encoding="utf-8") as fh:
+            text = fh.read()
+    except (OSError, UnicodeDecodeError):
+        return None
+    if len(text) > 2_000_000:
+        return None
+
+    def hex_sub(match: re.Match) -> str:
+        raw = match.group(1)
+        if len(raw) == 3:
+            raw = "".join(ch * 2 for ch in raw)
+        return mapper.map("#" + raw.upper())
+
+    def rgb_sub(match: re.Match) -> str:
+        r, g, b = (min(255, int(match.group(i))) for i in (1, 2, 3))
+        return mapper.map(f"#{r:02X}{g:02X}{b:02X}")
+
+    def attr_sub(match: re.Match) -> str:
+        key, quote, value = match.group(1), match.group(2), match.group(3)
+        return f"{key}={quote}{mapper.map(_SVG_NAMED[value.lower()])}{quote}"
+
+    out = _SVG_HEX.sub(hex_sub, text)
+    out = _SVG_RGB.sub(rgb_sub, out)
+    out = re.sub(
+        r"""\b(fill|stroke|stop-color)=(["'])(white|black)\2""", attr_sub, out, flags=re.IGNORECASE
+    )
+    # fill/stroke omitted on a shape means black in SVG; leave those alone (no visible change risk)
+    if out == text:
+        return None
+    name = hashlib.sha1(out.encode("utf-8")).hexdigest()[:20] + ".svg"
+    path = os.path.join(out_dir, name)
+    if not os.path.isfile(path):
+        os.makedirs(out_dir, exist_ok=True)
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as fh:
+            fh.write(out)
+        os.replace(tmp, path)
+    return f"/app_data/templates/{_ART_DIR}/{name}"
+
+
+def _recolor_art(src_url: str, mapper: "_Mapper") -> str | None:
+    """Hue-rotate a template picture towards `target_hex`; returns the new /app_data url.
+
+    Greys/blacks stay as they are, only coloured pixels move, lightness and alpha are kept.
+    Results are cached by (source, target hue) so every preset reuses the same file.
+    """
+    root = os.getenv("APP_DATA_DIRECTORY")
+    if not root:
+        return None
+    rel = src_url[len("/app_data/") :]
+    source = os.path.realpath(os.path.join(root, rel))
+    base = os.path.realpath(os.path.join(root, "templates"))
+    if not source.startswith(base + os.sep) or not os.path.isfile(source):
+        return None
+    out_dir = os.path.join(base, _ART_DIR)
+    if source.lower().endswith(".svg"):
+        return _recolor_svg(source, base, out_dir, mapper)
+    target_hue = round(_hue(mapper.primary) / 4) * 4  # 90 buckets keep the cache small
+    name = hashlib.sha1(f"{rel}|{target_hue}".encode()).hexdigest()[:20]
+    for ext in (".png", ".jpg"):
+        if os.path.isfile(os.path.join(out_dir, name + ext)):
+            return f"/app_data/templates/{_ART_DIR}/{name}{ext}"
+    try:
+        import numpy as np
+        from PIL import Image
+
+        image = Image.open(source)
+        rgba = image.convert("RGBA")
+        alpha = np.asarray(rgba.getchannel("A"), dtype=np.float32) / 255.0
+        hsv = np.asarray(rgba.convert("RGB").convert("HSV"), dtype=np.float32).copy()
+        weight = (hsv[..., 1] / 255.0) * (hsv[..., 2] / 255.0) * alpha
+        coloured = weight > 0.15
+        if coloured.mean() < 0.02:
+            return None  # essentially grey art: nothing to recolour
+        angles = hsv[..., 0][coloured] / 255.0 * 2 * np.pi
+        w = weight[coloured]
+        dominant = (np.arctan2((np.sin(angles) * w).sum(), (np.cos(angles) * w).sum()) % (2 * np.pi)) / (2 * np.pi) * 360
+        delta = (target_hue - dominant) / 360.0 * 255.0
+        hsv[..., 0] = (hsv[..., 0] + delta) % 255.0
+        rgb = Image.fromarray(hsv.astype("uint8"), "HSV").convert("RGB")
+        result = rgb.convert("RGBA")
+        result.putalpha(rgba.getchannel("A"))
+        os.makedirs(out_dir, exist_ok=True)
+        opaque = bool(alpha.min() >= 0.999)
+        ext = ".jpg" if opaque else ".png"
+        out_path = os.path.join(out_dir, name + ext)
+        tmp = out_path + ".tmp"
+        if opaque:
+            rgb.save(tmp, format="JPEG", quality=90)
+        else:
+            result.save(tmp, format="PNG")
+        os.replace(tmp, out_path)
+        _prune_cache(out_dir)
+        return f"/app_data/templates/{_ART_DIR}/{name}{ext}"
+    except Exception:
+        return None
 
 
 def _is_color_key(key: str) -> bool:
@@ -240,8 +395,6 @@ def recolor_slide(slide: Any, theme: dict[str, Any]) -> int:
     ui = copy.deepcopy(slide.ui)
     entries: list[tuple[tuple, str, bool, bool]] = []
     _walk(ui, (), entries)
-    if not entries:
-        return 0
 
     usage: dict[str, int] = {}
     for _, value, _, is_series in entries:
@@ -275,6 +428,14 @@ def recolor_slide(slide: Any, theme: dict[str, Any]) -> int:
             snapshot[json.dumps(list(path))] = value
             _set(ui, path, new_value)
 
+    art: list[tuple[tuple, str]] = []
+    _walk_art(ui, (), art)
+    for path, src in art:
+        new_src = _recolor_art(src, mapper)
+        if new_src and new_src != src:
+            snapshot[json.dumps(list(path))] = src
+            _set(ui, path, new_src)
+
     if not snapshot:
         return 0
     slide.ui = ui
@@ -296,3 +457,33 @@ def apply_theme_to_slides(slides: Iterable[Any], theme: dict[str, Any] | None) -
             recolor_slide(slide, data)
         else:
             revert_slide(slide)
+
+
+def _preset_data(theme: dict[str, Any] | None) -> dict[str, Any] | None:
+    if isinstance(theme, dict) and theme.get("source") == "preset":
+        candidate = theme.get("data")
+        if isinstance(candidate, dict) and candidate.get("palette") and candidate.get("colors"):
+            return candidate
+    return None
+
+
+def ensure_theme_on_new_slides(slides: Iterable[Any], theme: dict[str, Any] | None) -> int:
+    """Recolour only slides that carry no recolour snapshot yet (new / template-swapped
+    slides added in the editor). Already recoloured slides are left alone."""
+    data = _preset_data(theme)
+    if data is None:
+        return 0
+    count = 0
+    for slide in slides:
+        props = slide.properties if isinstance(slide.properties, dict) else {}
+        if _SNAPSHOT_KEY in props:
+            continue
+        count += recolor_slide(slide, data)
+    return count
+
+
+def forget_snapshot(slide: Any) -> None:
+    """Drop the snapshot without touching ui (used when ui was replaced by a fresh layout)."""
+    props = slide.properties if isinstance(slide.properties, dict) else None
+    if props and _SNAPSHOT_KEY in props:
+        slide.properties = {k: v for k, v in props.items() if k != _SNAPSHOT_KEY}

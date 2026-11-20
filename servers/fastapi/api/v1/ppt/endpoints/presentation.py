@@ -117,7 +117,7 @@ from templates.v2.content import (
 )
 from templates.v2.theme import template_theme_for_presentation
 from templates.theme_presets import get_theme_preset
-from templates.recolor import apply_theme_to_slides
+from templates.recolor import apply_theme_to_slides, ensure_theme_on_new_slides
 from utils.datetime_utils import get_current_utc_datetime
 from templates.default_templates import resolve_default_template_id
 from services.community_presentations import (
@@ -2599,6 +2599,8 @@ async def update_presentation(
         for slide in slides:
             slide.presentation = uuid.UUID(slide.presentation)
             slide.id = uuid.UUID(slide.id)
+        # slides added in the editor arrive with the template's own colours
+        ensure_theme_on_new_slides(slides, presentation.theme)
 
         await sql_session.execute(
             delete(SlideModel).where(
@@ -2711,6 +2713,9 @@ async def update_presentation_slide(
             exclude={"id", "presentation", "index"},
         )
     )
+    owning_presentation = await sql_session.get(PresentationModel, presentation_id)
+    if owning_presentation is not None:
+        ensure_theme_on_new_slides([stored_slide], owning_presentation.theme)
     sql_session.add(stored_slide)
     await sql_session.commit()
     await sql_session.refresh(stored_slide)
