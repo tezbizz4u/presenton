@@ -366,9 +366,16 @@ function fitTextIntoBox(host: HTMLDivElement) {
     inner.scrollHeight * scale > boxHeight + 1 ||
     inner.scrollWidth > inner.clientWidth + 1;
 
+  // ASF minimum readable sizes: body/heading 20, labels 18, footnotes 10.
+  // Large display text (>= 28px) may shrink freely; smaller text never goes
+  // below its tier, so content must be shortened instead of the font.
+  const base = parseFloat(host.style.fontSize || getComputedStyle(host).fontSize) || 0;
+  const tierMin = base >= 28 ? 0 : base >= 20 ? 20 : base >= 18 ? 18 : 10;
+  const floorScale = base > 0 && tierMin > 0 ? Math.max(tierMin / base, FIT_MIN_SCALE) : FIT_MIN_SCALE;
+
   let scale = 1;
   apply(scale);
-  while (overflows(scale) && scale > FIT_MIN_SCALE) {
+  while (overflows(scale) && scale > floorScale) {
     scale = Math.round((scale - FIT_STEP) * 100) / 100;
     apply(scale);
   }

@@ -89,7 +89,11 @@ You're a professional presentation designer with creative freedom to design enga
 3. **Audience experience**: Consider how slides work together
 - Create natural transitions between topics
 
-4. **Table of contents**:
+4. **Sources / references slide**: a slide titled Sources, References or Further Reading must use a layout
+   with several separate text items (list, agenda, cards or steps) so each source is its own item.
+   Never give it a title, hero, quote or image-led layout.
+
+5. **Table of contents**:
 - Must only use table of contents layout if slide content contains table of contents.
 
 {user_instruction_header}

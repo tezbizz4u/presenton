@@ -9026,7 +9026,7 @@
                     "height": 24
                   },
                   "font": {
-                    "size": 16,
+                    "size": 18,
                     "family": "Poppins",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -9041,7 +9041,7 @@
                     {
                       "text": "JD",
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Poppins",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -9052,7 +9052,7 @@
                   ],
                   "decorative": false,
                   "name": "avatar_initials",
-                  "max_length": 2,
+                  "max_length": 3,
                   "min_length": 1
                 },
                 {
@@ -9107,7 +9107,7 @@
                     "height": 24
                   },
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#4B5563",
                     "bold": false,
@@ -9122,7 +9122,7 @@
                     {
                       "text": "December 2025",
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -9133,7 +9133,7 @@
                   ],
                   "decorative": false,
                   "name": "attribution_detail",
-                  "max_length": 45,
+                  "max_length": 33,
                   "min_length": 7,
                   "rotation": 0
                 }
@@ -9346,7 +9346,7 @@
                 "height": 129.41
               },
               "font": {
-                "size": 18,
+                "size": 20,
                 "family": "Poppins",
                 "color": "#4B5563",
                 "bold": false,
@@ -9361,7 +9361,7 @@
                 {
                   "text": "Our product offers customizable dashboards for real-time reporting and data-driven decisions. It integrates with third-party tools to enhance operations and scales with business growth for improved efficiency.",
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#4B5563",
                     "bold": false,
@@ -9372,7 +9372,7 @@
               ],
               "decorative": false,
               "name": "supporting_paragraph",
-              "max_length": 274,
+              "max_length": 216,
               "min_length": 105,
               "rotation": 0
             }
@@ -9667,7 +9667,7 @@
                         "height": 68.25
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -9682,7 +9682,7 @@
                         {
                           "text": "We create tailored software to optimize processes and boost efficiency.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -9693,7 +9693,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 95,
+                      "max_length": 40,
                       "min_length": 38
                     }
                   ],
@@ -9801,7 +9801,7 @@
                         "height": 68.25
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -9816,7 +9816,7 @@
                         {
                           "text": "Our consultants guide organizations in leveraging the latest technologies.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -9827,7 +9827,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 95,
+                      "max_length": 40,
                       "min_length": 38
                     }
                   ],
@@ -9935,7 +9935,7 @@
                         "height": 68.25
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -9950,7 +9950,7 @@
                         {
                           "text": "We provide ongoing support to help businesses adapt and maintain performance.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -9961,7 +9961,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 95,
+                      "max_length": 40,
                       "min_length": 38
                     }
                   ],
@@ -10069,7 +10069,7 @@
                         "height": 68.25
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -10084,7 +10084,7 @@
                         {
                           "text": "Our data-driven strategies help businesses expand their reach and engagement.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -10095,7 +10095,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 95,
+                      "max_length": 40,
                       "min_length": 38
                     }
                   ],
@@ -10395,7 +10395,7 @@
                 "height": 88
               },
               "font": {
-                "size": 18,
+                "size": 20,
                 "family": "Poppins",
                 "color": "#4B5563",
                 "bold": false,
@@ -10410,7 +10410,7 @@
                 {
                   "text": "Businesses face challenges with outdated technology and rising costs, limiting efficiency and growth in competitive markets.",
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#4B5563",
                     "bold": false,
@@ -10580,7 +10580,7 @@
                         "height": 52
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -10595,7 +10595,7 @@
                         {
                           "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -10606,7 +10606,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 100,
+                      "max_length": 76,
                       "min_length": 48
                     }
                   ],
@@ -10752,7 +10752,7 @@
                         "height": 52
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -10767,7 +10767,7 @@
                         {
                           "text": "Outdated systems increase expenses, while small businesses struggle to expand their market reach.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -10778,7 +10778,7 @@
                       ],
                       "decorative": false,
                       "name": "feature_description",
-                      "max_length": 100,
+                      "max_length": 76,
                       "min_length": 48
                     }
                   ],
@@ -10786,698 +10786,6 @@
                 }
               ],
               "name": "feature_list",
-              "max_children": 3,
-              "min_children": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "title_description_chart_cards",
-      "description": "A clean presentation layout with a top-left header, large chart panel, and stacked rounded information cards in a right sidebar.",
-      "components": [
-        {
-          "id": "slide_background",
-          "description": "Full canvas background layer establishing the clean white presentation surface.",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF"
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 720
-                },
-                {
-                  "x": 0,
-                  "y": 720
-                }
-              ],
-              "closed": true
-            }
-          ]
-        },
-        {
-          "id": "header_text_block",
-          "description": "Top-left header area containing a prominent title and supporting subtitle paragraph.",
-          "position": {
-            "x": 80,
-            "y": 32
-          },
-          "elements": [
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 1118.17,
-                "height": 60
-              },
-              "font": {
-                "size": 60,
-                "family": "Poppins",
-                "color": "#111827",
-                "bold": true,
-                "italic": false,
-                "line_height": 0.8
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Market Size",
-                  "font": {
-                    "size": 60,
-                    "family": "Poppins",
-                    "color": "#111827",
-                    "bold": true,
-                    "italic": false,
-                    "line_height": 0.8
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "main_heading",
-              "max_length": 30,
-              "min_length": 6,
-              "rotation": 0
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 76
-              },
-              "size": {
-                "width": 770,
-                "height": 78.6
-              },
-              "font": {
-                "size": 16,
-                "family": "Poppins",
-                "color": "#4B5563",
-                "bold": false,
-                "italic": false,
-                "line_height": 1.3
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Businesses face challenges with outdated technology and rising costs, limiting efficiency and growth in competitive markets.",
-                  "font": {
-                    "size": 16,
-                    "family": "Poppins",
-                    "color": "#4B5563",
-                    "bold": false,
-                    "italic": false,
-                    "line_height": 1.3
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "intro_paragraph",
-              "max_length": 273,
-              "min_length": 62,
-              "rotation": 0
-            }
-          ]
-        },
-        {
-          "id": "large_chart_card",
-          "description": "Primary content card on the left designed to hold a large comparison chart.",
-          "position": {
-            "x": 80,
-            "y": 192
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF"
-              },
-              "stroke": {
-                "color": "#F8F9FA",
-                "width": 1
-              },
-              "shadow": {
-                "color": "#000000",
-                "blur": 2,
-                "opacity": 0.05,
-                "offset_x": 0,
-                "offset_y": 1
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 768,
-                  "y": 0
-                },
-                {
-                  "x": 768,
-                  "y": 496
-                },
-                {
-                  "x": 0,
-                  "y": 496
-                }
-              ],
-              "closed": true,
-              "corner_radii": [
-                8,
-                8,
-                8,
-                8
-              ]
-            },
-            {
-              "type": "chart",
-              "position": {
-                "x": 17,
-                "y": 17
-              },
-              "size": {
-                "width": 734,
-                "height": 460
-              },
-              "chart_type": "bar",
-              "title_color": "#111827",
-              "colors": [
-                "#3B82F6",
-                "#EF4444",
-                "#10B981"
-              ],
-              "x_axis": true,
-              "y_axis": true,
-              "axis_color": "#6B7280",
-              "categories": [
-                "Q1",
-                "Q1",
-                "Q1"
-              ],
-              "series": [
-                {
-                  "name": "Comparison values",
-                  "values": [
-                    5,
-                    5,
-                    5
-                  ]
-                }
-              ],
-              "legend": true,
-              "x_axis_grid": true,
-              "y_axis_grid": true,
-              "grid_color": "#A855F7",
-              "decorative": false,
-              "name": "primary_bar_chart"
-            }
-          ]
-        },
-        {
-          "id": "right_info_cards",
-          "description": "Right column containing three evenly spaced rounded cards with icon, title, and description content.",
-          "position": {
-            "x": 880,
-            "y": 101.75
-          },
-          "elements": [
-            {
-              "type": "flex",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 320,
-                "height": 516.5
-              },
-              "direction": "column",
-              "wrap": false,
-              "align_items": "center",
-              "justify_content": "center",
-              "gap": 16,
-              "children": [
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 320,
-                    "height": 161.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#9333EA"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "opacity": 0
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 161.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 161.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        16,
-                        16,
-                        16,
-                        16
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 29.59,
-                        "y": 42.61
-                      },
-                      "size": {
-                        "width": 20,
-                        "height": 20
-                      },
-                      "rotation": 0,
-                      "data": "static/image17-3bad1e1bf9ec.png",
-                      "fit": "fill",
-                      "color": "#FFFFFF",
-                      "decorative": true,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 68.47,
-                        "y": 20.2
-                      },
-                      "size": {
-                        "width": 230.8,
-                        "height": 56
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Total Addressable Market",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 27,
-                      "min_length": 14
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 92
-                      },
-                      "size": {
-                        "width": 274,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Companies can use TAM to plan future expansion and investment.",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_body",
-                      "max_length": 63,
-                      "min_length": 32
-                    }
-                  ],
-                  "name": "info_card_item"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 320,
-                    "height": 161.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#9333EA"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "opacity": 0
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 161.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 161.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        16,
-                        16,
-                        16,
-                        16
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 27.92,
-                        "y": 42.61
-                      },
-                      "size": {
-                        "width": 20,
-                        "height": 20
-                      },
-                      "rotation": 0,
-                      "data": "static/image18-7076e2044973.png",
-                      "fit": "fill",
-                      "color": "#FFFFFF",
-                      "decorative": true,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 63.84,
-                        "y": 24
-                      },
-                      "size": {
-                        "width": 234.16,
-                        "height": 56
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Serviceable Available Market",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 27,
-                      "min_length": 14
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 92
-                      },
-                      "size": {
-                        "width": 274,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Indicates more measurable market segments for sales efforts.",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_body",
-                      "max_length": 63,
-                      "min_length": 32
-                    }
-                  ],
-                  "name": "info_card_item"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 320,
-                    "height": 161.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#9333EA"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "opacity": 0
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 0
-                        },
-                        {
-                          "x": 320,
-                          "y": 161.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 161.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        16,
-                        16,
-                        16,
-                        16
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 27.19,
-                        "y": 42.61
-                      },
-                      "size": {
-                        "width": 20,
-                        "height": 20
-                      },
-                      "rotation": 0,
-                      "data": "static/image19-8efba41be759.png",
-                      "fit": "fill",
-                      "color": "#FFFFFF",
-                      "decorative": true,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 62.37,
-                        "y": 24
-                      },
-                      "size": {
-                        "width": 235.62,
-                        "height": 56
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Serviceable Obtainable Market",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 27,
-                      "min_length": 14
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 92
-                      },
-                      "size": {
-                        "width": 274,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#FFFFFF",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Help companies plan development strategies according to the market.",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#FFFFFF",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_body",
-                      "max_length": 63,
-                      "min_length": 32
-                    }
-                  ],
-                  "name": "info_card_item"
-                }
-              ],
-              "name": "stacked_card_list",
               "max_children": 3,
               "min_children": 2
             }
@@ -11729,7 +11037,7 @@
                         "height": 81.27
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -11744,7 +11052,7 @@
                         {
                           "text": "Larana Inc. has successfully built a diverse client base, gaining trust across industries.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -11755,7 +11063,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_description",
-                      "max_length": 200,
+                      "max_length": 76,
                       "min_length": 45,
                       "rotation": 0
                     }
@@ -11857,7 +11165,7 @@
                         "height": 82.64
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -11872,7 +11180,7 @@
                         {
                           "text": "Delivering over 200 projects, Larana Inc. consistently meets evolving client needs.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -11883,7 +11191,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_description",
-                      "max_length": 200,
+                      "max_length": 76,
                       "min_length": 45,
                       "rotation": 0
                     }
@@ -11985,7 +11293,7 @@
                         "height": 81.27
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -12000,7 +11308,7 @@
                         {
                           "text": "With a strong focus on customer success, Larana Inc. has a 95% satisfaction rate.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -12011,7 +11319,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_description",
-                      "max_length": 200,
+                      "max_length": 76,
                       "min_length": 45,
                       "rotation": 0
                     }
@@ -12234,7 +11542,7 @@
                 "height": 112
               },
               "font": {
-                "size": 18,
+                "size": 20,
                 "family": "Poppins",
                 "color": "#4B5563",
                 "bold": false,
@@ -12249,7 +11557,7 @@
                 {
                   "text": "Ginyard International Co. stands out by offering custom digital solutions tailored to client needs, alongside long-term support to ensure lasting relationships and continuous adaptation.",
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#4B5563",
                     "bold": false,
@@ -12260,7 +11568,7 @@
               ],
               "decorative": false,
               "name": "body_text",
-              "max_length": 186,
+              "max_length": 173,
               "min_length": 93
             }
           ]
@@ -12311,7 +11619,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 14,
+                        "size": 18,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -12326,7 +11634,7 @@
                         {
                           "text": "Satisfied Clients",
                           "font": {
-                            "size": 14,
+                            "size": 18,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -12337,7 +11645,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_label",
-                      "max_length": 30,
+                      "max_length": 23,
                       "min_length": 9
                     },
                     {
@@ -12405,7 +11713,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 14,
+                        "size": 18,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -12420,7 +11728,7 @@
                         {
                           "text": "Client Retention Rate",
                           "font": {
-                            "size": 14,
+                            "size": 18,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -12431,7 +11739,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_label",
-                      "max_length": 30,
+                      "max_length": 23,
                       "min_length": 9
                     },
                     {
@@ -12783,7 +12091,7 @@
                         "height": 78
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -12798,7 +12106,7 @@
                         {
                           "text": "Surveys reveal that 78% of businesses are planning to invest in digital solutions, with 85% preferring customized approaches.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -12917,7 +12225,7 @@
                         "height": 52
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -12932,7 +12240,7 @@
                         {
                           "text": "The survey revealed that 78% of businesses plan to invest in digital solutions, and 85% prefer a tailored approach.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -12943,7 +12251,7 @@
                       ],
                       "decorative": false,
                       "name": "item_body",
-                      "max_length": 107,
+                      "max_length": 76,
                       "min_length": 63
                     }
                   ]
@@ -13051,7 +12359,7 @@
                         "height": 52
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -13066,7 +12374,7 @@
                         {
                           "text": "The survey revealed that 78% of businesses plan to invest in digital solutions, and 85% prefer a tailored approach.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -13077,7 +12385,7 @@
                       ],
                       "decorative": false,
                       "name": "item_body",
-                      "max_length": 107,
+                      "max_length": 76,
                       "min_length": 63
                     }
                   ]
@@ -13185,7 +12493,7 @@
                         "height": 52
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Poppins",
                         "color": "#4B5563",
                         "bold": false,
@@ -13200,7 +12508,7 @@
                         {
                           "text": "The survey revealed that 78% of businesses plan to invest in digital solutions, and 85% prefer a tailored approach.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Poppins",
                             "color": "#4B5563",
                             "bold": false,
@@ -13211,7 +12519,7 @@
                       ],
                       "decorative": false,
                       "name": "item_body",
-                      "max_length": 107,
+                      "max_length": 76,
                       "min_length": 63
                     }
                   ]
@@ -13591,7 +12899,7 @@
                 "height": 28
               },
               "font": {
-                "size": 18,
+                "size": 20,
                 "family": "Poppins",
                 "color": "#FFFFFF",
                 "bold": false,
@@ -13606,7 +12914,7 @@
                 {
                   "text": "Winston Churchill",
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#FFFFFF",
                     "bold": false,
@@ -13617,7 +12925,7 @@
               ],
               "decorative": false,
               "name": "attribution_text",
-              "max_length": 17,
+              "max_length": 13,
               "min_length": 9
             },
             {
@@ -14308,7 +13616,7 @@
                 "height": 48
               },
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Poppins",
                 "color": "#4B5563",
                 "bold": false,
@@ -14323,7 +13631,7 @@
                 {
                   "text": "This comparison shows our competitive position in the market. While we currently have a smaller market share, our growth rate significantly exceeds competitors, indicating strong potential for future expansion.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Poppins",
                     "color": "#4B5563",
                     "bold": false,
@@ -14334,7 +13642,7 @@
               ],
               "decorative": false,
               "name": "supporting_note",
-              "max_length": 210,
+              "max_length": 146,
               "min_length": 105
             }
           ]
@@ -16410,989 +15718,6 @@
         }
       ],
       "elements": []
-    },
-    {
-      "id": "title_description_team_cards",
-      "description": "A clean split presentation layout with introductory copy on the left and a profile card grid on the right.",
-      "components": [
-        {
-          "id": "background_canvas",
-          "description": "Full-slide white background with a subtle decorative wave accent anchored along the lower-left edge.",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF"
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 720
-                },
-                {
-                  "x": 0,
-                  "y": 720
-                }
-              ],
-              "closed": true
-            },
-            {
-              "type": "image",
-              "position": {
-                "x": 0,
-                "y": 560
-              },
-              "size": {
-                "width": 320,
-                "height": 160
-              },
-              "data": "static/image33-ae1f10d83bac.png",
-              "fit": "fill",
-              "decorative": true,
-              "name": "lower_left_wave",
-              "is_icon": false
-            }
-          ]
-        },
-        {
-          "id": "left_intro_block",
-          "description": "Large headline, short accent divider, and paragraph arranged as a vertically stacked introduction area.",
-          "position": {
-            "x": 80,
-            "y": 212
-          },
-          "elements": [
-            {
-              "type": "flex",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 530,
-                "height": 312
-              },
-              "direction": "column",
-              "align_items": "flex-start",
-              "justify_content": "flex-start",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "text",
-                  "size": {
-                    "width": 530,
-                    "height": 120
-                  },
-                  "font": {
-                    "size": 60,
-                    "family": "Poppins",
-                    "color": "#111827",
-                    "bold": true,
-                    "italic": false,
-                    "line_height": 0.8
-                  },
-                  "alignment": {
-                    "horizontal": "left",
-                    "vertical": "top"
-                  },
-                  "runs": [
-                    {
-                      "text": "Our Team Members",
-                      "font": {
-                        "size": 60,
-                        "family": "Poppins",
-                        "color": "#111827",
-                        "bold": true,
-                        "italic": false,
-                        "line_height": 0.8
-                      }
-                    }
-                  ],
-                  "decorative": false,
-                  "name": "intro_heading",
-                  "max_length": 25,
-                  "min_length": 8
-                },
-                {
-                  "type": "vector",
-                  "shape": "polygon",
-                  "fill": {
-                    "color": "#9333EA"
-                  },
-                  "points": [
-                    {
-                      "x": 0,
-                      "y": 0
-                    },
-                    {
-                      "x": 80,
-                      "y": 0
-                    },
-                    {
-                      "x": 80,
-                      "y": 4
-                    },
-                    {
-                      "x": 0,
-                      "y": 4
-                    }
-                  ],
-                  "closed": true,
-                  "max_length": 26
-                },
-                {
-                  "type": "text",
-                  "size": {
-                    "width": 530,
-                    "height": 140
-                  },
-                  "font": {
-                    "size": 18,
-                    "family": "Poppins",
-                    "color": "#4B5563",
-                    "bold": false,
-                    "italic": false,
-                    "line_height": 1.24
-                  },
-                  "alignment": {
-                    "horizontal": "left",
-                    "vertical": "top"
-                  },
-                  "runs": [
-                    {
-                      "text": "Ginyard International Co. is a leading provider of innovative digital solutions tailored for businesses. Our mission is to empower organizations to achieve their goals through cutting-edge technology and strategic partnerships.",
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      }
-                    }
-                  ],
-                  "decorative": false,
-                  "name": "intro_body",
-                  "min_length": 64,
-                  "max_length": 250
-                }
-              ],
-              "name": "intro_vertical_stack",
-              "min_children": 1,
-              "max_children": 1
-            }
-          ]
-        },
-        {
-          "id": "profile_card_grid",
-          "description": "Four similarly structured profile cards arranged in a balanced two-by-two grid on the right side.",
-          "position": {
-            "x": 672,
-            "y": 101.5
-          },
-          "elements": [
-            {
-              "type": "grid",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 530,
-                "height": 533
-              },
-              "columns": 2,
-              "rows": 2,
-              "column_gap": 22,
-              "row_gap": 24.5,
-              "align_items": "flex-start",
-              "justify_items": "center",
-              "children": [
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 254,
-                    "height": 254.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#E5E7EB"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 6,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 4
-                      },
-                      "points": [
-                        {
-                          "x": 62,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 128
-                        },
-                        {
-                          "x": 62,
-                          "y": 128
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        8,
-                        8,
-                        8,
-                        8
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 62,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 128,
-                        "height": 128
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "cover",
-                      "border_radius": {
-                        "tl": 8,
-                        "tr": 8,
-                        "bl": 8,
-                        "br": 8
-                      },
-                      "decorative": false,
-                      "name": "profile_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 140
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#111827",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Juliana Silva",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#111827",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_name",
-                      "max_length": 20,
-                      "min_length": 7
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 168
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 20
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": true,
-                        "line_height": 1.14
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "CEO",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": true,
-                            "line_height": 1.14
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_role",
-                      "max_length": 25,
-                      "min_length": 2
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 8,
-                        "y": 196
-                      },
-                      "size": {
-                        "width": 238,
-                        "height": 58.5
-                      },
-                      "font": {
-                        "size": 12,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Strategic leader with 15+ years experience in digital transformation and business growth.",
-                          "font": {
-                            "size": 12,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_description",
-                      "max_length": 100,
-                      "min_length": 45
-                    }
-                  ],
-                  "name": "profile_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 254,
-                    "height": 254.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#E5E7EB"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 6,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 4
-                      },
-                      "points": [
-                        {
-                          "x": 62,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 128
-                        },
-                        {
-                          "x": 62,
-                          "y": 128
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        8,
-                        8,
-                        8,
-                        8
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 62,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 128,
-                        "height": 128
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "cover",
-                      "border_radius": {
-                        "tl": 8,
-                        "tr": 8,
-                        "bl": 8,
-                        "br": 8
-                      },
-                      "decorative": false,
-                      "name": "profile_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 140
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#111827",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Daniel Gallego",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#111827",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_name",
-                      "max_length": 20,
-                      "min_length": 7
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 168
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 20
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": true,
-                        "line_height": 1.14
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "CTO",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": true,
-                            "line_height": 1.14
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_role",
-                      "max_length": 25,
-                      "min_length": 2
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 8,
-                        "y": 196
-                      },
-                      "size": {
-                        "width": 238,
-                        "height": 58.5
-                      },
-                      "font": {
-                        "size": 12,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Technology expert specializing in scalable solutions and innovative software architecture.",
-                          "font": {
-                            "size": 12,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_description",
-                      "max_length": 100,
-                      "min_length": 45
-                    }
-                  ],
-                  "name": "profile_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 254,
-                    "height": 254.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#E5E7EB"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 6,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 4
-                      },
-                      "points": [
-                        {
-                          "x": 62,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 128
-                        },
-                        {
-                          "x": 62,
-                          "y": 128
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        8,
-                        8,
-                        8,
-                        8
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 62,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 128,
-                        "height": 128
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "cover",
-                      "border_radius": {
-                        "tl": 8,
-                        "tr": 8,
-                        "bl": 8,
-                        "br": 8
-                      },
-                      "decorative": false,
-                      "name": "profile_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 140
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#111827",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Ketut Susilo",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#111827",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_name",
-                      "max_length": 20,
-                      "min_length": 7
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 168
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 20
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": true,
-                        "line_height": 1.14
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "COO",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": true,
-                            "line_height": 1.14
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_role",
-                      "max_length": 25,
-                      "min_length": 2
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 8,
-                        "y": 196
-                      },
-                      "size": {
-                        "width": 238,
-                        "height": 58.5
-                      },
-                      "font": {
-                        "size": 12,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Operations leader focused on efficiency, process optimization, and team development.",
-                          "font": {
-                            "size": 12,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_description",
-                      "max_length": 100,
-                      "min_length": 45
-                    }
-                  ],
-                  "name": "profile_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 254,
-                    "height": 254.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#E5E7EB"
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 6,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 4
-                      },
-                      "points": [
-                        {
-                          "x": 62,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 0
-                        },
-                        {
-                          "x": 190,
-                          "y": 128
-                        },
-                        {
-                          "x": 62,
-                          "y": 128
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        8,
-                        8,
-                        8,
-                        8
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 62,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 128,
-                        "height": 128
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "cover",
-                      "border_radius": {
-                        "tl": 8,
-                        "tr": 8,
-                        "bl": 8,
-                        "br": 8
-                      },
-                      "decorative": false,
-                      "name": "profile_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 140
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 18,
-                        "family": "Poppins",
-                        "color": "#111827",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.24
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Anna Robertson",
-                          "font": {
-                            "size": 18,
-                            "family": "Poppins",
-                            "color": "#111827",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.24
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_name",
-                      "max_length": 20,
-                      "min_length": 7
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 168
-                      },
-                      "size": {
-                        "width": 254,
-                        "height": 20
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": true,
-                        "line_height": 1.14
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "CMO",
-                          "font": {
-                            "size": 14,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": true,
-                            "line_height": 1.14
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_role",
-                      "max_length": 25,
-                      "min_length": 2
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 8,
-                        "y": 196
-                      },
-                      "size": {
-                        "width": 238,
-                        "height": 58.5
-                      },
-                      "font": {
-                        "size": 12,
-                        "family": "Poppins",
-                        "color": "#4B5563",
-                        "bold": false,
-                        "italic": false,
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Marketing strategist with expertise in brand development and customer engagement.",
-                          "font": {
-                            "size": 12,
-                            "family": "Poppins",
-                            "color": "#4B5563",
-                            "bold": false,
-                            "italic": false,
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "profile_description",
-                      "max_length": 100,
-                      "min_length": 45
-                    }
-                  ],
-                  "name": "profile_card"
-                }
-              ],
-              "name": "profile_grid",
-              "max_children": 4,
-              "min_children": 4
-            }
-          ]
-        }
-      ]
     }
   ],
   "fonts": {

@@ -9526,7 +9526,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.28
@@ -9538,7 +9538,7 @@
                 {
                   "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.28
@@ -9547,7 +9547,7 @@
               ],
               "decorative": false,
               "name": "supporting_paragraph_text",
-              "max_length": 123,
+              "max_length": 101,
               "min_length": 62
             }
           ]
@@ -9657,7 +9657,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -9669,7 +9669,7 @@
                     {
                       "text": "John Doe",
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -9678,7 +9678,7 @@
                   ],
                   "decorative": false,
                   "name": "badge_primary_label",
-                  "max_length": 8,
+                  "max_length": 6,
                   "min_length": 4
                 },
                 {
@@ -9693,7 +9693,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 11.5,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -9705,7 +9705,7 @@
                     {
                       "text": "Jan 1, 2025",
                       "font": {
-                        "size": 11.5,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -9714,7 +9714,7 @@
                   ],
                   "decorative": false,
                   "name": "badge_secondary_label",
-                  "max_length": 11,
+                  "max_length": 6,
                   "min_length": 6
                 }
               ],
@@ -9826,865 +9826,6 @@
                 {
                   "x": 1169.37,
                   "y": 45.25
-                }
-              ],
-              "closed": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "title_note_icon_cards_2844",
-      "description": "A clean white slide with a top title and note, centered icon cards, and a thin footer rule.",
-      "components": [
-        {
-          "id": "background_canvas",
-          "description": "Full-slide white canvas that supports the open spacing and light presentation style.",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 720
-                },
-                {
-                  "x": 0,
-                  "y": 720
-                }
-              ],
-              "closed": true
-            }
-          ]
-        },
-        {
-          "id": "top_header_area",
-          "description": "Header with a small decorative marker, oversized left title, and concise explanatory copy aligned on the right.",
-          "position": {
-            "x": 42,
-            "y": 18
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "rotation": 45,
-              "fill": {
-                "color": "#111827",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 4,
-                  "y": 4
-                },
-                {
-                  "x": 21,
-                  "y": 4
-                },
-                {
-                  "x": 21,
-                  "y": 21
-                },
-                {
-                  "x": 4,
-                  "y": 21
-                }
-              ],
-              "closed": true,
-              "corner_radii": [
-                2.5,
-                2.5,
-                2.5,
-                2.5
-              ]
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 6,
-                "y": 34
-              },
-              "size": {
-                "width": 626,
-                "height": 59
-              },
-              "font": {
-                "size": 56,
-                "family": "Albert Sans",
-                "color": "#111827",
-                "line_height": 0.84
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Our Infographic",
-                  "font": {
-                    "size": 56,
-                    "family": "Albert Sans",
-                    "color": "#111827",
-                    "line_height": 0.84
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "large_left_heading",
-              "max_length": 15,
-              "min_length": 8
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 670,
-                "y": 34
-              },
-              "size": {
-                "width": 522,
-                "height": 24
-              },
-              "font": {
-                "size": 16,
-                "family": "Albert Sans",
-                "color": "#111827",
-                "line_height": 1.2
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Lorem ipsum dolor sit amet,",
-                  "font": {
-                    "size": 16,
-                    "family": "Albert Sans",
-                    "color": "#111827",
-                    "line_height": 1.2
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "right_intro_heading",
-              "max_length": 27,
-              "min_length": 14
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 670,
-                "y": 66
-              },
-              "size": {
-                "width": 522,
-                "height": 45
-              },
-              "font": {
-                "size": 14,
-                "family": "Albert Sans",
-                "color": "#6B7280",
-                "line_height": 1.28
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Concise paragraph describing context. Keep it short and readable across one or two lines.",
-                  "font": {
-                    "size": 14,
-                    "family": "Albert Sans",
-                    "color": "#6B7280",
-                    "line_height": 1.28
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "right_intro_body",
-              "max_length": 89,
-              "min_length": 45
-            }
-          ]
-        },
-        {
-          "id": "four_card_row",
-          "description": "A horizontal row of four equally spaced informational cards, each centered around an icon tile and two text lines.",
-          "position": {
-            "x": 72,
-            "y": 177
-          },
-          "elements": [
-            {
-              "type": "flex",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 1138,
-                "height": 254
-              },
-              "direction": "row",
-              "wrap": false,
-              "align_items": "flex-start",
-              "justify_content": "flex-start",
-              "gap": 30,
-              "children": [
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 262,
-                    "height": 254
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BFF4FF",
-                        "opacity": 1
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 2,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 1
-                      },
-                      "points": [
-                        {
-                          "x": 50,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 160
-                        },
-                        {
-                          "x": 50,
-                          "y": 160
-                        }
-                      ],
-                      "closed": true
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 102,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 56,
-                        "height": 56
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#111827",
-                      "decorative": false,
-                      "name": "center_tile_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 60.5,
-                        "y": 180
-                      },
-                      "size": {
-                        "width": 141,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 14.0,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Lorem ipsum dolor",
-                          "font": {
-                            "size": 14.0,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_heading",
-                      "max_length": 17,
-                      "min_length": 9
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 212
-                      },
-                      "size": {
-                        "width": 262,
-                        "height": 42
-                      },
-                      "font": {
-                        "size": 13,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.28
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text under the first icon explaining the point.",
-                          "font": {
-                            "size": 13,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.28
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_supporting_copy",
-                      "max_length": 67,
-                      "min_length": 33
-                    }
-                  ],
-                  "name": "centered_icon_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 262,
-                    "height": 254
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BFF4FF",
-                        "opacity": 1
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 2,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 1
-                      },
-                      "points": [
-                        {
-                          "x": 50,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 160
-                        },
-                        {
-                          "x": 50,
-                          "y": 160
-                        }
-                      ],
-                      "closed": true
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 102,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 56,
-                        "height": 56
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#111827",
-                      "decorative": false,
-                      "name": "center_tile_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 60.5,
-                        "y": 180
-                      },
-                      "size": {
-                        "width": 141,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 14.0,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Lorem ipsum dolor",
-                          "font": {
-                            "size": 14.0,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_heading",
-                      "max_length": 17,
-                      "min_length": 9
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 212
-                      },
-                      "size": {
-                        "width": 262,
-                        "height": 42
-                      },
-                      "font": {
-                        "size": 13,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.28
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text under the second icon explaining the point.",
-                          "font": {
-                            "size": 13,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.28
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_supporting_copy",
-                      "max_length": 67,
-                      "min_length": 33
-                    }
-                  ],
-                  "name": "centered_icon_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 262,
-                    "height": 254
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BFF4FF",
-                        "opacity": 1
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 2,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 1
-                      },
-                      "points": [
-                        {
-                          "x": 50,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 160
-                        },
-                        {
-                          "x": 50,
-                          "y": 160
-                        }
-                      ],
-                      "closed": true
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 102,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 56,
-                        "height": 56
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#111827",
-                      "decorative": false,
-                      "name": "center_tile_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 60.5,
-                        "y": 180
-                      },
-                      "size": {
-                        "width": 141,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 14.0,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Lorem ipsum dolor",
-                          "font": {
-                            "size": 14.0,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_heading",
-                      "max_length": 17,
-                      "min_length": 9
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 212
-                      },
-                      "size": {
-                        "width": 262,
-                        "height": 42
-                      },
-                      "font": {
-                        "size": 13,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.28
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text under the third icon explaining the point.",
-                          "font": {
-                            "size": 13,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.28
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_supporting_copy",
-                      "max_length": 67,
-                      "min_length": 33
-                    }
-                  ],
-                  "name": "centered_icon_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 262,
-                    "height": 254
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BFF4FF",
-                        "opacity": 1
-                      },
-                      "shadow": {
-                        "color": "#000000",
-                        "blur": 2,
-                        "opacity": 0.1,
-                        "offset_x": 0,
-                        "offset_y": 1
-                      },
-                      "points": [
-                        {
-                          "x": 50,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 0
-                        },
-                        {
-                          "x": 210,
-                          "y": 160
-                        },
-                        {
-                          "x": 50,
-                          "y": 160
-                        }
-                      ],
-                      "closed": true
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 102,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 56,
-                        "height": 56
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#111827",
-                      "decorative": false,
-                      "name": "center_tile_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 60.5,
-                        "y": 180
-                      },
-                      "size": {
-                        "width": 141,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 14.0,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Lorem ipsum dolor",
-                          "font": {
-                            "size": 14.0,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_heading",
-                      "max_length": 17,
-                      "min_length": 9
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 0,
-                        "y": 212
-                      },
-                      "size": {
-                        "width": 262,
-                        "height": 42
-                      },
-                      "font": {
-                        "size": 13,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.28
-                      },
-                      "alignment": {
-                        "horizontal": "center",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text under the fourth icon explaining the point.",
-                          "font": {
-                            "size": 13,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.28
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_supporting_copy",
-                      "max_length": 67,
-                      "min_length": 33
-                    }
-                  ],
-                  "name": "centered_icon_card"
-                }
-              ],
-              "name": "even_card_sequence",
-              "max_children": 4,
-              "min_children": 4
-            }
-          ]
-        },
-        {
-          "id": "bottom_footer_rule",
-          "description": "Footer with small website text, a long horizontal divider, and a diamond accent on the far right.",
-          "position": {
-            "x": 48,
-            "y": 644
-          },
-          "elements": [
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 23
-              },
-              "size": {
-                "width": 145,
-                "height": 21
-              },
-              "font": {
-                "size": 14,
-                "family": "Albert Sans",
-                "color": "#6B7280",
-                "line_height": 1.2
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "www.yourwebsite.com",
-                  "font": {
-                    "size": 14,
-                    "family": "Albert Sans",
-                    "color": "#6B7280",
-                    "line_height": 1.2
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "footer_left_label",
-              "max_length": 19,
-              "min_length": 10
-            },
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#111827",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 167,
-                  "y": 32.5
-                },
-                {
-                  "x": 1184,
-                  "y": 32.5
-                },
-                {
-                  "x": 1184,
-                  "y": 34.5
-                },
-                {
-                  "x": 167,
-                  "y": 34.5
-                }
-              ],
-              "closed": true
-            },
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "rotation": 45,
-              "fill": {
-                "color": "#111827",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 1169,
-                  "y": 9
-                },
-                {
-                  "x": 1214,
-                  "y": 9
-                },
-                {
-                  "x": 1214,
-                  "y": 54
-                },
-                {
-                  "x": 1169,
-                  "y": 54
                 }
               ],
               "closed": true
@@ -10854,7 +9995,7 @@
                 "height": 24
               },
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -10867,7 +10008,7 @@
                 {
                   "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -10876,7 +10017,7 @@
               ],
               "decorative": false,
               "name": "supporting_subheading",
-              "max_length": 90,
+              "max_length": 62,
               "min_length": 45
             }
           ]
@@ -11018,7 +10159,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -11031,7 +10172,7 @@
                         {
                           "text": "Customizable Workflows",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -11040,7 +10181,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -11054,7 +10195,7 @@
                         "height": 48
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11067,7 +10208,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet, dolor sit amet.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11076,7 +10217,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 43,
+                      "max_length": 17,
                       "min_length": 14
                     }
                   ],
@@ -11194,7 +10335,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -11207,7 +10348,7 @@
                         {
                           "text": "Multi-Device Access",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -11216,7 +10357,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -11230,7 +10371,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 9.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11243,7 +10384,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 9.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11252,7 +10393,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 43,
+                      "max_length": 17,
                       "min_length": 14
                     }
                   ],
@@ -11370,7 +10511,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -11383,7 +10524,7 @@
                         {
                           "text": "Scalable Architecture",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -11392,7 +10533,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -11406,7 +10547,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 9.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11419,7 +10560,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 9.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11428,7 +10569,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 43,
+                      "max_length": 17,
                       "min_length": 14
                     }
                   ],
@@ -11546,7 +10687,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -11559,7 +10700,7 @@
                         {
                           "text": "Detailed Reports",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -11568,7 +10709,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -11582,7 +10723,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 9.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11595,7 +10736,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 9.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11604,7 +10745,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 43,
+                      "max_length": 17,
                       "min_length": 14
                     }
                   ],
@@ -11723,704 +10864,6 @@
                 }
               ],
               "closed": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "left_intro_image_cards_2981",
-      "description": "A clean team introduction slide with left text, visual cards aligned across the top, and a minimal footer rule.",
-      "components": [
-        {
-          "id": "canvas_decorations",
-          "description": "Full-slide white canvas with small rotated corner markers and a thin footer divider for visual framing.",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 720
-                },
-                {
-                  "x": 0,
-                  "y": 720
-                }
-              ],
-              "closed": true
-            },
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "rotation": 45,
-              "fill": {
-                "color": "#111827",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 45.5,
-                  "y": 21.5
-                },
-                {
-                  "x": 62.5,
-                  "y": 21.5
-                },
-                {
-                  "x": 62.5,
-                  "y": 38.5
-                },
-                {
-                  "x": 45.5,
-                  "y": 38.5
-                }
-              ],
-              "closed": true,
-              "corner_radii": [
-                2.5,
-                2.5,
-                2.5,
-                2.5
-              ]
-            },
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#E5E7EB",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 215,
-                  "y": 676.5
-                },
-                {
-                  "x": 1232,
-                  "y": 676.5
-                },
-                {
-                  "x": 1232,
-                  "y": 678.5
-                },
-                {
-                  "x": 215,
-                  "y": 678.5
-                }
-              ],
-              "closed": true
-            },
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "rotation": 45,
-              "fill": {
-                "color": "#111827",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 1217.4,
-                  "y": 653.4
-                },
-                {
-                  "x": 1262.7,
-                  "y": 653.4
-                },
-                {
-                  "x": 1262.7,
-                  "y": 698.6999999999999
-                },
-                {
-                  "x": 1217.4,
-                  "y": 698.6999999999999
-                }
-              ],
-              "closed": true
-            }
-          ]
-        },
-        {
-          "id": "left_text_block",
-          "description": "Large title and short supporting paragraph stacked on the upper left with generous whitespace below.",
-          "position": {
-            "x": 48,
-            "y": 68
-          },
-          "elements": [
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 430,
-                "height": 60
-              },
-              "font": {
-                "size": 56,
-                "family": "Albert Sans",
-                "color": "#111827",
-                "line_height": 0.84
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Meet OurTeam",
-                  "font": {
-                    "size": 56,
-                    "family": "Albert Sans",
-                    "color": "#111827",
-                    "line_height": 0.84
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "main_heading",
-              "max_length": 12,
-              "min_length": 6
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 90.8
-              },
-              "size": {
-                "width": 302,
-                "height": 58
-              },
-              "font": {
-                "size": 16,
-                "family": "Albert Sans",
-                "color": "#6B7280",
-                "line_height": 1.44
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  "font": {
-                    "size": 16,
-                    "family": "Albert Sans",
-                    "color": "#6B7280",
-                    "line_height": 1.44
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "intro_paragraph",
-              "max_length": 56,
-              "min_length": 28
-            }
-          ]
-        },
-        {
-          "id": "top_card_row",
-          "description": "Three image cards arranged in a horizontal row, each combining a photo, colored caption area, title, and short copy.",
-          "position": {
-            "x": 506.2,
-            "y": 68
-          },
-          "elements": [
-            {
-              "type": "flex",
-              "size": {
-                "width": 757.8,
-                "height": 321
-              },
-              "direction": "row",
-              "wrap": false,
-              "align_items": "flex-start",
-              "justify_content": "flex-start",
-              "gap": 40,
-              "children": [
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 226,
-                    "height": 321
-                  },
-                  "children": [
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 0,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 226,
-                        "height": 180
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "fill",
-                      "border_radius": {
-                        "tl": 4,
-                        "tr": 4,
-                        "bl": 0,
-                        "br": 0
-                      },
-                      "decorative": false,
-                      "name": "card_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BDEFF8",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 321
-                        },
-                        {
-                          "x": 0,
-                          "y": 321
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        0,
-                        0,
-                        28,
-                        28
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 203
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 30
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Sample Title",
-                          "font": {
-                            "size": 20,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 12,
-                      "min_length": 6
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 245
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 48
-                      },
-                      "font": {
-                        "size": 14,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.36
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Short description for the image or item.",
-                          "font": {
-                            "size": 14,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.36
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 40,
-                      "min_length": 20
-                    }
-                  ],
-                  "name": "vertical_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 226,
-                    "height": 297
-                  },
-                  "children": [
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 0,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 226,
-                        "height": 180
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "fill",
-                      "border_radius": {
-                        "tl": 4,
-                        "tr": 4,
-                        "bl": 0,
-                        "br": 0
-                      },
-                      "decorative": false,
-                      "name": "card_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BDEFF8",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 297
-                        },
-                        {
-                          "x": 0,
-                          "y": 297
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        0,
-                        0,
-                        28,
-                        28
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 203
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 30
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Another Item",
-                          "font": {
-                            "size": 20,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 12,
-                      "min_length": 6
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 245
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.36
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.36
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 24,
-                      "min_length": 12
-                    }
-                  ],
-                  "name": "vertical_card"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 226,
-                    "height": 297
-                  },
-                  "children": [
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 0,
-                        "y": 0
-                      },
-                      "size": {
-                        "width": 226,
-                        "height": 180
-                      },
-                      "data": "/static/images/replaceable_template_image.png",
-                      "fit": "fill",
-                      "border_radius": {
-                        "tl": 4,
-                        "tr": 4,
-                        "bl": 0,
-                        "br": 0
-                      },
-                      "decorative": false,
-                      "name": "card_photo",
-                      "is_icon": false
-                    },
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#BDEFF8",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 179
-                        },
-                        {
-                          "x": 226,
-                          "y": 297
-                        },
-                        {
-                          "x": 0,
-                          "y": 297
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        0,
-                        0,
-                        28,
-                        28
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 203
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 30
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Albert Sans",
-                        "color": "#111827",
-                        "line_height": 1.2
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Third Item",
-                          "font": {
-                            "size": 20,
-                            "family": "Albert Sans",
-                            "color": "#111827",
-                            "line_height": 1.2
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 10,
-                      "min_length": 5
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 24,
-                        "y": 245
-                      },
-                      "size": {
-                        "width": 180,
-                        "height": 24
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Albert Sans",
-                        "color": "#6B7280",
-                        "line_height": 1.36
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Concise supporting text.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Albert Sans",
-                            "color": "#6B7280",
-                            "line_height": 1.36
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 24,
-                      "min_length": 12
-                    }
-                  ],
-                  "name": "vertical_card"
-                }
-              ],
-              "name": "card_row",
-              "max_children": 3,
-              "min_children": 3
-            }
-          ]
-        },
-        {
-          "id": "footer_label",
-          "description": "Small website label positioned at bottom left before the horizontal divider line.",
-          "position": {
-            "x": 48,
-            "y": 667
-          },
-          "elements": [
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 145,
-                "height": 21
-              },
-              "font": {
-                "size": 14,
-                "family": "Albert Sans",
-                "color": "#6B7280",
-                "line_height": 1.2
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "www.yourwebsite.com",
-                  "font": {
-                    "size": 14,
-                    "family": "Albert Sans",
-                    "color": "#6B7280",
-                    "line_height": 1.2
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "footer_text",
-              "max_length": 19,
-              "min_length": 10
             }
           ]
         }
@@ -12644,7 +11087,7 @@
                     "height": 60
                   },
                   "font": {
-                    "size": 17.5,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -12657,7 +11100,7 @@
                     {
                       "text": "Proven Results\nThrough Data",
                       "font": {
-                        "size": 17.5,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -12666,7 +11109,7 @@
                   ],
                   "decorative": false,
                   "name": "supporting_label",
-                  "max_length": 27,
+                  "max_length": 25,
                   "min_length": 14
                 }
               ],
@@ -12683,7 +11126,7 @@
                 "height": 57.59
               },
               "font": {
-                "size": 16,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.44
@@ -12696,7 +11139,7 @@
                 {
                   "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                   "font": {
-                    "size": 16,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.44
@@ -12828,7 +11271,7 @@
                         "height": 48
                       },
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -12841,7 +11284,7 @@
                         {
                           "text": "Total\nUsers",
                           "font": {
-                            "size": 16,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -12864,7 +11307,7 @@
                         "height": 19.19
                       },
                       "font": {
-                        "size": 12,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -12877,7 +11320,7 @@
                         {
                           "text": "active users across multiple industries",
                           "font": {
-                            "size": 12,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -12886,7 +11329,7 @@
                       ],
                       "decorative": false,
                       "name": "small_caption",
-                      "max_length": 39,
+                      "max_length": 36,
                       "min_length": 20
                     }
                   ],
@@ -12986,7 +11429,7 @@
                         "height": 48
                       },
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -12999,7 +11442,7 @@
                         {
                           "text": "Revenue\nGrowth",
                           "font": {
-                            "size": 16,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -13022,7 +11465,7 @@
                         "height": 19.19
                       },
                       "font": {
-                        "size": 12,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -13035,7 +11478,7 @@
                         {
                           "text": "year-over-year revenue growth",
                           "font": {
-                            "size": 12,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -13144,7 +11587,7 @@
                         "height": 48
                       },
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -13157,7 +11600,7 @@
                         {
                           "text": "Customer\nSatisfaction",
                           "font": {
-                            "size": 16,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -13180,7 +11623,7 @@
                         "height": 19.19
                       },
                       "font": {
-                        "size": 12,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -13193,7 +11636,7 @@
                         {
                           "text": "retention rate with an average rating of 4.8/5",
                           "font": {
-                            "size": 12,
+                            "size": 18,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -13202,7 +11645,7 @@
                       ],
                       "decorative": false,
                       "name": "small_caption",
-                      "max_length": 46,
+                      "max_length": 36,
                       "min_length": 23
                     }
                   ],
@@ -13466,7 +11909,7 @@
                     "height": 28.8
                   },
                   "font": {
-                    "size": 16,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.44
@@ -13479,7 +11922,7 @@
                     {
                       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                       "font": {
-                        "size": 16,
+                        "size": 18,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.44
@@ -13488,7 +11931,7 @@
                   ],
                   "decorative": false,
                   "name": "supporting_sentence",
-                  "max_length": 56,
+                  "max_length": 47,
                   "min_length": 28
                 }
               ],
@@ -13601,7 +12044,7 @@
                         "height": 57.59
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.44
@@ -13614,7 +12057,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.44
@@ -13623,7 +12066,7 @@
                       ],
                       "decorative": false,
                       "name": "section_paragraph",
-                      "max_length": 104,
+                      "max_length": 100,
                       "min_length": 52
                     }
                   ],
@@ -13683,7 +12126,7 @@
                         "height": 57.59
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.44
@@ -13696,7 +12139,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.44
@@ -13705,7 +12148,7 @@
                       ],
                       "decorative": false,
                       "name": "section_paragraph",
-                      "max_length": 104,
+                      "max_length": 100,
                       "min_length": 52
                     }
                   ],
@@ -13765,7 +12208,7 @@
                         "height": 57.59
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.44
@@ -13778,7 +12221,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.44
@@ -13787,7 +12230,7 @@
                       ],
                       "decorative": false,
                       "name": "section_paragraph",
-                      "max_length": 104,
+                      "max_length": 100,
                       "min_length": 52
                     }
                   ],
@@ -13847,7 +12290,7 @@
                         "height": 57.59
                       },
                       "font": {
-                        "size": 16,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.44
@@ -13860,7 +12303,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
                           "font": {
-                            "size": 16,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.44
@@ -13869,7 +12312,7 @@
                       ],
                       "decorative": false,
                       "name": "section_paragraph",
-                      "max_length": 104,
+                      "max_length": 100,
                       "min_length": 52
                     }
                   ],
@@ -14277,7 +12720,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -14290,7 +12733,7 @@
                         {
                           "text": "A brief description of our company and goals.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -14299,7 +12742,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 40,
                       "min_length": 10
                     },
                     {
@@ -14422,7 +12865,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -14435,7 +12878,7 @@
                         {
                           "text": "Leadership and core contributors.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -14444,7 +12887,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -14567,7 +13010,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -14580,7 +13023,7 @@
                         {
                           "text": "High-level execution plan and milestones.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -14589,7 +13032,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -14712,7 +13155,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -14725,7 +13168,7 @@
                         {
                           "text": "Key suggestions based on initial requirements.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -14734,7 +13177,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -14857,7 +13300,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -14870,7 +13313,7 @@
                         {
                           "text": "What we propose and why it works.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -14879,7 +13322,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -15002,7 +13445,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -15015,7 +13458,7 @@
                         {
                           "text": "Audience, segments, and opportunity size.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -15024,7 +13467,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -15147,7 +13590,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -15160,7 +13603,7 @@
                         {
                           "text": "How we create and capture value.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -15169,7 +13612,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -15292,7 +13735,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -15305,7 +13748,7 @@
                         {
                           "text": "Closing notes and next steps.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -15314,7 +13757,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -15437,7 +13880,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -15450,7 +13893,7 @@
                         {
                           "text": "How we create and capture value.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -15459,7 +13902,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 39,
                       "min_length": 10
                     },
                     {
@@ -15582,7 +14025,7 @@
                         "height": 23
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.28
@@ -15595,7 +14038,7 @@
                         {
                           "text": "Closing notes and next steps.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.28
@@ -15604,7 +14047,7 @@
                       ],
                       "decorative": false,
                       "name": "entry_summary",
-                      "max_length": 60,
+                      "max_length": 40,
                       "min_length": 10
                     },
                     {
@@ -15663,7 +14106,7 @@
                 "height": 21
               },
               "font": {
-                "size": 8.5,
+                "size": 10,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -15676,7 +14119,7 @@
                 {
                   "text": "www.yourwebsite.com",
                   "font": {
-                    "size": 8.5,
+                    "size": 10,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -15685,7 +14128,7 @@
               ],
               "decorative": false,
               "name": "footer_label",
-              "max_length": 40,
+              "max_length": 23,
               "min_length": 8
             },
             {
@@ -15863,7 +14306,7 @@
                 "height": 24
               },
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -15876,7 +14319,7 @@
                 {
                   "text": "Present structured information in a flexible table or visualize it with a chart.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -15885,7 +14328,7 @@
               ],
               "decorative": false,
               "name": "supporting_subheading",
-              "max_length": 90,
+              "max_length": 73,
               "min_length": 30
             }
           ]
@@ -16355,7 +14798,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#111827",
                 "line_height": 1.2
@@ -16368,7 +14811,7 @@
                 {
                   "text": "Column 1",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -16377,7 +14820,7 @@
               ],
               "decorative": false,
               "name": "table_header_left",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 4
             },
             {
@@ -16391,7 +14834,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#111827",
                 "line_height": 1.2
@@ -16404,7 +14847,7 @@
                 {
                   "text": "Column 2",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -16413,7 +14856,7 @@
               ],
               "decorative": false,
               "name": "table_header_middle",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 4
             },
             {
@@ -16427,7 +14870,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#111827",
                 "line_height": 1.2
@@ -16440,7 +14883,7 @@
                 {
                   "text": "Column 3",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -16449,7 +14892,7 @@
               ],
               "decorative": false,
               "name": "table_header_right",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 4
             },
             {
@@ -16463,7 +14906,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16476,7 +14919,7 @@
                 {
                   "text": "Row A",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16485,7 +14928,7 @@
               ],
               "decorative": false,
               "name": "table_row_one_left",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 3
             },
             {
@@ -16499,7 +14942,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16512,7 +14955,7 @@
                 {
                   "text": "-",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16521,7 +14964,7 @@
               ],
               "decorative": false,
               "name": "table_row_one_right",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 1
             },
             {
@@ -16535,7 +14978,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16548,7 +14991,7 @@
                 {
                   "text": "Row B",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16557,7 +15000,7 @@
               ],
               "decorative": false,
               "name": "table_row_two_left",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 3
             },
             {
@@ -16571,7 +15014,7 @@
                 "height": 22
               },
               "font": {
-                "size": 9.0,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16584,7 +15027,7 @@
                 {
                   "text": "Text",
                   "font": {
-                    "size": 9.0,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16593,7 +15036,7 @@
               ],
               "decorative": false,
               "name": "table_row_two_middle",
-              "max_length": 28,
+              "max_length": 13,
               "min_length": 1
             },
             {
@@ -16607,7 +15050,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16620,7 +15063,7 @@
                 {
                   "text": "123",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16629,7 +15072,7 @@
               ],
               "decorative": false,
               "name": "table_row_two_right",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 1
             },
             {
@@ -16643,7 +15086,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16656,7 +15099,7 @@
                 {
                   "text": "Row C",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16665,7 +15108,7 @@
               ],
               "decorative": false,
               "name": "table_row_three_left",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 3
             },
             {
@@ -16679,7 +15122,7 @@
                 "height": 22
               },
               "font": {
-                "size": 11.0,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16692,7 +15135,7 @@
                 {
                   "text": "More text",
                   "font": {
-                    "size": 11.0,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16701,7 +15144,7 @@
               ],
               "decorative": false,
               "name": "table_row_three_middle",
-              "max_length": 28,
+              "max_length": 16,
               "min_length": 1
             },
             {
@@ -16715,7 +15158,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 18,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16728,7 +15171,7 @@
                 {
                   "text": "456",
                   "font": {
-                    "size": 14,
+                    "size": 18,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16737,7 +15180,7 @@
               ],
               "decorative": false,
               "name": "table_row_three_right",
-              "max_length": 18,
+              "max_length": 13,
               "min_length": 1
             }
           ]
@@ -16761,7 +15204,7 @@
                 "height": 21
               },
               "font": {
-                "size": 8.5,
+                "size": 10,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16774,7 +15217,7 @@
                 {
                   "text": "www.yourwebsite.com",
                   "font": {
-                    "size": 8.5,
+                    "size": 10,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16783,7 +15226,7 @@
               ],
               "decorative": false,
               "name": "footer_label",
-              "max_length": 30,
+              "max_length": 23,
               "min_length": 8
             },
             {
@@ -17442,7 +15885,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 15.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -17454,7 +15897,7 @@
                         {
                           "text": "Founded in 2020",
                           "font": {
-                            "size": 15.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -17463,7 +15906,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 24,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -17477,7 +15920,7 @@
                         "height": 21
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -17489,7 +15932,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.2
@@ -17717,7 +16160,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 15.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -17729,7 +16172,7 @@
                         {
                           "text": "First Product in 2021",
                           "font": {
-                            "size": 15.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -17738,7 +16181,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 24,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -17752,7 +16195,7 @@
                         "height": 21
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -17764,7 +16207,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.2
@@ -17992,7 +16435,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 15.0,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -18004,7 +16447,7 @@
                         {
                           "text": "Key Milestone in 2022",
                           "font": {
-                            "size": 15.0,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -18013,7 +16456,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 24,
+                      "max_length": 17,
                       "min_length": 8
                     },
                     {
@@ -18027,7 +16470,7 @@
                         "height": 21
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -18039,7 +16482,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.2
@@ -18267,7 +16710,7 @@
                         "height": 54
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -18279,7 +16722,7 @@
                         {
                           "text": "Global Expansion in 2024",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -18302,7 +16745,7 @@
                         "height": 21
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -18314,7 +16757,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.2

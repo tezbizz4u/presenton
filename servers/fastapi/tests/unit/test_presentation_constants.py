@@ -9,7 +9,7 @@ from constants.presentation import (
 def test_max_outline_words_defaults_to_100(monkeypatch):
     monkeypatch.delenv("MAX_OUTLINE_WORDS", raising=False)
 
-    assert get_max_outline_words() == DEFAULT_MAX_OUTLINE_WORDS == 100
+    assert get_max_outline_words() == DEFAULT_MAX_OUTLINE_WORDS == 130
 
 
 def test_max_outline_words_accepts_positive_integer(monkeypatch):

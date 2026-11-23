@@ -23,6 +23,28 @@ def _icon_fastembed_cache_directory() -> str:
     return get_writable_path("fastembed_cache")
 
 
+# ASF: the general icon set has no clinical glyphs, so semantic search maps
+# skin/hair terms to unrelated objects (e.g. a hair dryer for hirsutism).
+_BAD_ICONS = {
+    "hair-dryer", "bathtub", "shower", "toilet", "toilet-paper", "bed", "baby-carriage",
+    "hairdryer", "handbag", "lipstick", "mask-happy", "mask-sad",
+}
+_CLINICAL_ICON_MAP = {
+    "hirsutism": "user", "alopecia": "user", "hair": "user", "acne": "user",
+    "androgen": "flask", "hyperandrogenism": "flask", "testosterone": "flask",
+    "insulin": "drop", "glucose": "drop", "ovary": "heartbeat", "ovarian": "heartbeat",
+    "cycle": "calendar", "menstrual": "calendar", "amenorrhea": "calendar",
+}
+
+
+def _clinical_icon_query(query: str) -> str:
+    words = (query or "").lower().replace("-", " ").split()
+    for w in words:
+        if w in _CLINICAL_ICON_MAP:
+            return _CLINICAL_ICON_MAP[w]
+    return query
+
+
 class IconFinderService:
     def __init__(self):
         self.model = FastembedEmbeddingModel.AllMiniLML6V2
@@ -169,8 +191,16 @@ class IconFinderService:
             
         try:
             icon_weight = normalize_icon_weight(weight)
-            result = await asyncio.to_thread(self.vectorstore.search, query, k)
-            return [self._icon_url_for_weight(each[0], icon_weight) for each in result]
+            query = _clinical_icon_query(query)
+            result = await asyncio.to_thread(self.vectorstore.search, query, k + 6)
+            kept = [
+                each
+                for each in result
+                if self._base_icon_name(each[0]).split("||")[0] not in _BAD_ICONS
+            ]
+            return [
+                self._icon_url_for_weight(each[0], icon_weight) for each in kept[:k]
+            ]
         except Exception as e:
             print(f"Icon search error: {e}")
             return []

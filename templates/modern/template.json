@@ -7196,7 +7196,7 @@
                     "height": 120.77
                   },
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -7209,7 +7209,7 @@
                     {
                       "text": "Add a short subtitle or description here. Add a short subtitle or description here. Add a short subtitle or description here. Add a short subtitle or description here.",
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -7218,7 +7218,7 @@
                   ],
                   "decorative": false,
                   "name": "supporting_paragraph",
-                  "max_length": 300,
+                  "max_length": 188,
                   "min_length": 84,
                   "rotation": 0
                 }
@@ -7325,7 +7325,7 @@
                         "height": 40
                       },
                       "font": {
-                        "size": 14,
+                        "size": 18,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "bold": true,
@@ -7339,7 +7339,7 @@
                         {
                           "text": "JD",
                           "font": {
-                            "size": 14,
+                            "size": 18,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "bold": true,
@@ -7372,7 +7372,7 @@
                           "height": 24
                         },
                         "font": {
-                          "size": 16,
+                          "size": 20,
                           "family": "Montserrat",
                           "color": "#234CD9",
                           "line_height": 1.2
@@ -7385,7 +7385,7 @@
                           {
                             "text": "John Doe",
                             "font": {
-                              "size": 16,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.2
@@ -7394,7 +7394,7 @@
                         ],
                         "decorative": false,
                         "name": "card_primary_text",
-                        "max_length": 29,
+                        "max_length": 21,
                         "min_length": 4,
                         "position": {
                           "x": 0,
@@ -7410,7 +7410,7 @@
                           "height": 21.1
                         },
                         "font": {
-                          "size": 14,
+                          "size": 20,
                           "family": "Montserrat",
                           "color": "#234CD9",
                           "line_height": 1.2
@@ -7423,7 +7423,7 @@
                           {
                             "text": "December 2025",
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.2
@@ -7432,7 +7432,7 @@
                         ],
                         "decorative": false,
                         "name": "card_secondary_text",
-                        "max_length": 32,
+                        "max_length": 21,
                         "min_length": 7,
                         "position": {
                           "x": 0,
@@ -7624,7 +7624,7 @@
                 "height": 175.5
               },
               "font": {
-                "size": 18,
+                "size": 20,
                 "family": "Montserrat",
                 "color": "#334155",
                 "line_height": 1.3
@@ -7637,7 +7637,7 @@
                 {
                   "text": "Show that we offer a solution that solves the problems previously described and identified. Make sure that the solutions we offer uphold the values of effectiveness, efficiency, and are highly relevant to the market situation and society is here and what is hsd sdksdf klfdslkf lkflkfsldkf.",
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#334155",
                     "line_height": 1.3
@@ -7646,7 +7646,7 @@
               ],
               "decorative": false,
               "name": "supporting_paragraph",
-              "max_length": 374,
+              "max_length": 252,
               "min_length": 145
             }
           ]
@@ -7750,7 +7750,7 @@
                         "height": 28
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.24
@@ -7763,7 +7763,7 @@
                         {
                           "text": "Market",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.24
@@ -7772,7 +7772,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 18,
                       "min_length": 3,
                       "rotation": 0
                     },
@@ -7818,7 +7818,7 @@
                         "height": 52.25
                       },
                       "font": {
-                        "size": 12,
+                        "size": 18,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.1
@@ -7831,7 +7831,7 @@
                         {
                           "text": "Innovative and widely accepted.",
                           "font": {
-                            "size": 12,
+                            "size": 18,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.1
@@ -7840,7 +7840,7 @@
                       ],
                       "decorative": false,
                       "name": "card_caption",
-                      "max_length": 113,
+                      "max_length": 45,
                       "min_length": 20,
                       "rotation": 0
                     }
@@ -7920,7 +7920,7 @@
                         "height": 28
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.24
@@ -7933,7 +7933,7 @@
                         {
                           "text": "Industry",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.24
@@ -7942,7 +7942,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 22,
+                      "max_length": 19,
                       "min_length": 3,
                       "rotation": 0
                     },
@@ -7988,7 +7988,7 @@
                         "height": 52.27
                       },
                       "font": {
-                        "size": 12,
+                        "size": 18,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.1
@@ -8001,7 +8001,7 @@
                         {
                           "text": "Based on sound market decisions.",
                           "font": {
-                            "size": 12,
+                            "size": 18,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.1
@@ -8010,7 +8010,7 @@
                       ],
                       "decorative": false,
                       "name": "card_caption",
-                      "max_length": 113,
+                      "max_length": 43,
                       "min_length": 20,
                       "rotation": 0
                     }
@@ -8019,737 +8019,6 @@
                 }
               ],
               "max_children": 6
-            }
-          ]
-        }
-      ],
-      "elements": []
-    },
-    {
-      "id": "title_description_bullet_points_list_with_icon",
-      "description": "A split slide with a large text block on the left and stacked rounded information cards on the right.",
-      "components": [
-        {
-          "id": "slide_background",
-          "description": "Full-canvas neutral background layer that provides the clean base for all foreground slide elements.",
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#FFFFFF",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 720
-                },
-                {
-                  "x": 0,
-                  "y": 720
-                }
-              ],
-              "closed": true
-            }
-          ]
-        },
-        {
-          "id": "left_text_block",
-          "description": "Left-aligned content area with a prominent heading above a wider explanatory paragraph block.",
-          "position": {
-            "x": 64,
-            "y": 170.25
-          },
-          "elements": [
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 512.18,
-                "height": 101.27
-              },
-              "font": {
-                "size": 48,
-                "family": "Montserrat",
-                "color": "#234CD9",
-                "bold": true,
-                "line_height": 1
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "Problem",
-                  "font": {
-                    "size": 48,
-                    "family": "Montserrat",
-                    "color": "#234CD9",
-                    "bold": true,
-                    "line_height": 1
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "section_heading",
-              "max_length": 33,
-              "min_length": 4,
-              "rotation": 0
-            },
-            {
-              "type": "text",
-              "position": {
-                "x": 0,
-                "y": 129.14
-              },
-              "size": {
-                "width": 514,
-                "height": 175.5
-              },
-              "font": {
-                "size": 18,
-                "family": "Montserrat",
-                "color": "#234CD9",
-                "line_height": 1.3
-              },
-              "alignment": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "runs": [
-                {
-                  "text": "A problem needs to be discussed further and in detail because this problem is the main foundation in the initial development of a product, service, and decision making. Without a well-defined problem, it will have an impact on a job that is unfocused, unmanaged, and less relevant.",
-                  "font": {
-                    "size": 18,
-                    "family": "Montserrat",
-                    "color": "#234CD9",
-                    "line_height": 1.3
-                  }
-                }
-              ],
-              "decorative": false,
-              "name": "body_paragraph",
-              "max_length": 281,
-              "min_length": 141
-            }
-          ]
-        },
-        {
-          "id": "stacked_card_column",
-          "description": "Right-side vertical card column containing repeated rounded panels with an icon, title, and supporting text.",
-          "position": {
-            "x": 704,
-            "y": 45
-          },
-          "elements": [
-            {
-              "type": "flex",
-              "position": {
-                "x": 0,
-                "y": 0
-              },
-              "size": {
-                "width": 512,
-                "height": 566
-              },
-              "direction": "column",
-              "wrap": false,
-              "align_items": "stretch",
-              "justify_content": "flex-start",
-              "gap": 32,
-              "children": [
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 512,
-                    "height": 117.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#F5F8FE",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 117.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 117.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        17.62,
-                        17.62,
-                        17.62,
-                        17.62
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 20,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 48,
-                        "height": 48
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#234CD9",
-                      "decorative": false,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.12
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Inefficiency",
-                          "font": {
-                            "size": 20,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.12
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 36,
-                      "min_length": 5
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 109,
-                      "min_length": 48
-                    }
-                  ],
-                  "name": "card_panel"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 512,
-                    "height": 117.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#F5F8FE",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 117.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 117.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        17.62,
-                        17.62,
-                        17.62,
-                        17.62
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 20,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 48,
-                        "height": 48
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#234CD9",
-                      "decorative": false,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.12
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "High Costs",
-                          "font": {
-                            "size": 20,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.12
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 36,
-                      "min_length": 5
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Outdated systems increase expenses, while small businesses struggle to expand their market reach.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 109,
-                      "min_length": 48
-                    }
-                  ],
-                  "name": "card_panel"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 512,
-                    "height": 117.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#F5F8FE",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 117.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 117.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        17.62,
-                        17.62,
-                        17.62,
-                        17.62
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 20,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 48,
-                        "height": 48
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#234CD9",
-                      "decorative": false,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.12
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Inefficiency",
-                          "font": {
-                            "size": 20,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.12
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 36,
-                      "min_length": 5
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 109,
-                      "min_length": 48
-                    }
-                  ],
-                  "name": "card_panel"
-                },
-                {
-                  "type": "group",
-                  "size": {
-                    "width": 512,
-                    "height": 117.5
-                  },
-                  "children": [
-                    {
-                      "type": "vector",
-                      "shape": "polygon",
-                      "fill": {
-                        "color": "#F5F8FE",
-                        "opacity": 1
-                      },
-                      "points": [
-                        {
-                          "x": 0,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 0
-                        },
-                        {
-                          "x": 512,
-                          "y": 117.5
-                        },
-                        {
-                          "x": 0,
-                          "y": 117.5
-                        }
-                      ],
-                      "closed": true,
-                      "corner_radii": [
-                        17.62,
-                        17.62,
-                        17.62,
-                        17.62
-                      ]
-                    },
-                    {
-                      "type": "image",
-                      "position": {
-                        "x": 20,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 48,
-                        "height": 48
-                      },
-                      "data": "/static/icons/placeholder.svg",
-                      "fit": "fill",
-                      "color": "#234CD9",
-                      "decorative": false,
-                      "name": "card_icon",
-                      "is_icon": true
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 20
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 28
-                      },
-                      "font": {
-                        "size": 20,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.12
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Inefficiency",
-                          "font": {
-                            "size": 20,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.12
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_title",
-                      "max_length": 36,
-                      "min_length": 5
-                    },
-                    {
-                      "type": "text",
-                      "position": {
-                        "x": 88,
-                        "y": 52
-                      },
-                      "size": {
-                        "width": 406,
-                        "height": 45.5
-                      },
-                      "font": {
-                        "size": 12.5,
-                        "family": "Montserrat",
-                        "color": "#234CD9",
-                        "line_height": 1.3
-                      },
-                      "alignment": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "runs": [
-                        {
-                          "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
-                          "font": {
-                            "size": 12.5,
-                            "family": "Montserrat",
-                            "color": "#234CD9",
-                            "line_height": 1.3
-                          }
-                        }
-                      ],
-                      "decorative": false,
-                      "name": "card_description",
-                      "max_length": 109,
-                      "min_length": 48
-                    }
-                  ],
-                  "name": "card_panel"
-                }
-              ],
-              "name": "card_stack",
-              "max_children": 4,
-              "min_children": 4
-            }
-          ]
-        },
-        {
-          "id": "bottom_accent_bar",
-          "description": "Thin horizontal accent bar spanning the bottom edge as a simple decorative slide footer.",
-          "position": {
-            "x": 0,
-            "y": 716
-          },
-          "elements": [
-            {
-              "type": "vector",
-              "shape": "polygon",
-              "fill": {
-                "color": "#1E4CD9",
-                "opacity": 1
-              },
-              "points": [
-                {
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 0
-                },
-                {
-                  "x": 1280,
-                  "y": 4
-                },
-                {
-                  "x": 0,
-                  "y": 4
-                }
-              ],
-              "closed": true,
-              "corner_radii": [
-                0.6,
-                0.6,
-                0.6,
-                0.6
-              ]
             }
           ]
         }
@@ -8891,7 +8160,7 @@
                 "height": 140.04
               },
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Montserrat",
                 "color": "#234CD9",
                 "line_height": 1.3
@@ -8904,7 +8173,7 @@
                 {
                   "text": "Present structured information in a flexible table or visualize it with a chart.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -8913,7 +8182,7 @@
               ],
               "decorative": false,
               "name": "supporting_paragraph",
-              "max_length": 320,
+              "max_length": 194,
               "min_length": 40,
               "rotation": 0
             }
@@ -9271,7 +8540,7 @@
                 "height": 130
               },
               "font": {
-                "size": 16,
+                "size": 20,
                 "family": "Montserrat",
                 "color": "#234CD9",
                 "line_height": 1.3
@@ -9284,7 +8553,7 @@
                 {
                   "text": "Traction is a period where the company is feeling momentum during its development period. If traction momentum is not harnessed, sales figures can decline and the customer base can shrink. In general, companies will judge success by the amount of revenue and new customers they receive.",
                   "font": {
-                    "size": 16,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -9293,7 +8562,7 @@
               ],
               "decorative": false,
               "name": "intro_paragraph",
-              "max_length": 406,
+              "max_length": 236,
               "min_length": 143
             }
           ]
@@ -9769,7 +9038,7 @@
                     "height": 292.5
                   },
                   "font": {
-                    "size": 18,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#334155",
                     "line_height": 1.3
@@ -9782,7 +9051,7 @@
                     {
                       "text": "In the presentation session, the background/introduction can be filled with information that is arranged systematically and effectively with respect to an interesting topic to be used as material for discussion at the opening of the presentation session. The introduction can provide a general overview for those who are listening to your presentation so that the key words on the topic of discussion are emphasized during this background/introductory presentation session.",
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#334155",
                         "line_height": 1.3
@@ -9791,7 +9060,7 @@
                   ],
                   "decorative": false,
                   "name": "stack_body",
-                  "max_length": 626,
+                  "max_length": 462,
                   "min_length": 237
                 }
               ],
@@ -10067,7 +9336,7 @@
                     "height": 113.75
                   },
                   "font": {
-                    "size": 14,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -10080,7 +9349,7 @@
                     {
                       "text": "Detail and explain each product. Our examination of community and market issues increases with additional products/services.",
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -10089,7 +9358,7 @@
                   ],
                   "decorative": false,
                   "name": "upper_text_body",
-                  "max_length": 124,
+                  "max_length": 66,
                   "min_length": 62
                 },
                 {
@@ -10140,7 +9409,7 @@
                     "height": 113.75
                   },
                   "font": {
-                    "size": 14,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -10153,7 +9422,7 @@
                     {
                       "text": "Our alternate product category is available. Our products must work together to solve social and economic issues.",
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -10162,7 +9431,7 @@
                   ],
                   "decorative": false,
                   "name": "lower_text_body",
-                  "max_length": 113,
+                  "max_length": 66,
                   "min_length": 57
                 }
               ],
@@ -10338,7 +9607,7 @@
                     "height": 113.75
                   },
                   "font": {
-                    "size": 14,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -10351,7 +9620,7 @@
                     {
                       "text": "Our alternate product category is available. Our products must work together to solve social and economic issues.",
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -10360,7 +9629,7 @@
                   ],
                   "decorative": false,
                   "name": "upper_text_body",
-                  "max_length": 113,
+                  "max_length": 66,
                   "min_length": 57
                 },
                 {
@@ -10411,7 +9680,7 @@
                     "height": 113.75
                   },
                   "font": {
-                    "size": 14,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -10424,7 +9693,7 @@
                     {
                       "text": "Our alternate product category is available. Our products must work together to solve social and economic issues.",
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -10433,7 +9702,7 @@
                   ],
                   "decorative": false,
                   "name": "lower_text_body",
-                  "max_length": 113,
+                  "max_length": 66,
                   "min_length": 57
                 }
               ],
@@ -10740,7 +10009,7 @@
                         "height": 47.26
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "bold": true,
@@ -10754,7 +10023,7 @@
                         {
                           "text": "Sarah Johnson",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "bold": true,
@@ -10764,7 +10033,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 40,
+                      "max_length": 15,
                       "min_length": 5,
                       "rotation": 0
                     },
@@ -10779,7 +10048,7 @@
                         "height": 104.13
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.14
@@ -10792,7 +10061,7 @@
                         {
                           "text": "Strategic leader with 15+ years experience in technology and business development. Former VP at Fortune 500 company.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.14
@@ -10801,7 +10070,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 170,
+                      "max_length": 73,
                       "min_length": 54,
                       "rotation": 0
                     }
@@ -10908,7 +10177,7 @@
                         "height": 50.01
                       },
                       "font": {
-                        "size": 18,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "bold": true,
@@ -10922,7 +10191,7 @@
                         {
                           "text": "David Kim",
                           "font": {
-                            "size": 18,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "bold": true,
@@ -10932,7 +10201,7 @@
                       ],
                       "decorative": false,
                       "name": "card_title",
-                      "max_length": 40,
+                      "max_length": 31,
                       "min_length": 5,
                       "rotation": 0
                     },
@@ -10947,7 +10216,7 @@
                         "height": 109.63
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.14
@@ -10960,7 +10229,7 @@
                         {
                           "text": "Product strategist focused on user experience and market-driven solutions. Former product manager at leading tech companies.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.14
@@ -10969,7 +10238,7 @@
                       ],
                       "decorative": false,
                       "name": "card_body",
-                      "max_length": 170,
+                      "max_length": 73,
                       "min_length": 54,
                       "rotation": 0
                     }
@@ -11147,7 +10416,7 @@
                 "height": 136.5
               },
               "font": {
-                "size": 14,
+                "size": 20,
                 "family": "Montserrat",
                 "color": "#234CD9",
                 "line_height": 1.3
@@ -11160,7 +10429,7 @@
                 {
                   "text": "Market size is the total amount of all sales and customers that can be seen directly by stakeholders. This technique is usually calculated at the end of the year, the market size can be used by companies to determine the potential of their market and business in the future. This is very useful, especially for new companies that will offer services to those who are interested in our services.",
                   "font": {
-                    "size": 14,
+                    "size": 20,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "line_height": 1.3
@@ -11169,7 +10438,7 @@
               ],
               "decorative": false,
               "name": "supporting_paragraph",
-              "max_length": 473,
+              "max_length": 210,
               "min_length": 197
             }
           ]
@@ -11249,7 +10518,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 12.5,
+                        "size": 18,
                         "family": "Montserrat",
                         "color": "#FFFFFF",
                         "line_height": 1.14
@@ -11262,7 +10531,7 @@
                         {
                           "text": "Total Available Market (TAM)",
                           "font": {
-                            "size": 12.5,
+                            "size": 18,
                             "family": "Montserrat",
                             "color": "#FFFFFF",
                             "line_height": 1.14
@@ -11271,7 +10540,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_label",
-                      "max_length": 28,
+                      "max_length": 18,
                       "min_length": 14
                     },
                     {
@@ -11323,7 +10592,7 @@
                         "height": 52.26
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#334155",
                         "line_height": 1.1
@@ -11336,7 +10605,7 @@
                         {
                           "text": "In the TAM Section, we can fill in the potential of any person who can buy an offer or the maximum amount of revenue a business can earn by selling their offer.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#334155",
                             "line_height": 1.1
@@ -11345,7 +10614,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_description",
-                      "max_length": 237,
+                      "max_length": 98,
                       "min_length": 80,
                       "rotation": 0
                     }
@@ -11403,7 +10672,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 14,
+                        "size": 18,
                         "family": "Montserrat",
                         "color": "#FFFFFF",
                         "line_height": 1.14
@@ -11416,7 +10685,7 @@
                         {
                           "text": "Serviceable Available Market (SAM)",
                           "font": {
-                            "size": 14,
+                            "size": 18,
                             "family": "Montserrat",
                             "color": "#FFFFFF",
                             "line_height": 1.14
@@ -11425,7 +10694,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_label",
-                      "max_length": 28,
+                      "max_length": 23,
                       "min_length": 14
                     },
                     {
@@ -11477,7 +10746,7 @@
                         "height": 64.63
                       },
                       "font": {
-                        "size": 14,
+                        "size": 20,
                         "family": "Montserrat",
                         "color": "#334155",
                         "line_height": 1.1
@@ -11490,7 +10759,7 @@
                         {
                           "text": "It is a part of TAM that has the potential to become a target market for the company by considering the type of product, technology available and geographical conditions.",
                           "font": {
-                            "size": 14,
+                            "size": 20,
                             "family": "Montserrat",
                             "color": "#334155",
                             "line_height": 1.1
@@ -11499,7 +10768,7 @@
                       ],
                       "decorative": false,
                       "name": "metric_description",
-                      "max_length": 237,
+                      "max_length": 98,
                       "min_length": 80,
                       "rotation": 0
                     }
@@ -11675,7 +10944,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -11689,7 +10958,7 @@
                           {
                             "text": "1",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -11776,7 +11045,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -11789,7 +11058,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -11798,7 +11067,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -11857,7 +11126,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -11871,7 +11140,7 @@
                           {
                             "text": "2",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -11958,7 +11227,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -11971,7 +11240,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -11980,7 +11249,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12039,7 +11308,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12053,7 +11322,7 @@
                           {
                             "text": "3",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -12140,7 +11409,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -12153,7 +11422,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -12162,7 +11431,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12221,7 +11490,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12235,7 +11504,7 @@
                           {
                             "text": "4",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -12322,7 +11591,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -12335,7 +11604,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -12344,7 +11613,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12403,7 +11672,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12417,7 +11686,7 @@
                           {
                             "text": "5",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -12504,7 +11773,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -12517,7 +11786,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -12526,7 +11795,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12585,7 +11854,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12599,7 +11868,7 @@
                           {
                             "text": "6",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -12686,7 +11955,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -12699,7 +11968,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -12708,7 +11977,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12767,7 +12036,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12781,7 +12050,7 @@
                           {
                             "text": "7",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -12868,7 +12137,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -12881,7 +12150,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -12890,7 +12159,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -12949,7 +12218,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -12963,7 +12232,7 @@
                           {
                             "text": "8",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -13050,7 +12319,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -13063,7 +12332,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -13072,7 +12341,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -13131,7 +12400,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -13145,7 +12414,7 @@
                           {
                             "text": "9",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -13232,7 +12501,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -13245,7 +12514,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -13254,7 +12523,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],
@@ -13313,7 +12582,7 @@
                           "height": 40
                         },
                         "font": {
-                          "size": 16,
+                          "size": 18,
                           "family": "Montserrat",
                           "color": "#FFFFFF",
                           "bold": true,
@@ -13327,7 +12596,7 @@
                           {
                             "text": "10",
                             "font": {
-                              "size": 16,
+                              "size": 18,
                               "family": "Montserrat",
                               "color": "#FFFFFF",
                               "bold": true,
@@ -13414,7 +12683,7 @@
                               "height": 22.75
                             },
                             "font": {
-                              "size": 14,
+                              "size": 20,
                               "family": "Montserrat",
                               "color": "#234CD9",
                               "line_height": 1.3
@@ -13427,7 +12696,7 @@
                               {
                                 "text": "Brief description for this section.",
                                 "font": {
-                                  "size": 14,
+                                  "size": 20,
                                   "family": "Montserrat",
                                   "color": "#234CD9",
                                   "line_height": 1.3
@@ -13436,7 +12705,7 @@
                             ],
                             "decorative": false,
                             "name": "entry_description",
-                            "max_length": 60,
+                            "max_length": 39,
                             "min_length": 18
                           }
                         ],

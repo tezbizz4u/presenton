@@ -140,9 +140,22 @@ class AsfImageResolver:
                     commons_query = " ".join(
                         w for w in query.split() if w not in GENERIC_FOR_COMMONS
                     ) or query
-                candidate = await self._first_unused(
-                    await self._commons(asf, commons_query)
-                )
+                # Only accept a Commons file whose title names the scan type or the
+                # organ; otherwise unrelated drawings (e.g. a knee) get picked.
+                terms = {imaging, *body}
+                stems = [t[:5] for t in terms if t]
+                found = [
+                    r
+                    for r in await self._commons(asf, commons_query)
+                    if any(st in (r.get("alt") or "").lower() for st in stems)
+                ]
+                candidate = await self._first_unused(found)
+                if candidate is None:
+                    # No licence-safe scan found: a neutral clinic photo beats a wrong one.
+                    scan_q = f"{imaging} scan doctor"
+                    candidate = await self._first_unused(
+                        await self._stock(asf, scan_q, orientation)
+                    )
             if candidate is None:
                 for q in (query, short):
                     candidate = await self._first_unused(await self._stock(asf, q, orientation))

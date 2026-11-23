@@ -224,8 +224,9 @@ async def _search_pixabay(session, query: str, limit: int, orientation: str, pag
             {
                 "id": f"pixabay-{hit.get('id')}",
                 "source": "pixabay",
-                "thumb": "/api/v1/ppt/images-plus/thumb?u="
-                + quote(hit.get("webformatURL") or full, safe=""),
+                # cdn.pixabay.com preview files may be shown directly; the
+                # pixabay.com/get/ webformat links refuse browser and server fetches.
+                "thumb": hit.get("previewURL") or hit.get("webformatURL") or full,
                 "url": full,
                 "width": hit.get("imageWidth"),
                 "height": hit.get("imageHeight"),
@@ -481,6 +482,21 @@ async def _assert_public_host(url: str) -> None:
             raise HTTPException(status_code=422, detail="Image host is not a public address")
 
 
+def _download_headers(url: str) -> dict[str, str]:
+    host = (urlparse(url).hostname or "").lower()
+    if host == "pixabay.com" or host.endswith(".pixabay.com"):
+        # Pixabay refuses unknown bots; send a normal browser identity.
+        return {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+            ),
+            "Referer": "https://pixabay.com/",
+            "Accept": "image/avif,image/webp,image/*,*/*;q=0.8",
+        }
+    return {"User-Agent": "asf-presenton/1.0"}
+
+
 async def _download_image(url: str) -> bytes:
     current = url
     async with aiohttp.ClientSession(trust_env=True) as session:
@@ -490,7 +506,7 @@ async def _download_image(url: str) -> bytes:
                 current,
                 timeout=HTTP_TIMEOUT,
                 allow_redirects=False,
-                headers={"User-Agent": "asf-presenton/1.0"},
+                headers=_download_headers(current),
             ) as response:
                 if response.status in (301, 302, 303, 307, 308):
                     location = response.headers.get("Location")

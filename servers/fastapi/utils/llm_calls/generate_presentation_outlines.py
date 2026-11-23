@@ -70,12 +70,12 @@ def get_system_prompt(
     include_table_of_contents: bool = False,
 ):
     verbosity_instruction = (
-        "Slide content should be around 45 words but detailed enough to generate a good slide."
+        "Slide content should be around 35 words but detailed enough to generate a good slide."
         if verbosity == "concise"
         else (
-            "Slide content should be around 140 words but detailed enough to generate a good slide."
+            "Slide content should be around 110 words but detailed enough to generate a good slide."
             if verbosity == "text-heavy"
-            else "Slide content should be around 90 words but detailed enough to generate a good slide."
+            else "Slide content should be around 70 words but detailed enough to generate a good slide."
         )
     )
 
