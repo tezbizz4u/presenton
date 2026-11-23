@@ -21,7 +21,7 @@ import tempfile
 import uuid
 from io import BytesIO
 from typing import Any, Literal, Optional
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 import aiohttp
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -224,7 +224,8 @@ async def _search_pixabay(session, query: str, limit: int, orientation: str, pag
             {
                 "id": f"pixabay-{hit.get('id')}",
                 "source": "pixabay",
-                "thumb": hit.get("webformatURL") or full,
+                "thumb": "/api/v1/ppt/images-plus/thumb?u="
+                + quote(hit.get("webformatURL") or full, safe=""),
                 "url": full,
                 "width": hit.get("imageWidth"),
                 "height": hit.get("imageHeight"),
@@ -334,6 +335,21 @@ async def test_key(body: KeyTest):
     return {"ok": True, "found": len(found)}
 
 
+THUMB_HOSTS = ("pixabay.com", "cdn.pixabay.com")
+
+
+@ASF_IMAGES_ROUTER.get("/thumb")
+async def thumbnail_proxy(u: str = Query(min_length=10, max_length=1000)):
+    """Pixabay blocks hot-linking from browsers; fetch its thumbnails on the server."""
+    from fastapi.responses import Response
+
+    host = (urlparse(u).hostname or "").lower()
+    if not any(host == h or host.endswith("." + h) for h in THUMB_HOSTS):
+        raise HTTPException(status_code=422, detail="Thumbnail host not allowed")
+    data = await _download_image(u)
+    return Response(content=data, media_type="image/jpeg", headers={"Cache-Control": "public, max-age=86400"})
+
+
 # ------------------------------------------------------- licence-safe web search
 
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
@@ -391,11 +407,11 @@ async def search_web(
             continue
         width, height = info.get("width") or 0, info.get("height") or 0
         ratio = (width / height) if width and height else 1
-        if orientation == "landscape" and ratio < 1.15:
+        if orientation == "landscape" and ratio < 1.1:
             continue
-        if orientation == "portrait" and ratio > 0.87:
+        if orientation == "portrait" and ratio > 0.92:
             continue
-        if orientation == "square" and not (0.87 <= ratio <= 1.15):
+        if orientation == "square" and not (0.75 <= ratio <= 1.34):
             continue
         url = info.get("thumburl") or info.get("url")
         if not url:

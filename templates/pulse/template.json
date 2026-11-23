@@ -30754,7 +30754,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16.88,
+                    "size": 14.88,
                     "family": "Inter 1",
                     "color": "#18324A",
                     "line_height": 1,
@@ -30768,7 +30768,7 @@
                     {
                       "text": "O",
                       "font": {
-                        "size": 16.88,
+                        "size": 14.88,
                         "family": "Inter 1",
                         "color": "#18324A",
                         "line_height": 1,
@@ -30778,7 +30778,7 @@
                     {
                       "text": "ptimizing Patient Flow, Safety, and Operational Efficiency",
                       "font": {
-                        "size": 16.88,
+                        "size": 14.88,
                         "family": "Inter 1",
                         "color": "#18324A",
                         "underline": false,
@@ -32145,7 +32145,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16.88,
+                    "size": 13.88,
                     "family": "Inter 1",
                     "color": "#18324A",
                     "underline": false,
@@ -32160,7 +32160,7 @@
                     {
                       "text": "A systematic approach to patient flow, safety, and efficiency.",
                       "font": {
-                        "size": 16.88,
+                        "size": 13.88,
                         "family": "Inter 1",
                         "color": "#18324A",
                         "underline": false,
@@ -32893,7 +32893,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16.88,
+                    "size": 14.88,
                     "family": "Inter 1",
                     "color": "#FFFFFF",
                     "line_height": 1.16,
@@ -32907,7 +32907,7 @@
                     {
                       "text": "Cr",
                       "font": {
-                        "size": 16.88,
+                        "size": 14.88,
                         "family": "Inter 1",
                         "color": "#FFFFFF",
                         "line_height": 1.16,
@@ -32917,7 +32917,7 @@
                     {
                       "text": "eating healthcare environments that are safe, efficient, accessible, and patient-centered.",
                       "font": {
-                        "size": 16.88,
+                        "size": 14.88,
                         "family": "Inter 1",
                         "color": "#FFFFFF",
                         "underline": false,
@@ -39011,7 +39011,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16,
+                    "size": 13.5,
                     "family": "Inter 1",
                     "color": "#18324A",
                     "line_height": 1.16,
@@ -39025,7 +39025,7 @@
                     {
                       "text": "The patient's journey through a medical facility should follow a clear, logical, and effic",
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "Inter 1",
                         "color": "#18324A",
                         "line_height": 1.16,
@@ -39035,7 +39035,7 @@
                     {
                       "text": "ient sequence. Each stage should connect naturally to the next while minimizing unnecessary movement, confusion, waiting, and delays.",
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "Inter 1",
                         "color": "#18324A",
                         "underline": false,
@@ -51247,7 +51247,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 16,
+                            "size": 12.5,
                             "family": "Inter 1 Bold",
                             "color": "#18324A",
                             "bold": false,
@@ -51262,7 +51262,7 @@
                             {
                               "text": "Traditional Layout",
                               "font": {
-                                "size": 16,
+                                "size": 12.5,
                                 "family": "Inter 1 Bold",
                                 "color": "#18324A",
                                 "bold": false,
@@ -51470,7 +51470,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 16,
+                            "size": 12.5,
                             "family": "Inter 1 Bold",
                             "color": "#18324A",
                             "bold": false,
@@ -51485,7 +51485,7 @@
                             {
                               "text": "Integrated Layout",
                               "font": {
-                                "size": 16,
+                                "size": 12.5,
                                 "family": "Inter 1 Bold",
                                 "color": "#18324A",
                                 "bold": false,
@@ -51848,7 +51848,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 66.66,
+                    "size": 59.66,
                     "family": "Inter 1 Bold",
                     "color": "#18324A",
                     "bold": false,
@@ -51863,7 +51863,7 @@
                     {
                       "text": "H",
                       "font": {
-                        "size": 66.66,
+                        "size": 59.66,
                         "family": "Inter 1 Bold",
                         "color": "#18324A",
                         "bold": false,
@@ -51874,7 +51874,7 @@
                     {
                       "text": "EALTHCARE ",
                       "font": {
-                        "size": 66.66,
+                        "size": 59.66,
                         "family": "Inter 1 Bold",
                         "color": "#18324A",
                         "bold": false,
@@ -53522,7 +53522,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 10.67,
+                        "size": 8.67,
                         "family": "Inter 1",
                         "color": "#FFFFFF",
                         "line_height": 1.16,
@@ -53536,7 +53536,7 @@
                         {
                           "text": "Ability of patients and visitors with different mobility requirements",
                           "font": {
-                            "size": 10.67,
+                            "size": 8.67,
                             "family": "Inter 1",
                             "color": "#FFFFFF",
                             "line_height": 1.16,
@@ -53546,7 +53546,7 @@
                         {
                           "text": " to use the facility.",
                           "font": {
-                            "size": 10.67,
+                            "size": 8.67,
                             "family": "Inter 1",
                             "color": "#FFFFFF",
                             "underline": false,
@@ -55206,7 +55206,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 24.88,
+                            "size": 18.88,
                             "family": "Inter 1 Semi-Bold",
                             "color": "#18324A",
                             "bold": false,
@@ -55221,7 +55221,7 @@
                             {
                               "text": "35 hrs ",
                               "font": {
-                                "size": 24.88,
+                                "size": 18.88,
                                 "family": "Inter 1 Semi-Bold",
                                 "color": "#18324A",
                                 "bold": false,
@@ -58151,7 +58151,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Inter 1 Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -58165,7 +58165,7 @@
                             {
                               "text": "HIGH RELATIONSHIP",
                               "font": {
-                                "size": 16,
+                                "size": 14.0,
                                 "family": "Inter 1 Semi-Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,
@@ -58657,7 +58657,7 @@
                             "height": 63.75
                           },
                           "font": {
-                            "size": 18.66,
+                            "size": 12.16,
                             "family": "Inter 2 Bold",
                             "color": "#000000",
                             "bold": false,
@@ -58671,7 +58671,7 @@
                             {
                               "text": "01",
                               "font": {
-                                "size": 18.66,
+                                "size": 12.16,
                                 "family": "Inter 2 Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -58920,7 +58920,7 @@
                             "height": 63.75
                           },
                           "font": {
-                            "size": 18.66,
+                            "size": 12.16,
                             "family": "Inter 2 Bold",
                             "color": "#000000",
                             "bold": false,
@@ -58934,7 +58934,7 @@
                             {
                               "text": "02",
                               "font": {
-                                "size": 18.66,
+                                "size": 12.16,
                                 "family": "Inter 2 Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -59187,7 +59187,7 @@
                             "height": 63.75
                           },
                           "font": {
-                            "size": 18.66,
+                            "size": 12.16,
                             "family": "Inter 2 Bold",
                             "color": "#000000",
                             "bold": false,
@@ -59202,7 +59202,7 @@
                             {
                               "text": "03",
                               "font": {
-                                "size": 18.66,
+                                "size": 12.16,
                                 "family": "Inter 2 Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -59456,7 +59456,7 @@
                             "height": 63.75
                           },
                           "font": {
-                            "size": 18.66,
+                            "size": 12.16,
                             "family": "Inter 2 Bold",
                             "color": "#000000",
                             "bold": false,
@@ -59471,7 +59471,7 @@
                             {
                               "text": "04",
                               "font": {
-                                "size": 18.66,
+                                "size": 12.16,
                                 "family": "Inter 2 Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -59725,7 +59725,7 @@
                             "height": 63.75
                           },
                           "font": {
-                            "size": 18.66,
+                            "size": 12.16,
                             "family": "Inter 2 Bold",
                             "color": "#000000",
                             "bold": false,
@@ -59740,7 +59740,7 @@
                             {
                               "text": "05",
                               "font": {
-                                "size": 18.66,
+                                "size": 12.16,
                                 "family": "Inter 2 Bold",
                                 "color": "#000000",
                                 "bold": false,

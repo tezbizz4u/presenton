@@ -14241,7 +14241,7 @@
                 "height": 219.33
               },
               "font": {
-                "size": 106.67,
+                "size": 83.17,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -14255,7 +14255,7 @@
                 {
                   "text": "SMART TASK \nMANAGEMENT PLATFORM",
                   "font": {
-                    "size": 106.67,
+                    "size": 83.17,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -14280,7 +14280,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 24,
+                "size": 19.0,
                 "family": "Montserrat Semi-Bold",
                 "color": "#000000",
                 "bold": true,
@@ -14295,7 +14295,7 @@
                 {
                   "text": "Organize Work. Improve Collaboration. Achieve More.",
                   "font": {
-                    "size": 24,
+                    "size": 19.0,
                     "family": "Montserrat Semi-Bold",
                     "color": "#000000",
                     "bold": true,
@@ -14331,7 +14331,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 14.22,
+                "size": 12.22,
                 "family": "Montserrat",
                 "color": "#000000",
                 "line_height": 1.4,
@@ -14345,7 +14345,7 @@
                 {
                   "text": "Presented by",
                   "font": {
-                    "size": 14.22,
+                    "size": 12.22,
                     "family": "Montserrat",
                     "color": "#000000",
                     "line_height": 1.4,
@@ -14369,7 +14369,7 @@
                 "height": 23.78
               },
               "font": {
-                "size": 17.78,
+                "size": 9.78,
                 "family": "Montserrat Bold",
                 "color": "#000000",
                 "bold": true,
@@ -14384,7 +14384,7 @@
                 {
                   "text": "Your Name",
                   "font": {
-                    "size": 17.78,
+                    "size": 9.78,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -14457,7 +14457,7 @@
                 "height": 18.49
               },
               "font": {
-                "size": 14.22,
+                "size": 12.72,
                 "family": "Montserrat Bold",
                 "color": "#000000",
                 "bold": true,
@@ -14472,7 +14472,7 @@
                 {
                   "text": "22 December 2030",
                   "font": {
-                    "size": 14.22,
+                    "size": 12.72,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -14592,7 +14592,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 97.78,
+                "size": 76.28,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.4
@@ -14605,7 +14605,7 @@
                 {
                   "text": "AGENDA",
                   "font": {
-                    "size": 97.78,
+                    "size": 76.28,
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.4
@@ -15166,7 +15166,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 30.79,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -15181,7 +15181,7 @@
                 {
                   "text": "What is a ",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -15195,7 +15195,7 @@
                 {
                   "text": "Smart Task Management",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "5F4F9B",
                     "bold": true,
@@ -15209,7 +15209,7 @@
                 {
                   "text": " Platform ?",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -15255,7 +15255,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 17.78,
+                    "size": 15.28,
                     "family": "Montserrat",
                     "color": "#000000",
                     "line_height": 1.4,
@@ -15269,7 +15269,7 @@
                     {
                       "text": "A Smart Task Management Platform is a digital workspace that helps individuals, teams, and organizations organize their work efficiently. Instead of using spreadsheets, sticky notes, or multiple communication tools, the platform centralizes everything into one place.",
                       "font": {
-                        "size": 17.78,
+                        "size": 15.28,
                         "family": "Montserrat",
                         "color": "#000000",
                         "line_height": 1.4,
@@ -15485,7 +15485,7 @@
                 "height": 66
               },
               "font": {
-                "size": 56,
+                "size": 44.5,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
@@ -15499,7 +15499,7 @@
                 {
                   "text": "Problems Faced by Organizations",
                   "font": {
-                    "size": 56,
+                    "size": 44.5,
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.05,
@@ -15920,7 +15920,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 30.79,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -15935,7 +15935,7 @@
                 {
                   "text": "Our Solution Smart Task Management Platform",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -16411,7 +16411,7 @@
                 "height": 122
               },
               "font": {
-                "size": 52,
+                "size": 45.0,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -16426,7 +16426,7 @@
                 {
                   "text": "System Framework for\nSmart Task Management Platform",
                   "font": {
-                    "size": 52,
+                    "size": 45.0,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -16596,7 +16596,7 @@
                     "height": 30.27
                   },
                   "font": {
-                    "size": 21.33,
+                    "size": 18.83,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -16611,7 +16611,7 @@
                     {
                       "text": "Presentation Layer",
                       "font": {
-                        "size": 21.33,
+                        "size": 18.83,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -16677,7 +16677,7 @@
                     "height": 29.1
                   },
                   "font": {
-                    "size": 21.33,
+                    "size": 16.83,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -16692,7 +16692,7 @@
                     {
                       "text": "Application Layer",
                       "font": {
-                        "size": 21.33,
+                        "size": 16.83,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -16718,7 +16718,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 14.22,
+                    "size": 12.22,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -16733,7 +16733,7 @@
                     {
                       "text": "Lorem Ipsum is simply dummy typesetting industry.",
                       "font": {
-                        "size": 14.22,
+                        "size": 12.22,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -16759,7 +16759,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 21.33,
+                    "size": 17.33,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -16774,7 +16774,7 @@
                     {
                       "text": "Database Layer",
                       "font": {
-                        "size": 21.33,
+                        "size": 17.33,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -16840,7 +16840,7 @@
                     "height": 29.1
                   },
                   "font": {
-                    "size": 21.33,
+                    "size": 17.33,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -16855,7 +16855,7 @@
                     {
                       "text": "Cloud Infrastructure",
                       "font": {
-                        "size": 21.33,
+                        "size": 17.33,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -16881,7 +16881,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 14.22,
+                    "size": 12.72,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -16896,7 +16896,7 @@
                     {
                       "text": "Lorem Ipsum is simply dummy typesetting industry.",
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -17029,7 +17029,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 56,
+                "size": 43.0,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
@@ -17043,7 +17043,7 @@
                 {
                   "text": "Comparison between",
                   "font": {
-                    "size": 56,
+                    "size": 43.0,
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
@@ -17068,7 +17068,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 56,
+                "size": 45.0,
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.09,
@@ -17082,7 +17082,7 @@
                 {
                   "text": "Traditional vs Smart Platform",
                   "font": {
-                    "size": 56,
+                    "size": 45.0,
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.09,
@@ -17107,7 +17107,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 18,
+                "size": 16.0,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -17122,7 +17122,7 @@
                 {
                   "text": "Smart Task Management Platform by presenting its purpose, vision, and importance. It provides the audience with a clear ares understanding of what the platform.",
                   "font": {
-                    "size": 18,
+                    "size": 16.0,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -17530,7 +17530,7 @@
                 "height": 122.83
               },
               "font": {
-                "size": 55.99,
+                "size": 44.49,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -17545,7 +17545,7 @@
                 {
                   "text": "Growth Opportunities as business Growth",
                   "font": {
-                    "size": 55.99,
+                    "size": 44.49,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -17573,7 +17573,7 @@
                 "height": 48.44
               },
               "font": {
-                "size": 17.78,
+                "size": 14.78,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -17588,7 +17588,7 @@
                 {
                   "text": "Organizations achieve faster project completion, improved communication, better resource allocation, and increased productivity.",
                   "font": {
-                    "size": 17.78,
+                    "size": 14.78,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -17676,7 +17676,7 @@
                         "height": 29.1
                       },
                       "font": {
-                        "size": 21.33,
+                        "size": 18.33,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -17691,7 +17691,7 @@
                         {
                           "text": "Productivity Rate",
                           "font": {
-                            "size": 21.33,
+                            "size": 18.33,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -17917,7 +17917,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 40.99,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -17932,7 +17932,7 @@
                 {
                   "text": "Metrics Opportunities as business Growth",
                   "font": {
-                    "size": 55.99,
+                    "size": 40.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -17961,7 +17961,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.78,
+                "size": 14.78,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -17976,7 +17976,7 @@
                 {
                   "text": "Professionals spend 31 hours a month in meetings yet retain almost nothing earenthing actionable from those conversations.",
                   "font": {
-                    "size": 17.78,
+                    "size": 14.78,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -18058,7 +18058,7 @@
                         "height": 38
                       },
                       "font": {
-                        "size": 24.88,
+                        "size": 21.38,
                         "family": "Montserrat Bold",
                         "color": "#5F4F9B",
                         "bold": true,
@@ -18073,7 +18073,7 @@
                         {
                           "text": "11K+",
                           "font": {
-                            "size": 24.88,
+                            "size": 21.38,
                             "family": "Montserrat Bold",
                             "color": "#5F4F9B",
                             "bold": true,
@@ -18342,7 +18342,7 @@
                 "height": 124
               },
               "font": {
-                "size": 55.99,
+                "size": 39.99,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -18357,7 +18357,7 @@
                 {
                   "text": "Growth Opportunities\nfaster project delivery",
                   "font": {
-                    "size": 55.99,
+                    "size": 39.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -18510,7 +18510,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 10.67,
+                    "size": 9.17,
                     "family": "Montserrat Medium",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -18525,7 +18525,7 @@
                     {
                       "text": "Lorem ipsum dolor sit amet,\nconsectetur adipiscing.",
                       "font": {
-                        "size": 10.67,
+                        "size": 9.17,
                         "family": "Montserrat Medium",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -18868,7 +18868,7 @@
                 "height": 126
               },
               "font": {
-                "size": 56,
+                "size": 47.0,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -18883,7 +18883,7 @@
                 {
                   "text": "Smart Progress Number of completed tasks compared to assigned tasks.",
                   "font": {
-                    "size": 56,
+                    "size": 47.0,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -19266,7 +19266,7 @@
                 "height": 125
               },
               "font": {
-                "size": 56,
+                "size": 49.0,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": false,
@@ -19281,7 +19281,7 @@
                 {
                   "text": "Chart Title Projects complet successfully each month.",
                   "font": {
-                    "size": 56,
+                    "size": 49.0,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": false,
@@ -19307,7 +19307,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.8,
+                "size": 15.8,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -19322,7 +19322,7 @@
                 {
                   "text": "This metric provides insights into overall project progress, team performance, and the effectiveness of task management processes.",
                   "font": {
-                    "size": 17.8,
+                    "size": 15.8,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -20442,7 +20442,7 @@
                 "height": 124
               },
               "font": {
-                "size": 48,
+                "size": 38.5,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -20457,7 +20457,7 @@
                 {
                   "text": "Chart emote work and digital transformation continue to expand.",
                   "font": {
-                    "size": 48,
+                    "size": 38.5,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -20483,7 +20483,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.78,
+                "size": 15.28,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -20498,7 +20498,7 @@
                 {
                   "text": "The company managed over 500 weekly tasks using spreadsheets and emails,resulting in delays\nand communication issues.",
                   "font": {
-                    "size": 17.78,
+                    "size": 15.28,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -20936,7 +20936,7 @@
                 "height": 48.44
               },
               "font": {
-                "size": 17.78,
+                "size": 14.78,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -20951,7 +20951,7 @@
                 {
                   "text": "The following chart illustrates the monthly growth in completed tasks over a six-month period after implementing the Smart Task Management Platform. It demonstrates how the platform improves productivity, enhances collaboration",
                   "font": {
-                    "size": 17.78,
+                    "size": 14.78,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -21449,7 +21449,7 @@
                 "height": 51
               },
               "font": {
-                "size": 48,
+                "size": 41.5,
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.05,
@@ -21463,7 +21463,7 @@
                 {
                   "text": " ",
                   "font": {
-                    "size": 48,
+                    "size": 41.5,
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.05,
@@ -21599,7 +21599,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 18,
+                "size": 15.0,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -21614,7 +21614,7 @@
                 {
                   "text": "The consistent growth also reflects the positive impact of task assignment, real-time progress tracking, and timely notifications.",
                   "font": {
-                    "size": 18,
+                    "size": 15.0,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -21925,7 +21925,7 @@
                 "height": 122.83
               },
               "font": {
-                "size": 55.99,
+                "size": 41.99,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
@@ -21939,7 +21939,7 @@
                 {
                   "text": "The ",
                   "font": {
-                    "size": 55.99,
+                    "size": 41.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": false,
@@ -21953,7 +21953,7 @@
                 {
                   "text": "consistent Growth",
                   "font": {
-                    "size": 55.99,
+                    "size": 41.99,
                     "family": "Anton",
                     "color": "5F4F9B",
                     "bold": false,
@@ -21967,7 +21967,7 @@
                 {
                   "text": " reflects the positive improve accountability",
                   "font": {
-                    "size": 55.99,
+                    "size": 41.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": false,
@@ -22337,7 +22337,7 @@
                 "height": 184
               },
               "font": {
-                "size": 56,
+                "size": 44.5,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
@@ -22351,7 +22351,7 @@
                 {
                   "text": "Market Analysis mprove collaboration and operational efficiency.",
                   "font": {
-                    "size": 56,
+                    "size": 44.5,
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
@@ -22770,7 +22770,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 21.33,
+                "size": 18.33,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -22785,7 +22785,7 @@
                 {
                   "text": "The Smart Task Management Platform has significantly improved our team's productivity. Real-time tracking and automated reminders have helped us complete projects on time.",
                   "font": {
-                    "size": 21.33,
+                    "size": 18.33,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -22952,7 +22952,7 @@
                 "height": 123
               },
               "font": {
-                "size": 55.99,
+                "size": 43.99,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -22967,7 +22967,7 @@
                 {
                   "text": "The company managed ",
                   "font": {
-                    "size": 55.99,
+                    "size": 43.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -22981,7 +22981,7 @@
                 {
                   "text": "over 500 ",
                   "font": {
-                    "size": 55.99,
+                    "size": 43.99,
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "bold": true,
@@ -22995,7 +22995,7 @@
                 {
                   "text": "weekly tasks",
                   "font": {
-                    "size": 55.99,
+                    "size": 43.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -23203,7 +23203,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 44.99,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -23218,7 +23218,7 @@
                 {
                   "text": "Project Team",
                   "font": {
-                    "size": 55.99,
+                    "size": 44.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -23710,7 +23710,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 30.79,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -23725,7 +23725,7 @@
                 {
                   "text": "Implementation ",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -23739,7 +23739,7 @@
                 {
                   "text": "Plan Manage Weekly",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "5F4F9B",
                     "bold": true,
@@ -23753,7 +23753,7 @@
                 {
                   "text": " Tasks",
                   "font": {
-                    "size": 55.99,
+                    "size": 30.79,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -23782,7 +23782,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.78,
+                "size": 14.28,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -23797,7 +23797,7 @@
                 {
                   "text": "By reducing manual effort, improving communication, and enabling informed decision-making, the platform helps organizations deliver projects on time, optimize resources, and achieve sustainable business growth.",
                   "font": {
-                    "size": 17.78,
+                    "size": 14.28,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -23856,7 +23856,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 24.88,
+                        "size": 20.38,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -23871,7 +23871,7 @@
                         {
                           "text": "Planning",
                           "font": {
-                            "size": 24.88,
+                            "size": 20.38,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -23896,7 +23896,7 @@
                         "height": 95.82
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -23911,7 +23911,7 @@
                         {
                           "text": "Define project goals, gather requirements, identify stakeholders, and establish the project timeline.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Montserrat Medium",
                             "color": "#000000",
                             "bold": true,
@@ -23946,7 +23946,7 @@
                         "height": 33.87
                       },
                       "font": {
-                        "size": 24.88,
+                        "size": 17.38,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -23961,7 +23961,7 @@
                         {
                           "text": "Design",
                           "font": {
-                            "size": 24.88,
+                            "size": 17.38,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -23986,7 +23986,7 @@
                         "height": 95.82
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -24001,7 +24001,7 @@
                         {
                           "text": "Define project goals, gather requirements, identify stakeholders, and establish the project timeline.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Montserrat Medium",
                             "color": "#000000",
                             "bold": true,
@@ -24036,7 +24036,7 @@
                         "height": 33.87
                       },
                       "font": {
-                        "size": 24.88,
+                        "size": 19.88,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -24051,7 +24051,7 @@
                         {
                           "text": "Development",
                           "font": {
-                            "size": 24.88,
+                            "size": 19.88,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -24076,7 +24076,7 @@
                         "height": 95.82
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -24091,7 +24091,7 @@
                         {
                           "text": "Define project goals, gather requirements, identify stakeholders, and establish the project timeline.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Montserrat Medium",
                             "color": "#000000",
                             "bold": true,
@@ -24126,7 +24126,7 @@
                         "height": 33.87
                       },
                       "font": {
-                        "size": 24.88,
+                        "size": 17.38,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -24141,7 +24141,7 @@
                         {
                           "text": "Deployment",
                           "font": {
-                            "size": 24.88,
+                            "size": 17.38,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -24166,7 +24166,7 @@
                         "height": 95.82
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -24181,7 +24181,7 @@
                         {
                           "text": "Define project goals, gather requirements, identify stakeholders, and establish the project timeline.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Montserrat Medium",
                             "color": "#000000",
                             "bold": true,
@@ -24216,7 +24216,7 @@
                         "height": 33.87
                       },
                       "font": {
-                        "size": 24.88,
+                        "size": 18.88,
                         "family": "Montserrat Bold",
                         "color": "#000000",
                         "bold": true,
@@ -24231,7 +24231,7 @@
                         {
                           "text": "Maintenance",
                           "font": {
-                            "size": 24.88,
+                            "size": 18.88,
                             "family": "Montserrat Bold",
                             "color": "#000000",
                             "bold": true,
@@ -24256,7 +24256,7 @@
                         "height": 95.82
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Montserrat Medium",
                         "color": "#000000",
                         "bold": true,
@@ -24271,7 +24271,7 @@
                         {
                           "text": "Define project goals, gather requirements, identify stakeholders, and establish the project timeline.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Montserrat Medium",
                             "color": "#000000",
                             "bold": true,
@@ -24656,7 +24656,7 @@
                 "height": 70
               },
               "font": {
-                "size": 56,
+                "size": 41.5,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -24671,7 +24671,7 @@
                 {
                   "text": "Pricing",
                   "font": {
-                    "size": 56,
+                    "size": 41.5,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -24697,7 +24697,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 18,
+                "size": 15.5,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -24712,7 +24712,7 @@
                 {
                   "text": "Every digital platform faces potential risks that may impact its experience. Identifying these risks early helps imp, secure, and continuous operation.",
                   "font": {
-                    "size": 18,
+                    "size": 15.5,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -24796,7 +24796,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 25,
+                        "size": 19.5,
                         "family": "Montserrat Bold",
                         "color": "#8958F4",
                         "bold": true,
@@ -24811,7 +24811,7 @@
                         {
                           "text": "Free",
                           "font": {
-                            "size": 25,
+                            "size": 19.5,
                             "family": "Montserrat Bold",
                             "color": "#8958F4",
                             "bold": true,
@@ -25237,7 +25237,7 @@
                 "height": 183.49
               },
               "font": {
-                "size": 51,
+                "size": 42.0,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -25252,7 +25252,7 @@
                 {
                   "text": "Project Breakdown\nthat maintains features\n& functionalities",
                   "font": {
-                    "size": 51,
+                    "size": 42.0,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -25372,7 +25372,7 @@
                           "height": 31
                         },
                         "font": {
-                          "size": 21.33,
+                          "size": 16.83,
                           "family": "Montserrat Bold",
                           "color": "#000000",
                           "bold": true,
@@ -25387,7 +25387,7 @@
                           {
                             "text": "Phase 1:",
                             "font": {
-                              "size": 21.33,
+                              "size": 16.83,
                               "family": "Montserrat Bold",
                               "color": "#000000",
                               "bold": true,
@@ -25413,7 +25413,7 @@
                         },
                         "rotation": 0,
                         "font": {
-                          "size": 21.33,
+                          "size": 17.83,
                           "family": "Montserrat Semi-Bold",
                           "color": "#000000",
                           "bold": true,
@@ -25428,7 +25428,7 @@
                           {
                             "text": "Requirement Analysis",
                             "font": {
-                              "size": 21.33,
+                              "size": 17.83,
                               "family": "Montserrat Semi-Bold",
                               "color": "#000000",
                               "bold": true,
@@ -25683,7 +25683,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 44.49,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
@@ -25697,7 +25697,7 @@
                 {
                   "text": "Next Steps",
                   "font": {
-                    "size": 55.99,
+                    "size": 44.49,
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.05,
@@ -25722,7 +25722,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.78,
+                "size": 15.28,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -25737,7 +25737,7 @@
                 {
                   "text": "A university implemented the Digital Learning Platform improve online education, simplify course management, and enhance student engagement.",
                   "font": {
-                    "size": 17.78,
+                    "size": 15.28,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -26033,7 +26033,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 21.33,
+                        "size": 18.33,
                         "family": "Montserrat Semi-Bold",
                         "color": "#000000",
                         "bold": true,
@@ -26048,7 +26048,7 @@
                         {
                           "text": "Intelligent Task & Project Management",
                           "font": {
-                            "size": 21.33,
+                            "size": 18.33,
                             "family": "Montserrat Semi-Bold",
                             "color": "#000000",
                             "bold": true,
@@ -26224,7 +26224,7 @@
                 "height": 61.07
               },
               "font": {
-                "size": 55.99,
+                "size": 39.99,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -26239,7 +26239,7 @@
                 {
                   "text": "Project Management Workflow",
                   "font": {
-                    "size": 55.99,
+                    "size": 39.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,
@@ -26381,7 +26381,7 @@
                         "height": 28.6
                       },
                       "font": {
-                        "size": 21.32,
+                        "size": 17.32,
                         "family": "Montserrat Semi-Bold",
                         "color": "#000000",
                         "bold": true,
@@ -26396,7 +26396,7 @@
                         {
                           "text": "Project Setup",
                           "font": {
-                            "size": 21.32,
+                            "size": 17.32,
                             "family": "Montserrat Semi-Bold",
                             "color": "#000000",
                             "bold": true,
@@ -26702,7 +26702,7 @@
                 "height": 62
               },
               "font": {
-                "size": 55.99,
+                "size": 43.99,
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
@@ -26716,7 +26716,7 @@
                 {
                   "text": "Identifying ",
                   "font": {
-                    "size": 55.99,
+                    "size": 43.99,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": false,
@@ -26730,7 +26730,7 @@
                 {
                   "text": "Potential Risks",
                   "font": {
-                    "size": 55.99,
+                    "size": 43.99,
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "bold": false,
@@ -26758,7 +26758,7 @@
                 "height": 48.44
               },
               "font": {
-                "size": 17.78,
+                "size": 14.78,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -26773,7 +26773,7 @@
                 {
                   "text": "Every software project faces technical, operational, and business challenges that may affect its performance, security, or successful implementation. Conducting a risk assessment helps identify these potential effective mitigation",
                   "font": {
-                    "size": 17.78,
+                    "size": 14.78,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -26948,7 +26948,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 14.22,
+                "size": 11.72,
                 "family": "Montserrat Medium",
                 "color": "#000000",
                 "bold": true,
@@ -26963,7 +26963,7 @@
                 {
                   "text": "Unexpected hardware failures or cybe loss of important without proper backups. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non elit mauris. Cras euismod, metus ac finibus finibus, felis dui suscipit.",
                   "font": {
-                    "size": 14.22,
+                    "size": 11.72,
                     "family": "Montserrat Medium",
                     "color": "#000000",
                     "bold": true,
@@ -26999,7 +26999,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 21.33,
+                "size": 18.33,
                 "family": "Montserrat Bold",
                 "color": "#000000",
                 "bold": true,
@@ -27014,7 +27014,7 @@
                 {
                   "text": "Data Security Risk",
                   "font": {
-                    "size": 21.33,
+                    "size": 18.33,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -27091,7 +27091,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 21.33,
+                "size": 18.33,
                 "family": "Montserrat Bold",
                 "color": "#000000",
                 "bold": true,
@@ -27106,7 +27106,7 @@
                 {
                   "text": "Data Loss",
                   "font": {
-                    "size": 21.33,
+                    "size": 18.33,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -27894,7 +27894,7 @@
                 "height": 39.11
               },
               "font": {
-                "size": 14.22,
+                "size": 12.72,
                 "family": "Montserrat",
                 "color": "#000000",
                 "line_height": 1.45,
@@ -27908,7 +27908,7 @@
                 {
                   "text": "Use reminders and notifications to ensure tasks are completed on time. Lorem ipsum dolor sit amet.",
                   "font": {
-                    "size": 14.22,
+                    "size": 12.72,
                     "family": "Montserrat",
                     "color": "#000000",
                     "line_height": 1.45,
@@ -28081,7 +28081,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 55.99,
+                "size": 47.49,
                 "family": "Anton",
                 "color": "#000000",
                 "bold": true,
@@ -28096,7 +28096,7 @@
                 {
                   "text": "Any questions ?",
                   "font": {
-                    "size": 55.99,
+                    "size": 47.49,
                     "family": "Anton",
                     "color": "#000000",
                     "bold": true,

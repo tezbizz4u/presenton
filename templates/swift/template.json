@@ -9693,7 +9693,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 14,
+                    "size": 11.5,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -9705,7 +9705,7 @@
                     {
                       "text": "Jan 1, 2025",
                       "font": {
-                        "size": 14,
+                        "size": 11.5,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.2
@@ -10120,7 +10120,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -10133,7 +10133,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -10253,7 +10253,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -10266,7 +10266,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -10386,7 +10386,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -10399,7 +10399,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -10519,7 +10519,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -10532,7 +10532,7 @@
                         {
                           "text": "Lorem ipsum dolor",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -11230,7 +11230,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 14,
+                        "size": 9.0,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11243,7 +11243,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 14,
+                            "size": 9.0,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11406,7 +11406,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 14,
+                        "size": 9.0,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11419,7 +11419,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 14,
+                            "size": 9.0,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -11582,7 +11582,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 14,
+                        "size": 9.0,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -11595,7 +11595,7 @@
                         {
                           "text": "Lorem ipsum dolor sit amet.",
                           "font": {
-                            "size": 14,
+                            "size": 9.0,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -12206,7 +12206,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -12219,7 +12219,7 @@
                         {
                           "text": "Concise supporting text.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -12343,7 +12343,7 @@
                         "height": 24
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Albert Sans",
                         "color": "#6B7280",
                         "line_height": 1.36
@@ -12356,7 +12356,7 @@
                         {
                           "text": "Concise supporting text.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Albert Sans",
                             "color": "#6B7280",
                             "line_height": 1.36
@@ -12644,7 +12644,7 @@
                     "height": 60
                   },
                   "font": {
-                    "size": 20,
+                    "size": 17.5,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 1.2
@@ -12657,7 +12657,7 @@
                     {
                       "text": "Proven Results\nThrough Data",
                       "font": {
-                        "size": 20,
+                        "size": 17.5,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -15663,7 +15663,7 @@
                 "height": 21
               },
               "font": {
-                "size": 14,
+                "size": 8.5,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -15676,7 +15676,7 @@
                 {
                   "text": "www.yourwebsite.com",
                   "font": {
-                    "size": 14,
+                    "size": 8.5,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16571,7 +16571,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 9.0,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16584,7 +16584,7 @@
                 {
                   "text": "Text",
                   "font": {
-                    "size": 14,
+                    "size": 9.0,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16679,7 +16679,7 @@
                 "height": 22
               },
               "font": {
-                "size": 14,
+                "size": 11.0,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16692,7 +16692,7 @@
                 {
                   "text": "More text",
                   "font": {
-                    "size": 14,
+                    "size": 11.0,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -16761,7 +16761,7 @@
                 "height": 21
               },
               "font": {
-                "size": 14,
+                "size": 8.5,
                 "family": "Albert Sans",
                 "color": "#6B7280",
                 "line_height": 1.2
@@ -16774,7 +16774,7 @@
                 {
                   "text": "www.yourwebsite.com",
                   "font": {
-                    "size": 14,
+                    "size": 8.5,
                     "family": "Albert Sans",
                     "color": "#6B7280",
                     "line_height": 1.2
@@ -17091,7 +17091,7 @@
                 "height": 52.8
               },
               "font": {
-                "size": 48,
+                "size": 40.0,
                 "family": "Albert Sans",
                 "color": "#111827",
                 "line_height": 0.88
@@ -17103,7 +17103,7 @@
                 {
                   "text": "Our Journey at a Glance",
                   "font": {
-                    "size": 48,
+                    "size": 40.0,
                     "family": "Albert Sans",
                     "color": "#111827",
                     "line_height": 0.88
@@ -17442,7 +17442,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 15.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -17454,7 +17454,7 @@
                         {
                           "text": "Founded in 2020",
                           "font": {
-                            "size": 18,
+                            "size": 15.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -17717,7 +17717,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 15.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -17729,7 +17729,7 @@
                         {
                           "text": "First Product in 2021",
                           "font": {
-                            "size": 18,
+                            "size": 15.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2
@@ -17992,7 +17992,7 @@
                         "height": 27
                       },
                       "font": {
-                        "size": 18,
+                        "size": 15.0,
                         "family": "Albert Sans",
                         "color": "#111827",
                         "line_height": 1.2
@@ -18004,7 +18004,7 @@
                         {
                           "text": "Key Milestone in 2022",
                           "font": {
-                            "size": 18,
+                            "size": 15.0,
                             "family": "Albert Sans",
                             "color": "#111827",
                             "line_height": 1.2

@@ -14076,7 +14076,7 @@
                 "height": 60.13
               },
               "font": {
-                "size": 53.32,
+                "size": 45.82,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -14091,7 +14091,7 @@
                 {
                   "text": "ESG Performance",
                   "font": {
-                    "size": 53.32,
+                    "size": 45.82,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -14116,7 +14116,7 @@
                 "height": 116.94
               },
               "font": {
-                "size": 59.76,
+                "size": 44.26,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -14132,7 +14132,7 @@
                 {
                   "text": "Annual Report 2026",
                   "font": {
-                    "size": 59.76,
+                    "size": 44.26,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -14359,7 +14359,7 @@
                 "height": 18.86
               },
               "font": {
-                "size": 17.87,
+                "size": 15.37,
                 "family": "DM Sans",
                 "color": "#D9D9D9",
                 "line_height": 1.04
@@ -14372,7 +14372,7 @@
                 {
                   "text": "John Doe",
                   "font": {
-                    "size": 17.87,
+                    "size": 15.37,
                     "family": "DM Sans",
                     "color": "#D9D9D9",
                     "line_height": 1.04
@@ -14395,7 +14395,7 @@
                 "height": 13.33
               },
               "font": {
-                "size": 12.45,
+                "size": 10.95,
                 "family": "DM Sans",
                 "color": "#D9D9D9",
                 "line_height": 1.04
@@ -14408,7 +14408,7 @@
                 {
                   "text": "December 2025",
                   "font": {
-                    "size": 12.45,
+                    "size": 10.95,
                     "family": "DM Sans",
                     "color": "#D9D9D9",
                     "line_height": 1.04
@@ -14492,7 +14492,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.16,
+                "size": 31.66,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -14508,7 +14508,7 @@
                 {
                   "text": "Agenda",
                   "font": {
-                    "size": 47.16,
+                    "size": 31.66,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -14810,7 +14810,7 @@
                 "height": 104.91
               },
               "font": {
-                "size": 47.16,
+                "size": 40.16,
                 "family": "Playfair Display Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -14826,7 +14826,7 @@
                 {
                   "text": "Environmental Performance",
                   "font": {
-                    "size": 47.16,
+                    "size": 40.16,
                     "family": "Playfair Display Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -14953,7 +14953,7 @@
                 "height": 118.94
               },
               "font": {
-                "size": 47.16,
+                "size": 36.16,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -14969,7 +14969,7 @@
                 {
                   "text": "ESG Challenges",
                   "font": {
-                    "size": 47.16,
+                    "size": 36.16,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -15307,7 +15307,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 29.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -15323,7 +15323,7 @@
                 {
                   "text": "Strategic Sustainability Initiatives",
                   "font": {
-                    "size": 47.11,
+                    "size": 29.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -15499,7 +15499,7 @@
                         "height": 20.18
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 13.81,
                         "family": "Playfair Display Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -15514,7 +15514,7 @@
                         {
                           "text": "Reduce Environmental Impact",
                           "font": {
-                            "size": 17.81,
+                            "size": 13.81,
                             "family": "Playfair Display Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -15593,7 +15593,7 @@
                         "height": 20.18
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 14.81,
                         "family": "Playfair Display Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -15608,7 +15608,7 @@
                         {
                           "text": "Empower People & Communities",
                           "font": {
-                            "size": 17.81,
+                            "size": 14.81,
                             "family": "Playfair Display Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -15781,7 +15781,7 @@
                         "height": 20.18
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 12.81,
                         "family": "Playfair Display Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -15796,7 +15796,7 @@
                         {
                           "text": " Drive Sustainable Innovation",
                           "font": {
-                            "size": 17.81,
+                            "size": 12.81,
                             "family": "Playfair Display Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -15932,7 +15932,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 29.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -15948,7 +15948,7 @@
                 {
                   "text": "ESG Value Creation Framework",
                   "font": {
-                    "size": 47.11,
+                    "size": 29.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -16049,7 +16049,7 @@
                         "height": 47.68
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.92,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -16063,7 +16063,7 @@
                         {
                           "text": "Identify ESG risks, opportunities, and stakeholder expectations.",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.92,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -16201,7 +16201,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 29.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -16217,7 +16217,7 @@
                 {
                   "text": "The Process",
                   "font": {
-                    "size": 47.11,
+                    "size": 29.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -16324,7 +16324,7 @@
                         "height": 20.84
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 13.81,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -16339,7 +16339,7 @@
                         {
                           "text": "Assess",
                           "font": {
-                            "size": 17.81,
+                            "size": 13.81,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -16514,7 +16514,7 @@
                         "height": 20.84
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 11.81,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -16529,7 +16529,7 @@
                         {
                           "text": "Reduce",
                           "font": {
-                            "size": 17.81,
+                            "size": 11.81,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -16555,7 +16555,7 @@
                         "height": 43.21
                       },
                       "font": {
-                        "size": 15.15,
+                        "size": 12.65,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.14,
@@ -16569,7 +16569,7 @@
                         {
                           "text": "Lower greenhouse gas emissions.",
                           "font": {
-                            "size": 15.15,
+                            "size": 12.65,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.14,
@@ -16704,7 +16704,7 @@
                         "height": 20.84
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 10.31,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -16719,7 +16719,7 @@
                         {
                           "text": "Protect",
                           "font": {
-                            "size": 17.81,
+                            "size": 10.31,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -16894,7 +16894,7 @@
                         "height": 20.84
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 9.81,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -16909,7 +16909,7 @@
                         {
                           "text": "Innovate",
                           "font": {
-                            "size": 17.81,
+                            "size": 9.81,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -16935,7 +16935,7 @@
                         "height": 44.59
                       },
                       "font": {
-                        "size": 15.15,
+                        "size": 13.15,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.14,
@@ -16949,7 +16949,7 @@
                         {
                           "text": "Adopt clean energy and sustainable ",
                           "font": {
-                            "size": 15.15,
+                            "size": 13.15,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.14,
@@ -17084,7 +17084,7 @@
                         "height": 20.84
                       },
                       "font": {
-                        "size": 17.81,
+                        "size": 12.81,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -17099,7 +17099,7 @@
                         {
                           "text": "Sustain",
                           "font": {
-                            "size": 17.81,
+                            "size": 12.81,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -17265,7 +17265,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 30.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -17281,7 +17281,7 @@
                 {
                   "text": "Our Goal",
                   "font": {
-                    "size": 47.11,
+                    "size": 30.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -17308,7 +17308,7 @@
                 "height": 90.44
               },
               "font": {
-                "size": 16.92,
+                "size": 14.92,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 1.19,
@@ -17322,7 +17322,7 @@
                 {
                   "text": "To reduce the impacts of global warming by promoting sustainable practices, protecting natural ecosystems, and encouraging collective climate action for a healthier planet.",
                   "font": {
-                    "size": 16.92,
+                    "size": 14.92,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 1.19,
@@ -17906,7 +17906,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 31.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -17922,7 +17922,7 @@
                 {
                   "text": "ESG Report Highlights",
                   "font": {
-                    "size": 47.11,
+                    "size": 31.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -18096,7 +18096,7 @@
                             "height": 51.18
                           },
                           "font": {
-                            "size": 16.92,
+                            "size": 14.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -18110,7 +18110,7 @@
                             {
                               "text": "Reducing carbon emissions, improving energy.",
                               "font": {
-                                "size": 16.92,
+                                "size": 14.42,
                                 "family": "DM Sans",
                                 "color": "#FFFFFF",
                                 "line_height": 1.19,
@@ -18330,7 +18330,7 @@
                 "height": 104.91
               },
               "font": {
-                "size": 47.11,
+                "size": 33.11,
                 "family": "Playfair Display Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -18346,7 +18346,7 @@
                 {
                   "text": "Traditional vs ESG Driven Business",
                   "font": {
-                    "size": 47.11,
+                    "size": 33.11,
                     "family": "Playfair Display Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -18372,7 +18372,7 @@
                 "height": 70.44
               },
               "font": {
-                "size": 16.92,
+                "size": 14.92,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 1.19,
@@ -18386,7 +18386,7 @@
                 {
                   "text": "How integrating ESG principles transforms business performance, resilience, and long-term value.",
                   "font": {
-                    "size": 16.92,
+                    "size": 14.92,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 1.19,
@@ -19407,7 +19407,7 @@
                             "height": 68.79
                           },
                           "font": {
-                            "size": 15.15,
+                            "size": 13.15,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.03,
@@ -19421,7 +19421,7 @@
                             {
                               "text": "Creates value for investors, employees, customers, and communities.",
                               "font": {
-                                "size": 15.15,
+                                "size": 13.15,
                                 "family": "DM Sans",
                                 "color": "#FFFFFF",
                                 "line_height": 1.03,
@@ -19528,7 +19528,7 @@
                 "height": 104.91
               },
               "font": {
-                "size": 47.11,
+                "size": 32.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -19544,7 +19544,7 @@
                 {
                   "text": "ESG Performance Timeline",
                   "font": {
-                    "size": 47.11,
+                    "size": 32.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -19785,7 +19785,7 @@
                 "height": 104.91
               },
               "font": {
-                "size": 47.11,
+                "size": 31.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -19801,7 +19801,7 @@
                 {
                   "text": "Climate \nPerformance Overview",
                   "font": {
-                    "size": 47.11,
+                    "size": 31.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -20076,7 +20076,7 @@
                         "height": 35.38
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 14.92,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.04,
@@ -20090,7 +20090,7 @@
                         {
                           "text": "Illustrative trend showing the steady increase in global carbon dioxide emissions over time.",
                           "font": {
-                            "size": 16.92,
+                            "size": 14.92,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.04,
@@ -20185,7 +20185,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 29.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -20201,7 +20201,7 @@
                 {
                   "text": "Key ESG Metrics",
                   "font": {
-                    "size": 47.11,
+                    "size": 29.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -20274,7 +20274,7 @@
                 "height": 39.52
               },
               "font": {
-                "size": 20.31,
+                "size": 11.17,
                 "family": "DM Sans Bold",
                 "color": "#0F92F4",
                 "bold": true,
@@ -20289,7 +20289,7 @@
                 {
                   "text": "Planet Health",
                   "font": {
-                    "size": 20.31,
+                    "size": 11.17,
                     "family": "DM Sans Bold",
                     "color": "#0F92F4",
                     "bold": true,
@@ -20333,7 +20333,7 @@
                 "height": 20.33
               },
               "font": {
-                "size": 20.31,
+                "size": 16.81,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -20348,7 +20348,7 @@
                 {
                   "text": "Climate",
                   "font": {
-                    "size": 20.31,
+                    "size": 16.81,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -20752,7 +20752,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 32.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -20768,7 +20768,7 @@
                 {
                   "text": "A Decade of Rising Challenges",
                   "font": {
-                    "size": 47.11,
+                    "size": 32.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -20815,7 +20815,7 @@
                     "height": 20.84
                   },
                   "font": {
-                    "size": 17.81,
+                    "size": 13.31,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -20830,7 +20830,7 @@
                     {
                       "text": "+1.02°C",
                       "font": {
-                        "size": 17.81,
+                        "size": 13.31,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -21004,7 +21004,7 @@
                     "height": 20.84
                   },
                   "font": {
-                    "size": 17.81,
+                    "size": 13.81,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21019,7 +21019,7 @@
                     {
                       "text": "36.3 GtCO₂",
                       "font": {
-                        "size": 17.81,
+                        "size": 13.81,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -21193,7 +21193,7 @@
                     "height": 20.84
                   },
                   "font": {
-                    "size": 17.81,
+                    "size": 13.31,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21208,7 +21208,7 @@
                     {
                       "text": "34%",
                       "font": {
-                        "size": 17.81,
+                        "size": 13.31,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -21382,7 +21382,7 @@
                     "height": 20.84
                   },
                   "font": {
-                    "size": 17.81,
+                    "size": 14.31,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21397,7 +21397,7 @@
                     {
                       "text": "+3.6 mm/yr",
                       "font": {
-                        "size": 17.81,
+                        "size": 14.31,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -21621,7 +21621,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 31.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -21637,7 +21637,7 @@
                 {
                   "text": "ESG Performance Dashboard",
                   "font": {
-                    "size": 47.11,
+                    "size": 31.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21674,7 +21674,7 @@
                 "height": 18.83
               },
               "font": {
-                "size": 16.04,
+                "size": 13.54,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -21689,7 +21689,7 @@
                 {
                   "text": "Sustainability Performance Trends",
                   "font": {
-                    "size": 16.04,
+                    "size": 13.54,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21803,7 +21803,7 @@
                 "height": 18.83
               },
               "font": {
-                "size": 16.04,
+                "size": 13.04,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -21818,7 +21818,7 @@
                 {
                   "text": "Overall ESG Performance",
                   "font": {
-                    "size": 16.04,
+                    "size": 13.04,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -21934,7 +21934,7 @@
                 "height": 31.37
               },
               "font": {
-                "size": 16.04,
+                "size": 12.04,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 0.99,
@@ -21948,7 +21948,7 @@
                 {
                   "text": "Overall ESG Score",
                   "font": {
-                    "size": 16.04,
+                    "size": 12.04,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 0.99,
@@ -21996,7 +21996,7 @@
                         "height": 18.83
                       },
                       "font": {
-                        "size": 16.04,
+                        "size": 14.04,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -22011,7 +22011,7 @@
                         {
                           "text": "Employee Engagement",
                           "font": {
-                            "size": 16.04,
+                            "size": 14.04,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -22129,7 +22129,7 @@
                 "height": 18.83
               },
               "font": {
-                "size": 16.04,
+                "size": 13.04,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22144,7 +22144,7 @@
                 {
                   "text": "KPI Cards",
                   "font": {
-                    "size": 16.04,
+                    "size": 13.04,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -22274,7 +22274,7 @@
                         "height": 35.92
                       },
                       "font": {
-                        "size": 13.66,
+                        "size": 12.16,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 0.99,
@@ -22288,7 +22288,7 @@
                         {
                           "text": "Reduction in operational greenhouse gas emissions compared.\n",
                           "font": {
-                            "size": 13.66,
+                            "size": 12.16,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 0.99,
@@ -22428,7 +22428,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 29.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22444,7 +22444,7 @@
                 {
                   "text": "ESG Performance Overview",
                   "font": {
-                    "size": 47.11,
+                    "size": 29.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -22471,7 +22471,7 @@
                 "height": 20.17
               },
               "font": {
-                "size": 16.92,
+                "size": 13.92,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 1.19,
@@ -22485,7 +22485,7 @@
                 {
                   "text": "Illustrative trend showing the steady increase in global carbon dioxide emissions over time.",
                   "font": {
-                    "size": 16.92,
+                    "size": 13.92,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 1.19,
@@ -22739,7 +22739,7 @@
                 "height": 20.17
               },
               "font": {
-                "size": 16.92,
+                "size": 12.92,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22754,7 +22754,7 @@
                 {
                   "text": "ESG Investment Distribution",
                   "font": {
-                    "size": 16.92,
+                    "size": 12.92,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -22904,7 +22904,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 35.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22920,7 +22920,7 @@
                 {
                   "text": "Carbon Emissions Reduction Journey",
                   "font": {
-                    "size": 47.11,
+                    "size": 35.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -22956,7 +22956,7 @@
                 "height": 20.17
               },
               "font": {
-                "size": 16.92,
+                "size": 14.42,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22971,7 +22971,7 @@
                 {
                   "text": "Emission Reduction Breakdown",
                   "font": {
-                    "size": 16.92,
+                    "size": 14.42,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23212,7 +23212,7 @@
                 "height": 20.17
               },
               "font": {
-                "size": 16.92,
+                "size": 13.42,
                 "family": "DM Sans Bold",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -23227,7 +23227,7 @@
                 {
                   "text": "ESG Performance Index",
                   "font": {
-                    "size": 16.92,
+                    "size": 13.42,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23252,7 +23252,7 @@
                 "height": 40.17
               },
               "font": {
-                "size": 16.92,
+                "size": 13.42,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 1.19,
@@ -23266,7 +23266,7 @@
                 {
                   "text": "A snapshot of organizational performance across the key pillars of Environmental, Social, and Governance",
                   "font": {
-                    "size": 16.92,
+                    "size": 13.42,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 1.19,
@@ -23410,7 +23410,7 @@
                         "height": 24.62
                       },
                       "font": {
-                        "size": 12.48,
+                        "size": 10.98,
                         "family": "DM Sans",
                         "color": "#B8C0CC",
                         "line_height": 0.99,
@@ -23424,7 +23424,7 @@
                         {
                           "text": "Environmental Stewardship",
                           "font": {
-                            "size": 12.48,
+                            "size": 10.98,
                             "family": "DM Sans",
                             "color": "#B8C0CC",
                             "line_height": 0.99,
@@ -23517,7 +23517,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 32.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -23533,7 +23533,7 @@
                 {
                   "text": "ESG Strategic Priorities",
                   "font": {
-                    "size": 47.11,
+                    "size": 32.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23717,7 +23717,7 @@
                         "height": 33.7
                       },
                       "font": {
-                        "size": 16.87,
+                        "size": 14.37,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -23732,7 +23732,7 @@
                         {
                           "text": "Environmental\nStewardship",
                           "font": {
-                            "size": 16.87,
+                            "size": 14.37,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -23912,7 +23912,7 @@
                         "height": 33.7
                       },
                       "font": {
-                        "size": 16.87,
+                        "size": 14.37,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -23927,7 +23927,7 @@
                         {
                           "text": "Social Responsibility",
                           "font": {
-                            "size": 16.87,
+                            "size": 14.37,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -24087,7 +24087,7 @@
                         "height": 33.7
                       },
                       "font": {
-                        "size": 16.87,
+                        "size": 14.37,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -24102,7 +24102,7 @@
                         {
                           "text": "Strong Governance",
                           "font": {
-                            "size": 16.87,
+                            "size": 14.37,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -24127,7 +24127,7 @@
                         "height": 29.56
                       },
                       "font": {
-                        "size": 15.18,
+                        "size": 13.18,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 0.99,
@@ -24141,7 +24141,7 @@
                         {
                           "text": "Maintain transparency, accountability, and effective corporate oversight.",
                           "font": {
-                            "size": 15.18,
+                            "size": 13.18,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 0.99,
@@ -24282,7 +24282,7 @@
                         "height": 33.7
                       },
                       "font": {
-                        "size": 16.87,
+                        "size": 14.37,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -24297,7 +24297,7 @@
                         {
                           "text": "Innovation & Growth",
                           "font": {
-                            "size": 16.87,
+                            "size": 14.37,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -24322,7 +24322,7 @@
                         "height": 29.56
                       },
                       "font": {
-                        "size": 15.18,
+                        "size": 12.18,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 0.99,
@@ -24336,7 +24336,7 @@
                         {
                           "text": "Develop sustainable products and improve operational efficiency.",
                           "font": {
-                            "size": 15.18,
+                            "size": 12.18,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 0.99,
@@ -24477,7 +24477,7 @@
                         "height": 33.7
                       },
                       "font": {
-                        "size": 16.87,
+                        "size": 14.37,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -24492,7 +24492,7 @@
                         {
                           "text": "Long-Term Value",
                           "font": {
-                            "size": 16.87,
+                            "size": 14.37,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -24517,7 +24517,7 @@
                         "height": 29.56
                       },
                       "font": {
-                        "size": 15.18,
+                        "size": 12.18,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 0.99,
@@ -24531,7 +24531,7 @@
                         {
                           "text": "Create lasting value for stakeholders while ensuring future business.",
                           "font": {
-                            "size": 15.18,
+                            "size": 12.18,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 0.99,
@@ -24625,7 +24625,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 37.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -24641,7 +24641,7 @@
                 {
                   "text": "ESG KPI Dashboard",
                   "font": {
-                    "size": 47.11,
+                    "size": 37.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -24667,7 +24667,7 @@
                 "height": 20.17
               },
               "font": {
-                "size": 16.92,
+                "size": 13.42,
                 "family": "DM Sans",
                 "color": "#FFFFFF",
                 "line_height": 1.19,
@@ -24681,7 +24681,7 @@
                 {
                   "text": "Key sustainability indicators achieved during the reporting period.",
                   "font": {
-                    "size": 16.92,
+                    "size": 13.42,
                     "family": "DM Sans",
                     "color": "#FFFFFF",
                     "line_height": 1.19,
@@ -24778,7 +24778,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 12.92,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -24793,7 +24793,7 @@
                         {
                           "text": "Renewable Energy",
                           "font": {
-                            "size": 16.92,
+                            "size": 12.92,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -24932,7 +24932,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 32.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -24948,7 +24948,7 @@
                 {
                   "text": "Market Inflection Point",
                   "font": {
-                    "size": 47.11,
+                    "size": 32.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -25172,7 +25172,7 @@
                 "height": 200
               },
               "font": {
-                "size": 31.27,
+                "size": 27.27,
                 "family": "DM Sans Bold",
                 "color": "#44AFFF",
                 "bold": true,
@@ -25187,7 +25187,7 @@
                 {
                   "text": "Sustainability ",
                   "font": {
-                    "size": 31.27,
+                    "size": 27.27,
                     "family": "DM Sans Bold",
                     "color": "#44AFFF",
                     "bold": true,
@@ -25198,7 +25198,7 @@
                 {
                   "text": "is not just a responsibility, it is the foundation of resilient growth, innovation, and longterm value.",
                   "font": {
-                    "size": 31.27,
+                    "size": 27.27,
                     "family": "DM Sans Bold",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -25401,7 +25401,7 @@
                 "height": 104.91
               },
               "font": {
-                "size": 47.11,
+                "size": 40.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -25417,7 +25417,7 @@
                 {
                   "text": "Renewable Energy Transition Program",
                   "font": {
-                    "size": 47.11,
+                    "size": 40.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -25515,7 +25515,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 14.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -25529,7 +25529,7 @@
                         {
                           "text": "Duration",
                           "font": {
-                            "size": 16.92,
+                            "size": 14.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -25553,7 +25553,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -25568,7 +25568,7 @@
                         {
                           "text": "12 Months",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -25603,7 +25603,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 14.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -25617,7 +25617,7 @@
                         {
                           "text": "Carbon Emissions Reduced",
                           "font": {
-                            "size": 16.92,
+                            "size": 14.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -25641,7 +25641,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -25656,7 +25656,7 @@
                         {
                           "text": "18%",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -25691,7 +25691,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 14.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -25705,7 +25705,7 @@
                         {
                           "text": "Renewable Energy Adoption",
                           "font": {
-                            "size": 16.92,
+                            "size": 14.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -25729,7 +25729,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -25744,7 +25744,7 @@
                         {
                           "text": "82%",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -25779,7 +25779,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 14.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -25793,7 +25793,7 @@
                         {
                           "text": "Annual Energy Cost Savings",
                           "font": {
-                            "size": 16.92,
+                            "size": 14.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -25817,7 +25817,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -25832,7 +25832,7 @@
                         {
                           "text": "15%",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -25975,7 +25975,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.92,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -25990,7 +25990,7 @@
                         {
                           "text": "Phase 1",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.92,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26044,7 +26044,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26059,7 +26059,7 @@
                         {
                           "text": "Assessment & Planning",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26134,7 +26134,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.92,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26149,7 +26149,7 @@
                         {
                           "text": "Phase 2",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.92,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26203,7 +26203,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26218,7 +26218,7 @@
                         {
                           "text": "Implementation",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26293,7 +26293,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.92,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26308,7 +26308,7 @@
                         {
                           "text": "Results",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.92,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26362,7 +26362,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26377,7 +26377,7 @@
                         {
                           "text": "Business Impact",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26511,7 +26511,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 28.61,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -26527,7 +26527,7 @@
                 {
                   "text": "Leadership Team",
                   "font": {
-                    "size": 47.11,
+                    "size": 28.61,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -26830,7 +26830,7 @@
                 "height": 52.91
               },
               "font": {
-                "size": 47.11,
+                "size": 35.11,
                 "family": "Playfair Display Semi-Bold Italics",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -26846,7 +26846,7 @@
                 {
                   "text": "Strategic Action Plan",
                   "font": {
-                    "size": 47.11,
+                    "size": 35.11,
                     "family": "Playfair Display Semi-Bold Italics",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -27176,7 +27176,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 12.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -27191,7 +27191,7 @@
                         {
                           "text": "ESG Assessment",
                           "font": {
-                            "size": 16.92,
+                            "size": 12.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -27344,7 +27344,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 12.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -27359,7 +27359,7 @@
                         {
                           "text": "Goal Setting",
                           "font": {
-                            "size": 16.92,
+                            "size": 12.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -27385,7 +27385,7 @@
                         "height": 80.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -27399,7 +27399,7 @@
                         {
                           "text": "Define measurable ESG objectives aligned with business strategy, stakeholder expectations",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -27512,7 +27512,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 12.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -27527,7 +27527,7 @@
                         {
                           "text": "Strategy Development",
                           "font": {
-                            "size": 16.92,
+                            "size": 12.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -27553,7 +27553,7 @@
                         "height": 80.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -27567,7 +27567,7 @@
                         {
                           "text": "Develop action plans focused on carbon reduction, resource efficiency, employee.",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -27680,7 +27680,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 12.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -27695,7 +27695,7 @@
                         {
                           "text": "Implementation",
                           "font": {
-                            "size": 16.92,
+                            "size": 12.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -27721,7 +27721,7 @@
                         "height": 80.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -27735,7 +27735,7 @@
                         {
                           "text": "Execute sustainability initiatives through renewable energy adoption, operational",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -27848,7 +27848,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -27863,7 +27863,7 @@
                         {
                           "text": "Performance Monitoring",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -27889,7 +27889,7 @@
                         "height": 80.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -27903,7 +27903,7 @@
                         {
                           "text": "Track ESG KPIs, measure progress, conduct regular reviews, and ensure transparent reporting.",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,
@@ -28016,7 +28016,7 @@
                         "height": 20.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -28031,7 +28031,7 @@
                         {
                           "text": "Improvement",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -28057,7 +28057,7 @@
                         "height": 80.17
                       },
                       "font": {
-                        "size": 16.92,
+                        "size": 13.42,
                         "family": "DM Sans",
                         "color": "#FFFFFF",
                         "line_height": 1.19,
@@ -28071,7 +28071,7 @@
                         {
                           "text": "Refine strategies, encourage innovation, and strengthen ESG performance.",
                           "font": {
-                            "size": 16.92,
+                            "size": 13.42,
                             "family": "DM Sans",
                             "color": "#FFFFFF",
                             "line_height": 1.19,

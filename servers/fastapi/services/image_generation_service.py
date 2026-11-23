@@ -15,6 +15,7 @@ from google.genai import types
 from openai import AsyncOpenAI, BadRequestError
 from models.image_prompt import ImagePrompt
 from models.sql.image_asset import ImageAsset
+from services.asf_image_resolver import AsfImageResolver
 from utils.get_env import (
     get_gpt_image_2_quality_env,
     get_gpt_image_2_5_quality_env,
@@ -134,8 +135,17 @@ def _get_image_generation_lock() -> asyncio.Lock:
 
 
 class ImageGenerationService:
-    def __init__(self, output_directory: str, config: dict[str, str] | None = None):
+    def __init__(
+        self,
+        output_directory: str,
+        config: dict[str, str] | None = None,
+        smart: bool = True,
+    ):
         self.output_directory = output_directory
+        # ASF: stock-first resolver with de-duplication (see asf_image_resolver.py).
+        self.asf_resolver = (
+            AsfImageResolver(output_directory) if smart and config is None else None
+        )
         self.config = migrate_legacy_image_config(config) if config is not None else None
         self.is_image_generation_disabled = (
             False if config is not None else is_image_generation_disabled()
@@ -202,6 +212,11 @@ class ImageGenerationService:
         if self.is_image_generation_disabled:
             print("Image generation is disabled. Using placeholder image.")
             return absolute_fastapi_asset_url("/static/images/placeholder.jpg")
+
+        if self.asf_resolver is not None:
+            resolved = await self.asf_resolver.resolve(prompt.prompt, prompt.target_size)
+            if resolved is not None:
+                return resolved
 
         if not self.image_gen_func:
             print("No image generation function found. Using placeholder image.")

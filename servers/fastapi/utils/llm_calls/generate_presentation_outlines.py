@@ -70,12 +70,12 @@ def get_system_prompt(
     include_table_of_contents: bool = False,
 ):
     verbosity_instruction = (
-        "Slide content should be around 20 words but detailed enough to generate a good slide."
+        "Slide content should be around 45 words but detailed enough to generate a good slide."
         if verbosity == "concise"
         else (
-            "Slide content should be around 60 words but detailed enough to generate a good slide."
+            "Slide content should be around 140 words but detailed enough to generate a good slide."
             if verbosity == "text-heavy"
-            else "Slide content should be around 40 words but detailed enough to generate a good slide."
+            else "Slide content should be around 90 words but detailed enough to generate a good slide."
         )
     )
 
@@ -156,7 +156,15 @@ def get_system_prompt(
         f"{content_only_rules}"
         "Slide content must not contain any presentation branding/styling information.\n"
         "Title slide must only contain title, presenter name, date and overview.\n"
-        "Do not include URLs, hyperlinks, citations, footnotes, references, or source lists in slide outlines.\n"
+        "Do not include URLs, hyperlinks, citations or footnotes inside slide content.\n"
+        "When the subject is medical or health education, write for qualified practitioners: "
+        "state specific criteria, thresholds, units, test names, drug classes and decision steps; "
+        "prefer established guideline definitions over general statements; never invent statistics, "
+        "trials or quotations; if a figure is uncertain, describe it qualitatively. Do not repeat the "
+        "same sentence pattern across slides, and include one short realistic clinical example where useful.\n"
+        "For presentations with 8 or more slides, make the last slide 'Sources and Further Reading' listing "
+        "4 to 6 established guidelines or consensus statements (issuing body, title, year) without URLs. "
+        "List only sources that certainly exist; never invent papers, authors or years.\n"
         "Make sure data is consistent across all slides.\n"
         "When a web search tool is available, use it for current, factual, or external information.\n"
         "When web search results are supplied in Context, use their factual content without mentioning sources.\n"

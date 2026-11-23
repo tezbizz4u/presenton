@@ -201,7 +201,8 @@ declare global {
 }
 
 function canUseMixpanel(): boolean {
-  return typeof window !== 'undefined' && Boolean(MIXPANEL_TOKEN);
+  // ASF: analytics and session recording are permanently disabled.
+  return false;
 }
 
 let trackingCheckPromise: Promise<boolean> | null = null;

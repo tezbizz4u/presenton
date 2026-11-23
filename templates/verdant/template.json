@@ -21707,7 +21707,7 @@
                     "height": 172.44
                   },
                   "font": {
-                    "size": 124.44,
+                    "size": 102.94,
                     "family": "Tinos Bold",
                     "color": "#112A0E",
                     "bold": true,
@@ -21722,7 +21722,7 @@
                     {
                       "text": "What Your Phone Knows",
                       "font": {
-                        "size": 124.44,
+                        "size": 102.94,
                         "family": "Tinos Bold",
                         "color": "#112A0E",
                         "bold": true,
@@ -22166,7 +22166,7 @@
                 "height": 142.09
               },
               "font": {
-                "size": 75.55,
+                "size": 57.55,
                 "family": "Tinos",
                 "color": "#03362D",
                 "line_height": 0.89,
@@ -22180,7 +22180,7 @@
                 {
                   "text": "Digital footprints are created constantly.",
                   "font": {
-                    "size": 75.55,
+                    "size": 57.55,
                     "family": "Tinos",
                     "color": "#03362D",
                     "line_height": 0.89,
@@ -22994,7 +22994,7 @@
                 "height": 75.42
               },
               "font": {
-                "size": 75.55,
+                "size": 60.55,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -23009,7 +23009,7 @@
                 {
                   "text": "Today’s Presentation",
                   "font": {
-                    "size": 75.55,
+                    "size": 60.55,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -23345,7 +23345,7 @@
                                 "height": 69.59
                               },
                               "font": {
-                                "size": 12.44,
+                                "size": 10.44,
                                 "family": "DM Sans",
                                 "color": "#000000",
                                 "line_height": 1.44
@@ -23358,7 +23358,7 @@
                                 {
                                   "text": "Understand how smartphones generate massive amounts of data through apps, notification.",
                                   "font": {
-                                    "size": 12.44,
+                                    "size": 10.44,
                                     "family": "DM Sans",
                                     "color": "#000000",
                                     "line_height": 1.44
@@ -24300,7 +24300,7 @@
                 "height": 295.47
               },
               "font": {
-                "size": 75.55,
+                "size": 62.05,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -24315,7 +24315,7 @@
                 {
                   "text": "Students spend more time on social and video apps than on educational apps.",
                   "font": {
-                    "size": 75.55,
+                    "size": 62.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -24620,7 +24620,7 @@
                         "height": 36.63
                       },
                       "font": {
-                        "size": 36.44,
+                        "size": 30.44,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -24635,7 +24635,7 @@
                         {
                           "text": "6 hours per day",
                           "font": {
-                            "size": 36.44,
+                            "size": 30.44,
                             "family": "Tinos",
                             "color": "#03362D",
                             "underline": false,
@@ -27369,7 +27369,7 @@
                     "height": 79.47
                   },
                   "font": {
-                    "size": 75.55,
+                    "size": 63.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -27384,7 +27384,7 @@
                     {
                       "text": "Average Daily Smartphone Usage",
                       "font": {
-                        "size": 75.55,
+                        "size": 63.05,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -27494,7 +27494,7 @@
                         "height": 24.48
                       },
                       "font": {
-                        "size": 17.77,
+                        "size": 14.77,
                         "family": "DM Sans Bold",
                         "color": "#000000",
                         "bold": true,
@@ -27508,7 +27508,7 @@
                         {
                           "text": "35–44 Years (5%)",
                           "font": {
-                            "size": 17.77,
+                            "size": 14.77,
                             "family": "DM Sans Bold",
                             "color": "#000000",
                             "bold": true,
@@ -27532,7 +27532,7 @@
                         "height": 44.61
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -27545,7 +27545,7 @@
                         {
                           "text": "Users tend to spend less recreational time on smartphones and use them more for professiona.",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -27594,7 +27594,7 @@
                         "height": 25.64
                       },
                       "font": {
-                        "size": 17.77,
+                        "size": 14.77,
                         "family": "DM Sans Bold",
                         "color": "#000000",
                         "bold": true,
@@ -27608,7 +27608,7 @@
                         {
                           "text": "13–17 Years (55%)",
                           "font": {
-                            "size": 17.77,
+                            "size": 14.77,
                             "family": "DM Sans Bold",
                             "color": "#000000",
                             "bold": true,
@@ -27632,7 +27632,7 @@
                         "height": 45.27
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -27645,7 +27645,7 @@
                         {
                           "text": "Usage is high due to social media, gaming, video streaming, and online communication",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -27732,7 +27732,7 @@
                         "height": 44.61
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -27745,7 +27745,7 @@
                         {
                           "text": "Screen time remains substantial, but usage is more balanced between work-related tasks.",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -27794,7 +27794,7 @@
                         "height": 24.48
                       },
                       "font": {
-                        "size": 17.77,
+                        "size": 14.77,
                         "family": "DM Sans Bold",
                         "color": "#000000",
                         "bold": true,
@@ -27808,7 +27808,7 @@
                         {
                           "text": "18–24 Years (25%)",
                           "font": {
-                            "size": 17.77,
+                            "size": 14.77,
                             "family": "DM Sans Bold",
                             "color": "#000000",
                             "bold": true,
@@ -27832,7 +27832,7 @@
                         "height": 44.61
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -27845,7 +27845,7 @@
                         {
                           "text": "This group shows the highest smartphone engagement, combining social networking",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -28017,7 +28017,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 65.05,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -28032,7 +28032,7 @@
                 {
                   "text": "App Category Usage",
                   "font": {
-                    "size": 75.55,
+                    "size": 65.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -29050,7 +29050,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 65.55,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -29065,7 +29065,7 @@
                 {
                   "text": "Hourly Phone Usage",
                   "font": {
-                    "size": 75.55,
+                    "size": 65.55,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -29137,7 +29137,7 @@
                         "height": 24.44
                       },
                       "font": {
-                        "size": 17.78,
+                        "size": 15.28,
                         "family": "DM Sans Bold",
                         "color": "#03362D",
                         "bold": true,
@@ -29151,7 +29151,7 @@
                         {
                           "text": "Smartphone engagement (%)",
                           "font": {
-                            "size": 17.78,
+                            "size": 15.28,
                             "family": "DM Sans Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -29605,7 +29605,7 @@
                         "height": 32.8
                       },
                       "font": {
-                        "size": 31.11,
+                        "size": 25.61,
                         "family": "Tinos Bold",
                         "color": "#03362D",
                         "bold": true,
@@ -29621,7 +29621,7 @@
                         {
                           "text": "Weekday Screen Time",
                           "font": {
-                            "size": 31.11,
+                            "size": 25.61,
                             "family": "Tinos Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -29706,7 +29706,7 @@
                         "height": 80.4
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -29719,7 +29719,7 @@
                         {
                           "text": "Weekday smartphone use is relatively structured because students divide their time between classes, assignments, communication, and limited entertainment. Educational app usage is noticeably higher during weekdays.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -29768,7 +29768,7 @@
                         "height": 32.8
                       },
                       "font": {
-                        "size": 31.11,
+                        "size": 25.61,
                         "family": "Tinos Bold",
                         "color": "#03362D",
                         "bold": true,
@@ -29784,7 +29784,7 @@
                         {
                           "text": "Weekend Screen Time",
                           "font": {
-                            "size": 31.11,
+                            "size": 25.61,
                             "family": "Tinos Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -29869,7 +29869,7 @@
                         "height": 80.4
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.44
@@ -29882,7 +29882,7 @@
                         {
                           "text": "Weekend usage increases significantly, especially for social media and video streaming. Students spend less time on educational apps and more time on relaxation, entertainment, and social interaction.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.44
@@ -30258,7 +30258,7 @@
                             "height": 23.07
                           },
                           "font": {
-                            "size": 16,
+                            "size": 12.5,
                             "family": "DM Sans Bold",
                             "color": "#282D49",
                             "bold": true,
@@ -30272,7 +30272,7 @@
                             {
                               "text": "Social Pressure",
                               "font": {
-                                "size": 16,
+                                "size": 12.5,
                                 "family": "DM Sans Bold",
                                 "color": "#282D49",
                                 "bold": true,
@@ -30478,7 +30478,7 @@
                             "height": 13.33
                           },
                           "font": {
-                            "size": 10.67,
+                            "size": 8.17,
                             "family": "DM Sans",
                             "color": "#03362D",
                             "line_height": 1.2,
@@ -30492,7 +30492,7 @@
                             {
                               "text": "2.4 hours",
                               "font": {
-                                "size": 10.67,
+                                "size": 8.17,
                                 "family": "DM Sans",
                                 "color": "#03362D",
                                 "line_height": 1.2,
@@ -30704,7 +30704,7 @@
                             "height": 23.07
                           },
                           "font": {
-                            "size": 16,
+                            "size": 12.5,
                             "family": "DM Sans Bold",
                             "color": "#282D49",
                             "bold": true,
@@ -30718,7 +30718,7 @@
                             {
                               "text": "Social Pressure",
                               "font": {
-                                "size": 16,
+                                "size": 12.5,
                                 "family": "DM Sans Bold",
                                 "color": "#282D49",
                                 "bold": true,
@@ -30924,7 +30924,7 @@
                             "height": 13.33
                           },
                           "font": {
-                            "size": 10.67,
+                            "size": 8.17,
                             "family": "DM Sans",
                             "color": "#03362D",
                             "line_height": 1.2,
@@ -30938,7 +30938,7 @@
                             {
                               "text": "2.4 hours",
                               "font": {
-                                "size": 10.67,
+                                "size": 8.17,
                                 "family": "DM Sans",
                                 "color": "#03362D",
                                 "line_height": 1.2,
@@ -31098,7 +31098,7 @@
                     "height": 79.47
                   },
                   "font": {
-                    "size": 75.55,
+                    "size": 60.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -31113,7 +31113,7 @@
                     {
                       "text": "Associated As Changes",
                       "font": {
-                        "size": 75.55,
+                        "size": 60.05,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -31256,7 +31256,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 60.05,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -31271,7 +31271,7 @@
                 {
                   "text": "Entertainment vs Learning App Usage",
                   "font": {
-                    "size": 75.55,
+                    "size": 60.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -31521,7 +31521,7 @@
                             "height": 22.74
                           },
                           "font": {
-                            "size": 20.44,
+                            "size": 17.44,
                             "family": "Tinos Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -31537,7 +31537,7 @@
                             {
                               "text": "Average Daily Social Media Usage",
                               "font": {
-                                "size": 20.44,
+                                "size": 17.44,
                                 "family": "Tinos Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -31715,7 +31715,7 @@
                             "height": 22.74
                           },
                           "font": {
-                            "size": 20.44,
+                            "size": 15.94,
                             "family": "Tinos Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -31731,7 +31731,7 @@
                             {
                               "text": "Average Daily Gaming Usage",
                               "font": {
-                                "size": 20.44,
+                                "size": 15.94,
                                 "family": "Tinos Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -32092,7 +32092,7 @@
                             "height": 49.9
                           },
                           "font": {
-                            "size": 48.84,
+                            "size": 40.84,
                             "family": "DM Sans Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -32106,7 +32106,7 @@
                             {
                               "text": "6.2 h",
                               "font": {
-                                "size": 48.84,
+                                "size": 40.84,
                                 "family": "DM Sans Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -32327,7 +32327,7 @@
                             "height": 49.9
                           },
                           "font": {
-                            "size": 48.84,
+                            "size": 40.84,
                             "family": "DM Sans Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -32341,7 +32341,7 @@
                             {
                               "text": "96",
                               "font": {
-                                "size": 48.84,
+                                "size": 40.84,
                                 "family": "DM Sans Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -32571,7 +32571,7 @@
                             "height": 49.9
                           },
                           "font": {
-                            "size": 48.84,
+                            "size": 40.84,
                             "family": "DM Sans Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -32585,7 +32585,7 @@
                             {
                               "text": "96",
                               "font": {
-                                "size": 48.84,
+                                "size": 40.84,
                                 "family": "DM Sans Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -32815,7 +32815,7 @@
                             "height": 49.9
                           },
                           "font": {
-                            "size": 48.84,
+                            "size": 40.84,
                             "family": "DM Sans Bold",
                             "color": "#03362D",
                             "bold": true,
@@ -32829,7 +32829,7 @@
                             {
                               "text": "6.7 h",
                               "font": {
-                                "size": 48.84,
+                                "size": 40.84,
                                 "family": "DM Sans Bold",
                                 "color": "#03362D",
                                 "bold": true,
@@ -32925,7 +32925,7 @@
                     "height": 79.47
                   },
                   "font": {
-                    "size": 75.55,
+                    "size": 58.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -32940,7 +32940,7 @@
                     {
                       "text": "Daily Digital Behavior Dashboard",
                       "font": {
-                        "size": 75.55,
+                        "size": 58.05,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -33135,7 +33135,7 @@
                 "height": 95.2
               },
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "DM Sans",
                 "color": "#000000",
                 "line_height": 1.52
@@ -33148,7 +33148,7 @@
                 {
                   "text": "The combination of high screen time, frequent unlocks, and constant notifications suggests that students are not only spending a long time on their phones—they are also interacting with them in many short, repeated sessions throughout the day.",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "DM Sans",
                     "color": "#000000",
                     "line_height": 1.52
@@ -33722,7 +33722,7 @@
                     "height": 79.47
                   },
                   "font": {
-                    "size": 75.55,
+                    "size": 61.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -33737,7 +33737,7 @@
                     {
                       "text": "Key Performance Indicators",
                       "font": {
-                        "size": 75.55,
+                        "size": 61.05,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -35158,7 +35158,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 62.05,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -35173,7 +35173,7 @@
                 {
                   "text": "Smartphone Behavior Snapshot",
                   "font": {
-                    "size": 75.55,
+                    "size": 62.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -35410,7 +35410,7 @@
                         "height": 40.91
                       },
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "DM Sans",
                         "color": "#22223B",
                         "line_height": 1.31
@@ -35423,7 +35423,7 @@
                         {
                           "text": "Average Daily Use",
                           "font": {
-                            "size": 16,
+                            "size": 13.5,
                             "family": "DM Sans",
                             "color": "#22223B",
                             "line_height": 1.31
@@ -35496,7 +35496,7 @@
                         "height": 40.91
                       },
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "DM Sans",
                         "color": "#22223B",
                         "line_height": 1.31
@@ -35509,7 +35509,7 @@
                         {
                           "text": "Device Unlocks",
                           "font": {
-                            "size": 16,
+                            "size": 13.5,
                             "family": "DM Sans",
                             "color": "#22223B",
                             "line_height": 1.31
@@ -35582,7 +35582,7 @@
                         "height": 40.91
                       },
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "DM Sans",
                         "color": "#22223B",
                         "line_height": 1.31
@@ -35595,7 +35595,7 @@
                         {
                           "text": "Educational Usage",
                           "font": {
-                            "size": 16,
+                            "size": 13.5,
                             "family": "DM Sans",
                             "color": "#22223B",
                             "line_height": 1.31
@@ -35894,7 +35894,7 @@
                     "height": 31.2
                   },
                   "font": {
-                    "size": 21.32,
+                    "size": 17.32,
                     "family": "DM Sans Bold",
                     "color": "#282D49",
                     "bold": true,
@@ -35908,7 +35908,7 @@
                     {
                       "text": "Executive Interpretation",
                       "font": {
-                        "size": 21.32,
+                        "size": 17.32,
                         "family": "DM Sans Bold",
                         "color": "#282D49",
                         "bold": true,
@@ -38158,7 +38158,7 @@
                     "height": 197.27
                   },
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "DM Sans",
                     "color": "#000000",
                     "line_height": 2.31
@@ -38171,7 +38171,7 @@
                     {
                       "text": "• Better focus during study\n• Fewer attention interruptions\n• More controlled app usage\n• Improved sleep consistency\n• Higher productivity ",
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 2.31
@@ -38942,7 +38942,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 58.55,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -38957,7 +38957,7 @@
                 {
                   "text": "Smartphone Usage by Activity Category",
                   "font": {
-                    "size": 75.55,
+                    "size": 58.55,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -39363,7 +39363,7 @@
                 "height": 143.52
               },
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "DM Sans",
                 "color": "#000000",
                 "line_height": 1.52
@@ -39376,7 +39376,7 @@
                 {
                   "text": "Social media is the dominant smartphone activity, consuming substantially more than a the time than educational apps and which is demonstrating how entertainment-oriented engagement ",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "DM Sans",
                     "color": "#000000",
                     "line_height": 1.52
@@ -40021,7 +40021,7 @@
                 "height": 119.52
               },
               "font": {
-                "size": 16,
+                "size": 13.5,
                 "family": "DM Sans",
                 "color": "#000000",
                 "line_height": 1.52
@@ -40034,7 +40034,7 @@
                 {
                   "text": "The table reinforces the visual trend by providing exact values for comparison. While the chart highlights the overall pattern, the table allows the audience to see the precise differences between categories.",
                   "font": {
-                    "size": 16,
+                    "size": 13.5,
                     "family": "DM Sans",
                     "color": "#000000",
                     "line_height": 1.52
@@ -40437,7 +40437,7 @@
                     "height": 79.47
                   },
                   "font": {
-                    "size": 75.55,
+                    "size": 60.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,
@@ -40452,7 +40452,7 @@
                     {
                       "text": "Drivers of Screen Time",
                       "font": {
-                        "size": 75.55,
+                        "size": 60.05,
                         "family": "Tinos",
                         "color": "#03362D",
                         "underline": false,
@@ -42676,7 +42676,7 @@
                         "height": 31.92
                       },
                       "font": {
-                        "size": 10.67,
+                        "size": 9.17,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.52
@@ -42689,7 +42689,7 @@
                         {
                           "text": "Ma",
                           "font": {
-                            "size": 10.67,
+                            "size": 9.17,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.52
@@ -42698,7 +42698,7 @@
                         {
                           "text": "ny smartphone interruptions come from alerts that are not urgent.",
                           "font": {
-                            "size": 10.67,
+                            "size": 9.17,
                             "family": "DM Sans",
                             "color": "#000000",
                             "underline": false,
@@ -42976,7 +42976,7 @@
                         "height": 31.25
                       },
                       "font": {
-                        "size": 10.67,
+                        "size": 9.17,
                         "family": "DM Sans",
                         "color": "#000000",
                         "line_height": 1.52
@@ -42989,7 +42989,7 @@
                         {
                           "text": "Plac",
                           "font": {
-                            "size": 10.67,
+                            "size": 9.17,
                             "family": "DM Sans",
                             "color": "#000000",
                             "line_height": 1.52
@@ -42998,7 +42998,7 @@
                         {
                           "text": "ing the phone away from the bed, using Do Not Disturb mode.   ",
                           "font": {
-                            "size": 10.67,
+                            "size": 9.17,
                             "family": "DM Sans",
                             "color": "#000000",
                             "underline": false,
@@ -43040,7 +43040,7 @@
                 "height": 79.47
               },
               "font": {
-                "size": 75.55,
+                "size": 58.05,
                 "family": "Tinos",
                 "color": "#03362D",
                 "underline": false,
@@ -43055,7 +43055,7 @@
                 {
                   "text": "Drivers of Screen Time",
                   "font": {
-                    "size": 75.55,
+                    "size": 58.05,
                     "family": "Tinos",
                     "color": "#03362D",
                     "underline": false,

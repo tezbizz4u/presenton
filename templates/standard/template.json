@@ -12723,7 +12723,7 @@
                     "height": 121.59
                   },
                   "font": {
-                    "size": 64,
+                    "size": 49.5,
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.76
@@ -12736,7 +12736,7 @@
                     {
                       "text": "Our\nJourney",
                       "font": {
-                        "size": 64,
+                        "size": 49.5,
                         "family": "Playfair Display",
                         "color": "#111827",
                         "line_height": 0.76
@@ -14554,7 +14554,7 @@
                 "height": 68
               },
               "font": {
-                "size": 64,
+                "size": 49.0,
                 "family": "Playfair Display",
                 "color": "#111827",
                 "bold": true,
@@ -14569,7 +14569,7 @@
                 {
                   "text": "Our Vision And Strategy For Excellence",
                   "font": {
-                    "size": 64,
+                    "size": 49.0,
                     "family": "Playfair Display",
                     "color": "#111827",
                     "bold": true,
@@ -14696,7 +14696,7 @@
                         "height": 30
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.0,
                         "family": "Playfair Display",
                         "color": "#111827",
                         "bold": true,
@@ -14710,7 +14710,7 @@
                         {
                           "text": "Research",
                           "font": {
-                            "size": 24,
+                            "size": 21.0,
                             "family": "Playfair Display",
                             "color": "#111827",
                             "bold": true,
@@ -14936,7 +14936,7 @@
                         "height": 30
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.0,
                         "family": "Playfair Display",
                         "color": "#111827",
                         "bold": true,
@@ -14950,7 +14950,7 @@
                         {
                           "text": "Development",
                           "font": {
-                            "size": 24,
+                            "size": 21.0,
                             "family": "Playfair Display",
                             "color": "#111827",
                             "bold": true,
@@ -15176,7 +15176,7 @@
                         "height": 30
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.0,
                         "family": "Playfair Display",
                         "color": "#111827",
                         "bold": true,
@@ -15190,7 +15190,7 @@
                         {
                           "text": "Research",
                           "font": {
-                            "size": 24,
+                            "size": 21.0,
                             "family": "Playfair Display",
                             "color": "#111827",
                             "bold": true,
@@ -15416,7 +15416,7 @@
                         "height": 30
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.0,
                         "family": "Playfair Display",
                         "color": "#111827",
                         "bold": true,
@@ -15430,7 +15430,7 @@
                         {
                           "text": "Development",
                           "font": {
-                            "size": 24,
+                            "size": 21.0,
                             "family": "Playfair Display",
                             "color": "#111827",
                             "bold": true,

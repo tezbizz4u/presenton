@@ -25562,7 +25562,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 16,
+                        "size": 13.0,
                         "family": "Poppins Semi-Bold",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -25577,7 +25577,7 @@
                         {
                           "text": "Presenter:",
                           "font": {
-                            "size": 16,
+                            "size": 13.0,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -25649,7 +25649,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Poppins Semi-Bold",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -25664,7 +25664,7 @@
                         {
                           "text": "Date:",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -33435,7 +33435,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 71.11,
+                "size": 52.61,
                 "family": "Archivo Black",
                 "color": "#FFFFFF",
                 "line_height": 0.87,
@@ -33449,7 +33449,7 @@
                 {
                   "text": "PROJECT LEAD\nGROWTH",
                   "font": {
-                    "size": 71.11,
+                    "size": 52.61,
                     "family": "Archivo Black",
                     "color": "#FFFFFF",
                     "line_height": 0.87,
@@ -42041,7 +42041,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 14.21,
+                            "size": 11.21,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "line_height": 1.2
@@ -42054,7 +42054,7 @@
                             {
                               "text": "yearly goal",
                               "font": {
-                                "size": 14.21,
+                                "size": 11.21,
                                 "family": "Poppins",
                                 "color": "#FFFFFF",
                                 "line_height": 1.2
@@ -42253,7 +42253,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 14.21,
+                            "size": 12.71,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "line_height": 1.2
@@ -42266,7 +42266,7 @@
                             {
                               "text": "earned",
                               "font": {
-                                "size": 14.21,
+                                "size": 12.71,
                                 "family": "Poppins",
                                 "color": "#FFFFFF",
                                 "line_height": 1.2
@@ -42465,7 +42465,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 14.21,
+                            "size": 11.21,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "line_height": 1.2
@@ -42478,7 +42478,7 @@
                             {
                               "text": "total shared",
                               "font": {
-                                "size": 14.21,
+                                "size": 11.21,
                                 "family": "Poppins",
                                 "color": "#FFFFFF",
                                 "line_height": 1.2
@@ -42677,7 +42677,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 14.21,
+                            "size": 12.71,
                             "family": "Poppins",
                             "color": "#FFFFFF",
                             "line_height": 1.2
@@ -42690,7 +42690,7 @@
                             {
                               "text": "yearly goal",
                               "font": {
-                                "size": 14.21,
+                                "size": 12.71,
                                 "family": "Poppins",
                                 "color": "#FFFFFF",
                                 "line_height": 1.2

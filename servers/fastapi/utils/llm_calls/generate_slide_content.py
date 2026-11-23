@@ -33,7 +33,8 @@ You need to generate structured content json based on the schema.
 - Slide Language is authoritative when it is explicitly set. If slide content
   or user instructions request a different language, ignore that conflicting
   language request unless Slide Language says auto-detect.
-- Speaker notes must be plain text (no markdown).
+- Speaker notes must be plain text (no markdown) and must teach: explain the why behind each point, add one practical example or clinical pearl, and never restate the slide text verbatim.
+- Keep every visible text field within the box: use concise phrasing and never use a single word longer than about 14 characters unless it is a standard medical term.
 - Never exceed max character limits; do not clip mid-sentence to fit—rephrase instead.
 - Do not use emojis or $schema fields.
 - Follow the intended outcome of user instructions when they do not conflict with Slide
@@ -216,9 +217,9 @@ def _prepare_response_schema(json_schema: Optional[dict]) -> Optional[dict]:
         {
             "__speaker_note__": {
                 "type": "string",
-                "minLength": 100,
-                "maxLength": 500,
-                "description": "Speaker note for the slide",
+                "minLength": 300,
+                "maxLength": 1500,
+                "description": "Speaker note for the slide: a spoken explanation for the presenter that expands every point on the slide with reasoning, an example or clinical pearl, and a transition to the next idea. Do not repeat the slide text word for word. Do not invent statistics.",
             }
         },
         True,

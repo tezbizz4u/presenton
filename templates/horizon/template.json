@@ -33746,7 +33746,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 16,
+                            "size": 12.5,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -33760,7 +33760,7 @@
                             {
                               "text": "Premium living room interior",
                               "font": {
-                                "size": 16,
+                                "size": 12.5,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,
@@ -38104,7 +38104,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 16,
+                    "size": 13.5,
                     "family": "Poppins",
                     "color": "#321A00",
                     "line_height": 1.4
@@ -38117,7 +38117,7 @@
                     {
                       "text": "Experience a vibrant urban lifestyle with convenient access to dining, recreation, education, and a well-established residential community.",
                       "font": {
-                        "size": 16,
+                        "size": 13.5,
                         "family": "Poppins",
                         "color": "#321A00",
                         "line_height": 1.4
@@ -38401,7 +38401,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 21.32,
+                        "size": 18.32,
                         "family": "Poppins Semi-Bold",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -38415,7 +38415,7 @@
                         {
                           "text": "Horizon Heights Residences",
                           "font": {
-                            "size": 21.32,
+                            "size": 18.32,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -39233,7 +39233,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 66.67,
+                "size": 56.17,
                 "family": "Poppins Semi-Bold",
                 "color": "#FFFFFF",
                 "bold": false,
@@ -39248,7 +39248,7 @@
                 {
                   "text": "11.2%",
                   "font": {
-                    "size": 66.67,
+                    "size": 56.17,
                     "family": "Poppins Semi-Bold",
                     "color": "#FFFFFF",
                     "bold": false,
@@ -40401,7 +40401,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 31.1,
+                            "size": 26.6,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -40415,7 +40415,7 @@
                             {
                               "text": "NPR 41.2M",
                               "font": {
-                                "size": 31.1,
+                                "size": 26.6,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,
@@ -42334,7 +42334,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 14.22,
+                            "size": 11.22,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -42348,7 +42348,7 @@
                             {
                               "text": "Acquisition Value",
                               "font": {
-                                "size": 14.22,
+                                "size": 11.22,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,
@@ -42928,7 +42928,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 39.99,
+                        "size": 23.99,
                         "family": "Poppins Semi-Bold",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -42942,7 +42942,7 @@
                         {
                           "text": "6.2 Years",
                           "font": {
-                            "size": 39.99,
+                            "size": 23.99,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -42963,7 +42963,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Poppins Semi-Bold",
                         "color": "#FFFFFF",
                         "bold": false,
@@ -42977,7 +42977,7 @@
                         {
                           "text": "Equity Payback",
                           "font": {
-                            "size": 16,
+                            "size": 14.0,
                             "family": "Poppins Semi-Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -44464,7 +44464,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 18.67,
+                            "size": 16.17,
                             "family": "Poppins Semi-Bold",
                             "color": "#191919",
                             "bold": false,
@@ -44478,7 +44478,7 @@
                             {
                               "text": "Cumulative Return",
                               "font": {
-                                "size": 18.67,
+                                "size": 16.17,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#191919",
                                 "bold": false,

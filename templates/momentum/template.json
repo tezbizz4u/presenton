@@ -14688,7 +14688,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 151.11,
+                "size": 102.61,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -14703,7 +14703,7 @@
                 {
                   "text": "SALES\nREPORT",
                   "font": {
-                    "size": 151.11,
+                    "size": 102.61,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -14729,7 +14729,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "Lato",
                 "color": "#2E3545",
                 "line_height": 1.29,
@@ -14743,7 +14743,7 @@
                 {
                   "text": "Understanding our performance helps us make smarter business decisions.",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato",
                     "color": "#2E3545",
                     "line_height": 1.29,
@@ -14777,7 +14777,7 @@
                 "height": 22
               },
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -14791,7 +14791,7 @@
                 {
                   "text": "Presenter:",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -14802,7 +14802,7 @@
                 {
                   "text": "Lorem doe, CEO",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -14827,7 +14827,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -14841,7 +14841,7 @@
                 {
                   "text": "Date:",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -14852,7 +14852,7 @@
                 {
                   "text": "Jan 26, 2030",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -14970,7 +14970,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 74.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -14985,7 +14985,7 @@
                 {
                   "text": "Agenda",
                   "font": {
-                    "size": 88.88,
+                    "size": 74.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -15236,7 +15236,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 86,
+                "size": 71.0,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -15251,7 +15251,7 @@
                 {
                   "text": "Sales Journey",
                   "font": {
-                    "size": 86,
+                    "size": 71.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -15277,7 +15277,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -15291,7 +15291,7 @@
                 {
                   "text": "Examine our sales results, identify the challenges we've faced, evaluate our achievements, drive future growth. The purpose is to provide a clear picture of where we stand today and where we're heading next.",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -15459,7 +15459,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 65.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -15474,7 +15474,7 @@
                 {
                   "text": "Problems",
                   "font": {
-                    "size": 88.88,
+                    "size": 65.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -16250,7 +16250,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 74.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -16265,7 +16265,7 @@
                 {
                   "text": "Strategic Solutions",
                   "font": {
-                    "size": 88.88,
+                    "size": 74.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -16393,7 +16393,7 @@
                     "height": 25.29
                   },
                   "font": {
-                    "size": 23.11,
+                    "size": 17.11,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -16407,7 +16407,7 @@
                     {
                       "text": "Improve Qualification",
                       "font": {
-                        "size": 23.11,
+                        "size": 17.11,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -16527,7 +16527,7 @@
                     "height": 25.29
                   },
                   "font": {
-                    "size": 23.11,
+                    "size": 17.11,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -16541,7 +16541,7 @@
                     {
                       "text": "Improve Qualification",
                       "font": {
-                        "size": 23.11,
+                        "size": 17.11,
                         "family": "Lato Heavy",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -16759,7 +16759,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 72.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -16774,7 +16774,7 @@
                 {
                   "text": "Sales Growth Framework",
                   "font": {
-                    "size": 88.88,
+                    "size": 72.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -16893,7 +16893,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 16,
+                        "size": 10.0,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -16907,7 +16907,7 @@
                         {
                           "text": "Customer Acquisition",
                           "font": {
-                            "size": 16,
+                            "size": 10.0,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -16932,7 +16932,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 14.21,
+                        "size": 12.21,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -16946,7 +16946,7 @@
                         {
                           "text": "Build brand awareness, generate qualified leads, and engage potential customers through targeted marketing.",
                           "font": {
-                            "size": 14.21,
+                            "size": 12.21,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -17043,7 +17043,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 75.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -17058,7 +17058,7 @@
                 {
                   "text": "Sales Process",
                   "font": {
-                    "size": 88.88,
+                    "size": 75.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -17096,7 +17096,7 @@
                 "height": 42
               },
               "font": {
-                "size": 16,
+                "size": 13.5,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -17110,7 +17110,7 @@
                 {
                   "text": "Our sales process follows a systematic approach that guides potential customers from their first interaction with our business to becoming long-term loyal clients. Each stage is designed to improve efficiency, enhance the customer experience, and maximize successful sales outcomes.",
                   "font": {
-                    "size": 16,
+                    "size": 13.5,
                     "family": "Lato",
                     "color": "#000000",
                     "bold": false,
@@ -17274,7 +17274,7 @@
                         "height": 72.05
                       },
                       "font": {
-                        "size": 14.21,
+                        "size": 11.71,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -17288,7 +17288,7 @@
                         {
                           "text": "Nurture prospects with personalized interactions, product demonstrations, and value-driven solutions",
                           "font": {
-                            "size": 14.21,
+                            "size": 11.71,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -17455,7 +17455,7 @@
                 "height": 86
               },
               "font": {
-                "size": 86,
+                "size": 68.0,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -17470,7 +17470,7 @@
                 {
                   "text": "Our Business Goals",
                   "font": {
-                    "size": 86,
+                    "size": 68.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -17693,7 +17693,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 16,
+                        "size": 12.0,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -17707,7 +17707,7 @@
                         {
                           "text": "Revenue Growth",
                           "font": {
-                            "size": 16,
+                            "size": 12.0,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -17731,7 +17731,7 @@
                         "height": 42
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -17745,7 +17745,7 @@
                         {
                           "text": "Increase annual sales by 25% through market .",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -17885,7 +17885,7 @@
                 "height": 42
               },
               "font": {
-                "size": 16,
+                "size": 13.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -17899,7 +17899,7 @@
                 {
                   "text": "These core strengths enable us to improve customer satisfaction, increase operational efficiency, and achieve sustainable business growth.",
                   "font": {
-                    "size": 16,
+                    "size": 13.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -18075,7 +18075,7 @@
                         "height": 74
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -18089,7 +18089,7 @@
                         {
                           "text": "Putting customers at the center of every business decision by understanding their needs and delivering personalized.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -18242,7 +18242,7 @@
                         "height": 74
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Lato",
                         "color": "#FFFFFF",
                         "line_height": 1.29,
@@ -18256,7 +18256,7 @@
                         {
                           "text": "Providing quick response times, timely follow-ups, and efficient issue resolution to enhance customer satisfaction.",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Lato",
                             "color": "#FFFFFF",
                             "line_height": 1.29,
@@ -18409,7 +18409,7 @@
                         "height": 74
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.22,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -18423,7 +18423,7 @@
                         {
                           "text": "Reaching customers through multiple channels—including online platforms, retail stores, direct sales, and part.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.22,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -18576,7 +18576,7 @@
                         "height": 74
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -18590,7 +18590,7 @@
                         {
                           "text": "Leveraging CRM systems, AI-powered analytics, and customer insights to track leads, forecast sales trends.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -19268,7 +19268,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 72.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -19283,7 +19283,7 @@
                 {
                   "text": "Business Growth",
                   "font": {
-                    "size": 88.88,
+                    "size": 72.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -19434,7 +19434,7 @@
                     "height": 33.87
                   },
                   "font": {
-                    "size": 16,
+                    "size": 11.5,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -19448,7 +19448,7 @@
                     {
                       "text": "Digital Sales Expansion",
                       "font": {
-                        "size": 16,
+                        "size": 11.5,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -19578,7 +19578,7 @@
                     "height": 33.87
                   },
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -19592,7 +19592,7 @@
                     {
                       "text": "Customer Retention",
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -19722,7 +19722,7 @@
                     "height": 33.87
                   },
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -19736,7 +19736,7 @@
                     {
                       "text": "High-Quality Lead Generation",
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -19866,7 +19866,7 @@
                     "height": 33.87
                   },
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -19880,7 +19880,7 @@
                     {
                       "text": "Strategic Market Expansion",
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -20010,7 +20010,7 @@
                     "height": 33.87
                   },
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -20024,7 +20024,7 @@
                     {
                       "text": "Revenue Growth through Upselling",
                       "font": {
-                        "size": 16,
+                        "size": 14.0,
                         "family": "Lato Heavy",
                         "color": "#000000",
                         "bold": true,
@@ -20232,7 +20232,7 @@
                 "height": 86
               },
               "font": {
-                "size": 88.88,
+                "size": 74.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -20247,7 +20247,7 @@
                 {
                   "text": "Key Performance Metrics",
                   "font": {
-                    "size": 88.88,
+                    "size": 74.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -20272,7 +20272,7 @@
                 "height": 24
               },
               "font": {
-                "size": 16,
+                "size": 11.5,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -20286,7 +20286,7 @@
                 {
                   "text": "By monitoring these indicators regularly, we can evaluate business progress, identify improvement opportunities, and make informed strategic decisions.",
                   "font": {
-                    "size": 16,
+                    "size": 11.5,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -20398,7 +20398,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 47.99,
+                            "size": 36.99,
                             "family": "Lato Heavy",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -20412,7 +20412,7 @@
                             {
                               "text": "$2,400",
                               "font": {
-                                "size": 47.99,
+                                "size": 36.99,
                                 "family": "Lato Heavy",
                                 "color": "#FFFFFF",
                                 "bold": true,
@@ -20436,7 +20436,7 @@
                             "height": 22
                           },
                           "font": {
-                            "size": 17.78,
+                            "size": 13.78,
                             "family": "Lato Heavy",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -20450,7 +20450,7 @@
                             {
                               "text": "Net Promoter Score (NPS)",
                               "font": {
-                                "size": 17.78,
+                                "size": 13.78,
                                 "family": "Lato Heavy",
                                 "color": "#FFFFFF",
                                 "bold": true,
@@ -20475,7 +20475,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 16,
+                            "size": 10.5,
                             "family": "Lato Heavy",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -20489,7 +20489,7 @@
                             {
                               "text": "72/100",
                               "font": {
-                                "size": 16,
+                                "size": 10.5,
                                 "family": "Lato Heavy",
                                 "color": "#FFFFFF",
                                 "bold": true,
@@ -20516,7 +20516,7 @@
                         "height": 24.62
                       },
                       "font": {
-                        "size": 23.11,
+                        "size": 19.61,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -20530,7 +20530,7 @@
                         {
                           "text": "Customer Value & Loyalty",
                           "font": {
-                            "size": 23.11,
+                            "size": 19.61,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -20664,7 +20664,7 @@
                 "height": 151.33
               },
               "font": {
-                "size": 88.88,
+                "size": 66.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -20679,7 +20679,7 @@
                 {
                   "text": "Sales Trend\nAnalysis",
                   "font": {
-                    "size": 88.88,
+                    "size": 66.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -20705,7 +20705,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 16,
+                "size": 14.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -20719,7 +20719,7 @@
                 {
                   "text": "The sales chart illustrates the company's monthly revenue performance over a six-month period. It highlights always consistent upward trend, demonstrating the effectiveness of our sales strategies, marketing initiatives, and customer engagement efforts.",
                   "font": {
-                    "size": 16,
+                    "size": 14.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -20995,7 +20995,7 @@
                 "height": 60.56
               },
               "font": {
-                "size": 16,
+                "size": 13.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -21009,7 +21009,7 @@
                 {
                   "text": "The pie chart below shows the distribution of new customers acquired through different marketing and sales channels. It highlights which channels contribute the most to customer acquisition and helps identify where future marketing investments should be focused.",
                   "font": {
-                    "size": 16,
+                    "size": 13.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -21101,7 +21101,7 @@
                         "height": 80.88
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -21115,7 +21115,7 @@
                         {
                           "text": "Customers increasingly prefer convenient, personalized, and digital-first shopping experiences, emphasizing the importance of omnichannel sales strategies and customer engagement.",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -21316,7 +21316,7 @@
                 "height": 88
               },
               "font": {
-                "size": 74,
+                "size": 65.0,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -21331,7 +21331,7 @@
                 {
                   "text": "Business Reports and Executive",
                   "font": {
-                    "size": 74,
+                    "size": 65.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -21454,7 +21454,7 @@
                           "height": 20
                         },
                         "font": {
-                          "size": 17.78,
+                          "size": 12.78,
                           "family": "Lato Heavy",
                           "color": "#2E3545",
                           "bold": true,
@@ -21468,7 +21468,7 @@
                           {
                             "text": "Revenue by Product Category",
                             "font": {
-                              "size": 17.78,
+                              "size": 12.78,
                               "family": "Lato Heavy",
                               "color": "#2E3545",
                               "bold": true,
@@ -21492,7 +21492,7 @@
                           "height": 16.38
                         },
                         "font": {
-                          "size": 12.44,
+                          "size": 8.94,
                           "family": "Lato",
                           "color": "#000000",
                           "line_height": 1.29,
@@ -21506,7 +21506,7 @@
                           {
                             "text": "Distribution of total revenue across product categories.",
                             "font": {
-                              "size": 12.44,
+                              "size": 8.94,
                               "family": "Lato",
                               "color": "#000000",
                               "line_height": 1.29,
@@ -21855,7 +21855,7 @@
                 "height": 86
               },
               "font": {
-                "size": 82,
+                "size": 69.0,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -21870,7 +21870,7 @@
                 {
                   "text": "Quarterly Sales Performance",
                   "font": {
-                    "size": 82,
+                    "size": 69.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -22017,7 +22017,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 23.1,
+                "size": 16.1,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -22032,7 +22032,7 @@
                 {
                   "text": "Chart Analysis",
                   "font": {
-                    "size": 23.1,
+                    "size": 16.1,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -22598,7 +22598,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 70.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -22613,7 +22613,7 @@
                 {
                   "text": "Market Analysis",
                   "font": {
-                    "size": 88.88,
+                    "size": 70.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -22778,7 +22778,7 @@
                 "height": 22
               },
               "font": {
-                "size": 17.78,
+                "size": 15.78,
                 "family": "Lato Heavy",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -22792,7 +22792,7 @@
                 {
                   "text": "Online Sales Growth",
                   "font": {
-                    "size": 17.78,
+                    "size": 15.78,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23019,7 +23019,7 @@
                         "height": 24.62
                       },
                       "font": {
-                        "size": 23.11,
+                        "size": 17.11,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -23033,7 +23033,7 @@
                         {
                           "text": "Consumer Buying Trends",
                           "font": {
-                            "size": 23.11,
+                            "size": 17.11,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -23105,7 +23105,7 @@
                         "height": 24.62
                       },
                       "font": {
-                        "size": 23.11,
+                        "size": 17.11,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -23119,7 +23119,7 @@
                         {
                           "text": "Consumer Buying Trends",
                           "font": {
-                            "size": 23.11,
+                            "size": 17.11,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -23191,7 +23191,7 @@
                         "height": 24.62
                       },
                       "font": {
-                        "size": 23.11,
+                        "size": 17.11,
                         "family": "Lato Heavy",
                         "color": "#2E3545",
                         "bold": true,
@@ -23205,7 +23205,7 @@
                         {
                           "text": "Consumer Buying Trends",
                           "font": {
-                            "size": 23.11,
+                            "size": 17.11,
                             "family": "Lato Heavy",
                             "color": "#2E3545",
                             "bold": true,
@@ -23803,7 +23803,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 47.99,
+                "size": 34.99,
                 "family": "Lato Heavy",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -23817,7 +23817,7 @@
                 {
                   "text": "+20%",
                   "font": {
-                    "size": 47.99,
+                    "size": 34.99,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23842,7 +23842,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 17.78,
+                "size": 13.28,
                 "family": "Lato Heavy",
                 "color": "#FFFFFF",
                 "bold": true,
@@ -23856,7 +23856,7 @@
                 {
                   "text": "Improvement",
                   "font": {
-                    "size": 17.78,
+                    "size": 13.28,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -23880,7 +23880,7 @@
                 "height": 32.88
               },
               "font": {
-                "size": 12.44,
+                "size": 9.44,
                 "family": "Lato",
                 "color": "#FFFFFF",
                 "line_height": 1.29,
@@ -23894,7 +23894,7 @@
                 {
                   "text": "Enhanced customer relationships and timely follow-ups increased repeat purchases and long-term customer loyalty.",
                   "font": {
-                    "size": 12.44,
+                    "size": 9.44,
                     "family": "Lato",
                     "color": "#FFFFFF",
                     "line_height": 1.29,
@@ -23929,7 +23929,7 @@
               },
               "rotation": 0,
               "font": {
-                "size": 88.88,
+                "size": 77.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -23944,7 +23944,7 @@
                 {
                   "text": "Success Story",
                   "font": {
-                    "size": 88.88,
+                    "size": 77.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -24104,7 +24104,7 @@
                         "height": 48.88
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.44,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -24118,7 +24118,7 @@
                         {
                           "text": "The company experienced a high volume no. of website visitors but struggled to convert them with into paying customers. Limited customer engagement,",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.44,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -24213,7 +24213,7 @@
                 "height": 86
               },
               "font": {
-                "size": 88.88,
+                "size": 74.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -24228,7 +24228,7 @@
                 {
                   "text": "Our Team",
                   "font": {
-                    "size": 88.88,
+                    "size": 74.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -24452,7 +24452,7 @@
                         "height": 64.88
                       },
                       "font": {
-                        "size": 12.44,
+                        "size": 10.94,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -24466,7 +24466,7 @@
                         {
                           "text": "Oversees digital marketing campaigns, enhances customer engagement, and ensures exceptional customer support.",
                           "font": {
-                            "size": 12.44,
+                            "size": 10.94,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -24559,7 +24559,7 @@
                 "height": 86
               },
               "font": {
-                "size": 88.88,
+                "size": 79.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -24574,7 +24574,7 @@
                 {
                   "text": "Strategic Plan",
                   "font": {
-                    "size": 88.88,
+                    "size": 79.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -24599,7 +24599,7 @@
                 "height": 45
               },
               "font": {
-                "size": 16,
+                "size": 12.0,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -24613,7 +24613,7 @@
                 {
                   "text": "Our strategic plan outlines a clear roadmap for achieving sustainable business growth. By focusing on short-term improvements, mid-term expansion, and long-term innovation, we aim to strengthen our market position, improve operational efficiency, and maximize customer value.",
                   "font": {
-                    "size": 16,
+                    "size": 12.0,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -24708,7 +24708,7 @@
                         "height": 54.05
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -24722,7 +24722,7 @@
                         {
                           "text": "The company experienced a high volume of website visitors but struggled.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -24927,7 +24927,7 @@
                             "height": 54.05
                           },
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -24941,7 +24941,7 @@
                             {
                               "text": "The company experienced a high volume of website visitors but struggled.",
                               "font": {
-                                "size": 14.22,
+                                "size": 12.72,
                                 "family": "Lato",
                                 "color": "#000000",
                                 "line_height": 1.29,
@@ -25123,7 +25123,7 @@
                             "height": 54.05
                           },
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -25137,7 +25137,7 @@
                             {
                               "text": "The company experienced a high volume of website visitors but struggled.",
                               "font": {
-                                "size": 14.22,
+                                "size": 12.72,
                                 "family": "Lato",
                                 "color": "#000000",
                                 "line_height": 1.29,
@@ -25320,7 +25320,7 @@
                         "height": 54.05
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 12.72,
                         "family": "Lato",
                         "color": "#000000",
                         "line_height": 1.29,
@@ -25334,7 +25334,7 @@
                         {
                           "text": "The company experienced a high volume of website visitors but struggled.",
                           "font": {
-                            "size": 14.22,
+                            "size": 12.72,
                             "family": "Lato",
                             "color": "#000000",
                             "line_height": 1.29,
@@ -25577,7 +25577,7 @@
                 "height": 152
               },
               "font": {
-                "size": 88.88,
+                "size": 64.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -25592,7 +25592,7 @@
                 {
                   "text": "Risk Analysis",
                   "font": {
-                    "size": 88.88,
+                    "size": 64.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -26135,7 +26135,7 @@
                 "height": 165.33
               },
               "font": {
-                "size": 88.88,
+                "size": 63.88,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -26150,7 +26150,7 @@
                 {
                   "text": "Pricing Strategy",
                   "font": {
-                    "size": 88.88,
+                    "size": 63.88,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -26175,7 +26175,7 @@
                 "height": 126.05
               },
               "font": {
-                "size": 14.22,
+                "size": 12.72,
                 "family": "Lato",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -26189,7 +26189,7 @@
                 {
                   "text": "Our pricing strategy is designed to deliver value to customers while maintaining profitability and supporting long-term business growth. By offering flexible pricing plans and customer-focused pricing models, we can meet the needs of different customer segments, improve market competitiveness, and maximize revenue opportunities.",
                   "font": {
-                    "size": 14.22,
+                    "size": 12.72,
                     "family": "Lato",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -26268,7 +26268,7 @@
                         "height": 50
                       },
                       "font": {
-                        "size": 35.55,
+                        "size": 24.05,
                         "family": "Lato Heavy",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26282,7 +26282,7 @@
                         {
                           "text": "$29/month",
                           "font": {
-                            "size": 35.55,
+                            "size": 24.05,
                             "family": "Lato Heavy",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26307,7 +26307,7 @@
                       },
                       "rotation": 0,
                       "font": {
-                        "size": 17.77,
+                        "size": 12.27,
                         "family": "Lato Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26322,7 +26322,7 @@
                         {
                           "text": "Basic Plan",
                           "font": {
-                            "size": 17.77,
+                            "size": 12.27,
                             "family": "Lato Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26405,7 +26405,7 @@
                         "height": 18.05
                       },
                       "font": {
-                        "size": 14.22,
+                        "size": 11.72,
                         "family": "Lato Bold",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -26420,7 +26420,7 @@
                         {
                           "text": "Features:",
                           "font": {
-                            "size": 14.22,
+                            "size": 11.72,
                             "family": "Lato Bold",
                             "color": "#FFFFFF",
                             "bold": true,
@@ -26655,7 +26655,7 @@
                 "height": 86
               },
               "font": {
-                "size": 82,
+                "size": 67.0,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -26670,7 +26670,7 @@
                 {
                   "text": "Sales Channel Distribution",
                   "font": {
-                    "size": 82,
+                    "size": 67.0,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -27579,7 +27579,7 @@
                 "height": 158
               },
               "font": {
-                "size": 86,
+                "size": 65.0,
                 "family": "Arial",
                 "color": "#000000",
                 "bold": true,
@@ -27594,7 +27594,7 @@
                 {
                   "text": "Immediate\nAction Plan",
                   "font": {
-                    "size": 86,
+                    "size": 65.0,
                     "family": "Arial",
                     "color": "#000000",
                     "bold": true,
@@ -27619,7 +27619,7 @@
                 "height": 60.56
               },
               "font": {
-                "size": 16,
+                "size": 13.0,
                 "family": "Arial",
                 "color": "#000000",
                 "line_height": 1.29,
@@ -27633,7 +27633,7 @@
                 {
                   "text": "The next steps outline the immediate priorities that will help us improve sales performance, strengthen customer relationships, and achieve our strategic business goals.",
                   "font": {
-                    "size": 16,
+                    "size": 13.0,
                     "family": "Arial",
                     "color": "#000000",
                     "line_height": 1.29,
@@ -28775,7 +28775,7 @@
                 "height": 80
               },
               "font": {
-                "size": 88.88,
+                "size": 77.38,
                 "family": "Lato Heavy",
                 "color": "#000000",
                 "bold": true,
@@ -28790,7 +28790,7 @@
                 {
                   "text": "Executive Summary",
                   "font": {
-                    "size": 88.88,
+                    "size": 77.38,
                     "family": "Lato Heavy",
                     "color": "#000000",
                     "bold": true,
@@ -29034,7 +29034,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 47.99,
+                    "size": 32.99,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -29048,7 +29048,7 @@
                     {
                       "text": "+20%",
                       "font": {
-                        "size": 47.99,
+                        "size": 32.99,
                         "family": "Lato Heavy",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -29073,7 +29073,7 @@
                   },
                   "rotation": 0,
                   "font": {
-                    "size": 17.78,
+                    "size": 13.78,
                     "family": "Lato Heavy",
                     "color": "#FFFFFF",
                     "bold": true,
@@ -29087,7 +29087,7 @@
                     {
                       "text": "Improvement",
                       "font": {
-                        "size": 17.78,
+                        "size": 13.78,
                         "family": "Lato Heavy",
                         "color": "#FFFFFF",
                         "bold": true,
@@ -29111,7 +29111,7 @@
                     "height": 32.88
                   },
                   "font": {
-                    "size": 12.44,
+                    "size": 9.44,
                     "family": "Lato",
                     "color": "#FFFFFF",
                     "line_height": 1.29,
@@ -29125,7 +29125,7 @@
                     {
                       "text": "Enhanced customer relationships and timely follow-ups increased repeat purchases and long-term customer loyalty.",
                       "font": {
-                        "size": 12.44,
+                        "size": 9.44,
                         "family": "Lato",
                         "color": "#FFFFFF",
                         "line_height": 1.29,

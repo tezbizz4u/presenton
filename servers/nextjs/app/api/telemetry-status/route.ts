@@ -23,7 +23,8 @@ export async function GET() {
     envDisabled ||
     fileDisabled === "true" ||
     fileDisabled === "True";
-  const telemetryEnabled = !isDisabled;
+  // ASF: telemetry is permanently disabled.
+  const telemetryEnabled = false && !isDisabled;
   return NextResponse.json({ telemetryEnabled });
 }
 

@@ -21238,7 +21238,7 @@
                               },
                               "rotation": 0,
                               "font": {
-                                "size": 12.44,
+                                "size": 10.44,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -21253,7 +21253,7 @@
                                 {
                                   "text": "Location:",
                                   "font": {
-                                    "size": 12.44,
+                                    "size": 10.44,
                                     "family": "Poppins Semi-Bold",
                                     "color": "#000000",
                                     "bold": false,
@@ -21514,7 +21514,7 @@
                               },
                               "rotation": 0,
                               "font": {
-                                "size": 12.44,
+                                "size": 10.44,
                                 "family": "Poppins Semi-Bold",
                                 "color": "#000000",
                                 "bold": false,
@@ -21529,7 +21529,7 @@
                                 {
                                   "text": "Project Size:",
                                   "font": {
-                                    "size": 12.44,
+                                    "size": 10.44,
                                     "family": "Poppins Semi-Bold",
                                     "color": "#000000",
                                     "bold": false,
@@ -25973,7 +25973,7 @@
                           },
                           "rotation": 0,
                           "font": {
-                            "size": 31.11,
+                            "size": 27.61,
                             "family": "Poppins Bold",
                             "color": "#FFFFFF",
                             "bold": false,
@@ -25987,7 +25987,7 @@
                             {
                               "text": "$54M",
                               "font": {
-                                "size": 31.11,
+                                "size": 27.61,
                                 "family": "Poppins Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,
@@ -25997,7 +25997,7 @@
                             {
                               "text": " Gross Sales",
                               "font": {
-                                "size": 31.11,
+                                "size": 27.61,
                                 "family": "Poppins Bold",
                                 "color": "#FFFFFF",
                                 "bold": false,

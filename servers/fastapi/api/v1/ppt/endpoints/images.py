@@ -272,7 +272,7 @@ async def generate_image(
     image_prompt = ImagePrompt(
         prompt=prompt, target_width=width, target_height=height
     )
-    image_generation_service = ImageGenerationService(images_directory)
+    image_generation_service = ImageGenerationService(images_directory, smart=False)
 
     image = await image_generation_service.generate_image(image_prompt)
     if not isinstance(image, ImageAsset):

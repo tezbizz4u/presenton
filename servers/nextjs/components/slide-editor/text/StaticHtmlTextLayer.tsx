@@ -88,10 +88,17 @@ function StaticHtmlTextLayerComponent({
     };
 
     syncTextElements();
+    // ASF: shrink text that would overflow its box or split a word mid-word.
+    const fitHandle = window.requestAnimationFrame(() => {
+      descriptors.forEach(({ key }) => {
+        const htmlElement = elementRefs.current.get(key);
+        if (htmlElement) fitTextIntoBox(htmlElement);
+      });
+    });
     const stage = Array.from(nodeRefs.current?.values() ?? [])
       .map((node) => node.getStage())
       .find(Boolean);
-    if (!stage) return;
+    if (!stage) return () => window.cancelAnimationFrame(fitHandle);
 
     const layers = stage.getLayers();
     stage.on(
@@ -102,6 +109,7 @@ function StaticHtmlTextLayerComponent({
       layer.on("draw.staticHtmlText", syncTextElements);
     });
     return () => {
+      window.cancelAnimationFrame(fitHandle);
       stage.off(
         "dragmove.staticHtmlText transform.staticHtmlText",
         syncTextElements,
@@ -198,7 +206,8 @@ function StaticHtmlTextElement({
           minWidth: 0,
           width: "100%",
           whiteSpace: "pre-wrap",
-          overflowWrap: "break-word",
+          overflowWrap: "normal",
+          wordBreak: "normal",
           unicodeBidi: "plaintext",
         }}
       >
@@ -333,4 +342,34 @@ function readFiniteDimension(value: unknown, fallback: number) {
   return typeof value === "number" && Number.isFinite(value) && value > 0
     ? value
     : Math.max(1, fallback);
+}
+
+
+const FIT_STEP = 0.04;
+const FIT_MIN_SCALE = 0.55;
+
+function fitTextIntoBox(host: HTMLDivElement) {
+  const inner = host.firstElementChild as HTMLDivElement | null;
+  if (!inner || host.style.display === "none") return;
+  const boxHeight = host.clientHeight;
+  const boxWidth = host.clientWidth;
+  if (!boxHeight || !boxWidth) return;
+
+  const vertical = host.style.justifyContent;
+  inner.style.transformOrigin =
+    vertical === "center" ? "0 50%" : vertical === "flex-end" ? "0 100%" : "0 0";
+  const apply = (scale: number) => {
+    inner.style.width = `${100 / scale}%`;
+    inner.style.transform = scale < 1 ? `scale(${scale})` : "";
+  };
+  const overflows = (scale: number) =>
+    inner.scrollHeight * scale > boxHeight + 1 ||
+    inner.scrollWidth > inner.clientWidth + 1;
+
+  let scale = 1;
+  apply(scale);
+  while (overflows(scale) && scale > FIT_MIN_SCALE) {
+    scale = Math.round((scale - FIT_STEP) * 100) / 100;
+    apply(scale);
+  }
 }

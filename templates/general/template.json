@@ -11652,7 +11652,7 @@
                         "height": 60
                       },
                       "font": {
-                        "size": 60,
+                        "size": 53.0,
                         "family": "Poppins",
                         "color": "#9333EA",
                         "bold": true,
@@ -11667,7 +11667,7 @@
                         {
                           "text": "150+",
                           "font": {
-                            "size": 60,
+                            "size": 53.0,
                             "family": "Poppins",
                             "color": "#9333EA",
                             "bold": true,
@@ -11780,7 +11780,7 @@
                         "height": 60
                       },
                       "font": {
-                        "size": 60,
+                        "size": 53.0,
                         "family": "Poppins",
                         "color": "#9333EA",
                         "bold": true,
@@ -11795,7 +11795,7 @@
                         {
                           "text": "200+",
                           "font": {
-                            "size": 60,
+                            "size": 53.0,
                             "family": "Poppins",
                             "color": "#9333EA",
                             "bold": true,
@@ -11908,7 +11908,7 @@
                         "height": 60
                       },
                       "font": {
-                        "size": 60,
+                        "size": 53.0,
                         "family": "Poppins",
                         "color": "#9333EA",
                         "bold": true,
@@ -11923,7 +11923,7 @@
                         {
                           "text": "95%",
                           "font": {
-                            "size": 60,
+                            "size": 53.0,
                             "family": "Poppins",
                             "color": "#9333EA",
                             "bold": true,

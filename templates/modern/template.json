@@ -8279,7 +8279,7 @@
                         "height": 45.5
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -8292,7 +8292,7 @@
                         {
                           "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.3
@@ -8411,7 +8411,7 @@
                         "height": 45.5
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -8424,7 +8424,7 @@
                         {
                           "text": "Outdated systems increase expenses, while small businesses struggle to expand their market reach.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.3
@@ -8543,7 +8543,7 @@
                         "height": 45.5
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -8556,7 +8556,7 @@
                         {
                           "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.3
@@ -8675,7 +8675,7 @@
                         "height": 45.5
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Montserrat",
                         "color": "#234CD9",
                         "line_height": 1.3
@@ -8688,7 +8688,7 @@
                         {
                           "text": "Businesses struggle to find digital tools that meet their needs, causing operational slowdowns.",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Montserrat",
                             "color": "#234CD9",
                             "line_height": 1.3
@@ -9864,7 +9864,7 @@
                 "height": 60
               },
               "font": {
-                "size": 48,
+                "size": 43.0,
                 "family": "Montserrat",
                 "color": "#234CD9",
                 "bold": true,
@@ -9878,7 +9878,7 @@
                 {
                   "text": "Product Overview",
                   "font": {
-                    "size": 48,
+                    "size": 43.0,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "bold": true,
@@ -11249,7 +11249,7 @@
                         "height": 20
                       },
                       "font": {
-                        "size": 14,
+                        "size": 12.5,
                         "family": "Montserrat",
                         "color": "#FFFFFF",
                         "line_height": 1.14
@@ -11262,7 +11262,7 @@
                         {
                           "text": "Total Available Market (TAM)",
                           "font": {
-                            "size": 14,
+                            "size": 12.5,
                             "family": "Montserrat",
                             "color": "#FFFFFF",
                             "line_height": 1.14
@@ -11285,7 +11285,7 @@
                         "height": 32
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.5,
                         "family": "Montserrat",
                         "color": "#1E4CD9",
                         "bold": true,
@@ -11299,7 +11299,7 @@
                         {
                           "text": "1.4 Billion",
                           "font": {
-                            "size": 24,
+                            "size": 21.5,
                             "family": "Montserrat",
                             "color": "#1E4CD9",
                             "bold": true,
@@ -11439,7 +11439,7 @@
                         "height": 32
                       },
                       "font": {
-                        "size": 24,
+                        "size": 21.5,
                         "family": "Montserrat",
                         "color": "#1E4CD9",
                         "bold": true,
@@ -11453,7 +11453,7 @@
                         {
                           "text": "194 Million",
                           "font": {
-                            "size": 24,
+                            "size": 21.5,
                             "family": "Montserrat",
                             "color": "#1E4CD9",
                             "bold": true,
@@ -11576,7 +11576,7 @@
                 "height": 60
               },
               "font": {
-                "size": 48,
+                "size": 42.0,
                 "family": "Montserrat",
                 "color": "#234CD9",
                 "bold": true,
@@ -11590,7 +11590,7 @@
                 {
                   "text": "Table Of Contents",
                   "font": {
-                    "size": 48,
+                    "size": 42.0,
                     "family": "Montserrat",
                     "color": "#234CD9",
                     "bold": true,
