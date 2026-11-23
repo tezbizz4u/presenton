@@ -365,8 +365,7 @@ def _open_licence(short: str) -> bool:
     return low.startswith("cc") or low.startswith("public domain") or low.startswith("pd") or "cc0" in low
 
 
-@ASF_IMAGES_ROUTER.get("/web")
-async def search_web(
+async def _search_web_once(
     query: str = Query(min_length=1, max_length=200),
     orientation: Literal["any", "landscape", "portrait", "square"] = "any",
     limit: int = Query(default=24, ge=1, le=40),
@@ -439,6 +438,29 @@ async def search_web(
         if len(results) >= limit:
             break
     return {"results": results, "errors": {}}
+
+
+@ASF_IMAGES_ROUTER.get("/web")
+async def search_web(
+    query: str = Query(min_length=1, max_length=200),
+    orientation: Literal["any", "landscape", "portrait", "square"] = "any",
+    limit: int = Query(default=24, ge=1, le=40),
+    page: int = Query(default=1, ge=1, le=20),
+):
+    """Wikimedia search; when a long query finds little, retry with its first words."""
+    data = await _search_web_once(query, orientation, limit, page)
+    words = query.split()
+    if len(data["results"]) < 6 and len(words) > 2 and page == 1:
+        seen = {r["id"] for r in data["results"]}
+        for n in (2, 1):
+            more = await _search_web_once(" ".join(words[:n]), orientation, limit, 1)
+            for r in more["results"]:
+                if r["id"] not in seen and len(data["results"]) < limit:
+                    seen.add(r["id"])
+                    data["results"].append(r)
+            if len(data["results"]) >= 6:
+                break
+    return data
 
 
 # ------------------------------------------------------------------ importing

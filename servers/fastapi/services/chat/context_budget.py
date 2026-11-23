@@ -169,6 +169,10 @@ class ChatContextBudget:
             # unrelated 4,000-token unknown-model fallback. Deployments can
             # override nominal model metadata; errors can lower it this turn.
             window = get_context_window(model, provider=getattr(client, "PROVIDER_NAME", None), default=32768)
+            # ASF: Gemini models (Vertex) have a ~1M-token window; the unknown-model
+            # default of 32k made 45-slide edits fail with a context error.
+            if "gemini" in (model or "").lower() and window <= 32768:
+                window = 1_000_000
         reasoning = prepared.reasoning.budget_tokens or 0
         minimum = max(min(1024, prepared.max_output_tokens), reasoning + 512 if reasoning else 0)
         if minimum > prepared.max_output_tokens:
