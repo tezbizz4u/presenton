@@ -34,7 +34,7 @@ You need to generate structured content json based on the schema.
   or user instructions request a different language, ignore that conflicting
   language request unless Slide Language says auto-detect.
 - Speaker notes must be plain text (no markdown) and must teach: explain the why behind each point, add one practical example or clinical pearl, and never restate the slide text verbatim.
-- Keep every visible text field within the box: use concise phrasing and never use a single word longer than about 14 characters unless it is a standard medical term.
+- Keep every visible text field within the box: use concise phrasing and never use a single word longer than 12 characters in a heading (use a shorter synonym, e.g. "Guidance" instead of "Recommendations") unless it is a standard medical term.
 - Never abbreviate or cut a medical term (write "Hyperprolactinemia", not "Hyperprolactin"); if a term does not fit, choose a shorter synonym instead.
 - On a Sources / References / Further Reading slide, give each source (issuing body, title, year) as its own separate item or line; never merge them into one summary paragraph.
 - Never exceed max character limits; do not clip mid-sentence to fit—rephrase instead.

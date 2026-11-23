@@ -17999,7 +17999,7 @@
                 "height": 18
               },
               "font": {
-                "size": 14.22,
+                "size": 12,
                 "family": "Montserrat Bold",
                 "color": "#000000",
                 "bold": true,
@@ -18014,7 +18014,7 @@
                 {
                   "text": "Page",
                   "font": {
-                    "size": 14.22,
+                    "size": 12,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -18039,7 +18039,7 @@
                 "height": 18
               },
               "font": {
-                "size": 14.22,
+                "size": 12,
                 "family": "Montserrat",
                 "color": "#000000",
                 "line_height": 1.4,
@@ -18053,7 +18053,7 @@
                 {
                   "text": "11",
                   "font": {
-                    "size": 14.22,
+                    "size": 12,
                     "family": "Montserrat",
                     "color": "#000000",
                     "line_height": 1.4,
@@ -21983,7 +21983,7 @@
                 "height": 20
               },
               "font": {
-                "size": 18,
+                "size": 12,
                 "family": "Montserrat",
                 "color": "#000000",
                 "line_height": 1.4,
@@ -21997,7 +21997,7 @@
                 {
                   "text": "Page",
                   "font": {
-                    "size": 18,
+                    "size": 12,
                     "family": "Montserrat Bold",
                     "color": "#000000",
                     "bold": true,
@@ -22008,7 +22008,7 @@
                 {
                   "text": "25",
                   "font": {
-                    "size": 18,
+                    "size": 12,
                     "family": "Montserrat",
                     "color": "#000000",
                     "line_height": 1.4,
