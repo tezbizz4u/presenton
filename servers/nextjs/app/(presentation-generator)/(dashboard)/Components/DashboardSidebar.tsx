@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { LayoutDashboard, Star, Brain, Settings, HelpCircle, UsersRound } from "lucide-react";
+import { LayoutDashboard, Star, Brain, Settings, HelpCircle, UsersRound, Layers } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import TemplateNavIcon from "./TemplateNavIcon";
@@ -89,6 +89,16 @@ const DashboardSidebar = ({
               <span className="text-[11px] text-slate-800">Templates</span>
             </Link>
                         : null}
+                        <Link
+                            prefetch={false}
+                            href="/bulk"
+                            className="flex flex-col items-center gap-2 text-center transition-colors"
+                            aria-label="Bulk Create"
+                            title="Bulk Create"
+                        >
+                            <Layers className={`h-4 w-4 ${pathname === "/bulk" ? "text-[#5146E5]" : "text-slate-600"}`} />
+                            <span className="text-[11px] text-slate-800">Bulk</span>
+                        </Link>
                         {showCommunity ? <Link
                             prefetch={false}
                             href="/community"

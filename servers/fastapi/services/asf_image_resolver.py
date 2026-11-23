@@ -60,6 +60,8 @@ ANATOMY_RE = re.compile(
     r"cyst\w*|fibrosis|cirrhosis|plaque|retina\w*|skin|acanthosis|hirsutism|acne)\b",
     re.I,
 )
+PEOPLE_RE = re.compile(r"\b(patient|patients|case|woman|women|female|portrait|person|people)\b", re.I)
+CLINIC_QUERY = "doctor patient consultation clinic"
 KEEP_ALWAYS = {"india", "indian", "ayush", "ayurveda", "yoga"}
 GENERIC_FOR_COMMONS = {"medical", "monitor", "screen", "machine", "device", "clinical"}
 
@@ -156,11 +158,24 @@ class AsfImageResolver:
                     candidate = await self._first_unused(
                         await self._stock(asf, scan_q, orientation)
                     )
+            if candidate is None and PEOPLE_RE.search(prompt):
+                # Case / patient slides: a consultation scene, not a random stock portrait.
+                candidate = await self._first_unused(
+                    await self._stock(asf, CLINIC_QUERY, orientation)
+                )
             if candidate is None:
                 for q in (query, short):
                     candidate = await self._first_unused(await self._stock(asf, q, orientation))
                     if candidate:
                         break
+            if candidate is None and ANATOMY_RE.search(prompt):
+                # AI-drawn anatomy is often wrong (e.g. a kidney under a stethoscope for
+                # "PCOS phenotypes"). Use a neutral clinic photo, or no picture at all.
+                candidate = await self._first_unused(
+                    await self._stock(asf, CLINIC_QUERY, orientation)
+                )
+                if candidate is None:
+                    return _transparent_asset(self.images_directory)
             if candidate is not None:
                 return await self._import(asf, candidate, prompt)
         except Exception as exc:  # noqa: BLE001 - never block slide generation
