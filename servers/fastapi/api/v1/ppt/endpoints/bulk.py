@@ -47,6 +47,7 @@ from models.sql.folder import FolderModel
 from models.sql.presentation import PresentationModel
 from models.sql.slide import SlideModel
 from services import bulk_quality_gate as gate
+from utils.llm_provider import reset_model_override, set_model_override
 from utils.export_utils import export_presentation
 from services.bulk_blueprint import parse_blueprint
 from services.database import async_session_maker
@@ -61,6 +62,8 @@ MAX_BRIEF_CHARS = 8000
 NOTES_MIN_CHARS = 300
 PILOT_FROM_DECKS = 12
 MAX_DECK_RETRIES = 2
+REPAIR_MODEL = os.getenv("ASF_REPAIR_MODEL", "gemini-3.8-pro")  # stronger model for the repair stage
+REPAIR_TIME_CAP = int(os.getenv("ASF_REPAIR_TIME_CAP", "150"))  # seconds per deck, then it is finalised as is
 _FIX_SEM = asyncio.Semaphore(8)  # global cap on concurrent slide repairs (LLM rate limits)
 
 # batch_id -> batch dict (also mirrored to disk so a finished batch can be re-opened)
@@ -95,7 +98,7 @@ def _load_batch(batch_id: str) -> Dict[str, Any]:
         batch = json.load(fh)
     # A batch loaded from disk has no live runner: anything unfinished was interrupted.
     for job in batch["jobs"]:
-        if job["status"] in ("queued", "running"):
+        if job["status"] in ("queued", "running", "repair"):
             job["status"] = "error"
             job["error"] = "Interrupted by a server restart; use Retry failed"
     _BATCHES[batch_id] = batch
@@ -287,9 +290,18 @@ async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id:
                             sql_session=session,
                         )
                     return 1
-                except Exception:  # noqa: BLE001 - a failed repair leaves the slide flagged
-                    LOGGER.exception("bulk gate: repair failed slide %s of %s", idx + 1, job["name"])
-                    return 0
+                except Exception:  # noqa: BLE001 - retry once with the default model
+                    LOGGER.warning("bulk gate: repair model failed on slide %s of %s", idx + 1, job["name"])
+                    set_model_override(None)
+                    try:
+                        async with _FIX_SEM, async_session_maker() as session:
+                            await edit_slide(
+                                id=target.id, prompt=gate.fix_prompt(codes), sql_session=session
+                            )
+                        return 1
+                    except Exception:  # noqa: BLE001 - a failed repair leaves the slide flagged
+                        LOGGER.exception("bulk gate: repair failed slide %s of %s", idx + 1, job["name"])
+                        return 0
 
             results = await asyncio.gather(*[_fix(i, c) for i, c in sorted(issues.items())])
             fixed += sum(results)
@@ -300,14 +312,8 @@ async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id:
                 break
     finally:
         reset_current_owner_id(token)
-    sc = gate.score(len(slides), issues)
-    job["gate"] = {
-        "score": sc,
-        "status": "PASS" if (not issues and sc >= gate.SCORE_PASS) else "NEEDS FIX",
-        "fix_rounds": rounds,
-        "slides_fixed": fixed,
-        "remaining": gate.describe(issues),
-    }
+    job["_rounds"] = rounds
+    job["_fixed"] = fixed
     return fixed > 0
 
 
@@ -375,27 +381,22 @@ async def _run_one_attempt(batch: Dict[str, Any], job: Dict[str, Any], sem: asyn
             data = final.data or {}
             job["export_path"] = data.get("path")
             job["edit_path"] = data.get("edit_path")
-            changed = await _run_gate(batch, job, presentation_id)
-            async with async_session_maker() as session:
-                pres = await session.get(PresentationModel, presentation_id)
-                if pres is not None and pres.title != job["name"]:
-                    pres.title = job["name"][:200]
-                    session.add(pres)
-                    await session.commit()
-                    changed = True
-            if changed:
-                exported = await export_presentation(
-                    presentation_id, job["name"], req.export_as, cookie_header=batch["_cookie"]
-                )
-                job["export_path"] = exported.path
-            q = await _quality(presentation_id)
-            images = q.pop("_image_urls")
-            titles = q.pop("_titles")
-            job["quality"] = q
-            job["_images"] = images
-            job["_titles"] = titles
-            job["status"] = "done"
-            job["error"] = None
+            slides_now = await _load_slides(presentation_id)
+            issues = gate.check_slides(_slide_records(slides_now))
+            if issues:
+                # Fresh generation is done: this deck leaves the fast lane and waits for the repair stage.
+                job["status"] = "repair"
+                job["_repair"] = True
+                job["gate"] = {
+                    "score": gate.score(len(slides_now), issues),
+                    "status": "REPAIRING",
+                    "fix_rounds": 0,
+                    "slides_fixed": 0,
+                    "remaining": gate.describe(issues),
+                }
+                job["error"] = None
+            else:
+                await _finalize(batch, job, presentation_id, False)
         except Exception as exc:  # noqa: BLE001 - one bad deck must not stop the batch
             LOGGER.exception("bulk: job %s failed (attempt %s)", job["name"], job.get("attempts", 0) + 1)
             job["status"] = "error"
@@ -427,6 +428,62 @@ def _recompute_cross_deck(batch: Dict[str, Any]) -> None:
         )
 
 
+async def _finalize(batch: Dict[str, Any], job: Dict[str, Any], presentation_id: uuid.UUID, changed: bool) -> None:
+    """Final gate verdict, deck title, re-export if slides changed, quality numbers, status done."""
+    req: BulkStartRequest = batch["_request"]
+    slides = await _load_slides(presentation_id)
+    issues = gate.check_slides(_slide_records(slides))
+    sc = gate.score(len(slides), issues)
+    job["gate"] = {
+        "score": sc,
+        "status": "PASS" if (not issues and sc >= gate.SCORE_PASS) else "NEEDS FIX",
+        "fix_rounds": job.pop("_rounds", 0),
+        "slides_fixed": job.pop("_fixed", 0),
+        "remaining": gate.describe(issues),
+    }
+    async with async_session_maker() as session:
+        pres = await session.get(PresentationModel, presentation_id)
+        if pres is not None and pres.title != job["name"]:
+            pres.title = job["name"][:200]
+            session.add(pres)
+            await session.commit()
+            changed = True
+    if changed:
+        exported = await export_presentation(
+            presentation_id, job["name"], req.export_as, cookie_header=batch["_cookie"]
+        )
+        job["export_path"] = exported.path
+    q = await _quality(presentation_id)
+    job["_images"] = q.pop("_image_urls")
+    job["_titles"] = q.pop("_titles")
+    job["quality"] = q
+    job["status"] = "done"
+    job["error"] = None
+
+
+async def _repair_deck(batch: Dict[str, Any], job: Dict[str, Any]) -> None:
+    """Repair stage: fix only the failing slides with the stronger model, stop as soon as they are correct."""
+    presentation_id = uuid.UUID(job["presentation_id"])
+    t0 = time.time()
+    changed = True
+    token = set_model_override(REPAIR_MODEL)
+    try:
+        changed = await asyncio.wait_for(_run_gate(batch, job, presentation_id), REPAIR_TIME_CAP)
+    except Exception:  # noqa: BLE001 - time cap or error: finish with what the deck has now
+        LOGGER.exception("bulk: repair stage ended early for %s", job["name"])
+    finally:
+        reset_model_override(token)
+    job["repair_seconds"] = round(time.time() - t0, 1)
+    try:
+        await _finalize(batch, job, presentation_id, changed)
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.exception("bulk: finalize failed for %s", job["name"])
+        job["status"] = "error"
+        job["error"] = (getattr(exc, "detail", None) or str(exc))[:300]
+    _recompute_cross_deck(batch)
+    _persist(batch)
+
+
 async def _run_batch(batch: Dict[str, Any], only_ids: Optional[List[int]] = None) -> None:
     sem = asyncio.Semaphore(batch["_request"].parallel)
     jobs = [j for j in batch["jobs"] if only_ids is None or j["idx"] in only_ids]
@@ -434,12 +491,16 @@ async def _run_batch(batch: Dict[str, Any], only_ids: Optional[List[int]] = None
         # Pilot deck first: the rest only starts if it passes the quality gate.
         pilot, jobs = jobs[0], jobs[1:]
         await _run_one(batch, pilot, asyncio.Semaphore(1))
-        if pilot["status"] != "done" or pilot.get("gate", {}).get("status") != "PASS":
+        if pilot["status"] not in ("done", "repair") or (pilot.get("gate") or {}).get("score", 0) < gate.SCORE_PASS:
             for j in jobs:
                 j["status"] = "cancelled"
                 j["error"] = "Stopped: the pilot deck did not pass the quality gate. Check it, then Retry."
             jobs = []
     await asyncio.gather(*[_run_one(batch, j, sem) for j in jobs])
+    # Repair stage: only decks with failing slides, all together, only those slides.
+    pending = [j for j in batch["jobs"] if j.pop("_repair", False) and j["status"] == "repair"]
+    if pending:
+        await asyncio.gather(*[_repair_deck(batch, j) for j in pending])
     batch["finished_at"] = time.time()
     _persist(batch)
 
@@ -485,7 +546,7 @@ def _public(batch: Dict[str, Any]) -> Dict[str, Any]:
         "total": len(jobs),
         "done": done,
         "failed": failed,
-        "running": sum(1 for j in jobs if j["status"] == "running"),
+        "running": sum(1 for j in jobs if j["status"] in ("running", "repair")),
         "clinical_review": batch.get("clinical_review", True),
         "jobs": jobs,
         **_speed(batch, jobs),

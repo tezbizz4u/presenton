@@ -46,6 +46,7 @@ async function call<T>(path: string, init?: RequestInit): Promise<T> {
 const STATUS_STYLE: Record<string, string> = {
   queued: "bg-slate-100 text-slate-700",
   running: "bg-blue-100 text-blue-800",
+  repair: "bg-purple-100 text-purple-800",
   done: "bg-green-100 text-green-800",
   error: "bg-red-100 text-red-800",
   cancelled: "bg-amber-100 text-amber-800",
@@ -360,7 +361,7 @@ export default function BulkCreatePage() {
                   <td className="p-1">
                     {j.gate ? (
                       <div title={j.gate.remaining.join("\n")}>
-                        <span className={`rounded px-2 py-0.5 text-xs ${j.gate.status === "PASS" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+                        <span className={`rounded px-2 py-0.5 text-xs ${j.gate.status === "PASS" ? "bg-green-100 text-green-800" : j.gate.status === "REPAIRING" ? "bg-purple-100 text-purple-800" : "bg-red-100 text-red-800"}`}>
                           {j.gate.status} {j.gate.score}
                         </span>
                         {j.gate.slides_fixed ? <div className="text-xs text-slate-600">{j.gate.slides_fixed} slide fix(es)</div> : null}

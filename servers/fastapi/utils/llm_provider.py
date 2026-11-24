@@ -1,3 +1,4 @@
+from typing import Optional
 from fastapi import HTTPException
 from google import genai
 from openai import OpenAI
@@ -123,7 +124,26 @@ def is_lmstudio_selected():
     return get_llm_provider() == LLMProvider.LMSTUDIO
 
 
+import contextvars as _contextvars
+
+_MODEL_OVERRIDE: "_contextvars.ContextVar[Optional[str]]" = _contextvars.ContextVar(
+    "asf_model_override", default=None
+)
+
+
+def set_model_override(model: Optional[str]):
+    """Use `model` for LLM calls made in this task (e.g. the Bulk repair stage)."""
+    return _MODEL_OVERRIDE.set(model)
+
+
+def reset_model_override(token) -> None:
+    _MODEL_OVERRIDE.reset(token)
+
+
 def get_model():
+    override = _MODEL_OVERRIDE.get()
+    if override:
+        return override
     selected_llm = get_llm_provider()
     if selected_llm == LLMProvider.OPENAI:
         return get_openai_model_env() or DEFAULT_OPENAI_MODEL
