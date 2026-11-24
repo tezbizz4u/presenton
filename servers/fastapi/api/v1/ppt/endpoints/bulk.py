@@ -293,8 +293,11 @@ async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id:
 
             results = await asyncio.gather(*[_fix(i, c) for i, c in sorted(issues.items())])
             fixed += sum(results)
+            before = len(issues)
             slides = await _load_slides(presentation_id)
             issues = gate.check_slides(_slide_records(slides))
+            if len(issues) >= before:  # repairs are not helping: stop, do not burn time
+                break
     finally:
         reset_current_owner_id(token)
     sc = gate.score(len(slides), issues)
