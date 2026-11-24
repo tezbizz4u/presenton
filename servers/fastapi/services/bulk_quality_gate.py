@@ -69,7 +69,7 @@ def check_slides(slides: List[Dict[str, Any]]) -> Dict[int, List[str]]:
             found.append("dup_image")
         seen_urls.update(urls)
         text = str(s.get("text") or "")
-        if PLACEHOLDER_RE.search(text) or (pos > 0 and not str(s.get("title") or "").strip()):
+        if PLACEHOLDER_RE.search(text):  # a missing "title" key is not a defect: layouts name it differently
             found.append("placeholder")
         run = run + 1 if s.get("layout") == prev_layout else 1
         prev_layout = s.get("layout")

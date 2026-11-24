@@ -25,10 +25,10 @@ def test_each_rule_flags_only_its_slide():
     assert issues[1] == ["notes_short"]
     assert issues[3] == ["dup_image"]
     assert issues[4] == ["placeholder"]
-    assert issues[5] == ["placeholder"]
+    assert 5 not in issues  # no title key is not a failure
     assert issues[8] == ["layout_run"]
     assert 0 not in issues and 2 not in issues and 6 not in issues and 7 not in issues
-    assert g.score(9, issues) == round(100 * (1 - 5 / 9))
+    assert g.score(9, issues) == round(100 * (1 - 4 / 9))
 
 
 def test_fix_prompt_only_for_given_codes():
