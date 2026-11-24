@@ -48,6 +48,11 @@ if "sqlite" in database_url:
     def _enable_sqlite_foreign_keys(dbapi_connection, _connection_record) -> None:
         cursor = dbapi_connection.cursor()
         cursor.execute("PRAGMA foreign_keys=ON")
+        # Many decks write at once (Bulk Create): WAL lets readers and one writer overlap,
+        # and a long busy timeout makes writers wait their turn instead of "database is locked".
+        cursor.execute("PRAGMA journal_mode=WAL")
+        cursor.execute("PRAGMA busy_timeout=60000")
+        cursor.execute("PRAGMA synchronous=NORMAL")
         cursor.close()
 
 
