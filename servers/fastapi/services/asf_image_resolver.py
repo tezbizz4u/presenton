@@ -165,11 +165,6 @@ class AsfImageResolver:
             if ai is not None:
                 return ai
         indian_scene = bool(INDIAN_SCENE_RE.search(prompt)) and not MEDICAL_IMAGING_RE.search(prompt)
-        if indian_scene and AI_ENABLED:
-            # Stock sites rarely have Indian subjects: draw the scene with Indian people.
-            ai = await self._ai_fallback(asf, prompt, orientation, kind="indian")
-            if ai is not None:
-                return ai
         if indian_scene and "india" not in query.lower():
             query = f"indian {query}"
         short = " ".join(query.split()[:3])
@@ -227,7 +222,10 @@ class AsfImageResolver:
         except Exception as exc:  # noqa: BLE001 - never block slide generation
             LOGGER.warning("asf image resolver failed: %s", type(exc).__name__)
 
-        return await self._ai_fallback(asf, prompt, orientation, kind="photo")
+        # Stock found nothing usable: only now draw it (with Indian people when it is a people scene).
+        return await self._ai_fallback(
+            asf, prompt, orientation, kind="indian" if indian_scene else "photo"
+        )
 
     async def _first_unused(self, results: list[dict]) -> Optional[dict]:
         for item in results:
