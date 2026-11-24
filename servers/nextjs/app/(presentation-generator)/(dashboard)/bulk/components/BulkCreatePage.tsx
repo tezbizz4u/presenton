@@ -57,7 +57,7 @@ export default function BulkCreatePage() {
   const [template, setTemplate] = useState("momentum");
   const [defaultSlides, setDefaultSlides] = useState(25);
   const [verbosity, setVerbosity] = useState("standard");
-  const [parallel, setParallel] = useState(3);
+  const [parallel, setParallel] = useState(10);
   const [exportAs, setExportAs] = useState("pptx");
   const [clinical, setClinical] = useState(true);
   const [rows, setRows] = useState<Row[]>([]);
@@ -237,9 +237,9 @@ export default function BulkCreatePage() {
               </select>
             </div>
             <div>
-              <label className={label}>Decks in parallel (1-4)</label>
-              <input type="number" min={1} max={4} className={field} value={parallel}
-                onChange={(e) => setParallel(Math.min(4, Math.max(1, Number(e.target.value) || 3)))} />
+              <label className={label}>Decks in parallel (1-12)</label>
+              <input type="number" min={1} max={12} className={field} value={parallel}
+                onChange={(e) => setParallel(Math.min(12, Math.max(1, Number(e.target.value) || 10)))} />
             </div>
             <div>
               <label className={label}>Export</label>

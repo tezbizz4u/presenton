@@ -70,6 +70,7 @@ ILLUS_RE = re.compile(
 )
 CLINIC_QUERY = "doctor patient consultation clinic"
 AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "6"))
+_AI_SEM = asyncio.Semaphore(int(os.getenv("ASF_AI_CONCURRENCY", "4")))
 AI_ENABLED = os.getenv("ASF_AI_IMAGES", "1") != "0"
 KEEP_ALWAYS = {"india", "indian", "ayush", "ayurveda", "yoga"}
 GENERIC_FOR_COMMONS = {"medical", "monitor", "screen", "machine", "device", "clinical"}
@@ -277,14 +278,23 @@ class AsfImageResolver:
             "No text, letters, numbers, captions, logos or watermarks in the image."
         )
         self.ai_count += 1
+        data = None
+        for attempt in range(3):  # 429 Too Many Requests: back off and retry
+            try:
+                async with _AI_SEM:
+                    data = await asyncio.wait_for(
+                        asyncio.to_thread(asf._generate_one_sync, full_prompt, model["id"], aspect),
+                        timeout=150,
+                    )
+                break
+            except Exception as exc:  # noqa: BLE001
+                LOGGER.warning("asf ai image failed (%s, try %s): %s", kind, attempt + 1, type(exc).__name__)
+                await asyncio.sleep(4 * (attempt + 1))
+        if data is None:
+            return None
         try:
-            data = await asyncio.wait_for(
-                asyncio.to_thread(asf._generate_one_sync, full_prompt, model["id"], aspect),
-                timeout=150,
-            )
             path = asf._store_image_bytes(data)
-        except Exception as exc:  # noqa: BLE001
-            LOGGER.warning("asf ai image failed (%s): %s", kind, type(exc).__name__)
+        except Exception:  # noqa: BLE001
             return None
         return ImageAsset(
             path=path,

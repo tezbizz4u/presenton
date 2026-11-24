@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from typing import Any, Dict, List
 
-NOTES_MIN_CHARS = 600
+NOTES_MIN_CHARS = 350
 MAX_SAME_LAYOUT_IN_A_ROW = 2
 SCORE_PASS = 85
 MAX_FIX_ROUNDS = 2
@@ -34,7 +34,7 @@ ISSUE_LABELS = {
 FIX_PROMPTS = {
     "notes_short": (
         "Keep every word of the slide text and every image exactly as it is. Rewrite ONLY the "
-        "speaker note: plain text, at least 700 characters, teaching the why behind the points, "
+        "speaker note: plain text, at least 500 characters, teaching the why behind the points, "
         "adding one practical clinical or classroom example, and never repeating the slide text."
     ),
     "dup_image": (

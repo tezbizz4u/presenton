@@ -56,10 +56,12 @@ LOGGER = logging.getLogger(__name__)
 BULK_ROUTER = APIRouter(prefix="/bulk", tags=["Bulk Create"])
 
 MAX_JOBS_PER_BATCH = 60
-MAX_PARALLEL = 4
+MAX_PARALLEL = 12
 MAX_BRIEF_CHARS = 8000
 NOTES_MIN_CHARS = 300
-PILOT_FROM_DECKS = 10
+PILOT_FROM_DECKS = 12
+MAX_DECK_RETRIES = 2
+_FIX_SEM = asyncio.Semaphore(8)  # global cap on concurrent slide repairs (LLM rate limits)
 
 # batch_id -> batch dict (also mirrored to disk so a finished batch can be re-opened)
 _BATCHES: Dict[str, Dict[str, Any]] = {}
@@ -135,7 +137,7 @@ class BulkStartRequest(BaseModel):
     jobs: List[BulkJob] = Field(..., min_length=1, max_length=MAX_JOBS_PER_BATCH)
     template: str = "momentum"
     verbosity: Literal["concise", "standard", "text-heavy"] = "standard"
-    parallel: int = Field(default=3, ge=1, le=MAX_PARALLEL)
+    parallel: int = Field(default=10, ge=1, le=MAX_PARALLEL)
     export_as: Literal["pptx", "pdf"] = "pptx"
     folder_id: Optional[uuid.UUID] = None
     theme_preset: Optional[str] = None
@@ -278,7 +280,7 @@ async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id:
                 if target is None:
                     return 0
                 try:
-                    async with async_session_maker() as session:
+                    async with _FIX_SEM, async_session_maker() as session:
                         await edit_slide(
                             id=target.id,
                             prompt=gate.fix_prompt(codes),
@@ -307,6 +309,19 @@ async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id:
 
 
 async def _run_one(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Semaphore) -> None:
+    """Run one deck; transient provider errors (429/400 under load) are retried with backoff."""
+    while True:
+        await _run_one_attempt(batch, job, sem)
+        if not job.pop("_retry", False):
+            return
+        job["attempts"] = job.get("attempts", 0) + 1
+        job["status"] = "queued"
+        job["error"] = f"Retrying ({job['attempts']}/{MAX_DECK_RETRIES}) after a provider error"
+        _persist(batch)
+        await asyncio.sleep(20 * job["attempts"])
+
+
+async def _run_one_attempt(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Semaphore) -> None:
     async with sem:
         if batch.get("cancelled"):
             job["status"] = "cancelled"
@@ -377,10 +392,12 @@ async def _run_one(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Sema
             job["_images"] = images
             job["_titles"] = titles
             job["status"] = "done"
+            job["error"] = None
         except Exception as exc:  # noqa: BLE001 - one bad deck must not stop the batch
-            LOGGER.exception("bulk: job %s failed", job["name"])
+            LOGGER.exception("bulk: job %s failed (attempt %s)", job["name"], job.get("attempts", 0) + 1)
             job["status"] = "error"
             job["error"] = (getattr(exc, "detail", None) or str(exc))[:300]
+            job["_retry"] = job.get("attempts", 0) < MAX_DECK_RETRIES and not batch.get("cancelled")
         finally:
             job["seconds"] = round(time.time() - job.get("started_at", time.time()), 1)
             _recompute_cross_deck(batch)
