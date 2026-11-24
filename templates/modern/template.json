@@ -2723,7 +2723,7 @@
                 "color": "#234CD9",
                 "bold": true,
                 "line_height": 1,
-                "letter_spacing": -1.44
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -2738,7 +2738,7 @@
                     "color": "#234CD9",
                     "bold": true,
                     "line_height": 1,
-                    "letter_spacing": -1.44
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -9857,7 +9857,7 @@
                 "color": "#234CD9",
                 "bold": true,
                 "line_height": 1,
-                "letter_spacing": -1.44
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -9872,7 +9872,7 @@
                     "color": "#234CD9",
                     "bold": true,
                     "line_height": 1,
-                    "letter_spacing": -1.44
+                    "letter_spacing": 0
                   }
                 }
               ],

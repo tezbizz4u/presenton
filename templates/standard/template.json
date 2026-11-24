@@ -560,7 +560,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -574,7 +574,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -644,7 +644,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -0.64
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -658,7 +658,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -0.64
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -1812,7 +1812,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.9,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -1826,7 +1826,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.9,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -3371,7 +3371,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.85,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -3385,7 +3385,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.85,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -3488,7 +3488,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -3502,7 +3502,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -3606,7 +3606,7 @@
                 "color": "#111827",
                 "bold": true,
                 "line_height": 0.84,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -3621,7 +3621,7 @@
                     "color": "#111827",
                     "bold": true,
                     "line_height": 0.84,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -7952,7 +7952,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -7966,7 +7966,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -8555,7 +8555,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.9,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -8569,7 +8569,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.9,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -9296,7 +9296,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -0.64
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -9310,7 +9310,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -0.64
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -10563,7 +10563,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.85,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -10577,7 +10577,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.85,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -12535,7 +12535,7 @@
                 "family": "Playfair Display",
                 "color": "#111827",
                 "line_height": 0.84,
-                "letter_spacing": -1.6
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -12549,7 +12549,7 @@
                     "family": "Playfair Display",
                     "color": "#111827",
                     "line_height": 0.84,
-                    "letter_spacing": -1.6
+                    "letter_spacing": 0
                   }
                 }
               ],

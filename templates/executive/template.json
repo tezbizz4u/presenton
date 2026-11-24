@@ -1280,7 +1280,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.03,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1297,7 +1297,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.03,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -1374,7 +1374,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1389,7 +1389,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -1465,7 +1465,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 1.05,
-                "letter_spacing": -0.35
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1482,7 +1482,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.35,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -1558,7 +1558,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1573,7 +1573,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -1649,7 +1649,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1666,7 +1666,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1680,7 +1680,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1694,7 +1694,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -1769,7 +1769,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1786,7 +1786,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1800,7 +1800,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1814,7 +1814,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -1892,7 +1892,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -1909,7 +1909,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1923,7 +1923,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -1937,7 +1937,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -2014,7 +2014,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -2029,7 +2029,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -2103,7 +2103,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.45
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -2120,7 +2120,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.45,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -2134,7 +2134,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.45,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -2148,7 +2148,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.45,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -2461,7 +2461,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -2478,7 +2478,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -2492,7 +2492,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -2506,7 +2506,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -2543,7 +2543,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -2558,7 +2558,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5363,7 +5363,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 0.99,
-                "letter_spacing": -0.5
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5380,7 +5380,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 0.99,
-                    "letter_spacing": -0.5,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -5454,7 +5454,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5468,7 +5468,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.05,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5544,7 +5544,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5558,7 +5558,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5583,7 +5583,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5597,7 +5597,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5673,7 +5673,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5690,7 +5690,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -5767,7 +5767,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5784,7 +5784,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -5861,7 +5861,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5876,7 +5876,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5952,7 +5952,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5967,7 +5967,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6042,7 +6042,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6056,7 +6056,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6132,7 +6132,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6149,7 +6149,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -6163,7 +6163,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -6177,7 +6177,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -6254,7 +6254,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6269,7 +6269,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6345,7 +6345,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.1,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6360,7 +6360,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.1,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6437,7 +6437,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 1.09,
-                "letter_spacing": -1.1
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6454,7 +6454,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -1.1,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -6530,7 +6530,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6547,7 +6547,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -6561,7 +6561,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -6638,7 +6638,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6655,7 +6655,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -7101,7 +7101,7 @@
                           "color": "#000000",
                           "bold": true,
                           "line_height": 1.5,
-                          "letter_spacing": -0.08
+                          "letter_spacing": 0
                         },
                         "alignment": {
                           "horizontal": "center",
@@ -7116,7 +7116,7 @@
                               "color": "#000000",
                               "bold": true,
                               "line_height": 1.5,
-                              "letter_spacing": -0.08
+                              "letter_spacing": 0
                             }
                           }
                         ],
@@ -7515,7 +7515,7 @@
                           "color": "#8958F4",
                           "bold": true,
                           "line_height": 1.25,
-                          "letter_spacing": -0.2
+                          "letter_spacing": 0
                         },
                         "alignment": {
                           "horizontal": "center",
@@ -7530,7 +7530,7 @@
                               "color": "#8958F4",
                               "bold": true,
                               "line_height": 1.25,
-                              "letter_spacing": -0.2
+                              "letter_spacing": 0
                             }
                           }
                         ],
@@ -7617,7 +7617,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -7634,7 +7634,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -7793,7 +7793,7 @@
                           "color": "#000000",
                           "bold": true,
                           "line_height": 1.5,
-                          "letter_spacing": -0.08
+                          "letter_spacing": 0
                         },
                         "alignment": {
                           "horizontal": "left",
@@ -7808,7 +7808,7 @@
                               "color": "#000000",
                               "bold": true,
                               "line_height": 1.5,
-                              "letter_spacing": -0.08
+                              "letter_spacing": 0
                             }
                           }
                         ],
@@ -8461,7 +8461,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -8476,7 +8476,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -8542,7 +8542,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -8557,7 +8557,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -8624,7 +8624,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -8639,7 +8639,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -8705,7 +8705,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -8720,7 +8720,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -9948,7 +9948,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.2,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "center",
@@ -9963,7 +9963,7 @@
                             "color": "#000000",
                             "bold": true,
                             "line_height": 1.2,
-                            "letter_spacing": -0.08
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -10150,7 +10150,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -10167,7 +10167,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -10181,7 +10181,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -10846,7 +10846,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -10863,7 +10863,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -10877,7 +10877,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -10891,7 +10891,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -10932,7 +10932,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -10946,7 +10946,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.05,
-                    "letter_spacing": -0.4
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -10986,7 +10986,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -11000,7 +11000,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.05,
-                    "letter_spacing": -0.4
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -11041,7 +11041,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -11058,7 +11058,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -11219,7 +11219,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "center",
@@ -11234,7 +11234,7 @@
                             "color": "#000000",
                             "bold": true,
                             "line_height": 1.5,
-                            "letter_spacing": -0.08
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -12663,7 +12663,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "center",
@@ -12678,7 +12678,7 @@
                             "color": "#000000",
                             "bold": true,
                             "line_height": 1.5,
-                            "letter_spacing": -0.08
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -13149,7 +13149,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -13163,7 +13163,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.05,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -14908,7 +14908,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 0.99,
-                "letter_spacing": -0.5
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -14925,7 +14925,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 0.99,
-                    "letter_spacing": -0.5,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -15171,7 +15171,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -15188,7 +15188,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -15202,7 +15202,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -15216,7 +15216,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -15563,7 +15563,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -15580,7 +15580,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -15727,7 +15727,7 @@
                           "color": "#000000",
                           "bold": true,
                           "line_height": 1.5,
-                          "letter_spacing": -0.08
+                          "letter_spacing": 0
                         },
                         "alignment": {
                           "horizontal": "left",
@@ -15742,7 +15742,7 @@
                               "color": "#000000",
                               "bold": true,
                               "line_height": 1.5,
-                              "letter_spacing": -0.08
+                              "letter_spacing": 0
                             }
                           }
                         ],
@@ -16054,7 +16054,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.03,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -16071,7 +16071,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.03,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -16239,7 +16239,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -16254,7 +16254,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -16320,7 +16320,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -16335,7 +16335,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -16402,7 +16402,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -16417,7 +16417,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -16483,7 +16483,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.5,
-                    "letter_spacing": -0.08
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -16498,7 +16498,7 @@
                         "color": "#000000",
                         "bold": true,
                         "line_height": 1.5,
-                        "letter_spacing": -0.08
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -16671,7 +16671,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -16685,7 +16685,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -16710,7 +16710,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -16724,7 +16724,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -17147,7 +17147,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -17164,7 +17164,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -17572,7 +17572,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -17587,7 +17587,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -18159,7 +18159,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -18174,7 +18174,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -18528,7 +18528,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -18545,7 +18545,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -18559,7 +18559,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -18966,7 +18966,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -18981,7 +18981,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -19389,7 +19389,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -19406,7 +19406,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -19420,7 +19420,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -19434,7 +19434,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -19892,7 +19892,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -19909,7 +19909,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -19923,7 +19923,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -19937,7 +19937,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -19972,7 +19972,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -19986,7 +19986,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.05,
-                    "letter_spacing": -0.4
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -20020,7 +20020,7 @@
                 "family": "Anton",
                 "color": "#5F4F9B",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -20034,7 +20034,7 @@
                     "family": "Anton",
                     "color": "#5F4F9B",
                     "line_height": 1.05,
-                    "letter_spacing": -0.4
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -20069,7 +20069,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.4
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -20086,7 +20086,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.05,
-                    "letter_spacing": -0.4,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -20348,7 +20348,7 @@
                           "color": "#8958F4",
                           "bold": true,
                           "line_height": 1.25,
-                          "letter_spacing": -0.2
+                          "letter_spacing": 0
                         },
                         "alignment": {
                           "horizontal": "center",
@@ -20363,7 +20363,7 @@
                               "color": "#8958F4",
                               "bold": true,
                               "line_height": 1.25,
-                              "letter_spacing": -0.2
+                              "letter_spacing": 0
                             }
                           }
                         ],
@@ -20508,7 +20508,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -20522,7 +20522,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -20893,7 +20893,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -20910,7 +20910,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -20924,7 +20924,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -20938,7 +20938,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -21144,7 +21144,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -21159,7 +21159,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -21516,7 +21516,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -21531,7 +21531,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -22097,7 +22097,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.1,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -22112,7 +22112,7 @@
                     "color": "#000000",
                     "bold": true,
                     "line_height": 1.1,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -22542,7 +22542,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.05,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -22556,7 +22556,7 @@
                     "family": "Anton",
                     "color": "#000000",
                     "line_height": 1.05,
-                    "letter_spacing": -0.55
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -22754,7 +22754,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 1.09,
-                "letter_spacing": -1.1
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -22771,7 +22771,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -1.1,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -23217,7 +23217,7 @@
                 "family": "Anton",
                 "color": "#000000",
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -23234,7 +23234,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 },
@@ -23248,7 +23248,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }
@@ -23814,7 +23814,7 @@
                 "color": "#000000",
                 "bold": true,
                 "line_height": 1.09,
-                "letter_spacing": -0.55
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -23831,7 +23831,7 @@
                     "italic": false,
                     "underline": false,
                     "line_height": 1.09,
-                    "letter_spacing": -0.55,
+                    "letter_spacing": 0,
                     "opacity": 1
                   }
                 }

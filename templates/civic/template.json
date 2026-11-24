@@ -1198,7 +1198,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.93,
-                    "letter_spacing": -3.39
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1213,7 +1213,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.93,
-                        "letter_spacing": -3.39
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1297,7 +1297,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1312,7 +1312,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1429,7 +1429,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1444,7 +1444,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1495,7 +1495,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1510,7 +1510,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1594,7 +1594,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1609,7 +1609,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1693,7 +1693,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1708,7 +1708,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1792,7 +1792,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -1807,7 +1807,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1891,7 +1891,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1906,7 +1906,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1991,7 +1991,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -2006,7 +2006,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2092,7 +2092,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -2107,7 +2107,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2191,7 +2191,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -2206,7 +2206,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2290,7 +2290,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -2305,7 +2305,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -5658,7 +5658,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5673,7 +5673,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5709,7 +5709,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "right",
@@ -5724,7 +5724,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5760,7 +5760,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -5775,7 +5775,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5811,7 +5811,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5826,7 +5826,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5862,7 +5862,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5877,7 +5877,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5913,7 +5913,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5928,7 +5928,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -5964,7 +5964,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5979,7 +5979,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6015,7 +6015,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6030,7 +6030,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6066,7 +6066,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6081,7 +6081,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6117,7 +6117,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6132,7 +6132,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6168,7 +6168,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6183,7 +6183,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6219,7 +6219,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -6234,7 +6234,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -20531,7 +20531,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -20546,7 +20546,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -20632,7 +20632,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -20647,7 +20647,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -20777,7 +20777,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "center",
@@ -20792,7 +20792,7 @@
                             "color": "#000000",
                             "bold": false,
                             "line_height": 0.97,
-                            "letter_spacing": -1.78
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -20937,7 +20937,7 @@
                         "color": "#FFFFFF",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "left",
@@ -20952,7 +20952,7 @@
                             "color": "#FFFFFF",
                             "bold": false,
                             "line_height": 0.97,
-                            "letter_spacing": -1.78
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -24684,7 +24684,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.93,
-                    "letter_spacing": -6.77
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -24699,7 +24699,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.93,
-                        "letter_spacing": -6.77
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -24846,7 +24846,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.93,
-                    "letter_spacing": -3.39
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -24861,7 +24861,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.93,
-                        "letter_spacing": -3.39
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -25571,7 +25571,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -25586,7 +25586,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -25870,7 +25870,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "right",
@@ -25885,7 +25885,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -26059,7 +26059,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -26074,7 +26074,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -27911,7 +27911,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -27926,7 +27926,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -28705,7 +28705,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -28720,7 +28720,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -29767,7 +29767,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -29782,7 +29782,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -30826,7 +30826,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -30841,7 +30841,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -30971,7 +30971,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -30986,7 +30986,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -31323,7 +31323,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -31338,7 +31338,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -31523,7 +31523,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -31538,7 +31538,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -32809,7 +32809,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -32824,7 +32824,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -33488,7 +33488,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -33503,7 +33503,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -34184,7 +34184,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -34199,7 +34199,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -34354,7 +34354,7 @@
                         "color": "#FFFFFF",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       },
                       "alignment": {
                         "horizontal": "left",
@@ -34369,7 +34369,7 @@
                             "color": "#FFFFFF",
                             "bold": false,
                             "line_height": 0.97,
-                            "letter_spacing": -1.78
+                            "letter_spacing": 0
                           }
                         }
                       ],
@@ -36112,7 +36112,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -36127,7 +36127,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.97,
-                        "letter_spacing": -1.78
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -37564,7 +37564,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -37579,7 +37579,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -38115,7 +38115,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -38130,7 +38130,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -39013,7 +39013,7 @@
                 "color": "#000000",
                 "bold": false,
                 "line_height": 0.97,
-                "letter_spacing": -1.78
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -39028,7 +39028,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.97,
-                    "letter_spacing": -1.78
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -39156,7 +39156,7 @@
                     "color": "#000000",
                     "bold": false,
                     "line_height": 0.93,
-                    "letter_spacing": -6.77
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -39171,7 +39171,7 @@
                         "color": "#000000",
                         "bold": false,
                         "line_height": 0.93,
-                        "letter_spacing": -6.77
+                        "letter_spacing": 0
                       }
                     }
                   ],

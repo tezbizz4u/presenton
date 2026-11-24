@@ -577,7 +577,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -7.2
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -591,7 +591,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -7.2
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -674,7 +674,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -688,7 +688,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -774,7 +774,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -789,7 +789,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -875,7 +875,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -890,7 +890,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -974,7 +974,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -989,7 +989,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1073,7 +1073,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1088,7 +1088,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1172,7 +1172,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1187,7 +1187,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1270,7 +1270,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -1284,7 +1284,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1295,7 +1295,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1378,7 +1378,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1392,7 +1392,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1403,7 +1403,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1486,7 +1486,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1500,7 +1500,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1511,7 +1511,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1594,7 +1594,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1608,7 +1608,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1619,7 +1619,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1702,7 +1702,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -1716,7 +1716,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1727,7 +1727,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -1800,7 +1800,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -1814,7 +1814,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -1896,7 +1896,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -1910,7 +1910,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -1921,7 +1921,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2004,7 +2004,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -2018,7 +2018,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -2029,7 +2029,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2112,7 +2112,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "center",
@@ -2126,7 +2126,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -2210,7 +2210,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -6.39
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -2224,7 +2224,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -6.39
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -2235,7 +2235,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -6.39
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -5974,7 +5974,7 @@
                 "color": "#321A00",
                 "underline": false,
                 "line_height": 0.95,
-                "letter_spacing": -7.2
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -5989,7 +5989,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -7.2
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6025,7 +6025,7 @@
                 "color": "#321A00",
                 "underline": false,
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "right",
@@ -6040,7 +6040,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6075,7 +6075,7 @@
                 "family": "Archivo Black",
                 "color": "#FFFFFF",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6089,7 +6089,7 @@
                     "family": "Archivo Black",
                     "color": "#FFFFFF",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -6100,7 +6100,7 @@
                     "color": "#FFFFFF",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6135,7 +6135,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6149,7 +6149,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -6160,7 +6160,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6196,7 +6196,7 @@
                 "color": "#321A00",
                 "underline": false,
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6211,7 +6211,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6246,7 +6246,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6260,7 +6260,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6295,7 +6295,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6309,7 +6309,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6344,7 +6344,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6358,7 +6358,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6393,7 +6393,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6407,7 +6407,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6442,7 +6442,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -6456,7 +6456,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -6491,7 +6491,7 @@
                 "family": "Archivo Black",
                 "color": "#FFFFFF",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -6505,7 +6505,7 @@
                     "family": "Archivo Black",
                     "color": "#FFFFFF",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -6516,7 +6516,7 @@
                     "color": "#FFFFFF",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -12015,7 +12015,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -12030,7 +12030,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -17721,7 +17721,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -17736,7 +17736,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -17803,7 +17803,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -17818,7 +17818,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -17894,7 +17894,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -17909,7 +17909,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -18318,7 +18318,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -1.07
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "right",
@@ -18333,7 +18333,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -1.07
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -18345,7 +18345,7 @@
                     "bold": false,
                     "underline": false,
                     "line_height": 1.06,
-                    "letter_spacing": -1.07
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -18371,7 +18371,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -18386,7 +18386,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -25835,7 +25835,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -7.2
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -25849,7 +25849,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -7.2
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -26853,7 +26853,7 @@
                 "color": "#321A00",
                 "underline": false,
                 "line_height": 0.95,
-                "letter_spacing": -7.2
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -26868,7 +26868,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -7.2
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -27040,7 +27040,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -27054,7 +27054,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -27610,7 +27610,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -27625,7 +27625,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -28873,7 +28873,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -28888,7 +28888,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -29652,7 +29652,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -29667,7 +29667,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -29960,7 +29960,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -29975,7 +29975,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -30390,7 +30390,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "left",
@@ -30405,7 +30405,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -5.19
+                        "letter_spacing": 0
                       }
                     }
                   ],
@@ -31290,7 +31290,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -31304,7 +31304,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -31315,7 +31315,7 @@
                     "color": "#321A00",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -31439,7 +31439,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -31453,7 +31453,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -31639,7 +31639,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -31654,7 +31654,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -31721,7 +31721,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -31736,7 +31736,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -31812,7 +31812,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -31827,7 +31827,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -32034,7 +32034,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -1.07
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "right",
@@ -32049,7 +32049,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -1.07
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -32061,7 +32061,7 @@
                     "bold": false,
                     "underline": false,
                     "line_height": 1.06,
-                    "letter_spacing": -1.07
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -32087,7 +32087,7 @@
                 "color": "#FFFFFF",
                 "bold": false,
                 "line_height": 1.06,
-                "letter_spacing": -2.86
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "center",
@@ -32102,7 +32102,7 @@
                     "color": "#FFFFFF",
                     "bold": false,
                     "line_height": 1.06,
-                    "letter_spacing": -2.86
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -32478,7 +32478,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -32492,7 +32492,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -33509,7 +33509,7 @@
                 "family": "Archivo Black",
                 "color": "#321A00",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -33523,7 +33523,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -34670,7 +34670,7 @@
                 "family": "Archivo Black",
                 "color": "#FFFFFF",
                 "line_height": 0.95,
-                "letter_spacing": -5.19
+                "letter_spacing": 0
               },
               "alignment": {
                 "horizontal": "left",
@@ -34684,7 +34684,7 @@
                     "family": "Archivo Black",
                     "color": "#FFFFFF",
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 },
                 {
@@ -34695,7 +34695,7 @@
                     "color": "#FFFFFF",
                     "underline": false,
                     "line_height": 0.95,
-                    "letter_spacing": -5.19
+                    "letter_spacing": 0
                   }
                 }
               ],
@@ -34741,7 +34741,7 @@
                     "family": "Archivo Black",
                     "color": "#321A00",
                     "line_height": 0.95,
-                    "letter_spacing": -6.39
+                    "letter_spacing": 0
                   },
                   "alignment": {
                     "horizontal": "right",
@@ -34755,7 +34755,7 @@
                         "family": "Archivo Black",
                         "color": "#321A00",
                         "line_height": 0.95,
-                        "letter_spacing": -6.39
+                        "letter_spacing": 0
                       }
                     },
                     {
@@ -34766,7 +34766,7 @@
                         "color": "#321A00",
                         "underline": false,
                         "line_height": 0.95,
-                        "letter_spacing": -6.39
+                        "letter_spacing": 0
                       }
                     }
                   ],
