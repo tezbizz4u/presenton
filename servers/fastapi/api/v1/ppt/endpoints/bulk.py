@@ -63,7 +63,8 @@ NOTES_MIN_CHARS = 300
 PILOT_FROM_DECKS = 12
 MAX_DECK_RETRIES = 2
 REPAIR_MODEL = os.getenv("ASF_REPAIR_MODEL", "gemini-3.8-pro")  # stronger model for the repair stage
-REPAIR_TIME_CAP = int(os.getenv("ASF_REPAIR_TIME_CAP", "150"))  # seconds per deck, then it is finalised as is
+REPAIR_SECONDS_PER_SLIDE = int(os.getenv("ASF_REPAIR_SECONDS_PER_SLIDE", "30"))  # time allowance per failing slide
+REPAIR_MIN_SECONDS = 45
 _FIX_SEM = asyncio.Semaphore(8)  # global cap on concurrent slide repairs (LLM rate limits)
 
 # batch_id -> batch dict (also mirrored to disk so a finished batch can be re-opened)
@@ -466,9 +467,12 @@ async def _repair_deck(batch: Dict[str, Any], job: Dict[str, Any]) -> None:
     presentation_id = uuid.UUID(job["presentation_id"])
     t0 = time.time()
     changed = True
+    failing = len(gate.check_slides(_slide_records(await _load_slides(presentation_id))))
+    budget = max(REPAIR_MIN_SECONDS, failing * REPAIR_SECONDS_PER_SLIDE)  # time follows the number of bad slides
+    job["repair_budget_seconds"] = budget
     token = set_model_override(REPAIR_MODEL)
     try:
-        changed = await asyncio.wait_for(_run_gate(batch, job, presentation_id), REPAIR_TIME_CAP)
+        changed = await asyncio.wait_for(_run_gate(batch, job, presentation_id), budget)
     except Exception:  # noqa: BLE001 - time cap or error: finish with what the deck has now
         LOGGER.exception("bulk: repair stage ended early for %s", job["name"])
     finally:
