@@ -68,8 +68,22 @@ ILLUS_RE = re.compile(
     r"model of|process|timeline|metaphor|abstract)\b",
     re.I,
 )
-CLINIC_QUERY = "doctor patient consultation clinic"
-AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "6"))
+INDIAN_SCENE_RE = re.compile(
+    r"\b(patient|patients|woman|women|female|girl|girls|mother|mothers|family|families|"
+    r"people|person|persons|community|village\w*|health ?workers?|asha|anm|anganwadi|"
+    r"doctor|doctors|nurse|nurses|counsel\w*|consultation|clinic|teacher|student|students|"
+    r"couple|household|kitchen|meal|diet|food|thali|yoga|exercise|walking|classroom|"
+    r"training|workshop|camp|screening)\b",
+    re.I,
+)
+INDIAN_DIRECTION = (
+    " Set in India: the people are Indian (South Asian features, natural skin tones, "
+    "authentic everyday Indian clothing such as saree, salwar kameez or kurta for women), "
+    "in a realistic Indian setting (Indian home, community health centre, clinic or village). "
+    "Respectful, candid documentary look; no Western stock-photo look."
+)
+CLINIC_QUERY = "indian doctor patient consultation clinic"
+AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "10"))
 _AI_SEM = asyncio.Semaphore(int(os.getenv("ASF_AI_CONCURRENCY", "4")))
 AI_ENABLED = os.getenv("ASF_AI_IMAGES", "1") != "0"
 KEEP_ALWAYS = {"india", "indian", "ayush", "ayurveda", "yoga"}
@@ -150,6 +164,14 @@ class AsfImageResolver:
             ai = await self._ai_fallback(asf, prompt, orientation, kind="diagram")
             if ai is not None:
                 return ai
+        indian_scene = bool(INDIAN_SCENE_RE.search(prompt)) and not MEDICAL_IMAGING_RE.search(prompt)
+        if indian_scene and AI_ENABLED:
+            # Stock sites rarely have Indian subjects: draw the scene with Indian people.
+            ai = await self._ai_fallback(asf, prompt, orientation, kind="indian")
+            if ai is not None:
+                return ai
+        if indian_scene and "india" not in query.lower():
+            query = f"indian {query}"
         short = " ".join(query.split()[:3])
 
         candidate = None
@@ -269,6 +291,10 @@ class AsfImageResolver:
             style = asf.AI_STYLES["flat"][1]
             model = asf.AI_MODELS["fast"]
             extra = " Simple, clear teaching visual with no labels."
+        elif kind == "indian":
+            style = asf.AI_STYLES["photo"][1]
+            model = asf.AI_MODELS["fast"]
+            extra = INDIAN_DIRECTION
         else:
             style = asf.AI_STYLES["photo"][1]
             model = asf.AI_MODELS["fast"]
