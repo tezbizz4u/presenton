@@ -371,6 +371,7 @@ async def _run_one_attempt(batch: Dict[str, Any], job: Dict[str, Any], sem: asyn
                 await session.refresh(task)
                 task_id = task.id
             job["presentation_id"] = str(presentation_id)
+            job["task_id"] = str(task_id)
             await _run_generate_presentation_task(
                 gen, presentation_id, task_id, batch["_cookie"], batch["_owner_id"]
             )
@@ -470,6 +471,7 @@ async def _repair_deck(batch: Dict[str, Any], job: Dict[str, Any]) -> None:
     failing = len(gate.check_slides(_slide_records(await _load_slides(presentation_id))))
     budget = max(REPAIR_MIN_SECONDS, failing * REPAIR_SECONDS_PER_SLIDE)  # time follows the number of bad slides
     job["repair_budget_seconds"] = budget
+    job["repair_started_at"] = time.time()
     token = set_model_override(REPAIR_MODEL)
     try:
         changed = await asyncio.wait_for(_run_gate(batch, job, presentation_id), budget)
@@ -509,25 +511,67 @@ async def _run_batch(batch: Dict[str, Any], only_ids: Optional[List[int]] = None
     _persist(batch)
 
 
-DEFAULT_SECONDS_PER_SLIDE = 15.0  # used for the ETA until the first deck has finished
+DEFAULT_DECK_SECONDS = 240.0  # only used before any deck has finished or reported progress
+
+
+async def _refresh_progress(batch: Dict[str, Any]) -> None:
+    """Read how many slides each running deck has produced so far (drives the ETA)."""
+    for job in batch["jobs"]:
+        if job["status"] != "running" or not job.get("task_id"):
+            continue
+        try:
+            async with async_session_maker() as session:
+                task = await session.get(AsyncTaskModel, uuid.UUID(job["task_id"]))
+            data = (task.data or {}) if task else {}
+            job["slides_created"] = int(data.get("created_slides") or 0)
+        except Exception:  # noqa: BLE001 - progress is best effort
+            pass
 
 
 def _speed(batch: Dict[str, Any], jobs: List[Dict[str, Any]]) -> Dict[str, Any]:
-    done = [j for j in jobs if j["status"] == "done" and j.get("seconds")]
+    now = time.time()
+    done = [j for j in jobs if j["status"] in ("done", "repair") and j.get("seconds")]
     slides_done = sum(j["slides"] for j in done)
     starts = [j["started_at"] for j in jobs if j.get("started_at")]
-    end = batch.get("finished_at") or time.time()
+    end = batch.get("finished_at") or now
     elapsed = round(end - min(starts)) if starts else 0
     parallel = max(1, int(batch.get("parallel") or 1))
-    left = sum(j["slides"] for j in jobs if j["status"] in ("queued", "running"))
-    per_slide = (sum(j["seconds"] for j in done) / slides_done) if slides_done else DEFAULT_SECONDS_PER_SLIDE
-    # per-deck time already spent on running decks reduces what is left
-    spent = sum(max(0.0, time.time() - j["started_at"]) for j in jobs if j["status"] == "running" and j.get("started_at"))
-    eta = max(0.0, left * per_slide - spent) / min(parallel, max(1, sum(1 for j in jobs if j["status"] in ("queued", "running"))))
+    avg_deck = (sum(j["seconds"] for j in done) / len(done)) if done else None
+
+    remaining: List[float] = []  # seconds left for each unfinished deck, measured on real progress
+    exact = True
+    for j in jobs:
+        if j["status"] == "running" and j.get("started_at"):
+            spent = max(0.0, now - j["started_at"])
+            created = j.get("slides_created") or 0
+            if created > 0:
+                remaining.append(spent * (j["slides"] - created) / created)
+            elif avg_deck is not None:
+                remaining.append(max(0.0, avg_deck - spent))
+            else:
+                exact = False
+                remaining.append(max(0.0, DEFAULT_DECK_SECONDS - spent))
+        elif j["status"] == "repair":
+            started = j.get("repair_started_at")
+            budget = j.get("repair_budget_seconds") or REPAIR_MIN_SECONDS
+            remaining.append(max(0.0, budget - (now - started)) if started else float(budget))
+    queued = [j for j in jobs if j["status"] == "queued"]
+    per_deck = avg_deck if avg_deck is not None else DEFAULT_DECK_SECONDS
+    if queued:
+        exact = exact and avg_deck is not None
+        waves = -(-len(queued) // parallel)
+        base = min(remaining) if remaining else 0.0
+        remaining.append(base + waves * per_deck)
+    eta = max(remaining) if remaining else 0.0
+    if not any(j.get("_repair") or j["status"] == "repair" for j in jobs) and any(
+        j["status"] in ("running", "queued") for j in jobs
+    ):
+        eta += REPAIR_MIN_SECONDS  # decks that finish may still need a short repair
+    active = any(j["status"] in ("queued", "running", "repair") for j in jobs)
     return {
-        "seconds_per_slide": round(per_slide, 1) if slides_done else None,
-        "eta_seconds": None if batch.get("finished_at") or not left else round(eta),
-        "eta_is_estimate": not slides_done,
+        "seconds_per_slide": round(sum(j["seconds"] for j in done) / slides_done, 1) if slides_done else None,
+        "eta_seconds": round(max(eta, 10)) if active and not batch.get("finished_at") else None,
+        "eta_is_estimate": not exact,
         "elapsed_seconds": elapsed,
         "slides_total": sum(j["slides"] for j in jobs),
         "slides_finished": slides_done,
@@ -600,7 +644,9 @@ async def start_batch(request_http: Request, body: BulkStartRequest):
 
 @BULK_ROUTER.get("/{batch_id}")
 async def get_batch(batch_id: str):
-    return _public(_load_batch(batch_id))
+    batch = _load_batch(batch_id)
+    await _refresh_progress(batch)
+    return _public(batch)
 
 
 @BULK_ROUTER.post("/{batch_id}/retry")

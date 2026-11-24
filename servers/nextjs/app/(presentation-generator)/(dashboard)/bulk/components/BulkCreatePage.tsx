@@ -319,7 +319,7 @@ export default function BulkCreatePage() {
                 return (
                   <>
                     {` · elapsed ${fmt(elapsed)}`}
-                    {!batch.finished_at && left != null ? ` · ETA ${fmt(left)}${batch.eta_is_estimate ? " (estimate)" : ""}` : ""}
+                    {!batch.finished_at && left != null ? (left > 0 ? ` · ETA ${fmt(left)}${batch.eta_is_estimate ? " (rough)" : ""}` : " · finishing…") : ""}
                   </>
                 );
               })()}

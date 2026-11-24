@@ -18,6 +18,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import os
+import time
 import re
 import uuid
 from typing import Any, Optional
@@ -83,8 +84,11 @@ INDIAN_DIRECTION = (
     "Respectful, candid documentary look; no Western stock-photo look."
 )
 CLINIC_QUERY = "indian doctor patient consultation clinic"
-AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "10"))
-_AI_SEM = asyncio.Semaphore(int(os.getenv("ASF_AI_CONCURRENCY", "4")))
+AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "3"))
+_AI_SEM = asyncio.Semaphore(int(os.getenv("ASF_AI_CONCURRENCY", "2")))
+_AI_COOLDOWN_UNTIL = 0.0  # after a 429 every deck skips AI for a while instead of hammering the quota
+AI_COOLDOWN_SECONDS = 60
+QUOTA_HINTS = ("429", "too many requests", "resource_exhausted", "quota")
 AI_ENABLED = os.getenv("ASF_AI_IMAGES", "1") != "0"
 KEEP_ALWAYS = {"india", "indian", "ayush", "ayurveda", "yoga"}
 GENERIC_FOR_COMMONS = {"medical", "monitor", "screen", "machine", "device", "clinical"}
@@ -216,16 +220,32 @@ class AsfImageResolver:
                     await self._stock(asf, CLINIC_QUERY, orientation)
                 )
                 if candidate is None:
-                    return _transparent_asset(self.images_directory)
+                    return await self._stock_any(asf, query, orientation)
             if candidate is not None:
                 return await self._import(asf, candidate, prompt)
         except Exception as exc:  # noqa: BLE001 - never block slide generation
             LOGGER.warning("asf image resolver failed: %s", type(exc).__name__)
 
         # Stock found nothing usable: only now draw it (with Indian people when it is a people scene).
-        return await self._ai_fallback(
+        ai = await self._ai_fallback(
             asf, prompt, orientation, kind="indian" if indian_scene else "photo"
         )
+        if ai is not None:
+            return ai
+        return await self._stock_any(asf, query, orientation)
+
+    async def _stock_any(self, asf: Any, query: str, orientation: str) -> Optional[ImageAsset]:
+        """Last resort when AI is unavailable: a broader stock search, never a blank slot."""
+        words = query.split()
+        tries = [" ".join(words[:2]), "indian health", "indian community women", "india healthcare"]
+        for q in dict.fromkeys(t for t in tries if t):
+            results = await self._stock(asf, q, orientation)
+            item = await self._first_unused(results)
+            if item is None and results:  # everything fresh is used: reuse beats an empty slot
+                item = next((r for r in results if (r.get("width") or 1200) >= 800), None)
+            if item is not None:
+                return await self._import(asf, item, q)
+        return None
 
     async def _first_unused(self, results: list[dict]) -> Optional[dict]:
         for item in results:
@@ -275,7 +295,8 @@ class AsfImageResolver:
     async def _ai_fallback(
         self, asf: Any, prompt: str, orientation: str, kind: str = "photo"
     ) -> Optional[ImageAsset]:
-        if not AI_ENABLED or self.ai_count >= AI_MAX_PER_DECK:
+        global _AI_COOLDOWN_UNTIL
+        if not AI_ENABLED or self.ai_count >= AI_MAX_PER_DECK or time.time() < _AI_COOLDOWN_UNTIL:
             return None
         aspect = {"landscape": "16:9", "portrait": "3:4", "square": "1:1"}[orientation]
         if kind == "anatomy":
@@ -303,17 +324,19 @@ class AsfImageResolver:
         )
         self.ai_count += 1
         data = None
-        for attempt in range(3):  # 429 Too Many Requests: back off and retry
-            try:
-                async with _AI_SEM:
-                    data = await asyncio.wait_for(
-                        asyncio.to_thread(asf._generate_one_sync, full_prompt, model["id"], aspect),
-                        timeout=150,
-                    )
-                break
-            except Exception as exc:  # noqa: BLE001
-                LOGGER.warning("asf ai image failed (%s, try %s): %s", kind, attempt + 1, type(exc).__name__)
-                await asyncio.sleep(4 * (attempt + 1))
+        try:
+            async with _AI_SEM:
+                data = await asyncio.wait_for(
+                    asyncio.to_thread(asf._generate_one_sync, full_prompt, model["id"], aspect),
+                    timeout=150,
+                )
+        except Exception as exc:  # noqa: BLE001
+            text = f"{type(exc).__name__} {exc}".lower()
+            if any(h in text for h in QUOTA_HINTS):
+                # Quota hit: no waiting, no retry. Everyone uses stock images for a minute.
+                _AI_COOLDOWN_UNTIL = time.time() + AI_COOLDOWN_SECONDS
+            LOGGER.warning("asf ai image failed (%s): %s", kind, type(exc).__name__)
+            return None
         if data is None:
             return None
         try:
