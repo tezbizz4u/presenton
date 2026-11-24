@@ -9,7 +9,8 @@ decorative "badge icon" slots get filled with unrelated photos. This resolver:
 3. looks for clinical images on Wikimedia Commons first (licence-safe, real scans),
 4. then searches Unsplash, Pexels and Pixabay together,
 5. never uses the same picture twice in one presentation,
-6. only falls back to AI generation when no stock picture is found.
+6. draws concepts/diagrams/anatomy with AI (capped per deck) and falls back to AI when no
+   stock picture is found.
 """
 
 from __future__ import annotations
@@ -61,7 +62,15 @@ ANATOMY_RE = re.compile(
     re.I,
 )
 PEOPLE_RE = re.compile(r"\b(patient|patients|case|woman|women|female|portrait|person|people)\b", re.I)
+ILLUS_RE = re.compile(
+    r"\b(illustrations?|diagrams?|infographics?|flow ?charts?|pathways?|mechanisms?|"
+    r"cycles?|schematics?|conceptual|concepts?|cross-?sections?|anatomical|framework|"
+    r"model of|process|timeline|metaphor|abstract)\b",
+    re.I,
+)
 CLINIC_QUERY = "doctor patient consultation clinic"
+AI_MAX_PER_DECK = int(os.getenv("ASF_AI_MAX_PER_DECK", "6"))
+AI_ENABLED = os.getenv("ASF_AI_IMAGES", "1") != "0"
 KEEP_ALWAYS = {"india", "indian", "ayush", "ayurveda", "yoga"}
 GENERIC_FOR_COMMONS = {"medical", "monitor", "screen", "machine", "device", "clinical"}
 
@@ -115,6 +124,7 @@ class AsfImageResolver:
     def __init__(self, images_directory: str):
         self.images_directory = images_directory
         self.used: set[str] = set()
+        self.ai_count = 0
 
     async def resolve(
         self, prompt: str, target_size: tuple[float, float] | None
@@ -130,6 +140,15 @@ class AsfImageResolver:
         query = condense_query(prompt)
         if not query:
             return None
+        if (
+            AI_ENABLED
+            and ILLUS_RE.search(prompt)
+            and not MEDICAL_IMAGING_RE.search(prompt)
+        ):
+            # Concepts, diagrams and mechanisms have no honest stock photo: draw them.
+            ai = await self._ai_fallback(asf, prompt, orientation, kind="diagram")
+            if ai is not None:
+                return ai
         short = " ".join(query.split()[:3])
 
         candidate = None
@@ -169,8 +188,12 @@ class AsfImageResolver:
                     if candidate:
                         break
             if candidate is None and ANATOMY_RE.search(prompt):
-                # AI-drawn anatomy is often wrong (e.g. a kidney under a stethoscope for
-                # "PCOS phenotypes"). Use a neutral clinic photo, or no picture at all.
+                # AI-drawn anatomy as a photo is often wrong; draw a clean educational
+                # illustration with the quality model instead, then fall back to a neutral
+                # clinic photo, or no picture at all.
+                ai = await self._ai_fallback(asf, prompt, orientation, kind="anatomy")
+                if ai is not None:
+                    return ai
                 candidate = await self._first_unused(
                     await self._stock(asf, CLINIC_QUERY, orientation)
                 )
@@ -181,7 +204,7 @@ class AsfImageResolver:
         except Exception as exc:  # noqa: BLE001 - never block slide generation
             LOGGER.warning("asf image resolver failed: %s", type(exc).__name__)
 
-        return await self._ai_fallback(asf, prompt, orientation)
+        return await self._ai_fallback(asf, prompt, orientation, kind="photo")
 
     async def _first_unused(self, results: list[dict]) -> Optional[dict]:
         for item in results:
@@ -228,22 +251,40 @@ class AsfImageResolver:
             },
         )
 
-    async def _ai_fallback(self, asf: Any, prompt: str, orientation: str) -> Optional[ImageAsset]:
+    async def _ai_fallback(
+        self, asf: Any, prompt: str, orientation: str, kind: str = "photo"
+    ) -> Optional[ImageAsset]:
+        if not AI_ENABLED or self.ai_count >= AI_MAX_PER_DECK:
+            return None
         aspect = {"landscape": "16:9", "portrait": "3:4", "square": "1:1"}[orientation]
+        if kind == "anatomy":
+            style = asf.AI_STYLES["diagram"][1]
+            model = asf.AI_MODELS["quality"]
+            extra = (
+                " Anatomically accurate educational medical illustration of exactly the organ "
+                "or structure described, centred, on a clean light background."
+            )
+        elif kind == "diagram":
+            style = asf.AI_STYLES["flat"][1]
+            model = asf.AI_MODELS["fast"]
+            extra = " Simple, clear teaching visual with no labels."
+        else:
+            style = asf.AI_STYLES["photo"][1]
+            model = asf.AI_MODELS["fast"]
+            extra = ""
         full_prompt = (
-            f"{prompt}. Style: {asf.AI_STYLES['photo'][1]}. "
-            "No text, captions, logos or watermarks in the image."
+            f"{prompt}.{extra} Style: {style}. "
+            "No text, letters, numbers, captions, logos or watermarks in the image."
         )
+        self.ai_count += 1
         try:
             data = await asyncio.wait_for(
-                asyncio.to_thread(
-                    asf._generate_one_sync, full_prompt, asf.AI_MODELS["fast"]["id"], aspect
-                ),
-                timeout=120,
+                asyncio.to_thread(asf._generate_one_sync, full_prompt, model["id"], aspect),
+                timeout=150,
             )
             path = asf._store_image_bytes(data)
         except Exception as exc:  # noqa: BLE001
-            LOGGER.warning("asf ai fallback failed: %s", type(exc).__name__)
+            LOGGER.warning("asf ai image failed (%s): %s", kind, type(exc).__name__)
             return None
         return ImageAsset(
             path=path,
@@ -253,7 +294,7 @@ class AsfImageResolver:
                 "source": "ai",
                 "credit": {
                     "source": "ai",
-                    "author": "Gemini Flash Image",
+                    "author": "Gemini image (Vertex AI)",
                     "license": "AI-generated image",
                 },
             },
