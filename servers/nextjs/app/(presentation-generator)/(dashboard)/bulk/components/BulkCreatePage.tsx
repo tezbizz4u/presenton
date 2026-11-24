@@ -82,6 +82,20 @@ export default function BulkCreatePage() {
 
   useEffect(() => stopPolling, []);
 
+  // Resume the last batch after a reload: jobs run on the server, the page only watches them.
+  useEffect(() => {
+    let id = "";
+    try { id = localStorage.getItem("asf_bulk_batch") || ""; } catch { /* ignore */ }
+    if (!id) return;
+    (async () => {
+      try {
+        const b = await call<Batch>(`/${id}`);
+        setBatch(b);
+        if (!b.finished_at) timer.current = setInterval(() => poll(id), 5000);
+      } catch { /* batch gone: show the empty form */ }
+    })();
+  }, [poll]);
+
   const onFile = async (file: File | undefined) => {
     if (!file) return;
     setText(await file.text());
@@ -117,6 +131,7 @@ export default function BulkCreatePage() {
         }),
       });
       setBatch(b);
+      try { localStorage.setItem("asf_bulk_batch", b.id); } catch { /* ignore */ }
       stopPolling();
       timer.current = setInterval(() => poll(b.id), 5000);
     } catch (e) {
@@ -286,7 +301,7 @@ export default function BulkCreatePage() {
               {batch.failed && !running ? <button className="rounded-md border px-3 py-1" onClick={retry}>Retry failed</button> : null}
               <a className="rounded-md border px-3 py-1" href={`${API}/${batch.id}/report.csv`}>Quality report (CSV)</a>
               <a className="rounded-md bg-[#5146E5] px-3 py-1 text-white" href={`${API}/${batch.id}/zip`}>Download ZIP</a>
-              <button className="rounded-md border px-3 py-1" onClick={() => { stopPolling(); setBatch(null); }}>New batch</button>
+              <button className="rounded-md border px-3 py-1" onClick={() => { stopPolling(); setBatch(null); try { localStorage.removeItem("asf_bulk_batch"); } catch { /* ignore */ } }}>New batch</button>
             </div>
           </div>
           {batch.clinical_review ? (
