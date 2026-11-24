@@ -38,7 +38,7 @@ say "Saved current image as presenton-rollback:previous"
 # 1b) Free disk before building: keep only the newest stopped rollback container, drop dangling images and build cache.
 say "Disk before cleanup: $(df -h / | awk 'NR==2{print $4" free"}')"
 for c in $(docker ps -a --format '{{.Names}}' | grep '^presenton-old-' | sort | head -n -1); do docker rm -f "$c" >/dev/null 2>&1 && say "Removed old rollback container $c"; done
-docker image prune -af --filter "until=24h" >/dev/null 2>&1 || true
+docker image prune -af >/dev/null 2>&1 || true
 docker builder prune -af >/dev/null 2>&1 || true
 say "Disk after cleanup: $(df -h / | awk 'NR==2{print $4" free"}')"
 

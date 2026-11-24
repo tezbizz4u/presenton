@@ -34,11 +34,20 @@ from api.v1.ppt.endpoints.presentation import (
     check_if_api_request_is_valid,
     presentation_task_progress_data,
 )
-from api.v1.auth.context import get_current_owner_id
+from api.v1.auth.context import (
+    get_current_owner_id,
+    reset_current_owner_id,
+    set_current_owner_id,
+)
+from api.v1.ppt.endpoints.slide import edit_slide
 from enums.async_task_status import AsyncTaskStatus
 from models.generate_presentation_request import GeneratePresentationRequest
 from models.sql.async_task import AsyncTaskModel
+from models.sql.folder import FolderModel
+from models.sql.presentation import PresentationModel
 from models.sql.slide import SlideModel
+from services import bulk_quality_gate as gate
+from utils.export_utils import export_presentation
 from services.bulk_blueprint import parse_blueprint
 from services.database import async_session_maker
 
@@ -50,6 +59,7 @@ MAX_JOBS_PER_BATCH = 60
 MAX_PARALLEL = 4
 MAX_BRIEF_CHARS = 8000
 NOTES_MIN_CHARS = 300
+PILOT_FROM_DECKS = 10
 
 # batch_id -> batch dict (also mirrored to disk so a finished batch can be re-opened)
 _BATCHES: Dict[str, Dict[str, Any]] = {}
@@ -102,6 +112,7 @@ class BulkJob(BaseModel):
     name: str = Field(..., min_length=1, max_length=160)
     brief: str = Field(..., min_length=1, max_length=MAX_BRIEF_CHARS)
     slides: int = Field(default=25, ge=1, le=200)
+    template: Optional[str] = Field(default=None, max_length=80)
 
 
 @BULK_ROUTER.post("/parse")
@@ -207,6 +218,94 @@ async def _quality(presentation_id: uuid.UUID) -> Dict[str, Any]:
     }
 
 
+def _walk_strings(obj: Any, out: List[str]) -> None:
+    if isinstance(obj, dict):
+        for key, val in obj.items():
+            if str(key).startswith("__") or key in ("url", "image_url"):
+                continue
+            _walk_strings(val, out)
+    elif isinstance(obj, list):
+        for val in obj:
+            _walk_strings(val, out)
+    elif isinstance(obj, str):
+        out.append(obj)
+
+
+async def _load_slides(presentation_id: uuid.UUID) -> List[SlideModel]:
+    async with async_session_maker() as session:
+        result = await session.scalars(
+            select(SlideModel)
+            .where(SlideModel.presentation == presentation_id)
+            .order_by(SlideModel.index)
+        )
+        return list(result)
+
+
+def _slide_records(slides: List[SlideModel]) -> List[Dict[str, Any]]:
+    records = []
+    for s in slides:
+        urls: List[str] = []
+        _walk_urls(s.content, urls)
+        strings: List[str] = []
+        _walk_strings(s.content, strings)
+        records.append(
+            {
+                "index": s.index,
+                "layout": s.layout,
+                "notes": s.speaker_note or "",
+                "urls": [u for u in urls if "transparent" not in u and "/static/" not in u],
+                "text": " ".join(strings),
+                "title": _slide_title(s.content),
+            }
+        )
+    return records
+
+
+async def _run_gate(batch: Dict[str, Any], job: Dict[str, Any], presentation_id: uuid.UUID) -> bool:
+    """Check every slide; repair ONLY failing slides (max 2 rounds). Returns True if anything changed."""
+    fixed = 0
+    rounds = 0
+    slides = await _load_slides(presentation_id)
+    issues = gate.check_slides(_slide_records(slides))
+    token = set_current_owner_id(batch["_owner_id"])
+    try:
+        while issues and rounds < gate.MAX_FIX_ROUNDS:
+            rounds += 1
+            by_index = {s.index: s for s in slides}
+
+            async def _fix(idx: int, codes: List[str]) -> int:
+                target = by_index.get(idx)
+                if target is None:
+                    return 0
+                try:
+                    async with async_session_maker() as session:
+                        await edit_slide(
+                            id=target.id,
+                            prompt=gate.fix_prompt(codes),
+                            sql_session=session,
+                        )
+                    return 1
+                except Exception:  # noqa: BLE001 - a failed repair leaves the slide flagged
+                    LOGGER.exception("bulk gate: repair failed slide %s of %s", idx + 1, job["name"])
+                    return 0
+
+            results = await asyncio.gather(*[_fix(i, c) for i, c in sorted(issues.items())])
+            fixed += sum(results)
+            slides = await _load_slides(presentation_id)
+            issues = gate.check_slides(_slide_records(slides))
+    finally:
+        reset_current_owner_id(token)
+    sc = gate.score(len(slides), issues)
+    job["gate"] = {
+        "score": sc,
+        "status": "PASS" if (not issues and sc >= gate.SCORE_PASS) else "NEEDS FIX",
+        "fix_rounds": rounds,
+        "slides_fixed": fixed,
+        "remaining": gate.describe(issues),
+    }
+    return fixed > 0
+
+
 async def _run_one(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Semaphore) -> None:
     async with sem:
         if batch.get("cancelled"):
@@ -224,7 +323,7 @@ async def _run_one(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Sema
                 web_search=False,
                 n_slides=job["slides"],
                 language=req.language,
-                template=req.template,
+                template=job.get("template") or req.template,
                 include_title_slide=req.include_title_slide,
                 export_as=req.export_as,
                 folder_id=req.folder_id,
@@ -258,6 +357,19 @@ async def _run_one(batch: Dict[str, Any], job: Dict[str, Any], sem: asyncio.Sema
             data = final.data or {}
             job["export_path"] = data.get("path")
             job["edit_path"] = data.get("edit_path")
+            changed = await _run_gate(batch, job, presentation_id)
+            async with async_session_maker() as session:
+                pres = await session.get(PresentationModel, presentation_id)
+                if pres is not None and pres.title != job["name"]:
+                    pres.title = job["name"][:200]
+                    session.add(pres)
+                    await session.commit()
+                    changed = True
+            if changed:
+                exported = await export_presentation(
+                    presentation_id, job["name"], req.export_as, cookie_header=batch["_cookie"]
+                )
+                job["export_path"] = exported.path
             q = await _quality(presentation_id)
             images = q.pop("_image_urls")
             titles = q.pop("_titles")
@@ -298,9 +410,32 @@ def _recompute_cross_deck(batch: Dict[str, Any]) -> None:
 async def _run_batch(batch: Dict[str, Any], only_ids: Optional[List[int]] = None) -> None:
     sem = asyncio.Semaphore(batch["_request"].parallel)
     jobs = [j for j in batch["jobs"] if only_ids is None or j["idx"] in only_ids]
+    if only_ids is None and len(jobs) > PILOT_FROM_DECKS:
+        # Pilot deck first: the rest only starts if it passes the quality gate.
+        pilot, jobs = jobs[0], jobs[1:]
+        await _run_one(batch, pilot, asyncio.Semaphore(1))
+        if pilot["status"] != "done" or pilot.get("gate", {}).get("status") != "PASS":
+            for j in jobs:
+                j["status"] = "cancelled"
+                j["error"] = "Stopped: the pilot deck did not pass the quality gate. Check it, then Retry."
+            jobs = []
     await asyncio.gather(*[_run_one(batch, j, sem) for j in jobs])
     batch["finished_at"] = time.time()
     _persist(batch)
+
+
+def _speed(batch: Dict[str, Any], jobs: List[Dict[str, Any]]) -> Dict[str, Any]:
+    done = [j for j in jobs if j["status"] == "done" and j.get("seconds")]
+    slides_done = sum(j["slides"] for j in done)
+    if not done or not slides_done:
+        return {"seconds_per_slide": None, "eta_seconds": None}
+    per_slide = sum(j["seconds"] for j in done) / slides_done
+    parallel = max(1, int(batch.get("parallel") or 1))
+    left = sum(j["slides"] for j in jobs if j["status"] in ("queued", "running"))
+    return {
+        "seconds_per_slide": round(per_slide, 1),
+        "eta_seconds": round(left * per_slide / parallel),
+    }
 
 
 def _public(batch: Dict[str, Any]) -> Dict[str, Any]:
@@ -322,12 +457,22 @@ def _public(batch: Dict[str, Any]) -> Dict[str, Any]:
         "running": sum(1 for j in jobs if j["status"] == "running"),
         "clinical_review": batch.get("clinical_review", True),
         "jobs": jobs,
+        **_speed(batch, jobs),
     }
 
 
 @BULK_ROUTER.post("/start")
 async def start_batch(request_http: Request, body: BulkStartRequest):
     batch_id = uuid.uuid4().hex[:12]
+    if body.folder_id is None:
+        async with async_session_maker() as session:
+            folder = FolderModel(
+                name=f"{body.course_name or 'Bulk'} {datetime.now().strftime('%Y-%m-%d %H:%M')}"[:120]
+            )
+            session.add(folder)
+            await session.commit()
+            await session.refresh(folder)
+            body.folder_id = folder.id
     batch: Dict[str, Any] = {
         "id": batch_id,
         "course_name": body.course_name,
@@ -341,6 +486,7 @@ async def start_batch(request_http: Request, body: BulkStartRequest):
                 "name": j.name,
                 "brief": j.brief,
                 "slides": j.slides,
+                "template": j.template,
                 "status": "queued",
             }
             for i, j in enumerate(body.jobs)
@@ -397,7 +543,8 @@ async def batch_report(batch_id: str):
         "deck", "status", "slides_requested", "slides", "seconds", "notes_min_chars",
         "notes_under_300", "images", "duplicate_images", "layout_repeat_max",
         "distinct_layouts", "cross_deck_duplicate_images", "cross_deck_duplicate_titles",
-        "clinical_review", "error",
+        "clinical_review", "error", "seconds_per_slide", "gate_score", "gate_status",
+        "slides_fixed", "fix_rounds", "remaining_issues",
     ]
     writer = csv.writer(out)
     writer.writerow(cols)
@@ -411,6 +558,10 @@ async def batch_report(batch_id: str):
             j.get("cross_deck_duplicate_titles", ""),
             "NEEDS ASF CLINICAL REVIEW" if batch.get("clinical_review", True) else "",
             j.get("error", ""),
+            round(j["seconds"] / max(1, j["slides"]), 1) if j.get("seconds") else "",
+            j.get("gate", {}).get("score", ""), j.get("gate", {}).get("status", ""),
+            j.get("gate", {}).get("slides_fixed", ""), j.get("gate", {}).get("fix_rounds", ""),
+            "; ".join(j.get("gate", {}).get("remaining", [])),
         ])
     return Response(
         out.getvalue(),

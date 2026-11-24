@@ -8,7 +8,8 @@ const TEMPLATES = [
   "modern", "mosaic", "nova", "pulse", "signal", "standard", "swift", "verdant",
 ];
 
-type Row = { name: string; brief: string; slides: number };
+type Row = { name: string; brief: string; slides: number; template?: string | null };
+type Gate = { score: number; status: string; fix_rounds: number; slides_fixed: number; remaining: string[] };
 type Quality = {
   slides?: number; notes_min?: number; notes_short?: number; images?: number;
   duplicate_images?: number; layout_repeat_max?: number; distinct_layouts?: number;
@@ -16,11 +17,12 @@ type Quality = {
 type Job = {
   idx: number; name: string; slides: number; status: string; seconds?: number; error?: string;
   edit_path?: string; quality?: Quality; cross_deck_duplicate_images?: number;
-  cross_deck_duplicate_titles?: number;
+  cross_deck_duplicate_titles?: number; gate?: Gate; template?: string | null;
 };
 type Batch = {
   id: string; total: number; done: number; failed: number; running: number;
   finished_at?: number | null; clinical_review: boolean; jobs: Job[];
+  seconds_per_slide?: number | null; eta_seconds?: number | null;
 };
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
@@ -258,7 +260,7 @@ export default function BulkCreatePage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs text-slate-600">
-                    <th className="p-1">Deck</th><th className="w-24 p-1">Slides</th><th className="w-16 p-1" />
+                    <th className="p-1">Deck</th><th className="w-24 p-1">Slides</th><th className="w-36 p-1">Template</th><th className="w-16 p-1" />
                   </tr>
                 </thead>
                 <tbody>
@@ -271,6 +273,13 @@ export default function BulkCreatePage() {
                       <td className="p-1">
                         <input type="number" min={1} max={200} className={field} value={r.slides}
                           onChange={(e) => setRows(rows.map((x, j) => (j === i ? { ...x, slides: Number(e.target.value) || 1 } : x)))} />
+                      </td>
+                      <td className="p-1">
+                        <select className="w-full rounded border px-1 py-1 text-sm" value={r.template || ""}
+                          onChange={(e) => setRows(rows.map((x, j) => (j === i ? { ...x, template: e.target.value || null } : x)))}>
+                          <option value="">Batch default</option>
+                          {TEMPLATES.map((t) => <option key={t} value={t}>{t}</option>)}
+                        </select>
                       </td>
                       <td className="p-1">
                         <button className="text-xs text-red-700" onClick={() => setRows(rows.filter((_, j) => j !== i))}>Remove</button>
@@ -295,6 +304,8 @@ export default function BulkCreatePage() {
             <div className="text-sm">
               <b>{batch.done}</b> of {batch.total} done · {batch.running} running · {batch.failed} failed
               {batch.finished_at ? " · finished" : ""}
+              {batch.seconds_per_slide ? ` · ${batch.seconds_per_slide} s/slide` : ""}
+              {!batch.finished_at && batch.eta_seconds ? ` · ETA ~${Math.ceil(batch.eta_seconds / 60)} min` : ""}
             </div>
             <div className="flex flex-wrap gap-2 text-sm">
               {running ? <button className="rounded-md border px-3 py-1" onClick={cancel}>Stop queued decks</button> : null}
@@ -314,7 +325,7 @@ export default function BulkCreatePage() {
               <tr className="text-left text-xs text-slate-600">
                 <th className="p-1">Deck</th><th className="p-1">Status</th><th className="p-1">Time</th>
                 <th className="p-1">Slides</th><th className="p-1">Notes min</th><th className="p-1">Images</th>
-                <th className="p-1">Dup. images</th><th className="p-1">Layouts</th><th className="p-1" />
+                <th className="p-1">Dup. images</th><th className="p-1">Layouts</th><th className="p-1">Quality gate</th><th className="p-1" />
               </tr>
             </thead>
             <tbody>
@@ -330,6 +341,17 @@ export default function BulkCreatePage() {
                     {j.quality ? (j.quality.duplicate_images ?? 0) + (j.cross_deck_duplicate_images ?? 0) : ""}
                   </td>
                   <td className="p-1">{j.quality?.distinct_layouts ?? ""}</td>
+                  <td className="p-1">
+                    {j.gate ? (
+                      <div title={j.gate.remaining.join("\n")}>
+                        <span className={`rounded px-2 py-0.5 text-xs ${j.gate.status === "PASS" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+                          {j.gate.status} {j.gate.score}
+                        </span>
+                        {j.gate.slides_fixed ? <div className="text-xs text-slate-600">{j.gate.slides_fixed} slide fix(es)</div> : null}
+                        {j.gate.remaining.map((m) => <div key={m} className="text-xs text-red-700">{m}</div>)}
+                      </div>
+                    ) : null}
+                  </td>
                   <td className="p-1">{j.edit_path ? <a className="text-[#5146E5]" href={j.edit_path} target="_blank">Open</a> : null}</td>
                 </tr>
               ))}
