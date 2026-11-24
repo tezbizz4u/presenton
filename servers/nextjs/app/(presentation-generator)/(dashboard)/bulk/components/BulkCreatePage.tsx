@@ -22,7 +22,8 @@ type Job = {
 type Batch = {
   id: string; total: number; done: number; failed: number; running: number;
   finished_at?: number | null; clinical_review: boolean; jobs: Job[];
-  seconds_per_slide?: number | null; eta_seconds?: number | null;
+  seconds_per_slide?: number | null; eta_seconds?: number | null; eta_is_estimate?: boolean;
+  elapsed_seconds?: number; slides_total?: number; slides_finished?: number;
 };
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
@@ -61,7 +62,11 @@ export default function BulkCreatePage() {
   const [exportAs, setExportAs] = useState("pptx");
   const [clinical, setClinical] = useState(true);
   const [rows, setRows] = useState<Row[]>([]);
-  const [batch, setBatch] = useState<Batch | null>(null);
+  const [batch, setBatchRaw] = useState<Batch | null>(null);
+  const [fetchedAt, setFetchedAt] = useState(Date.now());
+  const [now, setNow] = useState(Date.now());
+  const setBatch = (b: Batch | null) => { setFetchedAt(Date.now()); setNow(Date.now()); setBatchRaw(b); };
+  useEffect(() => { const t = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(t); }, []);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -305,7 +310,18 @@ export default function BulkCreatePage() {
               <b>{batch.done}</b> of {batch.total} done · {batch.running} running · {batch.failed} failed
               {batch.finished_at ? " · finished" : ""}
               {batch.seconds_per_slide ? ` · ${batch.seconds_per_slide} s/slide` : ""}
-              {!batch.finished_at && batch.eta_seconds ? ` · ETA ~${Math.ceil(batch.eta_seconds / 60)} min` : ""}
+              {(() => {
+                const drift = Math.max(0, Math.round((now - fetchedAt) / 1000));
+                const fmt = (n: number) => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, "0")}`;
+                const elapsed = (batch.elapsed_seconds ?? 0) + (batch.finished_at ? 0 : drift);
+                const left = batch.eta_seconds != null ? Math.max(0, batch.eta_seconds - drift) : null;
+                return (
+                  <>
+                    {` · elapsed ${fmt(elapsed)}`}
+                    {!batch.finished_at && left != null ? ` · ETA ${fmt(left)}${batch.eta_is_estimate ? " (estimate)" : ""}` : ""}
+                  </>
+                );
+              })()}
             </div>
             <div className="flex flex-wrap gap-2 text-sm">
               {running ? <button className="rounded-md border px-3 py-1" onClick={cancel}>Stop queued decks</button> : null}

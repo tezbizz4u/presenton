@@ -444,17 +444,28 @@ async def _run_batch(batch: Dict[str, Any], only_ids: Optional[List[int]] = None
     _persist(batch)
 
 
+DEFAULT_SECONDS_PER_SLIDE = 15.0  # used for the ETA until the first deck has finished
+
+
 def _speed(batch: Dict[str, Any], jobs: List[Dict[str, Any]]) -> Dict[str, Any]:
     done = [j for j in jobs if j["status"] == "done" and j.get("seconds")]
     slides_done = sum(j["slides"] for j in done)
-    if not done or not slides_done:
-        return {"seconds_per_slide": None, "eta_seconds": None}
-    per_slide = sum(j["seconds"] for j in done) / slides_done
+    starts = [j["started_at"] for j in jobs if j.get("started_at")]
+    end = batch.get("finished_at") or time.time()
+    elapsed = round(end - min(starts)) if starts else 0
     parallel = max(1, int(batch.get("parallel") or 1))
     left = sum(j["slides"] for j in jobs if j["status"] in ("queued", "running"))
+    per_slide = (sum(j["seconds"] for j in done) / slides_done) if slides_done else DEFAULT_SECONDS_PER_SLIDE
+    # per-deck time already spent on running decks reduces what is left
+    spent = sum(max(0.0, time.time() - j["started_at"]) for j in jobs if j["status"] == "running" and j.get("started_at"))
+    eta = max(0.0, left * per_slide - spent) / min(parallel, max(1, sum(1 for j in jobs if j["status"] in ("queued", "running"))))
     return {
-        "seconds_per_slide": round(per_slide, 1),
-        "eta_seconds": round(left * per_slide / parallel),
+        "seconds_per_slide": round(per_slide, 1) if slides_done else None,
+        "eta_seconds": None if batch.get("finished_at") or not left else round(eta),
+        "eta_is_estimate": not slides_done,
+        "elapsed_seconds": elapsed,
+        "slides_total": sum(j["slides"] for j in jobs),
+        "slides_finished": slides_done,
     }
 
 
